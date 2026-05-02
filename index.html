@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>GS ConsultPro - Digital Marketing Agency in Singapore</title>
+<title>GS ConsultPro - Marketing &amp; Digital Solutions Agency in Singapore</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -133,13 +133,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px
 .mob-nav a{display:block;padding:12px 32px;color:var(--text2);font-size:15px;font-weight:500;border-bottom:1px solid var(--border);transition:color .2s}
 .mob-nav a:hover{color:var(--accent)}
 .mob-cta{padding:20px 32px}
-
-/* Hide header and footer menus */
-.nav-ul,
-.ham,
-.mob-nav,
-.ft-col,
-.ft-links{display:none!important}
+.mob-nav .mob-group-label{display:block;padding:12px 32px 8px;color:var(--muted2);font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase}
 
 /* ===== HERO ===== */
 .hero{
@@ -276,6 +270,8 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px
 .ind-ico svg{width:24px;height:24px;color:var(--accent)}
 .ind-card h3{font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:800;text-transform:uppercase;color:var(--text)}
 .ind-card p{color:var(--muted);font-size:18px;line-height:1.65}
+.ind-sec .sec-hd,
+.ind-sec .sec-hd p{width:min(100%,760px)!important;max-width:760px!important}
 
 /* ===== TOOLS (LIGHT) ===== */
 .tools-sec{padding:128px 0;background:var(--light)}
@@ -402,6 +398,7 @@ footer{background:#fff;padding:80px 0 0;border-top:1px solid var(--border)}
   nav{padding:0 24px}
   .nav-ul{display:none}
   .ham{display:flex}
+  .nav-end .btn-primary{display:none}
   .hero-inner{padding:108px 0 86px}
   .stats-row{grid-template-columns:repeat(2,1fr)}
   .stat-i{border-bottom:1.5px solid var(--border)}
@@ -421,6 +418,8 @@ footer{background:#fff;padding:80px 0 0;border-top:1px solid var(--border)}
   .hero h1{font-size:38px}
   .hero-sub{font-size:18px}
   .hero-inner{padding:88px 0 72px}
+  .hero-btns{flex-direction:column}
+  .hero-btns a{width:100%;justify-content:center}
   .ind-grid{grid-template-columns:1fr}
   .proc-grid{grid-template-columns:1fr}
   .f-row{grid-template-columns:1fr}
@@ -428,6 +427,8 @@ footer{background:#fff;padding:80px 0 0;border-top:1px solid var(--border)}
   .stats-row{grid-template-columns:repeat(2,1fr)}
   .testi-wrap{margin:0 -24px;padding:0 24px}
   .cta-sec{padding:82px 0}
+  .why-overlay{left:14px;right:14px;bottom:14px;padding:16px}
+  .ft-bottom{justify-content:center;text-align:center}
   .about-sec,.svc-sec,.proc-sec,.why-sec,.ind-sec,.tools-sec,.testi-sec,.faq-sec,.contact-sec{padding:72px 0}
 }
 </style>
@@ -438,36 +439,35 @@ footer{background:#fff;padding:80px 0 0;border-top:1px solid var(--border)}
 <header id="hdr">
   <div class="nav-bg">
     <nav>
-      <a href="#" class="logo">
+      <a href="#home" class="logo" aria-label="GS ConsultPro home">
         <div class="logo-mark">GS</div>
         <span class="logo-txt">GS ConsultPro</span>
       </a>
       <ul class="nav-ul">
         <li>
-          <a href="#">Services <span class="arr"></span></a>
+          <a href="#services">Services <span class="arr"></span></a>
           <ul class="drop">
-            <li><a href="#">Search Engine Optimisation (SEO)</a></li>
-            <li><a href="#">Web Design & Development</a></li>
-            <li><a href="#">Mobile App Development</a></li>
-            <li><a href="#">Lead Generation & Growth</a></li>
-            <li><a href="#">Content Creation</a></li>
-            <li><a href="#">Paid Media & Social</a></li>
+            <li><a href="#services">Search Engine Optimisation (SEO)</a></li>
+            <li><a href="#services">Web Design & Development</a></li>
+            <li><a href="#services">Mobile App Development</a></li>
+            <li><a href="#services">Sales Automation &amp; Growth Systems</a></li>
+            <li><a href="#services">Content Creation</a></li>
+            <li><a href="#services">Paid Media & Social</a></li>
           </ul>
         </li>
         <li>
-          <a href="#">Industries <span class="arr"></span></a>
+          <a href="#industries">Industries <span class="arr"></span></a>
           <ul class="drop">
-            <li><a href="#">E-Commerce & Retail</a></li>
-            <li><a href="#">B2B & Professional Services</a></li>
-            <li><a href="#">Healthcare & Wellness</a></li>
-            <li><a href="#">Finance & Fintech</a></li>
-            <li><a href="#">Technology & SaaS</a></li>
-            <li><a href="#">Hospitality & Tourism</a></li>
+            <li><a href="#industries">E-Commerce & Retail</a></li>
+            <li><a href="#industries">B2B & Professional Services</a></li>
+            <li><a href="#industries">Healthcare & Wellness</a></li>
+            <li><a href="#industries">Finance & Fintech</a></li>
+            <li><a href="#industries">Technology & SaaS</a></li>
+            <li><a href="#industries">Hospitality & Tourism</a></li>
           </ul>
         </li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#">Case Studies</a></li>
-        <li><a href="#">Blog</a></li>
+        <li><a href="#why">About</a></li>
+        <li><a href="#faq">FAQs</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="nav-end">
@@ -481,15 +481,17 @@ footer{background:#fff;padding:80px 0 0;border-top:1px solid var(--border)}
 </header>
 
 <div class="mob-nav" id="mobNav">
-  <a href="#">Services</a>
-  <a href="#">SEO</a>
-  <a href="#">Web Design & Development</a>
-  <a href="#">Lead Generation & Growth</a>
-  <a href="#">Paid Media & Social</a>
-  <a href="#">Industries</a>
-  <a href="#about">About</a>
-  <a href="#">Case Studies</a>
-  <a href="#">Blog</a>
+  <a href="#services">Services</a>
+  <span class="mob-group-label">Core Services</span>
+  <a href="#services">SEO</a>
+  <a href="#services">Web Design & Development</a>
+  <a href="#services">Sales Automation &amp; Growth Systems</a>
+  <a href="#services">Content Creation</a>
+  <a href="#services">Paid Media & Social</a>
+  <a href="#industries">Industries</a>
+  <a href="#why">About</a>
+  <a href="#faq">FAQs</a>
+  <a href="#contact">Contact</a>
   <div class="mob-cta"><a href="#contact" class="btn-primary" style="display:inline-flex">Get a Free Consultation</a></div>
 </div>
 
@@ -498,9 +500,9 @@ footer{background:#fff;padding:80px 0 0;border-top:1px solid var(--border)}
   <div class="container">
     <div class="hero-inner">
       <div>
-        <div class="hero-eye">Singapore &amp; APAC Digital Marketing</div>
-        <h1>Digital Marketing <em>Agency</em> in Singapore</h1>
-        <p class="hero-sub">We help Singapore and APAC brands dominate search, convert audiences, and grow revenue through data-driven digital marketing strategies that deliver real, measurable results.</p>
+        <div class="hero-eye">Singapore &amp; APAC Marketing Solutions</div>
+        <h1>Marketing &amp; Digital <em>Solutions</em> Agency in Singapore</h1>
+        <p class="hero-sub">We help Singapore and APAC brands strengthen visibility, convert prospects, and grow revenue through data-driven marketing strategies that deliver real, measurable results.</p>
         <div class="hero-btns">
           <a href="#contact" class="btn-primary">Get a Free Consultation <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           <a href="#services" class="btn-ghost">Our Services</a>
@@ -516,40 +518,13 @@ footer{background:#fff;padding:80px 0 0;border-top:1px solid var(--border)}
   </div>
 </section>
 
-<!-- TICKER — appears once only -->
-<section class="ticker-sec">
-  <div class="ticker-lbl">Trusted by brands across Singapore &amp; APAC</div>
-  <div class="ticker-track">
-    <div class="ticker-in">
-      <span class="tick-item">E-Commerce</span><span class="tick-dot">✦</span>
-      <span class="tick-item">Healthcare</span><span class="tick-dot">✦</span>
-      <span class="tick-item">B2B</span><span class="tick-dot">✦</span>
-      <span class="tick-item">SaaS</span><span class="tick-dot">✦</span>
-      <span class="tick-item">E-Commerce</span><span class="tick-dot">✦</span>
-      <span class="tick-item">Healthcare</span><span class="tick-dot">✦</span>
-      <span class="tick-item">B2B</span><span class="tick-dot">✦</span>
-      <span class="tick-item">SaaS</span><span class="tick-dot">✦</span>
-      <span class="tick-item">E-Commerce</span><span class="tick-dot">✦</span>
-      <span class="tick-item">Healthcare</span><span class="tick-dot">✦</span>
-      <span class="tick-item">B2B</span><span class="tick-dot">✦</span>
-      <span class="tick-item">SaaS</span><span class="tick-dot">✦</span>
-      <span class="tick-item">E-Commerce</span><span class="tick-dot">✦</span>
-      <span class="tick-item">Healthcare</span><span class="tick-dot">✦</span>
-      <span class="tick-item">B2B</span><span class="tick-dot">✦</span>
-      <span class="tick-item">SaaS</span><span class="tick-dot">✦</span>
-     
-    </div>
-  </div>
-</section>
-
-
 <!-- SERVICES -->
 <section class="svc-sec" id="services">
   <div class="container">
     <div class="sec-hd rv" style="text-align:center">
       <span class="stag-plain">What We Offer</span>
-      <h2 class="dk">Services We Offer in Singapore</h2>
-      <p class="dk" style="max-width:720px;margin-left:auto;margin-right:auto">GS ConsultPro delivers an integrated portfolio of digital marketing, web development, and mobile app services, built to grow Singapore businesses and scale APAC brands across every channel that drives measurable, compounding revenue.</p>
+      <h2 class="dk">Services for Singapore &amp; APAC Businesses</h2>
+      <p class="dk" style="max-width:720px;margin-left:auto;margin-right:auto">GS ConsultPro delivers an integrated portfolio of marketing, web development, and mobile app services built to support Singapore businesses and scale APAC brands across every channel that drives measurable, sustainable revenue growth.</p>
     </div>
     <div class="svc-grid">
       <div class="svc-card rv">
@@ -561,54 +536,33 @@ footer{background:#fff;padding:80px 0 0;border-top:1px solid var(--border)}
       <div class="svc-card rv">
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
         <h3>Web Design & Development</h3>
-        <p>Conversion-optimised, technically sound websites — combining fast Core Web Vitals performance, semantic architecture, and lead generation infrastructure for Singapore and APAC businesses across every industry.</p>
+        <p>Conversion-optimised, technically sound websites designed for strong Core Web Vitals performance, scalable architecture, and high-performing lead generation infrastructure for Singapore and APAC businesses.</p>
         <div class="svc-lnk">Speak to Us <svg class="svc-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </div>
       <div class="svc-card rv">
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
         <h3>Mobile App Development</h3>
-        <p>Native and cross-platform mobile applications built for performance, scalability, and seamless user experience, extending your Singapore brand's digital reach across iOS and Android ecosystems.</p>
+        <p>Native and cross-platform mobile applications built for performance, scalability, and seamless user experience, extending your brand's digital reach across Singapore and APAC on iOS and Android.</p>
         <div class="svc-lnk">Speak to Us <svg class="svc-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </div>
       <div class="svc-card rv">
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h3>Lead Generation & Growth</h3>
-        <p>Multi-channel inbound and outbound strategies, combining intent data, account-based marketing (ABM), and sales automation to fill Singapore and APAC business pipelines with qualified, revenue-ready prospects.</p>
+        <h3>Sales Automation &amp; Growth Systems</h3>
+        <p>Sales automation systems and growth workflows designed to streamline follow-up, improve response times, and support stronger conversion across Singapore and APAC businesses.</p>
         <div class="svc-lnk">Speak to Us <svg class="svc-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </div>
       <div class="svc-card rv">
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
         <h3>Content Creation</h3>
-        <p>Entity-rich, NLP-aligned content that builds topical authority, engages target audiences, and drives organic growth for Singapore and APAC brands — across blogs, social media, and strategic content campaigns.</p>
+        <p>Strategic content that builds authority, engages your audience, and drives organic growth for Singapore and APAC businesses across websites, blogs, social media, and campaigns.</p>
         <div class="svc-lnk">Speak to Us <svg class="svc-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </div>
       <div class="svc-card rv">
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></div>
         <h3>Paid Media & Social</h3>
-        <p>Precision-targeted Google Ads and social media campaigns across Meta, LinkedIn, and TikTok, delivering immediate search visibility, qualified traffic, and measurable ROAS for Singapore and APAC brands.</p>
+        <p>Precision-targeted Google Ads and social media campaigns across Meta, LinkedIn, and TikTok, delivering immediate visibility, qualified traffic, and measurable return on ad spend for Singapore and APAC brands.</p>
         <div class="svc-lnk">Speak to Us <svg class="svc-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="proc-sec" id="process">
-  <div class="container">
-    <div class="sec-hd rv" style="text-align:center">
-      <span class="stag-plain">How We Work</span>
-      <h2 class="dk">How Does Our Digital Marketing Process Work for Singapore and APAC Businesses?</h2>
-      <p class="dk" style="max-width:720px;margin-left:auto;margin-right:auto">Our digital marketing process is a structured, eight-step methodology designed to eliminate guesswork and deliver consistent, compounding results for Singapore businesses and APAC brands.</p>
-    </div>
-    <div class="proc-grid">
-      <div class="proc-card rv"><span class="proc-step">01</span><h3>Discovery & Business Intelligence</h3><p>Deep-dive into your business model, revenue goals, target audience behaviour, and competitive landscape across Singapore and APAC, establishing the strategic foundation for every digital marketing decision we make on your behalf.</p></div>
-      <div class="proc-card rv"><span class="proc-step">02</span><h3>Comprehensive Digital Audit</h3><p>Full-spectrum audit covering technical SEO health, existing content performance, backlink profile quality, Google Ads account efficiency, and social media channel effectiveness, identifying every gap, barrier, and opportunity in your current digital presence.</p></div>
-      <div class="proc-card rv"><span class="proc-step">03</span><h3>Semantic Topical Mapping</h3><p>Development of a complete topical map aligned with your industry's entity relationships, search intent clusters, and keyword opportunity landscape, ensuring full topical coverage that signals expertise and authority to Google's NLP algorithms.</p></div>
-      <div class="proc-card rv"><span class="proc-step">04</span><h3>Custom Strategy Development</h3><p>Bespoke digital marketing roadmap covering SEO architecture, paid media budget allocation, content production calendar, social media strategy, and channel prioritisation, tailored to your specific business objectives and Singapore market dynamics.</p></div>
-      <div class="proc-card rv"><span class="proc-step">05</span><h3>Campaign Execution & Launch</h3><p>Simultaneous deployment of SEO content networks, Google Ads campaigns, social media strategies, and web optimisation initiatives, with every channel engineered to reinforce your brand's authority, relevance, and conversion performance.</p></div>
-      <div class="proc-card rv"><span class="proc-step">06</span><h3>Continuous Optimisation & Testing</h3><p>Ongoing A/B testing, search query analysis, bid optimisation, and algorithm-aligned content updates, keeping every campaign at peak efficiency as Singapore's digital landscape and APAC market conditions continuously evolve.</p></div>
-      <div class="proc-card rv"><span class="proc-step">07</span><h3>Performance Tracking & Attribution</h3><p>Real-time monitoring of organic rankings, traffic growth, conversion rates, cost-per-acquisition (CPA), and revenue attribution, through customised GA4 and Looker Studio dashboards built specifically for your Singapore business objectives.</p></div>
-      <div class="proc-card rv"><span class="proc-step">08</span><h3>Monthly Strategy Review & Scaling</h3><p>Monthly performance reviews with actionable insights, APAC industry benchmark comparisons, and proactive scaling recommendations, ensuring your digital marketing strategy evolves alongside your business growth and Singapore's competitive market shifts.</p></div>
     </div>
   </div>
 </section>
@@ -621,41 +575,30 @@ footer{background:#fff;padding:80px 0 0;border-top:1px solid var(--border)}
         <!-- REPLACE: office/team photo -->
         <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" alt="GS ConsultPro" />
         <div class="why-overlay">
-          <strong>We Own Every Campaign. Every Result.</strong>
-          <span>At GS ConsultPro, accountability isn't a policy. It's how we operate. We don't outsource your campaigns, dilute your strategy, or disappear after onboarding.</span>
-          <span style="display:block;margin-top:8px">Every client works with a dedicated team that treats your growth as their own.</span>
-          <span style="display:block;margin-top:8px">We measure success by outcomes that matter: organic traffic growth, lead volume growth, revenue attribution, and market share gains. Our approach is simple. Test, optimise, and refine continuously to drive stronger results.</span>
-          <span style="display:block;margin-top:8px">When performance falls short, we act immediately. We review, adjust, and improve without delay.</span>
+          <strong>We Take Full Ownership of Every Campaign</strong>
+          <span>From strategy to execution, every initiative is managed with focus, accountability, and a clear commitment to measurable growth.</span>
         </div>
       </div>
       <div class="rv">
-        <div class="stag">Why Choose Us</div>
-        <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(26px,3.5vw,44px);font-weight:900;text-transform:uppercase;color:var(--dark);line-height:1.05;margin-bottom:14px">Why Should Singapore Businesses Choose Us as Their Digital Marketing Agency?</h2>
-        <p style="color:var(--muted);font-size:18px;line-height:1.7;margin-bottom:32px">Singapore businesses choose GS ConsultPro because we combine deep regional market expertise with globally proven digital marketing methodologies, delivering results that generic agencies consistently fail to replicate across Singapore and the broader APAC region.</p>
+        <div class="stag-plain">Why Choose Us</div>
+        <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(26px,3.5vw,44px);font-weight:900;text-transform:uppercase;color:var(--dark);line-height:1.05;margin-bottom:14px">More Than Marketing. Built for Growth.</h2>
+        <p style="color:var(--muted);font-size:18px;line-height:1.7;margin-bottom:32px">Businesses work with GS ConsultPro because we combine regional insight with structured strategy and execution. We move beyond isolated campaigns, ensuring every initiative is aligned with clear business objectives to drive growth across Singapore and the broader APAC region.</p>
         <div class="why-items">
           <div class="why-item active">
             <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19v-6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2zm0 0V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v10m-6 0a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2m0 0V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"/></svg></div>
-            <div><h4>Data-Driven Strategy, Zero Guesswork</h4><p>Every campaign decision is backed by quantitative intelligence — search volume analysis, user intent mapping, competitor gap identification, and audience behaviour modelling using GA4, SEMrush, Ahrefs, and proprietary NLP analysis frameworks.</p></div>
+            <div><h4>Decisions Backed by Real Data</h4><p>Every decision is grounded in real market data and customer behaviour. We analyse demand, user intent, and competition to identify opportunities and act on them using tools like Google Analytics, SEMrush, and Ahrefs.</p></div>
           </div>
           <div class="why-item">
             <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-            <div><h4>Proven APAC Market Expertise</h4><p>With active campaigns across Singapore, Malaysia, Indonesia, Australia, India, and Japan, we bring firsthand knowledge of APAC consumer search behaviour, platform preferences, and cultural market nuances that directly influence digital marketing performance and campaign ROI.</p></div>
+            <div><h4>Regional Insight That Applies Locally</h4><p>We understand how businesses grow across Singapore and APAC, helping clients adapt strategy, messaging, and channel focus to the markets that matter most.</p></div>
           </div>
           <div class="why-item">
             <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-            <div><h4>Full Transparency, Real-Time Reporting</h4><p>Singapore clients receive custom performance dashboards, monthly strategy reviews, and direct access to their campaign data at all times — because informed clients make better business decisions, and better decisions produce stronger digital marketing outcomes.</p></div>
+            <div><h4>Clear Reporting and Accountability</h4><p>You see what is being done, why it matters, and how it is performing, so there is clarity around progress, priorities, and next steps.</p></div>
           </div>
           <div class="why-item">
             <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-            <div><h4>Performance Accountability</h4><p>Every campaign is measured against tangible business outcomes (traffic, leads &amp; revenue).</p></div>
-          </div>
-          <div class="why-item">
-            <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-            <div><h4>APAC Market Depth</h4><p>We understand the search behaviours, platforms, and culture across Singapore, Southeast Asia, and beyond.</p></div>
-          </div>
-          <div class="why-item">
-            <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-            <div><h4>Long-Term Partnership</h4><p>We don't chase quick wins. We build compounding digital growth that strengthens your brand year over year.</p></div>
+            <div><h4>Growth-Focused Execution</h4><p>We connect strategy and execution so each initiative supports stronger visibility, better conversion, and measurable business growth.</p></div>
           </div>
         </div>
       </div>
@@ -668,13 +611,13 @@ footer{background:#fff;padding:80px 0 0;border-top:1px solid var(--border)}
   <div class="container">
     <div class="sec-hd rv" style="text-align:center;width:75%;max-width:none;margin:0 auto">
       <span class="stag-plain">Sectors We Serve</span>
-      <h2 class="dk">Who We Serve</h2>
-      <p class="dk" style="width:75%;max-width:none;margin:16px auto 0">GS ConsultPro partners with focused, growth-minded companies in Singapore and across APAC, helping teams expand into new markets, strengthen demand generation, and build digital authority where it matters most.</p>
+      <h2 class="dk">Industries We Focus On</h2>
+      <p class="dk" style="width:75%;max-width:none;margin:16px auto 0">We work with growth-focused companies across Singapore and APAC to expand into new markets, strengthen demand, and build a lasting presence.</p>
     </div>
     <div class="ind-grid">
-      <div class="ind-card rv"><div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>Financial Services & Fintech</h3><p>Regulatory-aware SEO, high-intent paid search, and authority-led content strategies that build trust, capture qualified demand, and support APAC growth and expansion.</p></div>
-      <div class="ind-card rv"><div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><h3>SaaS & Technology</h3><p>Full-funnel growth marketing for software and technology companies, combining product-led SEO, demand generation, and conversion strategy to scale across Singapore and APAC.</p></div>
-      <div class="ind-card rv"><div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3>Enterprise B2B</h3><p>Focus Area: APAC Growth &amp; Expansion. Account-based marketing, executive content, and pipeline-focused campaigns built for longer sales cycles and regional market entry.</p></div>
+      <div class="ind-card rv"><div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>Financial Services &amp; Fintech</h3><p>We work with financial services and fintech companies to build trust in regulated markets and drive sustainable growth across Singapore and APAC.</p></div>
+      <div class="ind-card rv"><div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><h3>SaaS &amp; Technology</h3><p>We work with SaaS and technology companies to drive product adoption, strengthen market positioning, and scale effectively across Singapore and APAC.</p></div>
+      <div class="ind-card rv"><div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3>Professional Services</h3><p>We work with professional services firms to build authority, generate high-value demand, and support expansion across Singapore and APAC.</p></div>
     </div>
   </div>
 </section>
@@ -687,7 +630,7 @@ footer{background:#fff;padding:80px 0 0;border-top:1px solid var(--border)}
     <div class="cta-in" style="text-align:center;flex-direction:column;align-items:center">
       <div>
         <h2>Built for Growth. Engineered to Scale.</h2>
-        <p style="text-align:center;font-size:20px;line-height:1.75">Digital marketing is not a side service at GS ConsultPro — it is our singular focus. Every team member, every tool, and every process within our agency exists for one purpose: to grow your brand's digital presence, authority, and revenue across Singapore and the APAC region. We don't do average. We don't do shortcuts. We build brands that dominate.</p>
+        <p style="text-align:center;font-size:20px;line-height:1.75">Digital marketing is not a side service at GS ConsultPro - it is our singular focus. Every team member, every tool, and every process within our agency exists for one purpose: to grow your brand's digital presence, authority, and revenue across Singapore and the APAC region. We don't do average. We don't do shortcuts. We build brands that dominate.</p>
       </div>
       <div class="cta-btns" style="justify-content:center">
         <a href="#contact" class="btn-primary">Get a Free Consultation</a>
@@ -711,7 +654,7 @@ footer{background:#fff;padding:80px 0 0;border-top:1px solid var(--border)}
       <div class="faq-item"><div class="faq-q">What Makes GS ConsultPro Different from Other Digital Marketing Agencies in Singapore? <span class="faq-ico">+</span></div><div class="faq-a">GS ConsultPro is not a single-channel agency. We integrate SEO, paid media, web development, content creation, and lead generation into one unified growth engine, ensuring every digital touchpoint works together to drive measurable business outcomes. Every Singapore client receives a dedicated cross-functional team, a bespoke digital marketing roadmap, and full-funnel performance reporting, with every decision backed by data, audience intelligence, and a deep understanding of Singapore and APAC market dynamics.</div></div>
       <div class="faq-item"><div class="faq-q">Which Digital Marketing Services Does GS ConsultPro Offer in Singapore? <span class="faq-ico">+</span></div><div class="faq-a">GS ConsultPro offers a full-service digital marketing portfolio covering Search Engine Optimisation (SEO), Web Design and Development, App Development, Lead Generation and Sales Automation, Content Creation, Google Ads (PPC), and Social Media Marketing, all delivered by certified specialists with deep Singapore and APAC market experience.</div></div>
       <div class="faq-item"><div class="faq-q">How Long Does SEO Take to Show Results for Singapore Businesses? <span class="faq-ico">+</span></div><div class="faq-a">SEO in Singapore typically delivers measurable ranking improvements within 3 to 6 months, depending on existing domain authority, keyword competitiveness, content consistency, and technical health. Highly competitive industries, including finance, healthcare, and e-commerce, may require 6 to 12 months to achieve significant organic visibility. GS ConsultPro's semantic SEO methodology and topical authority building accelerate this timeline by ensuring full entity coverage and NLP alignment from day one.</div></div>
-      <div class="faq-item"><div class="faq-q">What Is the Difference Between SEO and Google Ads for Singapore Businesses? <span class="faq-ico">+</span></div><div class="faq-a">SEO (Search Engine Optimisation) builds sustainable organic search visibility over time through content authority, technical optimisation, and entity-based relevance, delivering compounding traffic without per-click costs. Google Ads delivers immediate paid search visibility with precise audience targeting and measurable return on ad spend (ROAS), but requires continuous budget investment. For Singapore businesses, the most effective digital marketing strategy integrates both Google Ads for immediate results while SEO compounds long-term APAC organic authority.</div></div>
+      <div class="faq-item"><div class="faq-q">What Is the Difference Between SEO and Google Ads for Singapore Businesses? <span class="faq-ico">+</span></div><div class="faq-a">SEO (Search Engine Optimisation) builds sustainable organic search visibility over time through content authority, technical optimisation, and entity-based relevance, delivering compounding traffic without per-click costs. Google Ads delivers immediate paid search visibility with precise audience targeting and measurable return on ad spend, but requires continuous budget investment. For Singapore businesses, the most effective digital marketing strategy integrates both Google Ads for immediate results while SEO compounds long-term APAC organic authority.</div></div>
       <div class="faq-item"><div class="faq-q">What Is Topical Authority and Why Does It Matter for Singapore SEO? <span class="faq-ico">+</span></div><div class="faq-a">Topical authority is the state in which Google recognises a website as the most comprehensive, trustworthy source on a specific subject, achieved through semantically structured content networks that cover every relevant entity, attribute, and search intent within a topic. For Singapore businesses, building topical authority reduces dependence on backlinks, accelerates organic rankings across competitive keywords, and establishes long-term search dominance across APAC markets without proportional increases in link-building investment.</div></div>
       <div class="faq-item"><div class="faq-q">Does GS ConsultPro Serve Businesses Outside Singapore? <span class="faq-ico">+</span></div><div class="faq-a">Yes. GS ConsultPro actively serves brands across the Asia-Pacific (APAC) region, including Malaysia, Indonesia, Australia, India, Japan, and broader Southeast Asia. Our regional digital marketing expertise, multilingual content capabilities, and deep understanding of APAC consumer search behaviour enable us to build and execute campaigns that drive measurable growth well beyond Singapore's borders, positioning your brand as a recognised authority across the world's fastest-growing digital economy.</div></div>
       <div class="faq-item"><div class="faq-q">What Industries Does GS ConsultPro Specialise In? <span class="faq-ico">+</span></div><div class="faq-a">GS ConsultPro delivers specialised digital marketing strategies across E-Commerce and Retail, B2B and Professional Services, Healthcare and Wellness, Finance and Fintech, Technology and SaaS, and Hospitality and Tourism, adapting SEO methodologies, paid media strategies, and content frameworks to the unique search behaviours, regulatory environments, and buyer journeys of each Singapore and APAC industry sector.</div></div>
@@ -746,7 +689,7 @@ footer{background:#fff;padding:80px 0 0;border-top:1px solid var(--border)}
         <div class="f-grp"><label>Email Address</label><input type="email" placeholder="john@company.com" /></div>
         <div class="f-grp"><label>Phone Number</label><input type="tel" placeholder="+65 0000 0000" /></div>
         <div class="f-grp"><label>Company</label><input type="text" placeholder="Your Company Name" /></div>
-        <div class="f-grp"><label>Service Interested In</label><select><option value="" disabled selected>Select a service</option><option>Search Engine Optimisation (SEO)</option><option>Web Design & Development</option><option>Mobile App Development</option><option>Lead Generation & Growth</option><option>Content Creation</option><option>Paid Media & Social</option></select></div>
+        <div class="f-grp"><label>Service Interested In</label><select><option value="" disabled selected>Select a service</option><option>Search Engine Optimisation (SEO)</option><option>Web Design & Development</option><option>Mobile App Development</option><option>Sales Automation &amp; Growth Systems</option><option>Content Creation</option><option>Paid Media &amp; Social</option></select></div>
         <div class="f-grp"><label>Message</label><textarea placeholder="Tell us about your project and goals..."></textarea></div>
         <button class="btn-primary" style="width:100%;justify-content:center;padding:15px">Get a Free Consultation <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
       </div>
@@ -760,23 +703,23 @@ footer{background:#fff;padding:80px 0 0;border-top:1px solid var(--border)}
     <div class="ft-top">
       <div>
         <div class="ft-logo"><div class="ft-logo-mark">GS</div><span class="ft-logo-txt">GS ConsultPro</span></div>
-        <div class="ft-tagline">Digital Marketing Agency for Singapore &amp; APAC Growth</div>
-        <p>Helping Singapore and APAC brands dominate search, convert audiences, and grow revenue through data-driven digital marketing strategies that deliver real, measurable results.</p>
-        <div class="social-row"><a href="#" class="soc">in</a><a href="#" class="soc">𝕏</a><a href="#" class="soc">fb</a><a href="#" class="soc">Ig</a></div>
+        <div class="ft-tagline">Marketing &amp; Digital Solutions for Singapore &amp; APAC Growth</div>
+        <p>Helping Singapore and APAC brands strengthen visibility, convert prospects, and grow revenue through data-driven marketing strategies that deliver real, measurable results.</p>
+        <div class="social-row"><a href="#" class="soc" aria-label="LinkedIn">in</a><a href="#" class="soc" aria-label="X">X</a><a href="#" class="soc" aria-label="Facebook">fb</a><a href="#" class="soc" aria-label="Instagram">Ig</a></div>
       </div>
-      <div class="ft-col"><h4>Services</h4><ul><li><a href="#">Search Engine Optimisation (SEO)</a></li><li><a href="#">Web Design & Development</a></li><li><a href="#">Mobile App Development</a></li><li><a href="#">Lead Generation & Growth</a></li><li><a href="#">Content Creation</a></li><li><a href="#">Paid Media & Social</a></li></ul></div>
-      <div class="ft-col"><h4>Industries</h4><ul><li><a href="#">E-Commerce & Retail</a></li><li><a href="#">B2B & Professional Services</a></li><li><a href="#">Healthcare & Wellness</a></li><li><a href="#">Finance & Fintech</a></li><li><a href="#">Technology & SaaS</a></li><li><a href="#">Hospitality & Tourism</a></li></ul></div>
-      <div class="ft-col"><h4>Company</h4><ul><li><a href="#">About GS ConsultPro</a></li><li><a href="#">Case Studies</a></li><li><a href="#">Blog</a></li><li><a href="#contact">Contact Us</a></li></ul><h4 style="margin-top:22px">Contact</h4><ul><li><a href="tel:+6500000000">+65 0000 0000</a></li><li><a href="mailto:hello@gsconsultpro.com">hello@gsconsultpro.com</a></li><li><a href="#">Singapore, APAC</a></li></ul></div>
+      <div class="ft-col"><h4>Services</h4><ul><li><a href="#services">Search Engine Optimisation (SEO)</a></li><li><a href="#services">Web Design & Development</a></li><li><a href="#services">Mobile App Development</a></li><li><a href="#services">Sales Automation &amp; Growth Systems</a></li><li><a href="#services">Content Creation</a></li><li><a href="#services">Paid Media &amp; Social</a></li></ul></div>
+      <div class="ft-col"><h4>Industries</h4><ul><li><a href="#industries">E-Commerce & Retail</a></li><li><a href="#industries">B2B & Professional Services</a></li><li><a href="#industries">Healthcare & Wellness</a></li><li><a href="#industries">Finance & Fintech</a></li><li><a href="#industries">Technology & SaaS</a></li><li><a href="#industries">Hospitality & Tourism</a></li></ul></div>
+      <div class="ft-col"><h4>Company</h4><ul><li><a href="#why">About GS ConsultPro</a></li><li><a href="#faq">FAQs</a></li><li><a href="#contact">Contact Us</a></li></ul><h4 style="margin-top:22px">Contact</h4><ul><li><a href="tel:+6500000000">+65 0000 0000</a></li><li><a href="mailto:hello@gsconsultpro.com">hello@gsconsultpro.com</a></li><li><a href="#contact">Singapore, APAC</a></li></ul></div>
     </div>
     <div class="ft-bottom">
-      <p>© 2026 GS ConsultPro. All rights reserved.</p>
-      <div class="ft-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Sitemap</a></div>
+      <p>&copy; 2026 GS ConsultPro. All rights reserved.</p>
+      <div class="ft-links"><a href="#contact">Privacy Policy</a><a href="#contact">Terms of Service</a><a href="#home">Sitemap</a></div>
     </div>
   </div>
 </footer>
 
 <!-- WHATSAPP -->
-<a href="https://wa.me/6500000000" class="wa" target="_blank" title="Chat on WhatsApp">
+<a href="https://wa.me/6500000000" class="wa" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
@@ -788,25 +731,37 @@ window.addEventListener('scroll', () => hdr.classList.toggle('scrolled', scrollY
 // Hamburger
 const ham = document.getElementById('ham');
 const mobNav = document.getElementById('mobNav');
-ham.addEventListener('click', () => { ham.classList.toggle('open'); mobNav.classList.toggle('open'); });
-mobNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { ham.classList.remove('open'); mobNav.classList.remove('open'); }));
+if (ham && mobNav) {
+  ham.addEventListener('click', () => {
+    ham.classList.toggle('open');
+    mobNav.classList.toggle('open');
+  });
+  mobNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    ham.classList.remove('open');
+    mobNav.classList.remove('open');
+  }));
+}
 
 // Testimonial slider
 const trk = document.getElementById('tTrack');
 const dots = document.querySelectorAll('.t-dot');
-let cur = 0;
-const pv = () => window.innerWidth < 768 ? 1 : 3;
-const pages = () => Math.ceil(6 / pv());
-function go(n) {
-  n = Math.max(0, Math.min(pages() - 1, n));
-  const w = trk.querySelector('.testi-card').offsetWidth + 24;
-  trk.style.transform = `translateX(-${n * w * pv()}px)`;
-  dots.forEach((d,i) => d.classList.toggle('on', i === n));
-  cur = n;
+const prevBtn = document.getElementById('tPrev');
+const nextBtn = document.getElementById('tNext');
+if (trk && dots.length && prevBtn && nextBtn && trk.querySelector('.testi-card')) {
+  let cur = 0;
+  const pv = () => window.innerWidth < 768 ? 1 : 3;
+  const pages = () => Math.ceil(6 / pv());
+  function go(n) {
+    n = Math.max(0, Math.min(pages() - 1, n));
+    const w = trk.querySelector('.testi-card').offsetWidth + 24;
+    trk.style.transform = `translateX(-${n * w * pv()}px)`;
+    dots.forEach((d, i) => d.classList.toggle('on', i === n));
+    cur = n;
+  }
+  dots.forEach(d => d.addEventListener('click', () => go(+d.dataset.i)));
+  prevBtn.addEventListener('click', () => go(cur - 1));
+  nextBtn.addEventListener('click', () => go(cur + 1));
 }
-dots.forEach(d => d.addEventListener('click', () => go(+d.dataset.i)));
-document.getElementById('tPrev').addEventListener('click', () => go(cur - 1));
-document.getElementById('tNext').addEventListener('click', () => go(cur + 1));
 
 // FAQ
 document.querySelectorAll('.faq-item').forEach(item => {
@@ -833,3 +788,4 @@ document.querySelectorAll('.rv').forEach(el => el.classList.add('vis'));
 </script>
 </body>
 </html>
+
