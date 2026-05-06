@@ -385,6 +385,74 @@ footer{background:#fff;padding:80px 0 0;border-top:1px solid var(--border)}
 .rv,
 .rv.rv-init,
 .rv.rv-init.vis{opacity:1;transform:none}
+section,footer{--reveal-dur:.8s;--reveal-ease:cubic-bezier(.22,1,.36,1)}
+section .container>*,
+footer .container>*{
+  opacity:0;
+  transform:translateY(34px);
+  transition:opacity var(--reveal-dur) var(--reveal-ease),transform var(--reveal-dur) var(--reveal-ease)
+}
+section.in-view .container>*,
+footer.in-view .container>*{
+  opacity:1;
+  transform:none
+}
+.svc-grid>*,
+.proc-grid>*,
+.ind-grid>*,
+.faq-grid>*,
+.contact-grid>*,
+.ft-top>*{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .75s var(--reveal-ease),transform .75s var(--reveal-ease)
+}
+section.in-view .svc-grid>*,
+section.in-view .proc-grid>*,
+section.in-view .ind-grid>*,
+section.in-view .faq-grid>*,
+section.in-view .contact-grid>*,
+footer.in-view .ft-top>*{
+  opacity:1;
+  transform:none
+}
+section.in-view .svc-grid>*:nth-child(1),
+section.in-view .proc-grid>*:nth-child(1),
+section.in-view .ind-grid>*:nth-child(1),
+section.in-view .faq-grid>*:nth-child(1),
+section.in-view .contact-grid>*:nth-child(1),
+footer.in-view .ft-top>*:nth-child(1){transition-delay:.04s}
+section.in-view .svc-grid>*:nth-child(2),
+section.in-view .proc-grid>*:nth-child(2),
+section.in-view .ind-grid>*:nth-child(2),
+section.in-view .faq-grid>*:nth-child(2),
+section.in-view .contact-grid>*:nth-child(2),
+footer.in-view .ft-top>*:nth-child(2){transition-delay:.12s}
+section.in-view .svc-grid>*:nth-child(3),
+section.in-view .proc-grid>*:nth-child(3),
+section.in-view .ind-grid>*:nth-child(3),
+section.in-view .faq-grid>*:nth-child(3),
+section.in-view .contact-grid>*:nth-child(3),
+footer.in-view .ft-top>*:nth-child(3){transition-delay:.2s}
+section.in-view .svc-grid>*:nth-child(4),
+section.in-view .proc-grid>*:nth-child(4),
+section.in-view .faq-grid>*:nth-child(4),
+footer.in-view .ft-top>*:nth-child(4){transition-delay:.28s}
+section.in-view .faq-grid>*:nth-child(n+5){transition-delay:.34s}
+@media (prefers-reduced-motion:reduce){
+  section .container>*,
+  footer .container>*,
+  .svc-grid>*,
+  .proc-grid>*,
+  .ind-grid>*,
+  .faq-grid>*,
+  .contact-grid>*,
+  .ft-top>*{
+    opacity:1!important;
+    transform:none!important;
+    transition:none!important
+  }
+}
 
 /* ===== RESPONSIVE ===== */
 @media(max-width:1100px){
@@ -447,6 +515,8 @@ footer{background:#fff;padding:80px 0 0;border-top:1px solid var(--border)}
         <li>
           <a href="#services">Services <span class="arr"></span></a>
           <ul class="drop">
+            <li><a href="services.html">All Services Page</a></li>
+            <li><a href="service-detail.html">SEO Service Detail Page</a></li>
             <li><a href="#services">Search Engine Optimisation (SEO)</a></li>
             <li><a href="#services">Web Design & Development</a></li>
             <li><a href="#services">Mobile App Development</a></li>
@@ -481,6 +551,8 @@ footer{background:#fff;padding:80px 0 0;border-top:1px solid var(--border)}
 </header>
 
 <div class="mob-nav" id="mobNav">
+  <a href="services.html">All Services Page</a>
+  <a href="service-detail.html">SEO Service Detail Page</a>
   <a href="#services">Services</a>
   <span class="mob-group-label">Core Services</span>
   <a href="#services">SEO</a>
@@ -784,6 +856,22 @@ whyItems.forEach(item => {
 
 // Keep reveal items static to prevent page jumps.
 document.querySelectorAll('.rv').forEach(el => el.classList.add('vis'));
+
+// Section reveal
+const revealBlocks = document.querySelectorAll('section, footer');
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.16, rootMargin: '0px 0px -8% 0px' });
+  revealBlocks.forEach((block) => revealObserver.observe(block));
+} else {
+  revealBlocks.forEach((block) => block.classList.add('in-view'));
+}
 
 </script>
 </body>
