@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Website UI/UX Design Services in Singapore | GS ConsultPro</title>
+<meta name="description" content="GS ConsultPro designs intuitive, conversion-focused website experiences for Singapore and APAC businesses that reduce local visitor drop-off, build user trust, and guide every visitor toward your most important business actions." />
+<meta property="og:title" content="Website UI/UX Design Services in Singapore | GS ConsultPro" />
+<meta property="og:description" content="GS ConsultPro designs intuitive, conversion-focused website experiences for Singapore and APAC businesses that reduce local visitor drop-off, build user trust, and guide every visitor toward your most important business actions." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="website-ui-ux-design-services-singapore.html" />
+<link rel="canonical" href="website-ui-ux-design-services-singapore.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-y:scroll}
+body{font-family:'Barlow','Segoe UI',Arial,Helvetica,sans-serif;background:#fff;color:#0f172a;overflow-x:hidden;line-height:1.6;text-rendering:optimizeLegibility}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+:root{
+  --dark:#0f1523;
+  --accent:#2d8cff;
+  --accent2:#1f72d8;
+  --accent-soft:rgba(45,140,255,.1);
+  --light:#f8fafc;
+  --text:#0b1220;
+  --text2:#1f2937;
+  --muted:#334155;
+  --muted2:#64748b;
+  --border:#e5e7eb;
+  --border2:#d1d5db;
+  --trans:all 0.28s cubic-bezier(0.4,0,0.2,1);
+  --max:1280px;
+  --r:12px;
+  --r2:16px;
+  --r3:20px;
+  --sh:0 6px 22px rgba(15,23,42,.07),0 2px 6px rgba(15,23,42,.04);
+  --shm:0 14px 40px rgba(15,23,42,.1),0 4px 14px rgba(15,23,42,.05);
+  --sh-red:0 8px 28px rgba(45,140,255,.28);
+}
+.container{max-width:var(--max);margin:0 auto;padding:0 48px}
+.btn-primary{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--accent);color:#fff;padding:14px 30px;border-radius:999px;
+  font-family:'Barlow','Segoe UI',Arial,Helvetica,sans-serif;font-weight:700;font-size:14px;
+  letter-spacing:.6px;text-transform:uppercase;border:2px solid var(--accent);
+  transition:var(--trans);cursor:pointer;box-shadow:0 10px 30px rgba(45,140,255,.2)
+}
+.btn-primary:hover{background:var(--accent2);border-color:var(--accent2);transform:translateY(-3px);box-shadow:var(--sh-red)}
+.sec-hd{margin:0 auto 56px;max-width:min(76%,940px);text-align:center}
+.sec-hd h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,4vw,50px);font-weight:900;text-transform:uppercase;line-height:1.04;color:var(--text)}
+.sec-hd p{font-size:18px;line-height:1.72;margin-top:16px;max-width:840px;color:var(--muted)}
+header{position:fixed;top:0;left:0;width:100%;z-index:1000;transition:var(--trans)}
+.nav-bg{background:transparent;transition:background .3s,box-shadow .3s}
+header.scrolled .nav-bg{background:rgba(255,255,255,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 2px 24px rgba(15,23,42,.08)}
+nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:76px;max-width:var(--max);margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:38px;height:38px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;color:#fff;letter-spacing:-1px}
+.logo-txt{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--text);letter-spacing:.5px}
+.nav-ul{display:flex;align-items:center;gap:2px}
+.nav-ul>li>a{color:var(--text2);font-size:14px;font-weight:500;padding:26px 14px;display:flex;align-items:center;gap:5px;transition:color .2s;white-space:nowrap}
+.nav-ul>li>a:hover{color:var(--text)}
+.nav-end{display:flex;align-items:center;gap:14px}
+.nav-end .btn-primary{padding:10px 22px;font-size:13px}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.ham span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:var(--trans)}
+.ham.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mob-nav{display:none;position:fixed;top:76px;left:0;width:100%;background:#fff;z-index:999;padding:20px 0 28px;border-top:1px solid var(--border);max-height:calc(100vh - 76px);overflow-y:auto;box-shadow:0 20px 40px rgba(15,23,42,.08)}
+.mob-nav.open{display:block}
+.mob-nav a{display:block;padding:12px 32px;color:var(--text2);font-size:15px;font-weight:500;border-bottom:1px solid var(--border)}
+.mob-cta{padding:20px 32px}
+.hero-page{
+  padding:164px 0 108px;background:
+  radial-gradient(circle at top left, rgba(45,140,255,.12), transparent 28%),
+  linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+}
+.hero-copy{max-width:min(84%,1040px);margin:0 auto;text-align:center}
+.hero-copy h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(42px,7vw,82px);font-weight:900;line-height:.95;text-transform:uppercase;color:var(--text);margin-bottom:22px}
+.hero-copy p{font-size:19px;line-height:1.78;color:var(--muted);max-width:920px;margin:0 auto}
+.tag-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:28px}
+.tag-pill{
+  padding:8px 14px;background:#fff;border:1.5px solid var(--border);border-radius:999px;
+  font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text2);box-shadow:var(--sh)
+}
+.section{padding:128px 0}
+.section.alt{background:var(--light)}
+.split-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:stretch}
+.problem-card,.solution-card,.strategy-card,.contact-card,.testimonial-card{
+  background:#fff;border-radius:var(--r3);padding:34px;border:1.5px solid var(--border);box-shadow:var(--sh)
+}
+.problem-card h2,.solution-card h2,.strategy-card h2,.contact-card h2,.service-card h3,.result-card h3,.proc-card h3,.factor-card h3,.testimonial-card h3{
+  font-family:'Barlow Condensed',sans-serif
+}
+.problem-card h2,.solution-card h2,.strategy-card h2,.contact-card h2{
+  font-size:clamp(28px,4vw,46px);font-weight:900;text-transform:uppercase;line-height:1.04;color:var(--text);margin-bottom:18px
+}
+.problem-list,.solution-list,.service-grid,.result-grid,.proc-grid,.factor-grid,.issue-grid{display:grid;gap:18px}
+.problem-list li,.solution-list li,.issue-grid li{
+  background:var(--light);border:1.5px solid var(--border);border-radius:14px;padding:18px 20px;
+  font-size:18px;line-height:1.68;color:var(--muted)
+}
+.solution-card>p,.strategy-card>p,.contact-card>p,.testimonial-card p{font-size:18px;line-height:1.72;color:var(--muted)}
+.service-grid{grid-template-columns:repeat(3,1fr);gap:22px}
+.service-card,.result-card,.proc-card,.factor-card{
+  background:#fff;border:1.5px solid var(--border);border-radius:var(--r2);padding:28px 24px;transition:var(--trans)
+}
+.service-card:hover,.result-card:hover,.proc-card:hover,.factor-card:hover,.problem-card:hover,.solution-card:hover,.strategy-card:hover,.contact-card:hover,.testimonial-card:hover{
+  transform:translateY(-4px);box-shadow:var(--shm);border-color:rgba(45,140,255,.24)
+}
+.service-card h3,.result-card h3,.proc-card h3,.factor-card h3,.testimonial-card h3{
+  font-size:22px;font-weight:800;text-transform:uppercase;color:var(--text);margin-bottom:10px;line-height:1.08
+}
+.service-card p,.result-card p,.proc-card p,.factor-card p{
+  font-size:17px;line-height:1.68;color:var(--muted)
+}
+.result-grid,.proc-grid,.factor-grid{grid-template-columns:repeat(3,1fr);gap:22px}
+.result-num,.proc-step{
+  font-family:'Barlow Condensed',sans-serif;font-size:52px;font-weight:900;line-height:1;color:rgba(45,140,255,.18);margin-bottom:16px;display:block
+}
+.testimonial-card{text-align:center;max-width:920px;margin:0 auto}
+.why-band{
+  background:linear-gradient(135deg,#0f1523 0%,#101b31 100%);
+  color:#fff;border-radius:28px;padding:44px;box-shadow:var(--shm)
+}
+.why-band h2{
+  font-family:'Barlow Condensed',sans-serif;font-size:clamp(30px,4vw,52px);font-weight:900;
+  line-height:1.02;text-transform:uppercase;margin-bottom:16px
+}
+.why-band p{font-size:18px;line-height:1.74;color:rgba(255,255,255,.82)}
+.pill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.pill-item{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:18px;
+  padding:20px;font-size:17px;line-height:1.66;color:#fff
+}
+.faq-wrap{max-width:980px;margin:0 auto}
+.faq-item{
+  border:1.5px solid var(--border);border-radius:18px;background:#fff;overflow:hidden;
+  box-shadow:var(--sh);transition:var(--trans)
+}
+.faq-item + .faq-item{margin-top:16px}
+.faq-item:hover{box-shadow:var(--shm);border-color:rgba(45,140,255,.24)}
+.faq-q{
+  width:100%;text-align:left;background:none;border:none;padding:22px 26px;cursor:pointer;
+  display:flex;align-items:center;justify-content:space-between;gap:14px
+}
+.faq-q span{
+  font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:800;line-height:1.08;
+  text-transform:uppercase;color:var(--text)
+}
+.faq-icon{
+  width:34px;height:34px;border-radius:50%;border:1.5px solid var(--border2);display:flex;
+  align-items:center;justify-content:center;font-size:22px;color:var(--accent);flex-shrink:0;transition:var(--trans)
+}
+.faq-a{
+  max-height:0;overflow:hidden;transition:max-height .35s ease;padding:0 26px
+}
+.faq-a p{font-size:17px;line-height:1.72;color:var(--muted);padding:0 0 24px}
+.faq-item.open .faq-icon{transform:rotate(45deg);border-color:var(--accent);background:var(--accent-soft)}
+.cta-band{
+  background:
+  radial-gradient(circle at top right, rgba(45,140,255,.18), transparent 28%),
+  linear-gradient(135deg,#0f1523 0%,#101b31 100%);
+  border-radius:30px;padding:52px 44px;text-align:center;color:#fff;box-shadow:var(--shm)
+}
+.cta-band h2{
+  font-family:'Barlow Condensed',sans-serif;font-size:clamp(32px,4.5vw,58px);font-weight:900;
+  line-height:1.02;text-transform:uppercase;margin-bottom:14px
+}
+.cta-band p{font-size:18px;line-height:1.72;max-width:900px;margin:0 auto;color:rgba(255,255,255,.84)}
+.footer{
+  background:#0f1523;color:rgba(255,255,255,.78);padding:34px 0;margin-top:110px
+}
+.footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.footer a{color:#fff}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:1180px){
+  .service-grid,.result-grid,.proc-grid,.factor-grid,.pill-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-copy,.sec-hd{max-width:100%}
+}
+@media (max-width:960px){
+  .container,nav{padding:0 24px}
+  .nav-ul,.nav-end .btn-primary{display:none}
+  .ham{display:flex}
+  .split-grid,.service-grid,.result-grid,.proc-grid,.factor-grid,.pill-grid{grid-template-columns:1fr}
+  .section{padding:96px 0}
+  .hero-page{padding:142px 0 88px}
+}
+@media (max-width:640px){
+  .problem-card,.solution-card,.strategy-card,.contact-card,.testimonial-card,.service-card,.result-card,.proc-card,.factor-card{padding:24px 20px}
+  .why-band,.cta-band{padding:32px 22px}
+  .faq-q{padding:18px 18px}
+  .faq-q span{font-size:21px}
+  .faq-a{padding:0 18px}
+  .footer-row{flex-direction:column;text-align:center}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Service",
+  "name":"Website UI/UX Design Services in Singapore",
+  "provider":{
+    "@type":"Organization",
+    "name":"GS ConsultPro"
+  },
+  "areaServed":[
+    {"@type":"Country","name":"Singapore"},
+    {"@type":"Place","name":"APAC"}
+  ],
+  "serviceType":"Website UI/UX Design Services",
+  "url":"website-ui-ux-design-services-singapore.html",
+  "description":"GS ConsultPro designs intuitive, conversion-focused website experiences for Singapore and APAC businesses that reduce local visitor drop-off, build user trust, and guide every visitor toward your most important business actions."
+}
+</script>
+</head>
+<body>
+<header id="siteHeader">
+  <div class="nav-bg">
+    <nav>
+      <a class="logo" href="index.html" aria-label="GS ConsultPro home">
+        <span class="logo-mark">GS</span>
+        <span class="logo-txt">GS ConsultPro</span>
+      </a>
+      <ul class="nav-ul">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="web-design-development-singapore.html">Web Design</a></li>
+        <li><a href="landing-page-development-singapore.html">Landing Pages</a></li>
+        <li><a href="website-ui-ux-design-services-singapore.html">UI/UX</a></li>
+      </ul>
+      <div class="nav-end">
+        <a class="btn-primary" href="#contact">Get My Free UI/UX Consultation</a>
+      </div>
+      <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobNav">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<div class="mob-nav" id="mobNav">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="web-design-development-singapore.html">Web Design</a>
+  <a href="landing-page-development-singapore.html">Landing Pages</a>
+  <a href="website-ui-ux-design-services-singapore.html">UI/UX</a>
+  <div class="mob-cta">
+    <a class="btn-primary" href="#contact">Get My Free UI/UX Consultation</a>
+  </div>
+</div>
+
+<main>
+  <section class="hero-page">
+    <div class="container">
+      <div class="hero-copy reveal">
+        <h1>Website UI/UX Design Services in Singapore</h1>
+        <p>GS ConsultPro designs intuitive, conversion-focused website experiences for Singapore and APAC businesses that reduce local visitor drop-off, build user trust, and guide every visitor toward your most important business actions.</p>
+        <div class="tag-row">
+          <span class="tag-pill">UX Research &amp; Strategy</span>
+          <span class="tag-pill">UI Design</span>
+          <span class="tag-pill">Wireframing</span>
+          <span class="tag-pill">Conversion-Focused Design</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="split-grid">
+        <article class="problem-card reveal">
+          <h2>Is Your Singapore Website Losing Users Because of Poor Design and Experience?</h2>
+          <ul class="problem-list">
+            <li>Singapore website visitors leave immediately because navigation is confusing and the user journey feels unclear.</li>
+            <li>Your Singapore site looks outdated and fails to build trust local buyers expect before enquiring.</li>
+            <li>Poor Singapore mobile experience frustrates local users who abandon pages before reaching key conversion points.</li>
+            <li>Singapore website pages have no clear path guiding local visitors toward making a purchase or enquiry.</li>
+          </ul>
+        </article>
+        <article class="solution-card reveal">
+          <h2>UI/UX Design That Turns Singapore and APAC Visitors into Engaged and Converting Customers</h2>
+          <p>GS ConsultPro creates Singapore and APAC website experiences built around how local users think, navigate, and make decisions so every design choice reduces friction and moves visitors closer toward conversion.</p>
+          <ul class="solution-list" style="margin-top:18px">
+            <li>Singapore website experiences designed around real local user behaviour and genuine purchase decision journeys.</li>
+            <li>Intuitive Singapore navigation structures guiding local visitors naturally toward your most valuable conversion actions.</li>
+            <li>Conversion-focused Singapore UI/UX design that builds immediate local user trust and reduces abandonment rates.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="sec-hd reveal">
+        <h2>Our Custom UI/UX Design Services for Singapore and APAC Businesses</h2>
+        <p>Every service targets a specific layer of how Singapore and APAC users experience your website so every design decision is grounded in local user behaviour and measurable conversion outcomes.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <h3>User Experience (UX) Research &amp; Strategy</h3>
+          <p>We research how real Singapore users navigate your website and develop a data-driven UX strategy removing friction and aligning every page with genuine local user conversion goals.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>UI Design for Websites &amp; Web Apps</h3>
+          <p>We create visually compelling Singapore website interfaces that reflect your brand quality, build immediate local user trust, and guide visitors efficiently toward your most important business actions.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>Wireframing &amp; Interactive Prototyping</h3>
+          <p>We build detailed Singapore website wireframes and interactive prototypes mapping the full local user journey before development begins so costly design misalignments are identified and resolved early.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>Conversion-Focused Landing Page Design</h3>
+          <p>We design Singapore landing pages built around a single local conversion goal with clear messaging, strong visual hierarchy, and a frictionless path that turns campaign traffic into qualified leads.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>Mobile-First UI/UX Optimisation</h3>
+          <p>We optimise your Singapore website specifically for the mobile devices local users rely on most ensuring fast load times, intuitive touch navigation, and strong mobile conversion rates across all devices.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>Website Redesign for Better Performance</h3>
+          <p>We redesign underperforming Singapore websites with improved user journeys, stronger visual credibility, faster load performance, and conversion-focused page structures that turn more local visitors into customers.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="sec-hd reveal">
+        <h2>Why Strong UI/UX Design Delivers Measurable Results for Singapore and APAC Business Websites</h2>
+        <p>Professional Singapore UI/UX design directly impacts how local users perceive your brand, how long they engage, and how many convert into qualified leads and paying customers every month.</p>
+      </div>
+      <div class="result-grid">
+        <article class="result-card reveal">
+          <span class="result-num">01</span>
+          <h3>Lower Bounce Rates</h3>
+          <p>A clear, intuitive Singapore website experience keeps local visitors engaged longer reducing drop-off that sends qualified traffic directly to your local competitors instead.</p>
+        </article>
+        <article class="result-card reveal">
+          <span class="result-num">02</span>
+          <h3>Higher Conversion Rates</h3>
+          <p>Conversion-focused Singapore UI/UX design guides local visitors toward enquiry and purchase actions more effectively turning the same traffic into significantly more qualified business outcomes.</p>
+        </article>
+        <article class="result-card reveal">
+          <span class="result-num">03</span>
+          <h3>Stronger Brand Trust</h3>
+          <p>A professionally designed Singapore website builds immediate credibility with local buyers who judge your business quality directly through the experience your website delivers on every visit.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="sec-hd reveal">
+        <h2>Our UI/UX Design Process for High-Performance Singapore and APAC Websites That Convert Visitors</h2>
+        <p>We follow a clear three-step Singapore UI/UX design process grounded in local user research and conversion strategy that produces websites performing measurably better than your current local digital presence.</p>
+      </div>
+      <div class="proc-grid">
+        <article class="proc-card reveal">
+          <span class="proc-step">01</span>
+          <h3>Research &amp; Strategy</h3>
+          <p>We analyse your Singapore user behaviour, map local conversion barriers, and develop a UX strategy aligned to your specific local business goals and target audience.</p>
+        </article>
+        <article class="proc-card reveal">
+          <span class="proc-step">02</span>
+          <h3>Design &amp; Prototyping</h3>
+          <p>We create detailed Singapore UI designs and interactive prototypes for your approval before development begins ensuring the final build matches local user expectations completely.</p>
+        </article>
+        <article class="proc-card reveal">
+          <span class="proc-step">03</span>
+          <h3>Testing &amp; Optimisation</h3>
+          <p>We test your Singapore website experience across all local devices and user scenarios then refine every element until conversion performance meets your specific business growth targets.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="sec-hd reveal">
+        <h2>How Better UI/UX Design Improved Traffic, Leads, and Conversions for Singapore and APAC Businesses</h2>
+        <p>GS ConsultPro has helped Singapore and APAC businesses replace outdated, friction-heavy website experiences with intuitive, conversion-focused designs that attract more qualified local traffic and turn significantly more Singapore visitors into paying customers.</p>
+      </div>
+      <div class="factor-grid">
+        <article class="factor-card reveal">
+          <h3>Traffic</h3>
+          <p>Improved Singapore website structure and SEO-friendly UI foundations helped pages rank higher and attract more qualified organic local search visitors consistently month after month.</p>
+        </article>
+        <article class="factor-card reveal">
+          <h3>Leads</h3>
+          <p>Clearer Singapore page hierarchies, stronger calls to action, and reduced local user friction produced measurably more qualified enquiries from the same volume of existing local website traffic.</p>
+        </article>
+        <article class="factor-card reveal">
+          <h3>Conversions</h3>
+          <p>Faster Singapore load times, better mobile usability, and conversion-focused page layouts turned significantly more local visitors into paying customers and qualified business enquiries after every redesign.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="sec-hd reveal">
+        <h2>What Singapore and APAC Clients Say About Our UI/UX Design Services</h2>
+        <p>Hear from Singapore and APAC businesses that improved local user engagement, reduced bounce rates, and grew qualified conversions through GS ConsultPro's professional UI/UX design work.</p>
+      </div>
+      <div class="testimonial-card reveal">
+        <h3>Testimonials here</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="why-band reveal">
+        <h2>Why Choose GS ConsultPro for Professional UI/UX Design Services</h2>
+        <p>We are a Singapore-based UI/UX design team combining genuine local user research, conversion strategy expertise, and high-quality interface design to build website experiences that perform measurably better in the competitive Singapore and APAC digital market.</p>
+        <div class="pill-grid">
+          <div class="pill-item">Research-Driven Design</div>
+          <div class="pill-item">Conversion-First Thinking</div>
+          <div class="pill-item">Singapore Market Expertise</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="strategy-card reveal">
+        <h2>SEO-Friendly and Mobile-Optimised UI/UX Designs</h2>
+        <p>Every UI/UX design GS ConsultPro delivers integrates local SEO visibility and mobile performance from the first design decision. Singapore and APAC users judge brand credibility within seconds, your website must load fast, navigate intuitively, and convert confidently across every device your audience uses daily.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="sec-hd reveal">
+        <h2>FAQs</h2>
+      </div>
+      <div class="faq-wrap">
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button"><span>What is the difference between UI design and UX design for Singapore websites?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>UX design focuses on how Singapore users navigate and experience your website including journey mapping and removing local conversion barriers. UI design covers the visual layer including typography, colour, and interface components that make your Singapore website look credible and feel intuitive to local users visiting your site.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button"><span>How long does a Singapore UI/UX design project typically take to complete?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>A focused Singapore landing page redesign typically takes two to three weeks. A full Singapore website UI/UX design project covering user research, wireframing, and prototyping usually takes four to eight weeks depending on project scope and how quickly local client feedback is provided throughout the design process.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button"><span>Will better UI/UX design actually improve our Singapore website conversion rates measurably?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Yes. Reducing friction, improving Singapore page hierarchy, and clarifying local calls to action consistently produces higher enquiry volumes and lower bounce rates from the same local traffic your Singapore website was already receiving before the professional UI/UX redesign was implemented and launched.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button"><span>Do you redesign existing Singapore websites or only design new ones from scratch?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>We handle both. We redesign underperforming Singapore websites with improved UX strategy and stronger UI design and we design new Singapore websites from scratch for businesses launching a new local digital presence or replacing an outdated site that no longer converts local visitors effectively.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button"><span>How much does a UI/UX design project cost for a Singapore business?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Investment varies depending on project scope, number of pages, research depth, and whether the project includes wireframing, prototyping, or a full design system. We provide clear itemised quotes before any work begins so you know exactly what your investment covers and what conversion improvement it is designed to deliver.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button"><span>Do you work with our existing development team or handle development internally?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>We work both ways. We can deliver complete design files and specifications directly to your existing development team or manage the full project from UI/UX design through to front-end development under one roof. We adapt our process to fit your existing workflow and internal team structure without disruption.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button"><span>Can UI/UX design improvements help our Singapore website rank better on Google?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Yes. A well-structured UI/UX design improves Core Web Vitals scores, reduces bounce rates, and increases time on site, all of which are signals Google uses to assess page quality. Better user experience and stronger SEO foundations work together to improve both organic rankings and the conversion rate of the traffic your website already receives.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button"><span>What deliverables will we receive at the end of the UI/UX design project?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>You receive complete design files in Figma or your preferred format, an interactive prototype, a style guide covering typography, colours, and component specifications, and a handover document outlining implementation guidelines. Everything your development team needs to build the final Singapore website accurately and efficiently from the approved designs is included in the full project deliverable package.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="cta-band reveal">
+        <h2>Ready to Upgrade Your Singapore Website?</h2>
+        <p>If your Singapore website is attracting qualified local traffic but failing to convert it into leads and sales, the problem is almost always in the design and user experience layer. A free consultation shows you exactly what better Singapore UI/UX design would deliver for your specific local business goals and target audience.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-card reveal">
+        <h2>Get in Touch for UI/UX Design Services Today</h2>
+        <p>If your Singapore website experience is costing you qualified local leads and customers every single day, share your project details and we will show you exactly what a better-designed, higher-converting Singapore website experience looks like for your specific business goals and local target audience needs.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-row">
+      <p>&copy; 2026 GS ConsultPro. All rights reserved.</p>
+      <p><a href="services.html">Explore Services</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const header=document.getElementById('siteHeader');
+const hamBtn=document.getElementById('hamBtn');
+const mobNav=document.getElementById('mobNav');
+const onScroll=()=>header.classList.toggle('scrolled',window.scrollY>10);
+onScroll();
+window.addEventListener('scroll',onScroll,{passive:true});
+hamBtn.addEventListener('click',()=>{
+  const open=mobNav.classList.toggle('open');
+  hamBtn.classList.toggle('open',open);
+  hamBtn.setAttribute('aria-expanded',open?'true':'false');
+});
+document.querySelectorAll('.mob-nav a').forEach(link=>link.addEventListener('click',()=>{
+  mobNav.classList.remove('open');
+  hamBtn.classList.remove('open');
+  hamBtn.setAttribute('aria-expanded','false');
+}));
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const btn=item.querySelector('.faq-q');
+  const panel=item.querySelector('.faq-a');
+  btn.addEventListener('click',()=>{
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(other=>{
+      other.classList.remove('open');
+      other.querySelector('.faq-a').style.maxHeight=null;
+    });
+    if(!isOpen){
+      item.classList.add('open');
+      panel.style.maxHeight=panel.scrollHeight+'px';
+    }
+  });
+});
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('in');
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:.14});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>

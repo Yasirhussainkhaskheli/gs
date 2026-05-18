@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>E-Commerce Website Development Services in Singapore | GS ConsultPro</title>
+<meta name="description" content="We design and develop high-performing e-commerce websites for Singapore and APAC businesses built to attract qualified buyers, deliver seamless shopping experiences, and generate consistent, scalable online revenue." />
+<meta property="og:title" content="E-Commerce Website Development Services in Singapore | GS ConsultPro" />
+<meta property="og:description" content="We design and develop high-performing e-commerce websites for Singapore and APAC businesses built to attract qualified buyers, deliver seamless shopping experiences, and generate consistent, scalable online revenue." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="ecommerce-website-development-singapore.html" />
+<link rel="canonical" href="ecommerce-website-development-singapore.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-y:scroll}
+body{font-family:'Barlow','Segoe UI',Arial,Helvetica,sans-serif;background:#fff;color:#0f172a;overflow-x:hidden;line-height:1.6;text-rendering:optimizeLegibility}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+:root{
+  --dark:#0f1523;
+  --accent:#2d8cff;
+  --accent2:#1f72d8;
+  --accent-soft:rgba(45,140,255,.1);
+  --light:#f8fafc;
+  --text:#0b1220;
+  --text2:#1f2937;
+  --muted:#334155;
+  --muted2:#64748b;
+  --border:#e5e7eb;
+  --border2:#d1d5db;
+  --trans:all 0.28s cubic-bezier(0.4,0,0.2,1);
+  --max:1280px;
+  --r:12px;
+  --r2:16px;
+  --r3:20px;
+  --sh:0 6px 22px rgba(15,23,42,.07),0 2px 6px rgba(15,23,42,.04);
+  --shm:0 14px 40px rgba(15,23,42,.1),0 4px 14px rgba(15,23,42,.05);
+  --sh-red:0 8px 28px rgba(45,140,255,.28);
+}
+.container{max-width:var(--max);margin:0 auto;padding:0 48px}
+.btn-primary{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--accent);color:#fff;padding:14px 30px;border-radius:999px;
+  font-family:'Barlow','Segoe UI',Arial,Helvetica,sans-serif;font-weight:700;font-size:14px;
+  letter-spacing:.6px;text-transform:uppercase;border:2px solid var(--accent);
+  transition:var(--trans);cursor:pointer;box-shadow:0 10px 30px rgba(45,140,255,.2)
+}
+.btn-primary:hover{background:var(--accent2);border-color:var(--accent2);transform:translateY(-3px);box-shadow:var(--sh-red)}
+.sec-hd{margin:0 auto 56px;max-width:min(72%,920px);text-align:center}
+.sec-hd h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,4vw,50px);font-weight:900;text-transform:uppercase;line-height:1.04;color:var(--text)}
+.sec-hd p{font-size:18px;line-height:1.72;margin-top:16px;max-width:820px;color:var(--muted)}
+header{position:fixed;top:0;left:0;width:100%;z-index:1000;transition:var(--trans)}
+.nav-bg{background:transparent;transition:background .3s,box-shadow .3s}
+header.scrolled .nav-bg{background:rgba(255,255,255,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 2px 24px rgba(15,23,42,.08)}
+nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:76px;max-width:var(--max);margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:38px;height:38px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;color:#fff;letter-spacing:-1px}
+.logo-txt{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--text);letter-spacing:.5px}
+.nav-ul{display:flex;align-items:center;gap:2px}
+.nav-ul>li>a{color:var(--text2);font-size:14px;font-weight:500;padding:26px 14px;display:flex;align-items:center;gap:5px;transition:color .2s;white-space:nowrap}
+.nav-ul>li>a:hover{color:var(--text)}
+.nav-end{display:flex;align-items:center;gap:14px}
+.nav-end .btn-primary{padding:10px 22px;font-size:13px}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.ham span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:var(--trans)}
+.ham.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mob-nav{display:none;position:fixed;top:76px;left:0;width:100%;background:#fff;z-index:999;padding:20px 0 28px;border-top:1px solid var(--border);max-height:calc(100vh - 76px);overflow-y:auto;box-shadow:0 20px 40px rgba(15,23,42,.08)}
+.mob-nav.open{display:block}
+.mob-nav a{display:block;padding:12px 32px;color:var(--text2);font-size:15px;font-weight:500;border-bottom:1px solid var(--border)}
+.mob-cta{padding:20px 32px}
+.hero-page{
+  padding:164px 0 108px;background:
+  radial-gradient(circle at top left, rgba(45,140,255,.12), transparent 28%),
+  linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+}
+.hero-copy{max-width:min(80%,1000px);margin:0 auto;text-align:center}
+.hero-copy h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(42px,7vw,82px);font-weight:900;line-height:.95;text-transform:uppercase;color:var(--text);margin-bottom:22px}
+.hero-copy p{font-size:19px;line-height:1.78;color:var(--muted);max-width:880px;margin:0 auto}
+.section{padding:128px 0}
+.section.alt{background:var(--light)}
+.split-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:stretch}
+.problem-card,.solution-card,.strategy-card,.contact-card,.testimonial-card{
+  background:#fff;border-radius:var(--r3);padding:34px;border:1.5px solid var(--border);box-shadow:var(--sh)
+}
+.problem-card h2,.solution-card h2,.strategy-card h2,.contact-card h2,.service-card h3,.result-card h3,.proc-card h3,.factor-card h3,.testimonial-card h3{
+  font-family:'Barlow Condensed',sans-serif
+}
+.problem-card h2,.solution-card h2,.strategy-card h2,.contact-card h2{
+  font-size:clamp(28px,4vw,46px);font-weight:900;text-transform:uppercase;line-height:1.04;color:var(--text);margin-bottom:18px
+}
+.problem-list,.solution-list,.service-grid,.result-grid,.proc-grid,.factor-grid,.issue-grid{display:grid;gap:18px}
+.problem-list li,.solution-list li,.issue-grid li{
+  background:var(--light);border:1.5px solid var(--border);border-radius:14px;padding:18px 20px;
+  font-size:18px;line-height:1.68;color:var(--muted)
+}
+.solution-card>p,.strategy-card>p,.contact-card>p,.testimonial-card p{font-size:18px;line-height:1.72;color:var(--muted)}
+.service-grid{grid-template-columns:repeat(3,1fr);gap:22px}
+.service-card,.result-card,.proc-card,.factor-card{
+  background:#fff;border:1.5px solid var(--border);border-radius:var(--r2);padding:28px 24px;transition:var(--trans)
+}
+.service-card:hover,.result-card:hover,.proc-card:hover,.factor-card:hover,.problem-card:hover,.solution-card:hover,.strategy-card:hover,.contact-card:hover,.testimonial-card:hover{
+  transform:translateY(-4px);box-shadow:var(--shm);border-color:rgba(45,140,255,.24)
+}
+.service-card h3,.result-card h3,.proc-card h3,.factor-card h3,.testimonial-card h3{
+  font-size:22px;font-weight:800;text-transform:uppercase;color:var(--text);margin-bottom:10px;line-height:1.08
+}
+.service-card p,.result-card p,.proc-card p,.factor-card p{
+  font-size:17px;line-height:1.68;color:var(--muted)
+}
+.result-grid,.proc-grid,.factor-grid{grid-template-columns:repeat(3,1fr);gap:22px}
+.result-num,.proc-step{
+  font-family:'Barlow Condensed',sans-serif;font-size:52px;font-weight:900;line-height:1;color:rgba(45,140,255,.18);margin-bottom:16px;display:block
+}
+.testimonial-card{text-align:center;max-width:920px;margin:0 auto}
+.faq-grid{display:grid;gap:14px}
+.faq-item{background:#fff;border-radius:14px;overflow:hidden;border:1.5px solid var(--border);transition:var(--trans)}
+.faq-item.on{border-color:rgba(45,140,255,.25);box-shadow:var(--sh)}
+.faq-q{padding:18px 20px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px;font-weight:600;color:var(--text);line-height:1.4}
+.faq-item.on .faq-q{color:var(--accent)}
+.faq-ico{width:24px;height:24px;border-radius:50%;background:var(--border);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:var(--muted);transition:var(--trans)}
+.faq-item.on .faq-ico{background:var(--accent);color:#fff;transform:rotate(45deg)}
+.faq-a{padding:0 20px;max-height:0;overflow:hidden;font-size:18px;color:var(--muted);line-height:1.72;transition:max-height .35s ease,padding .35s ease}
+.faq-item.on .faq-a{padding:0 20px 20px;max-height:420px}
+.cta-banner{
+  background:var(--accent);
+  background-image:linear-gradient(140deg, rgba(255,255,255,.16), transparent 35%), radial-gradient(circle at top right, rgba(255,255,255,.14), transparent 26%);
+  border-radius:28px;padding:56px 48px;display:flex;justify-content:space-between;gap:26px;align-items:center;box-shadow:var(--sh-red)
+}
+.cta-banner h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,4vw,48px);font-weight:900;text-transform:uppercase;color:#fff;line-height:1.02;margin-bottom:12px}
+.cta-banner p{font-size:19px;line-height:1.72;color:rgba(255,255,255,.86);max-width:760px}
+.contact-card{text-align:center;max-width:920px;margin:0 auto}
+footer{background:#fff;padding:80px 0 0;border-top:1px solid var(--border)}
+.ft-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:44px;padding-bottom:52px;border-bottom:1px solid var(--border)}
+.ft-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.ft-logo-mark{width:34px;height:34px;background:var(--accent);border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:900;color:#fff}
+.ft-logo-txt{font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:800;color:var(--text)}
+.ft-brand p{color:var(--muted);font-size:18px;line-height:1.72;margin-bottom:22px}
+.ft-tagline{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;display:block}
+.ft-col h4{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.ft-col ul{display:grid;gap:10px}
+.ft-col ul li a{color:var(--muted);font-size:14px;transition:var(--trans)}
+.ft-col ul li a:hover{color:var(--text);padding-left:5px}
+.ft-bottom{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:22px 0 30px}
+.ft-bottom p,.ft-links a{font-size:13px;color:var(--muted)}
+.ft-links{display:flex;gap:18px;flex-wrap:wrap}
+section,footer{--reveal-dur:.8s;--reveal-ease:cubic-bezier(.22,1,.36,1)}
+section .container>*,
+footer .container>*{opacity:0;transform:translateY(34px);transition:opacity var(--reveal-dur) var(--reveal-ease),transform var(--reveal-dur) var(--reveal-ease)}
+section.in-view .container>*,
+footer.in-view .container>*{opacity:1;transform:none}
+.split-grid>*,
+.service-grid>*,
+.result-grid>*,
+.proc-grid>*,
+.factor-grid>*,
+.faq-grid>*,
+.issue-grid>*,
+.ft-top>*{opacity:0;transform:translateY(28px);transition:opacity .75s var(--reveal-ease),transform .75s var(--reveal-ease)}
+section.in-view .split-grid>*,
+section.in-view .service-grid>*,
+section.in-view .result-grid>*,
+section.in-view .proc-grid>*,
+section.in-view .factor-grid>*,
+section.in-view .faq-grid>*,
+section.in-view .issue-grid>*,
+footer.in-view .ft-top>*{opacity:1;transform:none}
+@media (max-width:1120px){
+  .container,nav{padding:0 28px}
+  .service-grid,.result-grid,.proc-grid,.factor-grid,.ft-top,.split-grid{grid-template-columns:1fr}
+  .cta-banner{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:860px){
+  .nav-ul,.nav-end .btn-primary{display:none}
+  .ham{display:flex}
+  .hero-page,.section{padding-top:110px}
+}
+@media (max-width:720px){
+  .container,nav{padding:0 20px}
+  .hero-copy,.sec-hd{max-width:100%}
+  .hero-copy h1{font-size:clamp(36px,12vw,58px)}
+  .hero-copy p,.sec-hd p,.solution-card>p,.strategy-card>p,.contact-card>p,.testimonial-card p{font-size:17px}
+  .cta-banner{padding:38px 24px}
+  .problem-card,.solution-card,.strategy-card,.contact-card,.service-card,.result-card,.proc-card,.factor-card,.testimonial-card{padding:26px 20px}
+  .faq-a{font-size:17px}
+  .ft-bottom{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<header id="hdr">
+  <div class="nav-bg">
+    <nav aria-label="Primary">
+      <a href="index.html" class="logo" aria-label="GS ConsultPro home">
+        <div class="logo-mark">GS</div>
+        <div class="logo-txt">GS ConsultPro</div>
+      </a>
+      <ul class="nav-ul">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="#services">Our E-Commerce Website Development Services in Singapore</a></li>
+        <li><a href="#process">Our Step-by-Step Approach to Building High-Performing Online Stores</a></li>
+        <li><a href="#faq">FAQs</a></li>
+        <li><a href="#contact">Let's Build Your E-Commerce Website in Singapore Today</a></li>
+      </ul>
+      <div class="nav-end">
+        <a href="#contact" class="btn-primary">Get in Touch Today</a>
+        <button class="ham" id="ham" aria-label="Menu" aria-expanded="false" aria-controls="mobNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="mob-nav" id="mobNav">
+  <a href="index.html">GS ConsultPro</a>
+  <a href="services.html">Services</a>
+  <a href="#services">Our E-Commerce Website Development Services in Singapore</a>
+  <a href="#process">Our Step-by-Step Approach to Building High-Performing Online Stores</a>
+  <a href="#faq">FAQs</a>
+  <a href="#contact">Let's Build Your E-Commerce Website in Singapore Today</a>
+  <div class="mob-cta"><a href="#contact" class="btn-primary">Get in Touch Today</a></div>
+</div>
+
+<main>
+  <section class="hero-page">
+    <div class="container">
+      <div class="hero-copy">
+        <h1>E-Commerce Website Development Services in Singapore</h1>
+        <p>We design and develop high-performing e-commerce websites for Singapore and APAC businesses built to attract qualified buyers, deliver seamless shopping experiences, and generate consistent, scalable online revenue.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="split-grid">
+        <article class="problem-card">
+          <h2>Why Most Online Stores Fail to Generate Consistent Sales</h2>
+          <ul class="problem-list">
+            <li>Poor website structure makes it difficult for shoppers to find desired products</li>
+            <li>Slow page load speeds push potential buyers toward faster competitor online stores</li>
+            <li>Complicated checkout processes cause customers to abandon their carts before purchasing</li>
+            <li>Weak product page design fails to build enough trust for buying decisions</li>
+          </ul>
+        </article>
+        <article class="solution-card">
+          <h2>Building E-Commerce Websites That Turn Traffic into Revenue</h2>
+          <p>We build purpose-driven e-commerce websites for Singapore and APAC businesses that combine intuitive navigation, persuasive product presentation, and frictionless checkout to convert browsers into paying customers and drive sustainable online revenue growth.</p>
+          <ul class="solution-list">
+            <li>Every store is designed around real customer behaviour and Singapore buyer expectations</li>
+            <li>Conversion-focused page layouts reduce drop-off and guide shoppers confidently toward purchase completion</li>
+            <li>Built-in SEO architecture ensures your online store attracts consistent, high-intent organic traffic</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="services">
+    <div class="container">
+      <div class="sec-hd">
+        <h2>Our E-Commerce Website Development Services in Singapore</h2>
+        <p>We provide a complete range of e-commerce development services designed to help Singapore and APAC businesses launch, grow, and scale their online stores effectively.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card">
+          <h3>Custom Online Store Design</h3>
+          <p>Fully bespoke online store designs built around your brand identity, product range, and target customer purchasing behaviour.</p>
+        </article>
+        <article class="service-card">
+          <h3>Shopify Store Setup &amp; Development</h3>
+          <p>End-to-end Shopify store development with custom themes, app integrations, and Singapore-ready payment gateway configuration from day one.</p>
+        </article>
+        <article class="service-card">
+          <h3>WooCommerce Store Development</h3>
+          <p>Flexible WooCommerce stores built on WordPress with full product management, SEO foundations, and scalable architecture for long-term growth.</p>
+        </article>
+        <article class="service-card">
+          <h3>Marketplace Integration (Amazon, Lazada, etc.)</h3>
+          <p>Seamless integration with Amazon, Lazada, Shopee, and other APAC marketplaces to expand your reach and centralise inventory management.</p>
+        </article>
+        <article class="service-card">
+          <h3>Secure Checkout &amp; Payment System Setup</h3>
+          <p>Fully secured checkout flows with trusted Singapore payment gateways, SSL encryption, and fraud protection built in from launch.</p>
+        </article>
+        <article class="service-card">
+          <h3>Conversion-Focused Product Page Design</h3>
+          <p>Strategically designed product pages with compelling layouts, trust signals, and clear calls-to-action that consistently drive higher purchase rates.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="sec-hd">
+        <h2>How a Well-Designed E-Commerce Website Increases Customer Trust</h2>
+        <p>A professionally designed online store removes buying hesitation and gives Singapore shoppers the confidence they need to purchase from your business.</p>
+      </div>
+      <div class="result-grid">
+        <article class="result-card">
+          <span class="result-num">01</span>
+          <h3>Clear Brand Identity</h3>
+          <p>Consistent visual design, professional imagery, and cohesive branding signal legitimacy and make shoppers feel safe purchasing from you.</p>
+        </article>
+        <article class="result-card">
+          <span class="result-num">02</span>
+          <h3>Transparent Trust Signals</h3>
+          <p>Visible security badges, clear return policies, and genuine customer reviews directly reduce purchase hesitation at every critical decision point.</p>
+        </article>
+        <article class="result-card">
+          <span class="result-num">03</span>
+          <h3>Seamless User Experience</h3>
+          <p>Intuitive navigation, fast load speeds, and a frictionless checkout process reassure customers and significantly reduce cart abandonment rates.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="process">
+    <div class="container">
+      <div class="sec-hd">
+        <h2>Our Step-by-Step Approach to Building High-Performing Online Stores</h2>
+        <p>We follow a structured, proven development process that ensures every Singapore e-commerce store we build is built for performance, trust, and growth from the outset.</p>
+      </div>
+      <div class="proc-grid">
+        <article class="proc-card">
+          <span class="proc-step">01</span>
+          <h3>Research and Strategy</h3>
+          <p>We analyse your market, competitors, and target customers to build a focused e-commerce strategy aligned with your business goals.</p>
+        </article>
+        <article class="proc-card">
+          <span class="proc-step">02</span>
+          <h3>Design and Development</h3>
+          <p>Our team creates conversion-optimised store designs and develops clean, fast, scalable code across your entire product catalogue and checkout flow.</p>
+        </article>
+        <article class="proc-card">
+          <span class="proc-step">03</span>
+          <h3>Launch and Optimise</h3>
+          <p>We test every element across devices and browsers, then monitor post-launch performance data to continuously improve your store's commercial results.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="sec-hd">
+        <h2>Factors That Influence E-Commerce Website Success</h2>
+        <p>Many Singapore online stores underperform not because of poor products but because of avoidable technical and design issues that quietly suppress traffic, erode customer trust, and reduce the number of completed purchases every single day.</p>
+      </div>
+      <div class="factor-grid">
+        <article class="factor-card">
+          <h3>Speed</h3>
+          <p>Faster page load times directly reduce bounce rates and increase the likelihood of shoppers completing their intended purchases successfully.</p>
+        </article>
+        <article class="factor-card">
+          <h3>Trust</h3>
+          <p>Visible security signals, professional design, and clear policies give first-time buyers the confidence needed to complete their first order.</p>
+        </article>
+        <article class="factor-card">
+          <h3>Usability</h3>
+          <p>Intuitive store navigation and a simplified checkout flow eliminate friction and make purchasing easy for every type of online shopper.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="sec-hd">
+        <h2>What Business Owners Say After Launching Their Online Store</h2>
+      </div>
+      <article class="testimonial-card">
+        <h3>Testimonials here</h3>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="split-grid">
+        <article class="strategy-card">
+          <h2>Why Singapore Businesses Trust Our E-Commerce Development Team</h2>
+          <p>Singapore businesses trust us because we combine deep local market understanding, proven e-commerce expertise, and a performance-focused approach that consistently delivers online stores built to sell and scale across Singapore and APAC markets.</p>
+          <div class="pill-row" style="justify-content:flex-start;margin-top:22px">
+            <span class="mini-pill">Proven Track Record</span>
+            <span class="mini-pill">Local Market Knowledge</span>
+            <span class="mini-pill">Full-Stack Capability</span>
+          </div>
+        </article>
+        <article class="strategy-card">
+          <h2>Common Issues We Fix in Underperforming Online Stores</h2>
+          <ul class="issue-grid">
+            <li>High cart abandonment caused by a long or confusing checkout process</li>
+            <li>Slow page speeds resulting from unoptimised images and bloated code</li>
+            <li>Poor mobile experience driving away the majority of Singapore shoppers</li>
+            <li>Weak product pages lacking persuasive copy, clear pricing, and trust signals</li>
+            <li>Missing or broken payment gateway integrations causing failed transactions at checkout</li>
+            <li>No SEO structure leaving your store invisible to high-intent search traffic</li>
+            <li>Lack of marketplace integration limiting your reach across APAC platforms</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="faq">
+    <div class="container">
+      <div class="sec-hd">
+        <h2>FAQs</h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <div class="faq-q">How much does it cost to build an e-commerce website in Singapore? <span class="faq-ico">+</span></div>
+          <div class="faq-a">E-commerce website development costs in Singapore vary based on platform, number of products, and required integrations. Most projects range from a straightforward Shopify setup to a fully custom-built store. We provide a detailed, transparent proposal after understanding your specific requirements.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How long does it take to launch an online store? <span class="faq-ico">+</span></div>
+          <div class="faq-a">A standard e-commerce store typically takes 4 to 8 weeks from project kickoff to launch. Larger stores with custom functionality, marketplace integrations, or complex product catalogues may require 8 to 14 weeks for full delivery.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Which e-commerce platform is best for my Singapore business? <span class="faq-ico">+</span></div>
+          <div class="faq-a">The right platform depends on your product range, budget, and growth plans. Shopify suits most small to mid-size retailers, WooCommerce offers greater flexibility for content-heavy stores, and BigCommerce is ideal for enterprise-level operations requiring advanced scalability.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Will my online store be mobile-friendly and SEO-optimised? <span class="faq-ico">+</span></div>
+          <div class="faq-a">Yes. Every e-commerce store we build is mobile-first by design and includes full technical SEO foundations, clean URL structures, optimised meta data, fast load speeds, and structured product schema, ensuring strong visibility on Google from launch.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can you migrate my existing online store to a new platform? <span class="faq-ico">+</span></div>
+          <div class="faq-a">Absolutely. We manage full platform migrations including product data, customer records, order history, and URL redirects, ensuring zero data loss and protecting your existing search rankings throughout the entire migration process.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Do you offer support and maintenance after the store goes live? <span class="faq-ico">+</span></div>
+          <div class="faq-a">Yes. We offer ongoing support and maintenance packages covering security updates, platform upgrades, performance monitoring, and content edits to keep your online store running at its best long after launch day.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner">
+        <div>
+          <h2>Ready to Launch an Online Store That Actually Sells?</h2>
+          <p>Your e-commerce website should be your most productive sales channel, working around the clock to attract shoppers, build trust, and close orders. Let's build an online store that is engineered to perform from day one. Get in touch with our Singapore e-commerce development team today and take the first step toward consistent, scalable online sales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="contact">
+    <div class="container">
+      <article class="contact-card">
+        <h2>Let's Build Your E-Commerce Website in Singapore Today</h2>
+        <p>Whether you are launching your first online store, migrating to a better platform, or scaling an existing e-commerce business across APAC, our Singapore development team is ready to help you build something that genuinely sells. Share your project details and we will respond within one business day with a clear plan and next steps.</p>
+        <div class="hero-btns" style="margin-top:28px">
+          <a href="mailto:hello@gsconsultpro.com" class="btn-primary">Get in Touch Today</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <div class="ft-logo"><div class="ft-logo-mark">GS</div><span class="ft-logo-txt">GS ConsultPro</span></div>
+        <div class="ft-tagline">E-Commerce Website Development Services in Singapore</div>
+        <p>We design and develop high-performing e-commerce websites for Singapore and APAC businesses built to attract qualified buyers, deliver seamless shopping experiences, and generate consistent, scalable online revenue.</p>
+      </div>
+      <div class="ft-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">GS ConsultPro</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="web-design-development-singapore.html">Professional Web Design and Development Services in Singapore</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="#services">Our E-Commerce Website Development Services in Singapore</a></li>
+          <li><a href="#process">Our Step-by-Step Approach to Building High-Performing Online Stores</a></li>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#contact">Let's Build Your E-Commerce Website in Singapore Today</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p>&copy; 2026 GS ConsultPro. All rights reserved.</p>
+      <div class="ft-links"><a href="ecommerce-website-development-singapore.html">E-Commerce Website Development Services in Singapore</a></div>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "E-Commerce Website Development Services in Singapore",
+  "provider": {
+    "@type": "Organization",
+    "name": "GS ConsultPro"
+  },
+  "description": "We design and develop high-performing e-commerce websites for Singapore and APAC businesses built to attract qualified buyers, deliver seamless shopping experiences, and generate consistent, scalable online revenue.",
+  "url": "ecommerce-website-development-singapore.html",
+  "areaServed": [
+    "Singapore",
+    "APAC"
+  ]
+}
+</script>
+
+<script>
+const hdr = document.getElementById('hdr');
+window.addEventListener('scroll', () => hdr.classList.toggle('scrolled', scrollY > 60));
+
+const ham = document.getElementById('ham');
+const mobNav = document.getElementById('mobNav');
+if (ham && mobNav) {
+  ham.addEventListener('click', () => {
+    ham.classList.toggle('open');
+    mobNav.classList.toggle('open');
+    ham.setAttribute('aria-expanded', ham.classList.contains('open') ? 'true' : 'false');
+  });
+  mobNav.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => {
+    ham.classList.remove('open');
+    mobNav.classList.remove('open');
+    ham.setAttribute('aria-expanded', 'false');
+  }));
+}
+
+document.querySelectorAll('.faq-item').forEach((item) => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    const was = item.classList.contains('on');
+    document.querySelectorAll('.faq-item').forEach((i) => i.classList.remove('on'));
+    if (!was) item.classList.add('on');
+  });
+});
+
+const revealBlocks = document.querySelectorAll('section, footer');
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.16, rootMargin: '0px 0px -8% 0px' });
+  revealBlocks.forEach((block) => revealObserver.observe(block));
+} else {
+  revealBlocks.forEach((block) => block.classList.add('in-view'));
+}
+</script>
+</body>
+</html>
