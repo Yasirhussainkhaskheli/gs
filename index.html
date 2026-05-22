@@ -139,11 +139,30 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px
 .hero{
   min-height:100vh;
   padding-top:76px;
-  background:#fff;
+  background:#091226;
   display:flex;
   align-items:center;
   position:relative;
   overflow:hidden
+}
+.hero::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:url('hero-mountain-bg.jpg') center/cover no-repeat;
+  opacity:.68;
+  transform:scale(1.06);
+  transform-origin:center center;
+  animation:heroZoom 18s ease-in-out infinite alternate;
+  pointer-events:none
+}
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(8,16,34,.18), rgba(5,10,24,.34) 35%, rgba(5,10,24,.62));
+  z-index:1;
+  pointer-events:none
 }
 .hero-inner{
   display:flex;
@@ -154,21 +173,35 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px
   gap:0;
   padding:132px 0 120px;
   max-width:920px;
-  margin:0 auto
+  margin:0 auto;
+  position:relative;
+  z-index:2
 }
 
 .hero-eye{
   display:inline-flex;align-items:center;gap:8px;
   font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;
-  color:var(--accent);margin-bottom:24px;
-  background:var(--accent-soft);border:1px solid rgba(45,140,255,.2);
+  color:#eff6ff;margin-bottom:24px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);
   padding:7px 16px;border-radius:30px
 }
-.hero h1{font-family:'Barlow Condensed','Arial Narrow','Roboto Condensed','Segoe UI',sans-serif;font-size:clamp(44px,7vw,88px);font-weight:900;line-height:.96;color:var(--text);text-transform:uppercase;margin-bottom:24px;letter-spacing:-.5px;max-width:760px;margin-left:auto;margin-right:auto}
+.hero h1{font-family:'Barlow Condensed','Arial Narrow','Roboto Condensed','Segoe UI',sans-serif;font-size:clamp(44px,7vw,88px);font-weight:900;line-height:.96;color:#fff;text-transform:uppercase;margin-bottom:24px;letter-spacing:-.5px;max-width:760px;margin-left:auto;margin-right:auto;text-shadow:0 12px 30px rgba(0,0,0,.28)}
 .hero h1 em{font-style:normal;color:var(--accent)}
-.hero-sub{color:var(--muted);font-size:19px;font-weight:400;line-height:1.78;margin-bottom:42px;max-width:760px;margin-left:auto;margin-right:auto}
+.hero-sub{color:rgba(255,255,255,.88);font-size:19px;font-weight:400;line-height:1.78;margin-bottom:42px;max-width:760px;margin-left:auto;margin-right:auto}
 .hero-btns{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:56px}
 .hero-btns .btn-primary{padding:16px 36px;font-size:13px;letter-spacing:.8px}
+.hero .btn-ghost{color:#fff;border-color:rgba(255,255,255,.46);background:rgba(255,255,255,.04)}
+.hero .btn-ghost:hover{color:#fff;border-color:#fff;background:rgba(255,255,255,.14)}
+header:not(.scrolled) .logo-txt{color:#fff}
+header:not(.scrolled) .nav-ul>li>a{color:rgba(255,255,255,.9)}
+header:not(.scrolled) .nav-ul>li>a:hover{color:#fff}
+header:not(.scrolled) .arr{border-right-color:#fff;border-bottom-color:#fff}
+header:not(.scrolled) .ham span{background:#fff}
+
+@keyframes heroZoom{
+  0%{transform:scale(1.06)}
+  100%{transform:scale(1.16)}
+}
 
 .stats-row{display:grid;grid-template-columns:repeat(4,1fr);border:1.5px solid var(--border);border-radius:16px;overflow:hidden;background:#fff;box-shadow:var(--sh);max-width:900px;margin:0 auto}
 .stat-i{padding:20px 14px;text-align:center;border-right:1.5px solid var(--border)}

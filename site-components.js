@@ -13,6 +13,19 @@
 `;
   const globalDesktopMenus = [
     {
+      href: 'web-design-development-singapore.html',
+      label: 'Web Design',
+      children: [
+        { href: 'ecommerce-website-development-singapore.html', label: 'E-commerce Website Development' },
+        { href: 'shopify-development-services-singapore.html', label: 'Shopify Development' },
+        { href: 'wordpress-website-development-singapore.html', label: 'WordPress Website Development' },
+        { href: 'bigcommerce-development-services-singapore.html', label: 'BigCommerce Development' },
+        { href: 'landing-page-development-singapore.html', label: 'Landing Page Development' },
+        { href: 'website-ui-ux-design-services-singapore.html', label: 'Website UI/UX' },
+        { href: 'website-maintenance-services-singapore.html', label: 'Website Maintenance' }
+      ]
+    },
+    {
       href: 'seo-services-singapore.html',
       label: 'SEO',
       children: [
@@ -68,6 +81,15 @@
   ];
   const globalMobileMenus = [
     { href: 'index.html', label: 'Home' },
+    { href: 'web-design-development-singapore.html', label: 'Web Design' },
+    { type: 'label', label: 'Web Services' },
+    { href: 'ecommerce-website-development-singapore.html', label: 'E-commerce Website Development' },
+    { href: 'shopify-development-services-singapore.html', label: 'Shopify Development' },
+    { href: 'wordpress-website-development-singapore.html', label: 'WordPress Website Development' },
+    { href: 'bigcommerce-development-services-singapore.html', label: 'BigCommerce Development' },
+    { href: 'landing-page-development-singapore.html', label: 'Landing Page Development' },
+    { href: 'website-ui-ux-design-services-singapore.html', label: 'Website UI/UX' },
+    { href: 'website-maintenance-services-singapore.html', label: 'Website Maintenance' },
     { href: 'seo-services-singapore.html', label: 'SEO' },
     { type: 'label', label: 'SEO Services' },
     { href: 'technical-seo-services-singapore.html', label: 'Technical SEO' },
@@ -149,6 +171,10 @@
     return [...globalMobileMenus];
   }
 
+  function getDisplayBrandName(name = '') {
+    return name.replace(/^GS\s+/i, '') || name;
+  }
+
   function renderLinks(items = [], isMobile = false) {
     return items.map((item) => {
       if (item.type === 'label') {
@@ -188,6 +214,7 @@
 
     const logoHref = header.logoHref || 'index.html';
     const logoText = header.logoText || 'GS ConsultPro';
+    const displayLogoText = getDisplayBrandName(logoText);
     const hamId = header.hamId || 'ham';
     const navAttrs = header.navAriaLabel ? ` aria-label="${header.navAriaLabel}"` : '';
     const headerCta = '';
@@ -204,7 +231,7 @@
     <nav${navAttrs}>
       <a href="${logoHref}" class="logo" aria-label="${logoText} home">
         <div class="logo-mark">GS</div>
-        <span class="logo-txt">${logoText}</span>
+        <span class="logo-txt">${displayLogoText}</span>
       </a>
       <ul class="nav-ul">
         ${renderLinks(desktopLinks, false)}
@@ -228,6 +255,7 @@
   function renderFooter(footer) {
     if (!footer) return '';
 
+    const displayBrandName = getDisplayBrandName(footer.brandName || 'GS ConsultPro');
     const columns = (footer.columns || []).map((col) => {
       const links = (col.links || [])
         .map((link) => `<li><a href="${link.href || '#'}">${link.label || ''}</a></li>`)
@@ -252,7 +280,7 @@
   <div class="container">
     <div class="ft-top">
       <div class="ft-brand">
-        <div class="ft-logo"><div class="ft-logo-mark">GS</div><span class="ft-logo-txt">${footer.brandName || 'GS ConsultPro'}</span></div>
+        <div class="ft-logo"><div class="ft-logo-mark">GS</div><span class="ft-logo-txt">${displayBrandName}</span></div>
         <div class="ft-tagline">${footer.tagline || ''}</div>
         <p>${footer.description || ''}</p>
         ${socialLinks}
