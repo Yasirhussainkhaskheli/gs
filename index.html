@@ -149,19 +149,59 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px
   content:'';
   position:absolute;
   inset:0;
-  background:url('hero-mountain-bg.jpg') center/cover no-repeat;
+  background:url('hero-stars-bg.jpg') center/cover no-repeat;
   opacity:.68;
   transform:scale(1.06);
   transform-origin:center center;
   animation:heroZoom 18s ease-in-out infinite alternate;
+  z-index:0;
   pointer-events:none
+}
+.hero-stars,
+.hero-stars::before,
+.hero-stars::after{
+  position:absolute;
+  inset:-8%;
+  content:'';
+  pointer-events:none
+}
+.hero-stars{
+  z-index:1;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,.92) 0 1px, transparent 1.6px),
+    radial-gradient(circle, rgba(147,197,253,.9) 0 1.2px, transparent 1.9px),
+    radial-gradient(circle, rgba(255,255,255,.55) 0 1px, transparent 1.7px);
+  background-size:220px 220px, 340px 340px, 420px 420px;
+  background-position:0 0, 40px 70px, 120px 30px;
+  opacity:.58;
+  animation:starDrift 38s linear infinite
+}
+.hero-stars::before{
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,.95) 0 1.2px, transparent 2px),
+    radial-gradient(circle, rgba(125,211,252,.75) 0 1px, transparent 1.8px),
+    radial-gradient(circle, rgba(255,255,255,.35) 0 2px, transparent 3px);
+  background-size:280px 280px, 460px 460px, 620px 620px;
+  background-position:60px 40px, 0 0, 180px 120px;
+  opacity:.52;
+  animation:starDriftAlt 54s linear infinite
+}
+.hero-stars::after{
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,.9) 0 1px, transparent 1.7px),
+    radial-gradient(circle, rgba(191,219,254,.8) 0 1px, transparent 1.7px),
+    radial-gradient(circle, rgba(255,255,255,.28) 0 2.4px, transparent 3.2px);
+  background-size:180px 180px, 300px 300px, 540px 540px;
+  background-position:20px 110px, 100px 0, 60px 180px;
+  opacity:.34;
+  animation:starPulse 7s ease-in-out infinite alternate, starDrift 68s linear infinite
 }
 .hero::before{
   content:'';
   position:absolute;
   inset:0;
   background:linear-gradient(180deg, rgba(8,16,34,.18), rgba(5,10,24,.34) 35%, rgba(5,10,24,.62));
-  z-index:1;
+  z-index:2;
   pointer-events:none
 }
 .hero-inner{
@@ -175,7 +215,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px
   max-width:920px;
   margin:0 auto;
   position:relative;
-  z-index:2
+  z-index:3
 }
 
 .hero-eye{
@@ -201,6 +241,18 @@ header:not(.scrolled) .ham span{background:#fff}
 @keyframes heroZoom{
   0%{transform:scale(1.06)}
   100%{transform:scale(1.16)}
+}
+@keyframes starDrift{
+  0%{transform:translate3d(0,0,0)}
+  100%{transform:translate3d(-120px,70px,0)}
+}
+@keyframes starDriftAlt{
+  0%{transform:translate3d(0,0,0)}
+  100%{transform:translate3d(140px,90px,0)}
+}
+@keyframes starPulse{
+  0%{opacity:.24}
+  100%{opacity:.42}
 }
 
 .stats-row{display:grid;grid-template-columns:repeat(4,1fr);border:1.5px solid var(--border);border-radius:16px;overflow:hidden;background:#fff;box-shadow:var(--sh);max-width:900px;margin:0 auto}
@@ -637,6 +689,7 @@ window.gsSiteComponents = {
 
 <!-- HERO -->
 <section class="hero" id="home">
+  <div class="hero-stars" aria-hidden="true"></div>
   <div class="container">
     <div class="hero-inner">
       <div>
