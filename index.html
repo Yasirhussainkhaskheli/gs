@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -498,68 +498,108 @@ section.in-view .faq-grid>*:nth-child(n+5){transition-delay:.34s}
 </head>
 <body>
 
-<!-- HEADER -->
-<header id="hdr">
-  <div class="nav-bg">
-    <nav>
-      <a href="#home" class="logo" aria-label="GS ConsultPro home">
-        <div class="logo-mark">GS</div>
-        <span class="logo-txt">GS ConsultPro</span>
-      </a>
-      <ul class="nav-ul">
-        <li>
-          <a href="#services">Services <span class="arr"></span></a>
-          <ul class="drop">
-            <li><a href="services.html">All Services Page</a></li>
-            <li><a href="service-detail.html">SEO Service Detail Page</a></li>
-            <li><a href="#services">Search Engine Optimisation (SEO)</a></li>
-            <li><a href="#services">Web Design & Development</a></li>
-            <li><a href="#services">Mobile App Development</a></li>
-            <li><a href="#services">Sales Automation &amp; Growth Systems</a></li>
-            <li><a href="#services">Content Creation</a></li>
-            <li><a href="#services">Paid Media & Social</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#industries">Industries <span class="arr"></span></a>
-          <ul class="drop">
-            <li><a href="#industries">E-Commerce & Retail</a></li>
-            <li><a href="#industries">B2B & Professional Services</a></li>
-            <li><a href="#industries">Healthcare & Wellness</a></li>
-            <li><a href="#industries">Finance & Fintech</a></li>
-            <li><a href="#industries">Technology & SaaS</a></li>
-            <li><a href="#industries">Hospitality & Tourism</a></li>
-          </ul>
-        </li>
-        <li><a href="#why">About</a></li>
-        <li><a href="#faq">FAQs</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="nav-end">
-        <a href="#contact" class="btn-primary">Get a Free Consultation</a>
-        <button class="ham" id="ham" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
-  </div>
-</header>
-
-<div class="mob-nav" id="mobNav">
-  <a href="services.html">All Services Page</a>
-  <a href="service-detail.html">SEO Service Detail Page</a>
-  <a href="#services">Services</a>
-  <span class="mob-group-label">Core Services</span>
-  <a href="#services">SEO</a>
-  <a href="#services">Web Design & Development</a>
-  <a href="#services">Sales Automation &amp; Growth Systems</a>
-  <a href="#services">Content Creation</a>
-  <a href="#services">Paid Media & Social</a>
-  <a href="#industries">Industries</a>
-  <a href="#why">About</a>
-  <a href="#faq">FAQs</a>
-  <a href="#contact">Contact</a>
-  <div class="mob-cta"><a href="#contact" class="btn-primary" style="display:inline-flex">Get a Free Consultation</a></div>
+<script>
+window.gsSiteComponents = {
+  header: {
+    logoHref: "#home",
+    logoText: "GS ConsultPro",
+    hamId: "ham",
+    hamAriaLabel: "Menu",
+    desktopLinks: [
+      {
+        href: "seo-services-singapore.html",
+        label: "SEO",
+        children: [
+          { href: "technical-seo-services-singapore.html", label: "Technical SEO" },
+          { href: "on-page-semantic-seo-services-singapore.html", label: "On-Page & Semantic SEO" },
+          { href: "off-page-seo-link-building-singapore.html", label: "Off-Page SEO & Link Building" },
+          { href: "local-seo-services-singapore.html", label: "Local SEO" },
+          { href: "international-seo-services-singapore.html", label: "International SEO" },
+          { href: "ecommerce-seo-services-singapore.html", label: "E-commerce SEO" },
+          { href: "shopify-seo-services-singapore.html", label: "Shopify SEO" },
+          { href: "free-seo-audit-singapore.html", label: "Free SEO Audit" },
+          { href: "seo-packages-pricing-singapore.html", label: "SEO Packages & Pricing" }
+        ]
+      },
+      { href: "#why", label: "About" },
+      { href: "#faq", label: "FAQs" },
+      { href: "#contact", label: "Contact" }
+    ],
+    mobileLinks: [
+      { href: "seo-services-singapore.html", label: "SEO" },
+      { type: "label", label: "SEO Services" },
+      { href: "technical-seo-services-singapore.html", label: "Technical SEO" },
+      { href: "on-page-semantic-seo-services-singapore.html", label: "On-Page & Semantic SEO" },
+      { href: "off-page-seo-link-building-singapore.html", label: "Off-Page SEO & Link Building" },
+      { href: "local-seo-services-singapore.html", label: "Local SEO" },
+      { href: "international-seo-services-singapore.html", label: "International SEO" },
+      { href: "ecommerce-seo-services-singapore.html", label: "E-commerce SEO" },
+      { href: "shopify-seo-services-singapore.html", label: "Shopify SEO" },
+      { href: "free-seo-audit-singapore.html", label: "Free SEO Audit" },
+      { href: "seo-packages-pricing-singapore.html", label: "SEO Packages & Pricing" },
+      { href: "#why", label: "About" },
+      { href: "#faq", label: "FAQs" },
+      { href: "#contact", label: "Contact" }
+    ],
+    cta: null,
+    mobileCta: null,
+    mobileCtaInlineFlex: true
+  },
+  footer: {
+    brandName: "GS ConsultPro",
+    tagline: "Marketing &amp; Digital Solutions for Singapore &amp; APAC Growth",
+    description: "Helping Singapore and APAC brands strengthen visibility, convert prospects, and grow revenue through data-driven marketing strategies that deliver real, measurable results.",
+    socialLinks: [
+      { href: "#", ariaLabel: "LinkedIn", label: "in" },
+      { href: "#", ariaLabel: "X", label: "X" },
+      { href: "#", ariaLabel: "Facebook", label: "fb" },
+      { href: "#", ariaLabel: "Instagram", label: "Ig" }
+    ],
+    columns: [
+      {
+        title: "Services",
+        links: [
+          { href: "#services", label: "Search Engine Optimisation (SEO)" },
+          { href: "#services", label: "Web Design & Development" },
+          { href: "#services", label: "Mobile App Development" },
+          { href: "#services", label: "Sales Automation & Growth Systems" },
+          { href: "#services", label: "Content Creation" },
+          { href: "#services", label: "Paid Media & Social" }
+        ]
+      },
+      {
+        title: "Industries",
+        links: [
+          { href: "#industries", label: "E-Commerce & Retail" },
+          { href: "#industries", label: "B2B & Professional Services" },
+          { href: "#industries", label: "Healthcare & Wellness" },
+          { href: "#industries", label: "Finance & Fintech" },
+          { href: "#industries", label: "Technology & SaaS" },
+          { href: "#industries", label: "Hospitality & Tourism" }
+        ]
+      },
+      {
+        title: "Company",
+        links: [
+          { href: "#why", label: "About GS ConsultPro" },
+          { href: "#faq", label: "FAQs" },
+          { href: "#contact", label: "Contact Us" },
+          { href: "mailto:hello@gsconsultpro.com", label: "hello@gsconsultpro.com" },
+          { href: "#contact", label: "Singapore, APAC" }
+        ]
+      }
+    ],
+    copyright: "&copy; 2026 GS ConsultPro. All rights reserved.",
+    bottomLinks: [
+      { href: "#contact", label: "Privacy Policy" },
+      { href: "#contact", label: "Terms of Service" },
+      { href: "#home", label: "Sitemap" }
+    ]
+  }
+};
+</script>
+<div id="site-header"></div>
+<script src="site-components.js"></script>
 </div>
 
 <!-- HERO -->
@@ -762,26 +802,7 @@ section.in-view .faq-grid>*:nth-child(n+5){transition-delay:.34s}
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="ft-top">
-      <div>
-        <div class="ft-logo"><div class="ft-logo-mark">GS</div><span class="ft-logo-txt">GS ConsultPro</span></div>
-        <div class="ft-tagline">Marketing &amp; Digital Solutions for Singapore &amp; APAC Growth</div>
-        <p>Helping Singapore and APAC brands strengthen visibility, convert prospects, and grow revenue through data-driven marketing strategies that deliver real, measurable results.</p>
-        <div class="social-row"><a href="#" class="soc" aria-label="LinkedIn">in</a><a href="#" class="soc" aria-label="X">X</a><a href="#" class="soc" aria-label="Facebook">fb</a><a href="#" class="soc" aria-label="Instagram">Ig</a></div>
-      </div>
-      <div class="ft-col"><h4>Services</h4><ul><li><a href="#services">Search Engine Optimisation (SEO)</a></li><li><a href="#services">Web Design & Development</a></li><li><a href="#services">Mobile App Development</a></li><li><a href="#services">Sales Automation &amp; Growth Systems</a></li><li><a href="#services">Content Creation</a></li><li><a href="#services">Paid Media &amp; Social</a></li></ul></div>
-      <div class="ft-col"><h4>Industries</h4><ul><li><a href="#industries">E-Commerce & Retail</a></li><li><a href="#industries">B2B & Professional Services</a></li><li><a href="#industries">Healthcare & Wellness</a></li><li><a href="#industries">Finance & Fintech</a></li><li><a href="#industries">Technology & SaaS</a></li><li><a href="#industries">Hospitality & Tourism</a></li></ul></div>
-      <div class="ft-col"><h4>Company</h4><ul><li><a href="#why">About GS ConsultPro</a></li><li><a href="#faq">FAQs</a></li><li><a href="#contact">Contact Us</a></li></ul><h4 style="margin-top:22px">Contact</h4><ul><li><a href="mailto:hello@gsconsultpro.com">hello@gsconsultpro.com</a></li><li><a href="#contact">Singapore, APAC</a></li></ul></div>
-    </div>
-    <div class="ft-bottom">
-      <p>&copy; 2026 GS ConsultPro. All rights reserved.</p>
-      <div class="ft-links"><a href="#contact">Privacy Policy</a><a href="#contact">Terms of Service</a><a href="#home">Sitemap</a></div>
-    </div>
-  </div>
-</footer>
+<div id="site-footer"></div>
 
 <script>
 // Header scroll
@@ -864,4 +885,5 @@ if ('IntersectionObserver' in window) {
 </script>
 </body>
 </html>
+
 

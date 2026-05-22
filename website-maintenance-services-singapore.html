@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -220,40 +220,9 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px
 </script>
 </head>
 <body>
-<header id="siteHeader">
-  <div class="nav-bg">
-    <nav>
-      <a class="logo" href="index.html" aria-label="GS ConsultPro home">
-        <span class="logo-mark">GS</span>
-        <span class="logo-txt">GS ConsultPro</span>
-      </a>
-      <ul class="nav-ul">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="web-design-development-singapore.html">Web Development</a></li>
-        <li><a href="website-maintenance-services-singapore.html">Maintenance</a></li>
-        <li><a href="technical-seo-services-singapore.html">Technical SEO</a></li>
-      </ul>
-      <div class="nav-end">
-        <a class="btn-primary" href="#contact">Get My Free Website Audit</a>
-      </div>
-      <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobNav">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
-  </div>
-</header>
-
-<div class="mob-nav" id="mobNav">
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="web-design-development-singapore.html">Web Development</a>
-  <a href="website-maintenance-services-singapore.html">Maintenance</a>
-  <a href="technical-seo-services-singapore.html">Technical SEO</a>
-  <div class="mob-cta">
-    <a class="btn-primary" href="#contact">Get My Free Website Audit</a>
-  </div>
-</div>
+<script>window.gsSiteComponents = {"header":{"logoHref":"index.html","logoText":"GS ConsultPro","navAriaLabel":null,"hamId":"hamBtn","hamAriaLabel":"Open menu","hamAriaExpanded":"false","hamAriaControls":"mobNav","desktopLinks":[{"href":"index.html","label":"Home"},{"href":"services.html","label":"Services"},{"href":"web-design-development-singapore.html","label":"Web Development"},{"href":"website-maintenance-services-singapore.html","label":"Maintenance"},{"href":"technical-seo-services-singapore.html","label":"Technical SEO"}],"mobileLinks":[{"href":"index.html","label":"Home"},{"href":"services.html","label":"Services"},{"href":"web-design-development-singapore.html","label":"Web Development"},{"href":"website-maintenance-services-singapore.html","label":"Maintenance"},{"href":"technical-seo-services-singapore.html","label":"Technical SEO"}],"cta":{"href":"#contact","label":"Get My Free Website Audit"},"mobileCta":{"href":"#contact","label":"Get My Free Website Audit"},"mobileCtaInlineFlex":false},"footer":null};</script>
+<div id="site-header"></div>
+<script src="site-components.js"></script>
 
 <main>
   <section class="hero-page">
@@ -561,3 +530,6 @@ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 </script>
 </body>
 </html>
+
+
+

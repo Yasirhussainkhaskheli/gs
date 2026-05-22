@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -303,50 +303,102 @@ section.in-view .faq-grid>*:nth-child(n+5){transition-delay:.34s}
 </style>
 </head>
 <body>
-<header id="hdr">
-  <div class="nav-bg">
-    <nav>
-      <a href="index.html" class="logo" aria-label="GS ConsultPro home">
-        <div class="logo-mark">GS</div>
-        <span class="logo-txt">GS ConsultPro</span>
-      </a>
-      <ul class="nav-ul">
-        <li>
-          <a href="services.html">Services <span class="arr"></span></a>
-          <ul class="drop">
-            <li><a href="service-detail.html">Search Engine Optimisation (SEO)</a></li>
-            <li><a href="services.html#services-grid">Web Design &amp; Development</a></li>
-            <li><a href="services.html#services-grid">Mobile App Development</a></li>
-            <li><a href="services.html#services-grid">Sales Automation &amp; Growth Systems</a></li>
-            <li><a href="services.html#services-grid">Content Creation</a></li>
-            <li><a href="services.html#services-grid">Paid Media &amp; Social</a></li>
-          </ul>
-        </li>
-        <li><a href="services.html#why-us">Why Us</a></li>
-        <li><a href="services.html#process">Process</a></li>
-        <li><a href="services.html#faq">FAQs</a></li>
-        <li><a href="services.html#contact">Contact</a></li>
-      </ul>
-      <div class="nav-end">
-        <a href="#contact" class="btn-primary">Get a Free Quote</a>
-        <button class="ham" id="ham" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
-  </div>
-</header>
-
-<div class="mob-nav" id="mobNav">
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <span class="mob-group-label">Featured Service</span>
-  <a href="service-detail.html">SEO Service Detail</a>
-  <a href="#why-us">Why Us</a>
-  <a href="#process">Process</a>
-  <a href="#faq">FAQs</a>
-  <a href="#contact">Contact</a>
-  <div class="mob-cta"><a href="#contact" class="btn-primary">Get a Free Quote</a></div>
+<script>
+window.gsSiteComponents = {
+  header: {
+    logoHref: "index.html",
+    logoText: "GS ConsultPro",
+    hamId: "ham",
+    hamAriaLabel: "Menu",
+    desktopLinks: [
+      {
+        href: "seo-services-singapore.html",
+        label: "SEO",
+        children: [
+          { href: "technical-seo-services-singapore.html", label: "Technical SEO" },
+          { href: "on-page-semantic-seo-services-singapore.html", label: "On-Page & Semantic SEO" },
+          { href: "off-page-seo-link-building-singapore.html", label: "Off-Page SEO & Link Building" },
+          { href: "local-seo-services-singapore.html", label: "Local SEO" },
+          { href: "international-seo-services-singapore.html", label: "International SEO" },
+          { href: "ecommerce-seo-services-singapore.html", label: "E-commerce SEO" },
+          { href: "shopify-seo-services-singapore.html", label: "Shopify SEO" },
+          { href: "free-seo-audit-singapore.html", label: "Free SEO Audit" },
+          { href: "seo-packages-pricing-singapore.html", label: "SEO Packages & Pricing" }
+        ]
+      },
+      { href: "services.html#why-us", label: "Why Us" },
+      { href: "services.html#process", label: "Process" },
+      { href: "services.html#faq", label: "FAQs" },
+      { href: "services.html#contact", label: "Contact" }
+    ],
+    mobileLinks: [
+      { href: "index.html", label: "Home" },
+      { href: "seo-services-singapore.html", label: "SEO" },
+      { type: "label", label: "SEO Services" },
+      { href: "technical-seo-services-singapore.html", label: "Technical SEO" },
+      { href: "on-page-semantic-seo-services-singapore.html", label: "On-Page & Semantic SEO" },
+      { href: "off-page-seo-link-building-singapore.html", label: "Off-Page SEO & Link Building" },
+      { href: "local-seo-services-singapore.html", label: "Local SEO" },
+      { href: "international-seo-services-singapore.html", label: "International SEO" },
+      { href: "ecommerce-seo-services-singapore.html", label: "E-commerce SEO" },
+      { href: "shopify-seo-services-singapore.html", label: "Shopify SEO" },
+      { href: "free-seo-audit-singapore.html", label: "Free SEO Audit" },
+      { href: "seo-packages-pricing-singapore.html", label: "SEO Packages & Pricing" },
+      { href: "#why-us", label: "Why Us" },
+      { href: "#process", label: "Process" },
+      { href: "#faq", label: "FAQs" },
+      { href: "#contact", label: "Contact" }
+    ],
+    cta: { href: "#contact", label: "Contact Us" },
+    mobileCta: { href: "#contact", label: "Contact Us" }
+  },
+  footer: {
+    brandName: "GS ConsultPro",
+    tagline: "Marketing &amp; Digital Solutions for Singapore &amp; APAC Growth",
+    description: "Helping brands strengthen visibility, convert better-fit prospects, and grow revenue through focused digital strategy and execution.",
+    socialLinks: [
+      { href: "#", ariaLabel: "LinkedIn", label: "in" },
+      { href: "#", ariaLabel: "X", label: "X" },
+      { href: "#", ariaLabel: "Facebook", label: "fb" },
+      { href: "#", ariaLabel: "Instagram", label: "Ig" }
+    ],
+    columns: [
+      {
+        title: "Pages",
+        links: [
+          { href: "index.html", label: "Homepage" },
+          { href: "services.html", label: "Services" },
+          { href: "service-detail.html", label: "SEO Detail Page" }
+        ]
+      },
+      {
+        title: "Services",
+        links: [
+          { href: "service-detail.html", label: "SEO" },
+          { href: "#services-grid", label: "Web Design" },
+          { href: "#services-grid", label: "PPC" },
+          { href: "#services-grid", label: "Automation" }
+        ]
+      },
+      {
+        title: "Contact",
+        links: [
+          { href: "mailto:hello@gsconsultpro.com", label: "hello@gsconsultpro.com" },
+          { href: "#contact", label: "Singapore, APAC" }
+        ]
+      }
+    ],
+    copyright: "&copy; 2026 GS ConsultPro. All rights reserved.",
+    bottomLinks: [
+      { href: "#contact", label: "Privacy Policy" },
+      { href: "#contact", label: "Terms of Service" },
+      { href: "services.html", label: "Sitemap" }
+    ]
+  }
+};
+</script>
+<div id="site-header"></div>
+<script src="site-components.js"></script>
 </div>
 
 <section class="hero-page">
@@ -357,7 +409,7 @@ section.in-view .faq-grid>*:nth-child(n+5){transition-delay:.34s}
         <h1>Services Built to <em>Generate Leads</em> and Turn Attention Into Revenue</h1>
         <p>GS ConsultPro helps Singapore and APAC businesses attract better-fit prospects, improve conversion performance, and build a stronger digital presence through focused, measurable service delivery.</p>
         <div class="hero-btns">
-          <a href="#contact" class="btn-primary">Get a Free Quote <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="#contact" class="btn-primary">Contact Us <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           <a href="#services-grid" class="btn-ghost">Explore Services</a>
         </div>
       </div>
@@ -488,7 +540,7 @@ section.in-view .faq-grid>*:nth-child(n+5){transition-delay:.34s}
     </div>
     <div class="testi-grid">
       <article class="testi-card">
-        <div class="tq">“</div>
+        <div class="tq">â€œ</div>
         <p class="t-txt">GS ConsultPro helped us improve lead quality and gave us a much clearer path to scale our marketing without wasted effort.</p>
         <div class="t-meta">
           <div class="t-av">DT</div>
@@ -496,7 +548,7 @@ section.in-view .faq-grid>*:nth-child(n+5){transition-delay:.34s}
         </div>
       </article>
       <article class="testi-card">
-        <div class="tq">“</div>
+        <div class="tq">â€œ</div>
         <p class="t-txt">Our website finally started generating real enquiries instead of just traffic. The difference in clarity and structure was immediate.</p>
         <div class="t-meta">
           <div class="t-av">AL</div>
@@ -504,7 +556,7 @@ section.in-view .faq-grid>*:nth-child(n+5){transition-delay:.34s}
         </div>
       </article>
       <article class="testi-card">
-        <div class="tq">“</div>
+        <div class="tq">â€œ</div>
         <p class="t-txt">They brought structure, urgency, and measurable performance to our campaigns. It felt like working with a true growth partner.</p>
         <div class="t-meta">
           <div class="t-av">ML</div>
@@ -520,7 +572,7 @@ section.in-view .faq-grid>*:nth-child(n+5){transition-delay:.34s}
     <div class="cta-in">
       <div>
         <h2>Your Next Customer Could Already Be Searching for You</h2>
-        <p>Let’s build a focused growth plan that brings in more qualified leads, removes friction from your funnel, and gives your team a clearer path to revenue.</p>
+        <p>Letâ€™s build a focused growth plan that brings in more qualified leads, removes friction from your funnel, and gives your team a clearer path to revenue.</p>
       </div>
       <div class="cta-btns">
         <a href="#contact" class="btn-primary">Book Now</a>
@@ -563,7 +615,7 @@ section.in-view .faq-grid>*:nth-child(n+5){transition-delay:.34s}
     <div class="contact-grid">
       <div class="contact-copy">
         <div class="stag">Get In Touch</div>
-        <h2>Let’s Find the Service That Will Move the Needle Fastest</h2>
+        <h2>Letâ€™s Find the Service That Will Move the Needle Fastest</h2>
         <p>Whether you need stronger search visibility, a better-performing website, or a clearer lead generation system, we can help you identify the most effective next move.</p>
         <div class="c-info-list">
           <div class="c-info-item"><div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="c-det"><strong>Email</strong><span>hello@gsconsultpro.com</span></div></div>
@@ -571,7 +623,7 @@ section.in-view .faq-grid>*:nth-child(n+5){transition-delay:.34s}
         </div>
       </div>
       <div class="c-form">
-        <h3>Get a Free Quote</h3>
+        <h3>Contact Us</h3>
         <div class="f-row">
           <div class="f-grp"><label>First Name</label><input type="text" placeholder="John" /></div>
           <div class="f-grp"><label>Last Name</label><input type="text" placeholder="Doe" /></div>
@@ -585,25 +637,7 @@ section.in-view .faq-grid>*:nth-child(n+5){transition-delay:.34s}
   </div>
 </section>
 
-<footer>
-  <div class="container">
-    <div class="ft-top">
-      <div class="ft-brand">
-        <div class="ft-logo"><div class="ft-logo-mark">GS</div><span class="ft-logo-txt">GS ConsultPro</span></div>
-        <div class="ft-tagline">Marketing &amp; Digital Solutions for Singapore &amp; APAC Growth</div>
-        <p>Helping brands strengthen visibility, convert better-fit prospects, and grow revenue through focused digital strategy and execution.</p>
-        <div class="social-row"><a href="#" class="soc" aria-label="LinkedIn">in</a><a href="#" class="soc" aria-label="X">X</a><a href="#" class="soc" aria-label="Facebook">fb</a><a href="#" class="soc" aria-label="Instagram">Ig</a></div>
-      </div>
-      <div class="ft-col"><h4>Pages</h4><ul><li><a href="index.html">Homepage</a></li><li><a href="services.html">Services</a></li><li><a href="service-detail.html">SEO Detail Page</a></li></ul></div>
-      <div class="ft-col"><h4>Services</h4><ul><li><a href="service-detail.html">SEO</a></li><li><a href="#services-grid">Web Design</a></li><li><a href="#services-grid">PPC</a></li><li><a href="#services-grid">Automation</a></li></ul></div>
-      <div class="ft-col"><h4>Contact</h4><ul><li><a href="mailto:hello@gsconsultpro.com">hello@gsconsultpro.com</a></li><li><a href="#contact">Singapore, APAC</a></li></ul></div>
-    </div>
-    <div class="ft-bottom">
-      <p>&copy; 2026 GS ConsultPro. All rights reserved.</p>
-      <div class="ft-links"><a href="#contact">Privacy Policy</a><a href="#contact">Terms of Service</a><a href="services.html">Sitemap</a></div>
-    </div>
-  </div>
-</footer>
+<div id="site-footer"></div>
 
 <script>
 const hdr = document.getElementById('hdr');
@@ -647,3 +681,4 @@ if ('IntersectionObserver' in window) {
 </script>
 </body>
 </html>
+

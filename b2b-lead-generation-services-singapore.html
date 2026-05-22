@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -215,40 +215,9 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px
 </script>
 </head>
 <body>
-<header id="siteHeader">
-  <div class="nav-bg">
-    <nav>
-      <a class="logo" href="index.html" aria-label="GS ConsultPro home">
-        <span class="logo-mark">GS</span>
-        <span class="logo-txt">GS ConsultPro</span>
-      </a>
-      <ul class="nav-ul">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="seo-services-singapore.html">SEO</a></li>
-        <li><a href="lead-generation-services-singapore.html">Lead Generation</a></li>
-        <li><a href="content-marketing-services-singapore.html">Content</a></li>
-      </ul>
-      <div class="nav-end">
-        <a class="btn-primary" href="#contact">Get in Touch</a>
-      </div>
-      <button class="ham" id="hamBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobNav">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
-  </div>
-</header>
-
-<div class="mob-nav" id="mobNav">
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="seo-services-singapore.html">SEO</a>
-  <a href="lead-generation-services-singapore.html">Lead Generation</a>
-  <a href="content-marketing-services-singapore.html">Content</a>
-  <div class="mob-cta">
-    <a class="btn-primary" href="#contact">Get in Touch</a>
-  </div>
-</div>
+<script>window.gsSiteComponents = {"header":{"logoHref":"index.html","logoText":"GS ConsultPro","navAriaLabel":null,"hamId":"hamBtn","hamAriaLabel":"Open menu","hamAriaExpanded":"false","hamAriaControls":"mobNav","desktopLinks":[{"href":"index.html","label":"Home"},{"href":"services.html","label":"Services"},{"href":"seo-services-singapore.html","label":"SEO"},{"href":"lead-generation-services-singapore.html","label":"Lead Generation"},{"href":"content-marketing-services-singapore.html","label":"Content"}],"mobileLinks":[{"href":"index.html","label":"Home"},{"href":"services.html","label":"Services"},{"href":"seo-services-singapore.html","label":"SEO"},{"href":"lead-generation-services-singapore.html","label":"Lead Generation"},{"href":"content-marketing-services-singapore.html","label":"Content"}],"cta":{"href":"#contact","label":"Get in Touch"},"mobileCta":{"href":"#contact","label":"Get in Touch"},"mobileCtaInlineFlex":false},"footer":null};</script>
+<div id="site-header"></div>
+<script src="site-components.js"></script>
 
 <main>
   <section class="hero-page">
@@ -549,3 +518,6 @@ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 </script>
 </body>
 </html>
+
+
+
