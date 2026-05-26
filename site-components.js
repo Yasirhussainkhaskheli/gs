@@ -1,17 +1,74 @@
 (() => {
   const config = window.gsSiteComponents || {};
   const sharedMenuCss = `
+body:not(.home-page){
+  --inner-top-gradient:linear-gradient(135deg, #08101f 0%, #112a59 48%, #2d8cff 100%);
+}
+header.inner-page-header .nav-bg{
+  background:transparent;
+  box-shadow:none;
+}
+header.inner-page-header.scrolled .nav-bg{
+  background:rgba(8,16,31,.18);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  box-shadow:0 14px 36px rgba(15,23,42,.18);
+}
+header.inner-page-header .logo-txt,
+header.inner-page-header .nav-ul>li>a,
+header.inner-page-header .nav-ul>li>a .arr{
+  color:#fff !important;
+}
+header.inner-page-header .ham span{background:#fff}
+header.inner-page-header .nav-ul>li>a:hover,
+header.inner-page-header .nav-ul>li:hover>a,
+header.inner-page-header .nav-ul>li:hover>a .arr{
+  color:rgba(255,255,255,.92) !important;
+}
+header.inner-page-header .logo-mark{box-shadow:0 10px 24px rgba(45,140,255,.24)}
+body:not(.home-page) .hero-page{
+  background:var(--inner-top-gradient) !important;
+}
+body:not(.home-page) .hero-page .hero-copy h1,
+body:not(.home-page) .hero-page .hero-copy p,
+body:not(.home-page) .hero-page .stag,
+body:not(.home-page) .hero-page .stag-plain,
+body:not(.home-page) .hero-page .tag-pill,
+body:not(.home-page) .hero-page .mini-pill{
+  color:#fff;
+}
+body:not(.home-page) .hero-page .hero-copy p{color:rgba(255,255,255,.82)}
+body:not(.home-page) .hero-page .tag-pill,
+body:not(.home-page) .hero-page .mini-pill{
+  background:rgba(255,255,255,.1);
+  border-color:rgba(255,255,255,.18);
+  box-shadow:none;
+}
+body:not(.home-page) .hero-page .btn-ghost{
+  color:#fff;
+  border-color:rgba(255,255,255,.42);
+  background:rgba(255,255,255,.06);
+}
+body:not(.home-page) .hero-page .btn-ghost:hover{
+  color:#fff;
+  border-color:#fff;
+  background:rgba(255,255,255,.14);
+}
 .nav-ul>li{position:relative}
 .arr{width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px;transition:transform .2s;flex-shrink:0}
 .nav-ul>li:hover>a .arr{transform:rotate(-135deg);margin-top:2px}
 .drop{position:absolute;top:100%;left:0;background:#fff;min-width:250px;box-shadow:0 20px 60px rgba(0,0,0,.13);border-top:3px solid var(--accent,#2d8cff);border-radius:0 0 10px 10px;padding:8px 0;opacity:0;visibility:hidden;transform:translateY(10px);transition:all .28s cubic-bezier(.4,0,.2,1);z-index:100}
-.nav-ul>li:hover .drop{opacity:1;visibility:visible;transform:translateY(0)}
-.drop li{display:block}
+.nav-ul>li:hover>.drop{opacity:1;visibility:visible;transform:translateY(0)}
+.drop li{display:block;position:relative}
 .drop a{display:block;padding:10px 20px;color:var(--text2,#1f2937);font-size:14px;font-weight:500;transition:all .28s cubic-bezier(.4,0,.2,1);white-space:nowrap}
 .drop a:hover{color:var(--accent,#2d8cff);background:var(--light,#f8fafc);padding-left:26px}
+.drop li.has-children>a{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.drop li.has-children>a::after{content:'';width:6px;height:6px;border-top:1.5px solid currentColor;border-right:1.5px solid currentColor;transform:rotate(45deg);flex-shrink:0}
+.drop-sub{top:-11px;left:100%;border-top:0;border-left:3px solid var(--accent,#2d8cff);border-radius:0 10px 10px 10px;transform:translate(10px,0)}
+.drop li:hover>.drop-sub{opacity:1;visibility:visible;transform:translate(0,0)}
 .mob-group-label{display:block;padding:12px 32px 8px;color:var(--muted2,#64748b);font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase}
 `;
-  const globalDesktopMenus = [
+  const globalServiceMenus = [
     {
       href: 'web-design-development-singapore.html',
       label: 'Web Design',
@@ -73,6 +130,13 @@
         { href: 'google-ads-ppc-services-singapore.html', label: 'Google Ads (PPC)' },
         { href: 'social-media-marketing-services-singapore.html', label: 'Social Media Marketing' }
       ]
+    }
+  ];
+  const globalDesktopMenus = [
+    {
+      href: 'services.html',
+      label: 'Services',
+      children: globalServiceMenus
     }
   ];
   const globalUtilityLinks = [
@@ -164,7 +228,8 @@
   ]);
 
   function injectGlobalDesktopMenus(items = []) {
-    return [...globalDesktopMenus, ...globalUtilityLinks];
+    const homeLink = items.find((item) => item && item.label === 'Home');
+    return [...(homeLink ? [homeLink] : []), ...globalDesktopMenus, ...globalUtilityLinks];
   }
 
   function injectGlobalMobileMenus(items = []) {
@@ -195,7 +260,25 @@
       }
 
       const childLinks = children
-        .map((child) => `<li><a href="${child.href || '#'}">${child.label || ''}</a></li>`)
+        .map((child) => {
+          const grandChildren = Array.isArray(child.children) ? child.children : [];
+          if (!grandChildren.length) {
+            return `<li><a href="${child.href || '#'}">${child.label || ''}</a></li>`;
+          }
+
+          const grandChildLinks = grandChildren
+            .map((grandChild) => `<li><a href="${grandChild.href || '#'}">${grandChild.label || ''}</a></li>`)
+            .join('');
+
+          return `
+            <li class="has-children">
+              <a href="${child.href || '#'}">${child.label || ''}</a>
+              <ul class="drop drop-sub">
+                ${grandChildLinks}
+              </ul>
+            </li>
+          `;
+        })
         .join('');
 
       return `
@@ -214,19 +297,21 @@
 
     const logoHref = header.logoHref || 'index.html';
     const logoText = header.logoText || 'GS ConsultPro';
+    const isHomePage = /(^|\/)index\.html$/i.test(window.location.pathname) || window.location.pathname === '/' || window.location.pathname === '';
     const displayLogoText = getDisplayBrandName(logoText);
     const hamId = header.hamId || 'ham';
     const navAttrs = header.navAriaLabel ? ` aria-label="${header.navAriaLabel}"` : '';
-    const headerCta = '';
+    const headerCtaConfig = { href: 'contact.html', label: 'Get a Free Quote' };
+    const headerCta = `<a href="${headerCtaConfig.href}" class="btn-primary">${headerCtaConfig.label}</a>`;
     const desktopLinks = injectGlobalDesktopMenus(header.desktopLinks || []);
-    const mobileCta = null;
+    const mobileCta = headerCtaConfig;
     const mobileLinks = injectGlobalMobileMenus(header.mobileLinks || []);
     const mobileCtaHtml = mobileCta
       ? `<div class="mob-cta"><a href="${mobileCta.href || '#'}" class="btn-primary"${header.mobileCtaInlineFlex ? ' style="display:inline-flex"' : ''}>${mobileCta.label || ''}</a></div>`
       : '';
 
     return `
-<header id="hdr">
+<header id="hdr"${isHomePage ? '' : ' class="inner-page-header"'}>
   <div class="nav-bg">
     <nav${navAttrs}>
       <a href="${logoHref}" class="logo" aria-label="${logoText} home">
