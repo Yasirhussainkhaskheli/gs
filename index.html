@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/styles.css" />
 <style>
 /* ===== RESET & BASE ===== */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -149,7 +150,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px
   content:'';
   position:absolute;
   inset:0;
-  background:url('hero-stars-bg.jpg') center/cover no-repeat;
+  background:url('/assets/images/hero-stars-bg.jpg') center/cover no-repeat;
   opacity:.68;
   transform:scale(1.06);
   transform-origin:center center;
@@ -229,7 +230,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px
 .hero h1 em{font-style:normal;color:var(--accent)}
 .hero-sub{color:rgba(255,255,255,.88);font-size:19px;font-weight:400;line-height:1.78;margin-bottom:42px;max-width:760px;margin-left:auto;margin-right:auto}
 .hero-btns{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:56px}
-.hero-btns .btn-primary{padding:16px 36px;font-size:13px;letter-spacing:.8px}
+.hero-btns .btn-primary{min-width:276px;padding:16px 42px;font-size:14px;letter-spacing:.6px}
 .hero .btn-ghost{color:#fff;border-color:rgba(255,255,255,.46);background:rgba(255,255,255,.04)}
 .hero .btn-ghost:hover{color:#fff;border-color:#fff;background:rgba(255,255,255,.14)}
 header:not(.scrolled) .logo-txt{color:#fff}
@@ -325,7 +326,7 @@ header:not(.scrolled) .ham span{background:#fff}
 .svc-card p{color:var(--muted);font-size:16px;line-height:1.58;margin-bottom:22px;min-height:126px}
 .svc-list{display:flex;flex-direction:column;gap:10px;margin-top:0;margin-bottom:0}
 .svc-list span{display:flex;align-items:flex-start;gap:9px;padding:0;background:transparent;border:none;border-radius:0;color:var(--text2);font-size:14px;font-weight:700;line-height:1.35}
-.svc-list span::before{content:'✓';width:16px;height:16px;border-radius:50%;background:var(--accent);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;line-height:1;flex-shrink:0;margin-top:1px}
+.svc-list span::before{content:'?';width:16px;height:16px;border-radius:50%;background:var(--accent);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;line-height:1;flex-shrink:0;margin-top:1px}
 .svc-list span:last-child:nth-child(odd){grid-column:auto}
 .svc-lnk{display:none}
 .svc-arrow{transition:transform .3s}
@@ -627,18 +628,18 @@ window.gsSiteComponents = {
     hamAriaLabel: "Menu",
     desktopLinks: [
       {
-        href: "seo-services-singapore.html",
+        href: "/seo-services-singapore/",
         label: "SEO",
         children: [
-          { href: "technical-seo-services-singapore.html", label: "Technical SEO" },
-          { href: "on-page-semantic-seo-services-singapore.html", label: "On-Page & Semantic SEO" },
-          { href: "off-page-seo-link-building-singapore.html", label: "Off-Page SEO & Link Building" },
-          { href: "local-seo-services-singapore.html", label: "Local SEO" },
-          { href: "international-seo-services-singapore.html", label: "International SEO" },
-          { href: "ecommerce-seo-services-singapore.html", label: "E-commerce SEO" },
-          { href: "shopify-seo-services-singapore.html", label: "Shopify SEO" },
-          { href: "free-seo-audit-singapore.html", label: "Free SEO Audit" },
-          { href: "seo-packages-pricing-singapore.html", label: "SEO Packages & Pricing" }
+          { href: "technical-/seo-services-singapore/", label: "Technical SEO" },
+          { href: "/on-page-semantic-seo-services-singapore/", label: "On-Page & Semantic SEO" },
+          { href: "/off-page-seo-link-building-singapore/", label: "Off-Page SEO & Link Building" },
+          { href: "/local-seo-services-singapore/", label: "Local SEO" },
+          { href: "/international-seo-services-singapore/", label: "International SEO" },
+          { href: "/ecommerce-seo-services-singapore/", label: "E-commerce SEO" },
+          { href: "shopify-/seo-services-singapore/", label: "Shopify SEO" },
+          { href: "/free-seo-audit-singapore/", label: "Free SEO Audit" },
+          { href: "/seo-packages-pricing-singapore/", label: "SEO Packages & Pricing" }
         ]
       },
       { href: "#why", label: "About" },
@@ -646,17 +647,17 @@ window.gsSiteComponents = {
       { href: "#contact", label: "Contact" }
     ],
     mobileLinks: [
-      { href: "seo-services-singapore.html", label: "SEO" },
+      { href: "/seo-services-singapore/", label: "SEO" },
       { type: "label", label: "SEO Services" },
-      { href: "technical-seo-services-singapore.html", label: "Technical SEO" },
-      { href: "on-page-semantic-seo-services-singapore.html", label: "On-Page & Semantic SEO" },
-      { href: "off-page-seo-link-building-singapore.html", label: "Off-Page SEO & Link Building" },
-      { href: "local-seo-services-singapore.html", label: "Local SEO" },
-      { href: "international-seo-services-singapore.html", label: "International SEO" },
-      { href: "ecommerce-seo-services-singapore.html", label: "E-commerce SEO" },
-      { href: "shopify-seo-services-singapore.html", label: "Shopify SEO" },
-      { href: "free-seo-audit-singapore.html", label: "Free SEO Audit" },
-      { href: "seo-packages-pricing-singapore.html", label: "SEO Packages & Pricing" },
+      { href: "technical-/seo-services-singapore/", label: "Technical SEO" },
+      { href: "/on-page-semantic-seo-services-singapore/", label: "On-Page & Semantic SEO" },
+      { href: "/off-page-seo-link-building-singapore/", label: "Off-Page SEO & Link Building" },
+      { href: "/local-seo-services-singapore/", label: "Local SEO" },
+      { href: "/international-seo-services-singapore/", label: "International SEO" },
+      { href: "/ecommerce-seo-services-singapore/", label: "E-commerce SEO" },
+      { href: "shopify-/seo-services-singapore/", label: "Shopify SEO" },
+      { href: "/free-seo-audit-singapore/", label: "Free SEO Audit" },
+      { href: "/seo-packages-pricing-singapore/", label: "SEO Packages & Pricing" },
       { href: "#why", label: "About" },
       { href: "#faq", label: "FAQs" },
       { href: "#contact", label: "Contact" }
@@ -719,7 +720,7 @@ window.gsSiteComponents = {
 };
 </script>
 <div id="site-header"></div>
-<script src="site-components.js"></script>
+<script src="/assets/site.js"></script>
 </div>
 
 <!-- HERO -->
@@ -729,7 +730,7 @@ window.gsSiteComponents = {
     <div class="hero-inner">
       <div>
         <div class="hero-eye">Singapore &amp; APAC Marketing Solutions</div>
-        <h1>Marketing &amp; Digital <em>Solutions</em> Agency in Singapore</h1>
+        <h1>Singapore &amp; APAC Digital <em>Growth</em> Agency</h1>
         <p class="hero-sub">We help Singapore and APAC brands strengthen visibility, convert prospects, and grow revenue through data-driven marketing strategies that deliver real, measurable results.</p>
         <div class="hero-btns">
           <a href="#contact" class="btn-primary">Get a Free Consultation <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
@@ -863,8 +864,7 @@ window.gsSiteComponents = {
         <p style="text-align:center;font-size:20px;line-height:1.75">GS ConsultPRO combines digital marketing, growth strategy, digital platforms, automation, and market engagement solutions to help businesses strengthen visibility, generate demand, and support scalable growth across Singapore and APAC.<br><br>From SEO and content strategy to web development, partnership strategy, AI-powered video production, and executive engagement initiatives, every solution is aligned with clear business objectives and measurable outcomes.<br><br><strong>Strategy-led. Growth-focused. Execution-driven.</strong></p>
       </div>
       <div class="cta-btns" style="justify-content:center">
-        <a href="#contact" class="btn-primary">Get a Free Consultation</a>
-        <a href="#services" class="btn-ghost-white">Our Services</a>
+        <a href="mailto:hello@gsconsultpro.com" class="btn-primary">Email Us</a>
       </div>
     </div>
   </div>
@@ -874,16 +874,15 @@ window.gsSiteComponents = {
 <section class="faq-sec" id="faq">
   <div class="container">
     <div class="sec-hd rv" style="text-align:center;max-width:580px;margin:0 auto">
-      <span class="stag-plain">FAQs</span>
       <h2 class="dk">Frequently Asked Questions</h2>
       <p class="dk">Everything you need to know about digital marketing in Singapore and how GS ConsultPro delivers measurable results for your business.</p>
     </div>
     <div class="faq-grid">
+      <div class="faq-item"><div class="faq-q">What SEO Services Do You Provide? <span class="faq-ico">+</span></div><div class="faq-a">GS ConsultPro provides SEO strategy, technical SEO, on-page optimisation, content SEO, local SEO, e-commerce SEO, and website SEO audits. The exact scope depends on your website, business goals, target audience, and current search visibility.</div></div>
       <div class="faq-item"><div class="faq-q">How Long Does SEO Take to Show Results? <span class="faq-ico">+</span></div><div class="faq-a">SEO typically delivers measurable improvements within 3 to 6 months, depending on factors such as competition, website authority, technical performance, and content consistency. More competitive industries may require longer-term investment to achieve strong organic visibility and sustainable ranking growth. GS ConsultPRO focuses on structured SEO strategies designed to strengthen search visibility, build topical authority, and support long-term business growth.</div></div>
-      <div class="faq-item"><div class="faq-q">What Is the Difference Between SEO and Google Ads for Businesses? <span class="faq-ico">+</span></div><div class="faq-a">SEO (Search Engine Optimisation) builds long-term organic visibility through content strategy, technical optimisation, and search authority, helping businesses generate sustainable traffic and reduce long-term acquisition costs. Google Ads provides immediate paid search visibility, targeted traffic, and measurable lead generation through ongoing advertising campaigns. For many businesses, the strongest digital growth strategy combines both SEO for sustainable long-term visibility and Google Ads for immediate traffic, conversions, and demand generation.</div></div>
       <div class="faq-item"><div class="faq-q">What Is Topical Authority and Why Does It Matter for SEO? <span class="faq-ico">+</span></div><div class="faq-a">Topical authority is the process of building comprehensive, trusted expertise around a specific subject so search engines recognise a website as a credible source within that area. This is achieved through strategically structured content that covers related topics, search intent, user questions, and key subject areas in depth. For businesses, strong topical authority improves organic visibility, strengthens rankings across competitive keywords, reduces dependence on paid traffic, and supports long-term SEO growth.</div></div>
       <div class="faq-item"><div class="faq-q">Does GS ConsultPro Serve Businesses Outside Singapore? <span class="faq-ico">+</span></div><div class="faq-a">Yes. GS ConsultPRO supports businesses across APAC, including Southeast Asia, Malaysia, Indonesia, Thailand, Vietnam, Cambodia, India, and other regional markets. Our experience across APAC helps businesses adapt strategy, content, digital execution, and growth initiatives for regional audiences, market conditions, and local business environments.</div></div>
-      <div class="faq-item"><div class="faq-q">What Industries Does GS ConsultPRO Focus On? <span class="faq-ico">+</span></div><div class="faq-a">GS ConsultPRO focuses on financial services and fintech, SaaS and technology, and professional services. These sectors require clear positioning, trust-building, strong digital visibility, and structured growth execution across competitive Singapore and APAC markets. Our work is tailored to the buyer journeys, decision cycles, and market dynamics of these focused industries.</div></div>
+      <div class="faq-item"><div class="faq-q">What Industries Does GS ConsultPro Specialise In? <span class="faq-ico">+</span></div><div class="faq-a">GS ConsultPro focuses on financial services and fintech, SaaS and technology, professional services, and retail &amp; e-commerce businesses across Singapore and APAC. Our work is tailored to industries where clear positioning, digital visibility, trust-building, and structured growth execution are important to business growth.</div></div>
       <div class="faq-item"><div class="faq-q">How Does GS ConsultPRO Measure and Report Performance? <span class="faq-ico">+</span></div><div class="faq-a">GS ConsultPRO provides customised reporting dashboards using platforms such as Google Analytics 4 (GA4) and Looker Studio to track visibility, traffic, engagement, lead generation, and conversion performance. Regular strategy reviews and performance reporting help businesses understand what is working, identify growth opportunities, and make informed marketing and digital growth decisions.</div></div>
       <div class="faq-item"><div class="faq-q">How Does GS ConsultPRO Approach Local SEO? <span class="faq-ico">+</span></div><div class="faq-a">Our Local SEO strategies help businesses improve visibility across Google Search, Google Maps, and location-based search results. This includes Google Business Profile optimisation, local citation building, geo-targeted content, review management, and structured data implementation designed to strengthen local search visibility and attract high-intent audiences actively searching for relevant services.</div></div>
       <div class="faq-item"><div class="faq-q">How Do We Get Started with GS ConsultPRO? <span class="faq-ico">+</span></div><div class="faq-a">Getting started begins with a consultation to understand your business objectives, current digital presence, and growth priorities. From there, GS ConsultPRO develops a tailored strategy and execution roadmap aligned with your goals, timelines, and measurable growth objectives.</div></div>
@@ -901,7 +900,7 @@ window.gsSiteComponents = {
         <p style="color:var(--muted);font-size:18px;line-height:1.7;margin-bottom:32px">Growth-focused digital strategy, execution, and market engagement designed for businesses across Singapore and APAC.</p>
         <div class="c-info-list">
           <div class="c-info-item"><div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="c-det"><strong>Email</strong><span>hello@gsconsultpro.com</span></div></div>
-          <div class="c-info-item"><div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="c-det"><strong>Location</strong><span>Singapore • Serving APAC</span></div></div>
+          <div class="c-info-item"><div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="c-det"><strong>Location</strong><span>Singapore - Serving APAC</span></div></div>
         </div>
       </div>
       <div class="c-form rv">

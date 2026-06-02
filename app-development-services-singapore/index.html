@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>App Development & AI Solutions in Singapore & APAC | GS ConsultPro</title>
+<meta name="description" content="GS ConsultPro helps Singapore and APAC businesses build practical digital solutions, from mobile apps and web applications to AI chatbots and workflow tools designed to improve customer experience, efficiency, and business growth." />
+<meta property="og:title" content="App Development & AI Solutions in Singapore & APAC | GS ConsultPro" />
+<meta property="og:description" content="GS ConsultPro helps Singapore and APAC businesses build practical digital solutions, from mobile apps and web applications to AI chatbots and workflow tools designed to improve customer experience, efficiency, and business growth." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/app-development-services-singapore/" />
+<link rel="canonical" href="/app-development-services-singapore/" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/styles.css" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-y:scroll}
+body{font-family:'Barlow','Segoe UI',Arial,Helvetica,sans-serif;background:#fff;color:#0f172a;overflow-x:hidden;line-height:1.6;text-rendering:optimizeLegibility}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+:root{
+  --dark:#0f1523;
+  --accent:#2d8cff;
+  --accent2:#1f72d8;
+  --accent-soft:rgba(45,140,255,.1);
+  --light:#f8fafc;
+  --text:#0b1220;
+  --text2:#1f2937;
+  --muted:#334155;
+  --muted2:#64748b;
+  --border:#e5e7eb;
+  --border2:#d1d5db;
+  --trans:all 0.28s cubic-bezier(0.4,0,0.2,1);
+  --max:1280px;
+  --r:12px;
+  --r2:16px;
+  --r3:20px;
+  --sh:0 6px 22px rgba(15,23,42,.07),0 2px 6px rgba(15,23,42,.04);
+  --shm:0 14px 40px rgba(15,23,42,.1),0 4px 14px rgba(15,23,42,.05);
+  --sh-red:0 8px 28px rgba(45,140,255,.28);
+}
+.container{max-width:var(--max);margin:0 auto;padding:0 48px}
+.btn-primary{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--accent);color:#fff;padding:14px 30px;border-radius:999px;
+  font-family:'Barlow','Segoe UI',Arial,Helvetica,sans-serif;font-weight:700;font-size:14px;
+  letter-spacing:.6px;text-transform:uppercase;border:2px solid var(--accent);
+  transition:var(--trans);cursor:pointer;box-shadow:0 10px 30px rgba(45,140,255,.2)
+}
+.btn-primary:hover{background:var(--accent2);border-color:var(--accent2);transform:translateY(-3px);box-shadow:var(--sh-red)}
+.sec-hd{margin:0 auto 56px;max-width:min(76%,940px);text-align:center}
+.sec-hd h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,4vw,50px);font-weight:900;text-transform:uppercase;line-height:1.04;color:var(--text)}
+.sec-hd p{font-size:18px;line-height:1.72;margin-top:16px;max-width:840px;color:var(--muted)}
+header{position:fixed;top:0;left:0;width:100%;z-index:1000;transition:var(--trans)}
+.nav-bg{background:transparent;transition:background .3s,box-shadow .3s}
+header.scrolled .nav-bg{background:rgba(255,255,255,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 2px 24px rgba(15,23,42,.08)}
+nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:76px;max-width:var(--max);margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:38px;height:38px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;color:#fff;letter-spacing:-1px}
+.logo-txt{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--text);letter-spacing:.5px}
+.nav-ul{display:flex;align-items:center;gap:2px}
+.nav-ul>li>a{color:var(--text2);font-size:14px;font-weight:500;padding:26px 14px;display:flex;align-items:center;gap:5px;transition:color .2s;white-space:nowrap}
+.nav-ul>li>a:hover{color:var(--text)}
+.nav-end{display:flex;align-items:center;gap:14px}
+.nav-end .btn-primary{padding:10px 22px;font-size:13px}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.ham span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:var(--trans)}
+.ham.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mob-nav{display:none;position:fixed;top:76px;left:0;width:100%;background:#fff;z-index:999;padding:20px 0 28px;border-top:1px solid var(--border);max-height:calc(100vh - 76px);overflow-y:auto;box-shadow:0 20px 40px rgba(15,23,42,.08)}
+.mob-nav.open{display:block}
+.mob-nav a{display:block;padding:12px 32px;color:var(--text2);font-size:15px;font-weight:500;border-bottom:1px solid var(--border)}
+.mob-cta{padding:20px 32px}
+.hero-page{
+  padding:164px 0 108px;background:
+  radial-gradient(circle at top left, rgba(45,140,255,.12), transparent 28%),
+  linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+}
+.hero-copy{max-width:min(84%,1040px);margin:0 auto;text-align:center}
+.hero-label,.mini-label{
+  display:inline-block;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:16px
+}
+.hero-copy h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(42px,7vw,82px);font-weight:900;line-height:.95;text-transform:uppercase;color:var(--text);margin-bottom:22px}
+.hero-copy p{font-size:19px;line-height:1.78;color:var(--muted);max-width:920px;margin:0 auto}
+.hero-actions{display:flex;justify-content:center;margin-top:30px}
+.hero-tags,.cta-tags{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+  margin-top:26px
+}
+.hero-tag,.cta-tag{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 16px;
+  border-radius:999px;
+  border:1.5px solid var(--border);
+  background:#fff;
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+  color:var(--text2)
+}
+.section{padding:128px 0}
+.section.alt{background:var(--light)}
+.split-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:stretch}
+.problem-card,.solution-card,.strategy-card,.contact-card,.testimonial-card{
+  background:#fff;border-radius:var(--r3);padding:34px;border:1.5px solid var(--border);box-shadow:var(--sh)
+}
+.problem-card h2,.solution-card h2,.strategy-card h2,.contact-card h2,.service-card h3,.result-card h3,.proc-card h3,.factor-card h3,.testimonial-card h3{
+  font-family:'Barlow Condensed',sans-serif
+}
+.problem-card h2,.solution-card h2,.strategy-card h2,.contact-card h2{
+  font-size:clamp(28px,4vw,46px);font-weight:900;text-transform:uppercase;line-height:1.04;color:var(--text);margin-bottom:18px
+}
+.problem-card .mini-label,.solution-card .mini-label{margin-bottom:14px}
+.problem-list,.solution-list,.service-grid,.result-grid,.proc-grid,.factor-grid,.issue-grid{display:grid;gap:18px}
+.problem-list li,.solution-list li,.issue-grid li{
+  background:var(--light);border:1.5px solid var(--border);border-radius:14px;padding:18px 20px;
+  font-size:18px;line-height:1.68;color:var(--muted)
+}
+.problem-card>p,.solution-card>p,.strategy-card>p,.contact-card>p,.testimonial-card p,.why-col p{font-size:18px;line-height:1.72;color:var(--muted)}
+.service-grid{grid-template-columns:repeat(3,1fr);gap:22px}
+.service-card,.result-card,.proc-card,.factor-card{
+  background:#fff;border:1.5px solid var(--border);border-radius:var(--r2);padding:28px 24px;transition:var(--trans)
+}
+.service-card:hover,.result-card:hover,.proc-card:hover,.factor-card:hover,.problem-card:hover,.solution-card:hover,.strategy-card:hover,.contact-card:hover,.testimonial-card:hover{
+  transform:translateY(-4px);box-shadow:var(--shm);border-color:rgba(45,140,255,.24)
+}
+.service-card h3,.result-card h3,.proc-card h3,.factor-card h3,.testimonial-card h3{
+  font-size:22px;font-weight:800;text-transform:uppercase;color:var(--text);margin-bottom:10px;line-height:1.08
+}
+.service-card p,.result-card p,.proc-card p,.factor-card p{
+  font-size:17px;line-height:1.68;color:var(--muted)
+}
+.result-grid,.proc-grid,.factor-grid{grid-template-columns:repeat(3,1fr);gap:22px}
+.result-num,.proc-step{
+  font-family:'Barlow Condensed',sans-serif;font-size:52px;font-weight:900;line-height:1;color:rgba(45,140,255,.18);margin-bottom:16px;display:block
+}
+.testimonial-card{text-align:center;max-width:920px;margin:0 auto}
+.why-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:stretch}
+.why-col{
+  background:#fff;
+  border:1.5px solid var(--border);
+  border-radius:var(--r3);
+  padding:34px;
+  box-shadow:var(--sh)
+}
+.why-col h2{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:clamp(28px,4vw,46px);
+  font-weight:900;
+  line-height:1.04;
+  text-transform:uppercase;
+  color:var(--text);
+  margin-bottom:18px
+}
+.pill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:26px}
+.pill-item{
+  background:var(--light);
+  border:1.5px solid var(--border);
+  border-radius:18px;
+  padding:20px;
+  font-size:17px;
+  line-height:1.5;
+  color:var(--text);
+  font-weight:700;
+  text-transform:uppercase
+}
+.faq-wrap{max-width:980px;margin:0 auto}
+.faq-item{
+  border:1.5px solid var(--border);border-radius:14px;background:#fff;overflow:hidden;
+  transition:var(--trans)
+}
+.faq-item + .faq-item{margin-top:14px}
+.faq-item.open{box-shadow:var(--sh);border-color:rgba(45,140,255,.25)}
+.faq-q{
+  width:100%;text-align:left;background:none;border:none;padding:18px 20px;cursor:pointer;
+  display:flex;align-items:center;justify-content:space-between;gap:12px
+}
+.faq-q span:first-child{
+  font-family:'Barlow','Segoe UI',Arial,Helvetica,sans-serif;font-size:14px;font-weight:600;line-height:1.4;
+  text-transform:none;color:var(--text)
+}
+.faq-icon{
+  width:18px;height:18px;border-radius:999px;background:#e7f1ff;border:0;display:flex;
+  align-items:center;justify-content:center;font-size:13px;color:var(--accent);flex-shrink:0;transition:var(--trans);font-weight:700
+}
+.faq-a{
+  max-height:0;overflow:hidden;transition:max-height .35s ease;padding:0 20px
+}
+.faq-a p{font-size:18px;line-height:1.72;color:var(--muted);padding:0 0 20px}
+.faq-item.open .faq-q span:first-child{color:var(--accent)}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--accent);color:#fff}
+.cta-band{
+  background:
+  radial-gradient(circle at top right, rgba(255,255,255,.18), transparent 28%),
+  linear-gradient(135deg,#2d8cff 0%,#1f72d8 100%);
+  border-radius:30px;padding:52px 44px;text-align:center;color:#fff;box-shadow:var(--shm)
+}
+.cta-band h2{
+  font-family:'Barlow Condensed',sans-serif;font-size:clamp(32px,4.5vw,58px);font-weight:900;
+  line-height:1.02;text-transform:uppercase;margin-bottom:14px
+}
+.cta-band p{font-size:18px;line-height:1.72;max-width:900px;margin:0 auto;color:rgba(255,255,255,.84)}
+.cta-band .mini-label,.cta-band .cta-tag{color:#fff}
+.cta-band .mini-label{margin-bottom:14px}
+.cta-band .cta-tag{
+  background:rgba(255,255,255,.12);
+  border-color:rgba(255,255,255,.22)
+}
+.cta-band .btn-primary{
+  margin-top:28px;
+  background:#fff;
+  color:var(--accent);
+  border-color:#fff;
+  box-shadow:none
+}
+.cta-band .btn-primary:hover{
+  background:#eff6ff;
+  color:var(--accent2);
+  border-color:#eff6ff
+}
+.footer{
+  background:#0f1523;color:rgba(255,255,255,.78);padding:34px 0;margin-top:110px
+}
+.footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.footer a{color:#fff}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:1180px){
+  .service-grid,.result-grid,.proc-grid,.factor-grid,.pill-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-copy,.sec-hd{max-width:100%}
+}
+@media (max-width:960px){
+  .container,nav{padding:0 24px}
+  .nav-ul,.nav-end .btn-primary{display:none}
+  .ham{display:flex}
+  .split-grid,.service-grid,.result-grid,.proc-grid,.factor-grid,.pill-grid,.why-grid{grid-template-columns:1fr}
+  .section{padding:96px 0}
+  .hero-page{padding:142px 0 88px}
+}
+@media (max-width:640px){
+  .problem-card,.solution-card,.strategy-card,.contact-card,.testimonial-card,.service-card,.result-card,.proc-card,.factor-card{padding:24px 20px}
+  .why-band,.cta-band{padding:32px 22px}
+  .faq-q{padding:18px 18px}
+  .faq-q span:first-child{font-size:14px}
+  .faq-a{padding:0 18px}
+  .footer-row{flex-direction:column;text-align:center}
+}
+.compact-pill-normalize{}
+.pill-grid{display:flex!important;gap:10px!important;flex-wrap:wrap!important;align-items:center!important;margin-top:22px!important}
+.pill-item{display:inline-flex!important;align-items:center!important;justify-content:center!important;width:auto!important;max-width:100%!important;min-height:0!important;padding:8px 14px!important;background:#fff!important;border:1.5px solid var(--border)!important;border-radius:999px!important;font-size:12px!important;font-weight:700!important;letter-spacing:1px!important;line-height:1.25!important;text-transform:uppercase!important;color:var(--text2)!important;box-shadow:var(--sh)!important}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Service",
+  "name":"App Development & AI Solutions in Singapore & APAC",
+  "provider":{
+    "@type":"Organization",
+    "name":"GS ConsultPro"
+  },
+  "areaServed":[
+    {"@type":"Country","name":"Singapore"},
+    {"@type":"Place","name":"APAC"}
+  ],
+  "serviceType":"App Development and AI Solutions",
+  "url":"/app-development-services-singapore/",
+  "description":"GS ConsultPro helps Singapore and APAC businesses build practical digital solutions, from mobile apps and web applications to AI chatbots and workflow tools designed to improve customer experience, efficiency, and business growth."
+}
+</script>
+</head>
+<body>
+<script>window.gsSiteComponents = {"header":{"logoHref":"/","logoText":"GS ConsultPro","navAriaLabel":null,"hamId":"hamBtn","hamAriaLabel":"Open menu","hamAriaExpanded":"false","hamAriaControls":"mobNav","desktopLinks":[{"href":"/","label":"Home"},{"href":"/services/","label":"Services"},{"href":"/custom-mobile-app-development-singapore/","label":"Mobile Apps"},{"href":"/react-native-app-development-singapore/","label":"React Native"},{"href":"/chatbot-development-services-singapore/","label":"Chatbots"}],"mobileLinks":[{"href":"/","label":"Home"},{"href":"/services/","label":"Services"},{"href":"/custom-mobile-app-development-singapore/","label":"Mobile Apps"},{"href":"/react-native-app-development-singapore/","label":"React Native"},{"href":"/chatbot-development-services-singapore/","label":"Chatbots"}],"cta":{"href":"/contact/#contact-form","label":"Get in Touch"},"mobileCta":{"href":"/contact/#contact-form","label":"Get in Touch"},"mobileCtaInlineFlex":false},"footer":null};</script>
+<div id="site-header"></div>
+<script src="/assets/site.js"></script>
+
+<main>
+  <section class="hero-page">
+    <div class="container">
+      <div class="hero-copy reveal">
+        <div class="hero-label">App Development &amp; AI Solutions</div>
+        <h1>App Development &amp; AI Solutions in Singapore &amp; APAC</h1>
+        <p>GS ConsultPro helps Singapore and APAC businesses build practical digital solutions, from mobile apps and web applications to AI chatbots and workflow tools designed to improve customer experience, efficiency, and business growth.</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="/contact/#contact-form">Get My Free Consultation</a>
+        </div>
+        <div class="hero-tags">
+          <span class="hero-tag">Mobile Apps</span>
+          <span class="hero-tag">Web Apps</span>
+          <span class="hero-tag">AI Chatbots</span>
+          <span class="hero-tag">Digital Workflows</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="split-grid">
+        <article class="problem-card reveal">
+          <div class="mini-label">Problem</div>
+          <h2>Struggling to Turn Digital Ideas into Practical Business Tools?</h2>
+          <p>Many businesses have digital ideas, but struggle to turn them into practical tools that improve customer experience, reduce manual work, or support scalable operations.</p>
+          <ul class="problem-list" style="margin-top:18px">
+            <li>Customer journeys still rely on manual steps, disconnected tools, or outdated processes.</li>
+            <li>Internal teams may not have the technical capacity to build apps, portals, chatbots, or automated workflows.</li>
+            <li>Existing systems and AI opportunities are often unclear, underused, or not connected to real business goals.</li>
+          </ul>
+        </article>
+        <article class="solution-card reveal">
+          <div class="mini-label">Solution</div>
+          <h2>Practical App and AI Solutions Built Around Your Business Needs</h2>
+          <p>GS ConsultPro helps businesses plan, design, and build digital tools that support specific customer-facing and operational goals.</p>
+          <ul class="solution-list" style="margin-top:18px">
+            <li>Mobile and web applications designed around clear business use cases and user journeys.</li>
+            <li>AI chatbot solutions that support enquiries, FAQs, lead capture, and customer support workflows.</li>
+            <li>Digital systems built to improve efficiency, reduce manual work, and support scalable growth.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="sec-hd reveal">
+        <div class="mini-label">Our Services</div>
+        <h2>App Development &amp; AI Solutions</h2>
+        <p>Every service is designed to help businesses improve customer experience, streamline workflows, and build more scalable digital systems.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <h3>Mobile App Development</h3>
+          <p>Custom mobile app solutions designed to support customer engagement, service delivery, booking flows, internal workflows, or business-specific digital experiences.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>Web App Development</h3>
+          <p>Browser-based applications, dashboards, portals, and workflow tools built to help businesses manage processes, data, customers, and operations more efficiently.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>AI Chatbot Development</h3>
+          <p>AI-powered chatbot solutions designed to support customer enquiries, FAQs, internal support, and automated conversations across relevant channels.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="sec-hd reveal">
+        <div class="mini-label">Results &amp; Benefits</div>
+        <h2>Benefits of Practical App and AI Solutions</h2>
+        <p>The right digital solution can help businesses improve customer experience, reduce manual work, and create more scalable ways to operate and grow.</p>
+      </div>
+      <div class="result-grid">
+        <article class="result-card reveal">
+          <span class="result-num">01</span>
+          <h3>Improved Customer Experience</h3>
+          <p>Give customers easier ways to interact with your business, access information, complete actions, and receive support.</p>
+        </article>
+        <article class="result-card reveal">
+          <span class="result-num">02</span>
+          <h3>More Efficient Workflows</h3>
+          <p>Reduce repetitive manual work by connecting digital tools, automating routine steps, and improving how information moves across your business.</p>
+        </article>
+        <article class="result-card reveal">
+          <span class="result-num">03</span>
+          <h3>Scalable Digital Growth</h3>
+          <p>Build systems that can support more customers, more enquiries, and more operational activity without relying only on manual effort.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="sec-hd reveal">
+        <div class="mini-label">How It Works</div>
+        <h2>Our App Development &amp; AI Solutions Process</h2>
+        <p>A structured process that ensures every digital solution is planned around your goals, users, workflows, and business requirements.</p>
+      </div>
+      <div class="proc-grid">
+        <article class="proc-card reveal">
+          <span class="proc-step">01</span>
+          <h3>Discovery &amp; Planning</h3>
+          <p>We review your goals, users, workflows, technical requirements, and operational challenges before defining the right solution.</p>
+        </article>
+        <article class="proc-card reveal">
+          <span class="proc-step">02</span>
+          <h3>Design &amp; Development</h3>
+          <p>We design and build the app, chatbot, or digital workflow around your business needs, user experience, and operational requirements.</p>
+        </article>
+        <article class="proc-card reveal">
+          <span class="proc-step">03</span>
+          <h3>Testing &amp; Delivery</h3>
+          <p>We test the solution, refine the user experience, and prepare it for launch, handover, or ongoing improvement.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="why-grid">
+        <article class="why-col reveal">
+          <div class="mini-label">Why Choose Us</div>
+          <h2>Why Choose GS ConsultPro for App Development &amp; AI Solutions</h2>
+          <p>GS ConsultPro focuses on practical digital solutions that serve a clear business purpose. Instead of building technology for its own sake, we help businesses create apps, chatbots, and workflow tools that improve customer experience, streamline operations, and support growth.</p>
+          <div class="pill-grid">
+            <div class="pill-item">Business-Focused</div>
+            <div class="pill-item">User-Centred</div>
+            <div class="pill-item">AI-Enabled</div>
+            <div class="pill-item">Growth-Oriented</div>
+          </div>
+        </article>
+        <article class="why-col reveal">
+          <div class="mini-label">Our Approach</div>
+          <h2>Digital Solutions Built Around Workflows, Users, and Business Goals</h2>
+          <p>Our approach connects business requirements, user experience, automation opportunities, and practical technology choices into one clear development direction. This helps businesses build mobile apps, web apps, chatbot solutions, and digital workflows with a stronger purpose and a clearer role in supporting efficiency, service delivery, and growth.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="sec-hd reveal">
+        <h2>FAQs</h2>
+      </div>
+      <div class="faq-wrap">
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button"><span>What Types of Apps Can You Help Develop?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>GS ConsultPro can help with mobile apps, web applications, customer portals, internal dashboards, booking tools, and custom digital tools. The focus is on building practical tools that support customer experience, operational efficiency, or business growth.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button"><span>Do You Build Both Mobile Apps and Web Applications?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Yes. We can support both mobile app and web application development depending on your business needs, target users, budget, and technical requirements. During the planning stage, we help assess whether a mobile app, web app, or responsive web-based solution is the most suitable option.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button"><span>Can You Help Us Decide Whether We Need an App, Chatbot, or Workflow Tool?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Yes. Not every business needs a full app. Sometimes a chatbot, customer portal, automation workflow, or improved web experience may be more practical. GS ConsultPro helps review your goals, users, processes, and customer journey before recommending the right type of digital solution.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button"><span>Do You Develop AI Chatbots for Customer Enquiries and Lead Capture?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Yes. GS ConsultPro can help develop AI chatbot solutions for customer enquiries, FAQs, lead capture, appointment requests, qualification flows, and basic support workflows. Chatbots can be designed to guide users, collect relevant information, and connect enquiries to the right follow-up process.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button"><span>Can the Solution Connect With Our Existing CRM, Website, or Business Tools?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Where technically possible, digital solutions can be designed to connect with existing websites, CRM platforms, forms, databases, email systems, or other business tools. Integration requirements are reviewed during the planning stage so the solution can support your current workflows and future needs.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button"><span>How Long Does App or Chatbot Development Usually Take?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Timelines depend on the complexity of the solution, number of features, integrations required, design requirements, and approval process. A simple chatbot or workflow tool may be developed faster, while a custom mobile or web application usually requires more planning, design, development, and testing.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button"><span>What Makes GS ConsultPro Different From Other App Development Providers?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>GS ConsultPro approaches app and AI development from a business growth perspective, not just a technical build perspective. We focus on understanding the customer journey, workflow gaps, user needs, and commercial goals before recommending or building a solution. The aim is to create digital tools that are practical, useful, and aligned with how the business operates.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-band reveal">
+        <div class="mini-label">Get in Touch</div>
+        <h2>Ready to Build a Digital Solution That Supports Your Business?</h2>
+        <p>Book a consultation to discuss your app, chatbot, customer portal, or other digital solution idea and explore the right approach for your business.</p>
+        <div class="cta-tags">
+          <span class="cta-tag">Mobile Apps</span>
+          <span class="cta-tag">AI Chatbots</span>
+          <span class="cta-tag">Customer Portals</span>
+        </div>
+        <a class="btn-primary" href="/contact/#contact-form">Schedule a Consultation</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-row">
+      <p>&copy; 2026 GS ConsultPro. All rights reserved.</p>
+      <p><a href="/services/">Explore Services</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const header=document.getElementById('siteHeader')||document.querySelector('header');
+const hamBtn=document.getElementById('hamBtn');
+const mobNav=document.getElementById('mobNav');
+const onScroll=()=>{
+  if(header){
+    header.classList.toggle('scrolled',window.scrollY>10);
+  }
+};
+onScroll();
+window.addEventListener('scroll',onScroll,{passive:true});
+if(hamBtn&&mobNav){
+  hamBtn.addEventListener('click',()=>{
+    const open=mobNav.classList.toggle('open');
+    hamBtn.classList.toggle('open',open);
+    hamBtn.setAttribute('aria-expanded',open?'true':'false');
+  });
+  document.querySelectorAll('.mob-nav a').forEach(link=>link.addEventListener('click',()=>{
+    mobNav.classList.remove('open');
+    hamBtn.classList.remove('open');
+    hamBtn.setAttribute('aria-expanded','false');
+  }));
+}
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const btn=item.querySelector('.faq-q');
+  const panel=item.querySelector('.faq-a');
+  btn.addEventListener('click',()=>{
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(other=>{
+      other.classList.remove('open');
+      other.querySelector('.faq-a').style.maxHeight=null;
+    });
+    if(!isOpen){
+      item.classList.add('open');
+      panel.style.maxHeight=panel.scrollHeight+'px';
+    }
+  });
+});
+if('IntersectionObserver' in window){
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+}else{
+  document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+}
+</script>
+</body>
+</html>
+
+
+

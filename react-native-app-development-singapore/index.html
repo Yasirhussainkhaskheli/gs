@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>React Native App Development Services in Singapore | GS ConsultPro</title>
+<meta name="description" content="GS ConsultPro builds high-performance React Native apps for Singapore and APAC businesses that work seamlessly across iOS and Android without the cost of maintaining two separate codebases." />
+<meta property="og:title" content="React Native App Development Services in Singapore | GS ConsultPro" />
+<meta property="og:description" content="GS ConsultPro builds high-performance React Native apps for Singapore and APAC businesses that work seamlessly across iOS and Android without the cost of maintaining two separate codebases." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/react-native-app-development-singapore/" />
+<link rel="canonical" href="/react-native-app-development-singapore/" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/styles.css" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-y:scroll}
+body{font-family:'Barlow','Segoe UI',Arial,Helvetica,sans-serif;background:#fff;color:#0f172a;overflow-x:hidden;line-height:1.6;text-rendering:optimizeLegibility}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+:root{
+  --dark:#0f1523;
+  --accent:#2d8cff;
+  --accent2:#1f72d8;
+  --accent-soft:rgba(45,140,255,.1);
+  --light:#f8fafc;
+  --text:#0b1220;
+  --text2:#1f2937;
+  --muted:#334155;
+  --muted2:#64748b;
+  --border:#e5e7eb;
+  --border2:#d1d5db;
+  --trans:all 0.28s cubic-bezier(0.4,0,0.2,1);
+  --max:1280px;
+  --r:12px;
+  --r2:16px;
+  --r3:20px;
+  --sh:0 6px 22px rgba(15,23,42,.07),0 2px 6px rgba(15,23,42,.04);
+  --shm:0 14px 40px rgba(15,23,42,.1),0 4px 14px rgba(15,23,42,.05);
+  --sh-red:0 8px 28px rgba(45,140,255,.28);
+}
+.container{max-width:var(--max);margin:0 auto;padding:0 48px}
+.btn-primary{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--accent);color:#fff;padding:14px 30px;border-radius:999px;
+  font-family:'Barlow','Segoe UI',Arial,Helvetica,sans-serif;font-weight:700;font-size:14px;
+  letter-spacing:.6px;text-transform:uppercase;border:2px solid var(--accent);
+  transition:var(--trans);cursor:pointer;box-shadow:0 10px 30px rgba(45,140,255,.2)
+}
+.btn-primary:hover{background:var(--accent2);border-color:var(--accent2);transform:translateY(-3px);box-shadow:var(--sh-red)}
+.sec-hd{margin:0 auto 56px;max-width:min(76%,940px);text-align:center}
+.sec-hd h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,4vw,50px);font-weight:900;text-transform:uppercase;line-height:1.04;color:var(--text)}
+.sec-hd p{font-size:18px;line-height:1.72;margin-top:16px;max-width:840px;color:var(--muted)}
+header{position:fixed;top:0;left:0;width:100%;z-index:1000;transition:var(--trans)}
+.nav-bg{background:transparent;transition:background .3s,box-shadow .3s}
+header.scrolled .nav-bg{background:rgba(255,255,255,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 2px 24px rgba(15,23,42,.08)}
+nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:76px;max-width:var(--max);margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:38px;height:38px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;color:#fff;letter-spacing:-1px}
+.logo-txt{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--text);letter-spacing:.5px}
+.nav-ul{display:flex;align-items:center;gap:2px}
+.nav-ul>li>a{color:var(--text2);font-size:14px;font-weight:500;padding:26px 14px;display:flex;align-items:center;gap:5px;transition:color .2s;white-space:nowrap}
+.nav-ul>li>a:hover{color:var(--text)}
+.nav-end{display:flex;align-items:center;gap:14px}
+.nav-end .btn-primary{padding:10px 22px;font-size:13px}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.ham span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:var(--trans)}
+.ham.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mob-nav{display:none;position:fixed;top:76px;left:0;width:100%;background:#fff;z-index:999;padding:20px 0 28px;border-top:1px solid var(--border);max-height:calc(100vh - 76px);overflow-y:auto;box-shadow:0 20px 40px rgba(15,23,42,.08)}
+.mob-nav.open{display:block}
+.mob-nav a{display:block;padding:12px 32px;color:var(--text2);font-size:15px;font-weight:500;border-bottom:1px solid var(--border)}
+.mob-cta{padding:20px 32px}
+.hero-page{
+  padding:164px 0 108px;background:
+  radial-gradient(circle at top left, rgba(45,140,255,.12), transparent 28%),
+  linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+}
+.hero-copy{max-width:min(84%,1040px);margin:0 auto;text-align:center}
+.hero-copy h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(42px,7vw,82px);font-weight:900;line-height:.95;text-transform:uppercase;color:var(--text);margin-bottom:22px}
+.hero-copy p{font-size:19px;line-height:1.78;color:var(--muted);max-width:920px;margin:0 auto}
+.section{padding:128px 0}
+.section.alt{background:var(--light)}
+.split-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:stretch}
+.problem-card,.solution-card,.strategy-card,.contact-card,.testimonial-card{
+  background:#fff;border-radius:var(--r3);padding:34px;border:1.5px solid var(--border);box-shadow:var(--sh)
+}
+.problem-card h2,.solution-card h2,.strategy-card h2,.contact-card h2,.service-card h3,.result-card h3,.proc-card h3,.factor-card h3,.testimonial-card h3{
+  font-family:'Barlow Condensed',sans-serif
+}
+.problem-card h2,.solution-card h2,.strategy-card h2,.contact-card h2{
+  font-size:clamp(28px,4vw,46px);font-weight:900;text-transform:uppercase;line-height:1.04;color:var(--text);margin-bottom:18px
+}
+.problem-list,.solution-list,.service-grid,.result-grid,.proc-grid,.factor-grid,.issue-grid{display:grid;gap:18px}
+.problem-list li,.solution-list li,.issue-grid li{
+  background:var(--light);border:1.5px solid var(--border);border-radius:14px;padding:18px 20px;
+  font-size:18px;line-height:1.68;color:var(--muted)
+}
+.solution-card>p,.strategy-card>p,.contact-card>p,.testimonial-card p{font-size:18px;line-height:1.72;color:var(--muted)}
+.service-grid{grid-template-columns:repeat(3,1fr);gap:22px}
+.service-card,.result-card,.proc-card,.factor-card{
+  background:#fff;border:1.5px solid var(--border);border-radius:var(--r2);padding:28px 24px;transition:var(--trans)
+}
+.service-card:hover,.result-card:hover,.proc-card:hover,.factor-card:hover,.problem-card:hover,.solution-card:hover,.strategy-card:hover,.contact-card:hover,.testimonial-card:hover{
+  transform:translateY(-4px);box-shadow:var(--shm);border-color:rgba(45,140,255,.24)
+}
+.service-card h3,.result-card h3,.proc-card h3,.factor-card h3,.testimonial-card h3{
+  font-size:22px;font-weight:800;text-transform:uppercase;color:var(--text);margin-bottom:10px;line-height:1.08
+}
+.service-card p,.result-card p,.proc-card p,.factor-card p{
+  font-size:17px;line-height:1.68;color:var(--muted)
+}
+.result-grid,.proc-grid,.factor-grid{grid-template-columns:repeat(3,1fr);gap:22px}
+.result-num,.proc-step{
+  font-family:'Barlow Condensed',sans-serif;font-size:52px;font-weight:900;line-height:1;color:rgba(45,140,255,.18);margin-bottom:16px;display:block
+}
+.testimonial-card{text-align:center;max-width:920px;margin:0 auto}
+.why-band{
+  background:linear-gradient(135deg,#0f1523 0%,#101b31 100%);
+  color:#fff;border-radius:28px;padding:44px;box-shadow:var(--shm)
+}
+.why-band h2{
+  font-family:'Barlow Condensed',sans-serif;font-size:clamp(30px,4vw,52px);font-weight:900;
+  line-height:1.02;text-transform:uppercase;margin-bottom:16px
+}
+.why-band p{font-size:18px;line-height:1.74;color:rgba(255,255,255,.82)}
+.pill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.pill-item{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:18px;
+  padding:20px;font-size:17px;line-height:1.66;color:#fff
+}
+.faq-wrap{max-width:980px;margin:0 auto}
+.faq-item{
+  border:1.5px solid var(--border);border-radius:18px;background:#fff;overflow:hidden;
+  box-shadow:var(--sh);transition:var(--trans)
+}
+.faq-item + .faq-item{margin-top:16px}
+.faq-item:hover{box-shadow:var(--shm);border-color:rgba(45,140,255,.24)}
+.faq-q{
+  width:100%;text-align:left;background:none;border:none;padding:22px 26px;cursor:pointer;
+  display:flex;align-items:center;justify-content:space-between;gap:14px
+}
+.faq-q span{
+  font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:800;line-height:1.08;
+  text-transform:uppercase;color:var(--text)
+}
+.faq-icon{
+  width:34px;height:34px;border-radius:50%;border:1.5px solid var(--border2);display:flex;
+  align-items:center;justify-content:center;font-size:22px;color:var(--accent);flex-shrink:0;transition:var(--trans)
+}
+.faq-a{
+  max-height:0;overflow:hidden;transition:max-height .35s ease;padding:0 26px
+}
+.faq-a p{font-size:17px;line-height:1.72;color:var(--muted);padding:0 0 24px}
+.faq-item.open .faq-icon{transform:rotate(45deg);border-color:var(--accent);background:var(--accent-soft)}
+.cta-band{
+  background:
+  radial-gradient(circle at top right, rgba(45,140,255,.18), transparent 28%),
+  linear-gradient(135deg,#0f1523 0%,#101b31 100%);
+  border-radius:30px;padding:52px 44px;text-align:center;color:#fff;box-shadow:var(--shm)
+}
+.cta-band h2{
+  font-family:'Barlow Condensed',sans-serif;font-size:clamp(32px,4.5vw,58px);font-weight:900;
+  line-height:1.02;text-transform:uppercase;margin-bottom:14px
+}
+.cta-band p{font-size:18px;line-height:1.72;max-width:900px;margin:0 auto;color:rgba(255,255,255,.84)}
+.footer{
+  background:#0f1523;color:rgba(255,255,255,.78);padding:34px 0;margin-top:110px
+}
+.footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.footer a{color:#fff}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:1180px){
+  .service-grid,.result-grid,.proc-grid,.factor-grid,.pill-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-copy,.sec-hd{max-width:100%}
+}
+@media (max-width:960px){
+  .container,nav{padding:0 24px}
+  .nav-ul,.nav-end .btn-primary{display:none}
+  .ham{display:flex}
+  .split-grid,.service-grid,.result-grid,.proc-grid,.factor-grid,.pill-grid{grid-template-columns:1fr}
+  .section{padding:96px 0}
+  .hero-page{padding:142px 0 88px}
+}
+@media (max-width:640px){
+  .problem-card,.solution-card,.strategy-card,.contact-card,.testimonial-card,.service-card,.result-card,.proc-card,.factor-card{padding:24px 20px}
+  .why-band,.cta-band{padding:32px 22px}
+  .faq-q{padding:18px 18px}
+  .faq-q span{font-size:21px}
+  .faq-a{padding:0 18px}
+  .footer-row{flex-direction:column;text-align:center}
+}
+.compact-pill-normalize{}
+.pill-grid{display:flex!important;gap:10px!important;flex-wrap:wrap!important;align-items:center!important;margin-top:22px!important}
+.pill-item{display:inline-flex!important;align-items:center!important;justify-content:center!important;width:auto!important;max-width:100%!important;min-height:0!important;padding:8px 14px!important;background:#fff!important;border:1.5px solid var(--border)!important;border-radius:999px!important;font-size:12px!important;font-weight:700!important;letter-spacing:1px!important;line-height:1.25!important;text-transform:uppercase!important;color:var(--text2)!important;box-shadow:var(--sh)!important}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Service",
+  "name":"React Native App Development Services in Singapore",
+  "provider":{
+    "@type":"Organization",
+    "name":"GS ConsultPro"
+  },
+  "areaServed":[
+    {"@type":"Country","name":"Singapore"},
+    {"@type":"Place","name":"APAC"}
+  ],
+  "serviceType":"React Native App Development Services",
+  "url":"/react-native-app-development-singapore/",
+  "description":"GS ConsultPro builds high-performance React Native apps for Singapore and APAC businesses that work seamlessly across iOS and Android without the cost of maintaining two separate codebases."
+}
+</script>
+</head>
+<body>
+<script>window.gsSiteComponents = {"header":{"logoHref":"/","logoText":"GS ConsultPro","navAriaLabel":null,"hamId":"hamBtn","hamAriaLabel":"Open menu","hamAriaExpanded":"false","hamAriaControls":"mobNav","desktopLinks":[{"href":"/","label":"Home"},{"href":"/services/","label":"Services"},{"href":"/web-design-development-singapore/","label":"Web Development"},{"href":"/shopify-development-services-singapore/","label":"Shopify"},{"href":"/chatbot-development-services-singapore/","label":"Chatbots"}],"mobileLinks":[{"href":"/","label":"Home"},{"href":"/services/","label":"Services"},{"href":"/web-design-development-singapore/","label":"Web Development"},{"href":"/shopify-development-services-singapore/","label":"Shopify"},{"href":"/chatbot-development-services-singapore/","label":"Chatbots"}],"cta":{"href":"#contact","label":"Get in Touch"},"mobileCta":{"href":"#contact","label":"Get in Touch"},"mobileCtaInlineFlex":false},"footer":null};</script>
+<div id="site-header"></div>
+<script src="/assets/site.js"></script>
+
+<main>
+  <section class="hero-page">
+    <div class="container">
+      <div class="hero-copy reveal">
+        <h1>React Native App Development Services in Singapore</h1>
+        <p>GS ConsultPro builds high-performance React Native apps for Singapore and APAC businesses that work seamlessly across iOS and Android without the cost of maintaining two separate codebases.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="split-grid">
+        <article class="problem-card reveal">
+          <h2>Struggling to Build Mobile Apps for iOS and Android Efficiently?</h2>
+          <ul class="problem-list">
+            <li>Separate codebases doubling development costs with no added benefit.</li>
+            <li>Poor performance causing users to uninstall before completing any meaningful in-app action.</li>
+            <li>Long development timelines caused by managing two completely separate mobile codebases simultaneously.</li>
+            <li>App unable to scale as your user base rapidly grows.</li>
+          </ul>
+        </article>
+        <article class="solution-card reveal">
+          <h2>React Native Development That Builds Fast, Scalable, Cross-Platform Apps</h2>
+          <p>GS ConsultPro builds React Native apps with native-like performance on iOS and Android, one codebase, faster delivery, and architecture that scales with your Singapore and APAC business.</p>
+          <ul class="solution-list" style="margin-top:18px">
+            <li>One shared codebase delivering consistent performance across iOS and Android platforms simultaneously.</li>
+            <li>Faster app delivery without compromising native-like performance Singapore and APAC users expect.</li>
+            <li>Scalable architecture supporting Singapore and APAC business growth without costly future rebuilds.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="sec-hd reveal">
+        <h2>Custom React Native Development Services in Singapore</h2>
+        <p>Every service tailored to your Singapore and APAC product goals, user needs, and technical environment.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <h3>React Native App Development</h3>
+          <p>End-to-end custom React Native apps built for iOS and Android through to Singapore store submission.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>Cross-Platform Mobile App Solutions</h3>
+          <p>Single codebase delivering consistent user experiences across every major mobile platform and screen size.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>React Native UI/UX Development</h3>
+          <p>Pixel-perfect interfaces designed around Singapore and APAC user behaviour to maximise engagement and reduce drop-off.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>API &amp; Third-Party Integrations</h3>
+          <p>Seamless connections to payment gateways, CRMs, and third-party services your Singapore and APAC app needs.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>React Native App Migration</h3>
+          <p>Existing native iOS and Android apps migrated to React Native without losing features or existing users.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3>App Maintenance &amp; Performance Optimization</h3>
+          <p>Ongoing monitoring, bug fixing, and performance tuning keeping your React Native app running at peak.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="sec-hd reveal">
+        <h2>Our React Native Development Workflow from Concept to Launch</h2>
+        <p>A clear three-phase process delivering Singapore and APAC businesses a production-ready React Native app on time.</p>
+      </div>
+      <div class="proc-grid">
+        <article class="proc-card reveal">
+          <span class="proc-step">01</span>
+          <h3>Discovery &amp; Planning</h3>
+          <p>Business goals, user requirements, and technical architecture fully defined before any React Native development work begins.</p>
+        </article>
+        <article class="proc-card reveal">
+          <span class="proc-step">02</span>
+          <h3>Build &amp; Test</h3>
+          <p>App built sprint by sprint with continuous testing across real iOS and Android devices throughout.</p>
+        </article>
+        <article class="proc-card reveal">
+          <span class="proc-step">03</span>
+          <h3>Launch &amp; Support</h3>
+          <p>App submitted to both stores with performance monitored closely and post-launch issues resolved immediately after.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="sec-hd reveal">
+        <h2>Common App Performance Issues We Solve with React Native</h2>
+        <p>Singapore and APAC businesses switching to React Native resolve the same costly mobile problems, slow load times, fragmented codebases, and rising maintenance costs that make managing two separate native apps completely unsustainable.</p>
+      </div>
+      <div class="factor-grid">
+        <article class="factor-card reveal">
+          <h3>Slowness</h3>
+          <p>Unoptimised architecture and heavy components causing poor user experience and high app uninstall rates resolved.</p>
+        </article>
+        <article class="factor-card reveal">
+          <h3>Fragmentation</h3>
+          <p>Separate iOS and Android codebases creating inconsistent experiences and doubling every future development and maintenance cost.</p>
+        </article>
+        <article class="factor-card reveal">
+          <h3>Instability</h3>
+          <p>Frequent crashes, unresolved bugs, and memory issues damaging user trust and app store ratings fixed.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="sec-hd reveal">
+        <h2>Testimonials</h2>
+      </div>
+      <div class="testimonial-card reveal">
+        <h3>Testimonials here</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="why-band reveal">
+        <h2>Why Singapore Businesses Partner with Our React Native Team</h2>
+        <p>Singapore and APAC businesses choose GS ConsultPro for React Native because we combine deep expertise with transparent delivery focused on shipping real products on time.</p>
+        <div class="pill-grid">
+          <div class="pill-item">Platform-Specific Expertise</div>
+          <div class="pill-item">On-Time Delivery</div>
+          <div class="pill-item">Post-Launch Support</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="strategy-card reveal">
+        <h2>How React Native Helps Reduce Development Time and Costs</h2>
+        <p>One codebase covering iOS and Android means building once, deploying everywhere, and spending less every month.</p>
+        <ul class="issue-grid" style="margin-top:18px">
+          <li>Shared codebase cutting mobile development time significantly across Singapore and APAC.</li>
+          <li>Shared codebase cutting Singapore and APAC development time by forty percent immediately.</li>
+          <li>Single team managing both platforms reducing hiring and maintenance overhead significantly.</li>
+          <li>Faster releases keeping Singapore and APAC apps competitive without extra development spend.</li>
+          <li>Over-the-air updates pushing improvements instantly without slow app store approval processes.</li>
+          <li>Lower maintenance costs freeing Singapore and APAC budgets for product growth.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="sec-hd reveal">
+        <h2>FAQs</h2>
+      </div>
+      <div class="faq-wrap">
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button"><span>Is React Native Suitable For Complex Singapore And Apac Business Applications?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Yes. React Native handles complex applications including real-time features, payment integrations, and high-traffic consumer apps effectively. Businesses across Singapore and APAC in finance, e-commerce, and healthcare rely on React Native for production-grade applications serving hundreds of thousands of daily active users without performance compromises.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button"><span>How Does React Native Compare To Building Separate Native Apps For Singapore And Apac Businesses?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>React Native delivers a single shared codebase for iOS and Android, significantly reducing development time and cost. The performance is native-like and indistinguishable to end users across the vast majority of Singapore and APAC mobile application types and everyday use cases.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button"><span>How Long Does It Take To Build A React Native App In Singapore And Apac?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>A straightforward app typically takes eight to twelve weeks from discovery to launch. Apps with complex integrations or real-time features take longer. We agree on a realistic timeline during the discovery phase before any Singapore and APAC development begins.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button"><span>Can You Migrate Our Existing Singapore App To React Native Without Losing Features Or Users?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Yes. We migrate existing native apps to React Native for Singapore and APAC businesses while preserving all functionality, user data, and app store ratings, planned carefully in phases so your users experience zero disruption throughout the entire transition</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button"><span>What Types Of Singapore Businesses Benefit Most From React Native Development?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>React Native suits any Singapore business needing a quality mobile app on both iOS and Android without the budget for two separate native builds. Startups validating new product ideas, SMEs launching customer-facing apps, and established APAC brands expanding into mobile all benefit significantly from React Native's speed, cost efficiency, and cross-platform consistency.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button"><span>Can React Native Apps Access Device Hardware Features Like Camera And Gps In Singapore?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Yes. React Native provides access to native device hardware including camera, GPS, biometric authentication, push notifications, and accelerometer through a combination of built-in APIs and well-maintained community libraries. For any hardware capability your Singapore app requires, we evaluate the best integration approach during the discovery phase before development begins.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button"><span>Will Our React Native App Be Accepted By The Apple App Store And Google Play Store?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Yes. React Native apps fully comply with Apple App Store and Google Play submission requirements. We manage the complete submission process for Singapore businesses including store listing optimisation, screenshot production, compliance review, and content rating classification to give your app the strongest possible foundation for organic discoverability from the moment it goes live publicly.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" type="button"><span>How Do You Handle React Native Performance Optimisation For Singapore And Apac Users?</span><span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Performance optimisation is built into our development process from the start rather than treated as an afterthought after launch. We implement lazy loading, efficient state management, optimised API calls, and memory handling best practices throughout every sprint so your Singapore app delivers fast, smooth performance across the full range of iOS and Android devices your target audience uses daily across Singapore and the wider APAC region.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-band reveal">
+        <h2>Ready to Launch a High-Performance React Native App?</h2>
+        <p>If your Singapore or APAC business needs a fast cross-platform mobile app without building two separate native applications, GS ConsultPro is the right team to build it properly from day one.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="contact">
+    <div class="container">
+      <div class="contact-card reveal">
+        <h2>Speak with Our React Native Developers in Singapore</h2>
+        <p>Share your app goals and target platforms and we will show you exactly how React Native gets your Singapore or APAC business to market faster and at lower cost.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-row">
+      <p>&copy; 2026 GS ConsultPro. All rights reserved.</p>
+      <p><a href="/services/">Explore Services</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const header=document.getElementById('siteHeader');
+const hamBtn=document.getElementById('hamBtn');
+const mobNav=document.getElementById('mobNav');
+const onScroll=()=>header.classList.toggle('scrolled',window.scrollY>10);
+onScroll();
+window.addEventListener('scroll',onScroll,{passive:true});
+hamBtn.addEventListener('click',()=>{
+  const open=mobNav.classList.toggle('open');
+  hamBtn.classList.toggle('open',open);
+  hamBtn.setAttribute('aria-expanded',open?'true':'false');
+});
+document.querySelectorAll('.mob-nav a').forEach(link=>link.addEventListener('click',()=>{
+  mobNav.classList.remove('open');
+  hamBtn.classList.remove('open');
+  hamBtn.setAttribute('aria-expanded','false');
+}));
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const btn=item.querySelector('.faq-q');
+  const panel=item.querySelector('.faq-a');
+  btn.addEventListener('click',()=>{
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(other=>{
+      other.classList.remove('open');
+      other.querySelector('.faq-a').style.maxHeight=null;
+    });
+    if(!isOpen){
+      item.classList.add('open');
+      panel.style.maxHeight=panel.scrollHeight+'px';
+    }
+  });
+});
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('in');
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:.14});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
+
+
+

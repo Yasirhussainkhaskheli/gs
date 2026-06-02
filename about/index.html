@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About Us | GS ConsultPro</title>
+<meta name="description" content="Learn about GS ConsultPro, our approach to growth marketing, and how we help Singapore and APAC businesses scale with clarity, strategy, and execution." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/styles.css" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-y:scroll}
+body{font-family:'Barlow','Segoe UI',Arial,Helvetica,sans-serif;background:#fff;color:#0f172a;overflow-x:hidden;line-height:1.6;text-rendering:optimizeLegibility}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+:root{
+  --dark:#0f1523;
+  --accent:#2d8cff;
+  --accent2:#1f72d8;
+  --accent-soft:rgba(45,140,255,.1);
+  --light:#f8fafc;
+  --light2:#f1f5f9;
+  --text:#0b1220;
+  --text2:#1f2937;
+  --muted:#334155;
+  --muted2:#64748b;
+  --border:#e5e7eb;
+  --border2:#d1d5db;
+  --trans:all .28s cubic-bezier(.4,0,.2,1);
+  --max:1280px;
+  --r2:16px;
+  --r3:20px;
+  --sh:0 6px 22px rgba(15,23,42,.07),0 2px 6px rgba(15,23,42,.04);
+  --shm:0 14px 40px rgba(15,23,42,.1),0 4px 14px rgba(15,23,42,.05);
+  --sh-red:0 8px 28px rgba(45,140,255,.28);
+}
+.container{max-width:var(--max);margin:0 auto;padding:0 48px}
+.btn-primary,.btn-ghost,.btn-ghost-white{
+  display:inline-flex;align-items:center;gap:8px;border-radius:999px;
+  font-family:'Barlow','Segoe UI',Arial,Helvetica,sans-serif;font-weight:700;font-size:14px;
+  letter-spacing:.6px;text-transform:uppercase;transition:var(--trans);cursor:pointer
+}
+.btn-primary{background:var(--accent);color:#fff;padding:14px 30px;border:2px solid var(--accent);box-shadow:0 10px 30px rgba(45,140,255,.2)}
+.btn-primary:hover{background:var(--accent2);border-color:var(--accent2);transform:translateY(-3px);box-shadow:var(--sh-red)}
+.btn-ghost{background:transparent;color:var(--text);padding:12px 28px;border:2px solid var(--border2)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+.stag,.stag-plain{font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent)}
+.stag{display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
+.stag::before{content:'';width:24px;height:2px;background:var(--accent);flex-shrink:0}
+.stag-plain{display:inline-block;margin-bottom:12px}
+.sec-hd{margin:0 auto 60px;max-width:min(70%,900px);text-align:center}
+.sec-hd h2{font-family:'Barlow Condensed','Arial Narrow','Roboto Condensed','Segoe UI',sans-serif;font-size:clamp(28px,4vw,50px);font-weight:900;text-transform:uppercase;line-height:1.04;color:var(--text)}
+.sec-hd p{font-size:18px;line-height:1.72;margin-top:16px;max-width:720px;color:var(--muted);margin-left:auto;margin-right:auto}
+header{position:fixed;top:0;left:0;width:100%;z-index:1000;transition:var(--trans)}
+.nav-bg{background:transparent;transition:background .3s,box-shadow .3s}
+header.scrolled .nav-bg{background:rgba(255,255,255,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 2px 24px rgba(15,23,42,.08)}
+nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:76px;max-width:var(--max);margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:38px;height:38px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;color:#fff;letter-spacing:-1px}
+.logo-txt{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--text);letter-spacing:.5px}
+.nav-ul{display:flex;align-items:center;gap:2px}
+.nav-ul>li{position:relative}
+.nav-ul>li>a{color:var(--text2);font-size:14px;font-weight:500;padding:26px 14px;display:flex;align-items:center;gap:5px;transition:color .2s;white-space:nowrap}
+.nav-ul>li>a:hover{color:var(--text)}
+.arr{width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px;transition:transform .2s;flex-shrink:0}
+.nav-ul>li:hover>a .arr{transform:rotate(-135deg);margin-top:2px}
+.drop{position:absolute;top:100%;left:0;background:#fff;min-width:250px;box-shadow:0 20px 60px rgba(0,0,0,.13);border-top:3px solid var(--accent);border-radius:0 0 10px 10px;padding:8px 0;opacity:0;visibility:hidden;transform:translateY(10px);transition:var(--trans);z-index:100}
+.nav-ul>li:hover .drop{opacity:1;visibility:visible;transform:translateY(0)}
+.drop a{display:block;padding:10px 20px;color:var(--text2);font-size:14px;font-weight:500;transition:var(--trans)}
+.drop a:hover{color:var(--accent);background:var(--light);padding-left:26px}
+.nav-end{display:flex;align-items:center;gap:14px}
+.nav-end .btn-primary{padding:10px 22px;font-size:13px}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.ham span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:var(--trans)}
+.ham.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mob-nav{display:none;position:fixed;top:76px;left:0;width:100%;background:#fff;z-index:999;padding:20px 0 28px;border-top:1px solid var(--border);max-height:calc(100vh - 76px);overflow-y:auto;box-shadow:0 20px 40px rgba(15,23,42,.08)}
+.mob-nav.open{display:block}
+.mob-nav a{display:block;padding:12px 32px;color:var(--text2);font-size:15px;font-weight:500;border-bottom:1px solid var(--border)}
+.mob-group-label{display:block;padding:12px 32px 8px;color:var(--muted2);font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase}
+.mob-cta{padding:20px 32px}
+.hero-page{padding:164px 0 108px;background:radial-gradient(circle at top left, rgba(45,140,255,.12), transparent 28%),linear-gradient(180deg,#fff 0%,#f8fbff 100%)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:40px;align-items:end}
+.hero-copy{max-width:min(72%,920px);margin:0 auto;text-align:center}
+.hero-copy h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(46px,7vw,82px);font-weight:900;line-height:.95;text-transform:uppercase;color:var(--text);margin-bottom:22px}
+.hero-copy h1 em{font-style:normal;color:var(--accent)}
+.hero-copy p{font-size:19px;line-height:1.78;color:var(--muted);max-width:760px;margin:0 auto 32px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.section{padding:128px 0}
+.section.alt{background:var(--light)}
+.story-grid,.value-grid,.stat-grid,.approach-grid,.contact-band{display:grid;gap:24px}
+.story-grid{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:center}
+.story-card,.sidebar-card,.value-card,.approach-card,.contact-band .band-card{background:#fff;border:1.5px solid var(--border);border-radius:var(--r3);box-shadow:var(--sh)}
+.story-card,.sidebar-card{padding:40px 34px}
+.story-card h2,.sidebar-card h3,.value-card h3,.approach-card h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;text-transform:uppercase;color:var(--text)}
+.story-card h2{font-size:clamp(28px,4vw,48px);line-height:1.04;margin-bottom:18px}
+.story-card p,.sidebar-card p,.value-card p,.approach-card p{font-size:18px;line-height:1.72;color:var(--muted)}
+.story-card p + p{margin-top:16px}
+.sidebar-card{background:linear-gradient(180deg,#0f1523 0%,#17213b 100%);border-color:#17213b}
+.sidebar-card h3,.sidebar-card p,.sidebar-card li{color:#fff}
+.sidebar-card ul{display:grid;gap:12px;margin-top:18px}
+.sidebar-card li{padding:14px 16px;border:1px solid rgba(255,255,255,.14);border-radius:14px;background:rgba(255,255,255,.05);font-size:15px;line-height:1.6}
+.stat-grid{grid-template-columns:repeat(4,1fr)}
+.stat-card{padding:28px 24px;background:#fff;border:1.5px solid var(--border);border-radius:var(--r2);text-align:center;box-shadow:var(--sh)}
+.stat-card strong{display:block;font-family:'Barlow Condensed',sans-serif;font-size:44px;font-weight:900;color:var(--accent);line-height:1;margin-bottom:8px}
+.stat-card span{font-size:13px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}
+.value-grid{grid-template-columns:repeat(3,1fr)}
+.value-card,.approach-card{padding:34px 30px;transition:var(--trans)}
+.value-card:hover,.approach-card:hover{transform:translateY(-4px);box-shadow:var(--shm);border-color:rgba(45,140,255,.28)}
+.value-icon{width:52px;height:52px;border-radius:12px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.value-icon svg{width:24px;height:24px;color:var(--accent)}
+.value-card h3,.approach-card h3{font-size:22px;margin-bottom:10px}
+.approach-grid{grid-template-columns:repeat(2,1fr)}
+.cta-band{grid-template-columns:minmax(0,1fr);background:var(--accent);background-image:linear-gradient(140deg, rgba(255,255,255,.16), transparent 35%), radial-gradient(circle at top right, rgba(255,255,255,.14), transparent 26%);border-radius:28px;padding:56px 48px;box-shadow:var(--sh-red)}
+.cta-band h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(30px,4vw,50px);font-weight:900;text-transform:uppercase;color:#fff;line-height:1.02;margin-bottom:12px}
+.cta-band p{font-size:19px;line-height:1.72;color:rgba(255,255,255,.86);max-width:760px;margin-bottom:24px}
+.cta-band .btn-primary{background:#fff;color:var(--accent);border-color:#fff}
+.cta-band .btn-primary:hover{background:rgba(255,255,255,.92);border-color:rgba(255,255,255,.92)}
+footer{background:#fff;padding:80px 0 0;border-top:1px solid var(--border)}
+.ft-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:44px;padding-bottom:52px;border-bottom:1px solid var(--border)}
+.ft-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.ft-logo-mark{width:34px;height:34px;background:var(--accent);border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:900;color:#fff}
+.ft-logo-txt{font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:800;color:var(--text)}
+.ft-brand p{color:var(--muted);font-size:18px;line-height:1.72;margin-bottom:22px}
+.ft-tagline{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;display:block}
+.social-row{display:flex;gap:10px}
+.soc{width:36px;height:36px;border-radius:8px;background:var(--light);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px;font-weight:700;transition:var(--trans)}
+.soc:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-2px)}
+.ft-col h4{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.ft-col ul{display:grid;gap:10px}
+.ft-col ul li a{color:var(--muted);font-size:14px;transition:var(--trans)}
+.ft-col ul li a:hover{color:var(--text);padding-left:5px}
+.ft-bottom{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:22px 0 30px}
+.ft-bottom p,.ft-links a{font-size:13px;color:var(--muted)}
+.ft-links{display:flex;gap:18px;flex-wrap:wrap}
+.ft-links a:hover{color:var(--text2)}
+section,footer{--reveal-dur:.8s;--reveal-ease:cubic-bezier(.22,1,.36,1)}
+section .container>*,footer .container>*{opacity:0;transform:translateY(34px);transition:opacity var(--reveal-dur) var(--reveal-ease),transform var(--reveal-dur) var(--reveal-ease)}
+section.in-view .container>*,footer.in-view .container>*{opacity:1;transform:none}
+@media (max-width:1100px){
+  .story-grid,.value-grid,.stat-grid,.approach-grid,.ft-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .container,nav{padding:0 22px}
+  .nav-ul,.nav-end .btn-primary{display:none}
+  .ham{display:flex}
+  .hero-page{padding:136px 0 84px}
+  .story-grid,.value-grid,.stat-grid,.approach-grid,.ft-top{grid-template-columns:1fr}
+  .hero-copy,.sec-hd{max-width:100%}
+  .ft-bottom{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:640px){
+  .hero-copy h1{font-size:40px}
+  .hero-copy p,.sec-hd p,.story-card p,.sidebar-card p,.value-card p,.approach-card p,.cta-band p{font-size:17px}
+  .hero-btns{flex-direction:column;align-items:stretch}
+  .hero-btns a,.mob-cta a{justify-content:center;width:100%}
+  .section{padding:72px 0}
+  .cta-band{padding:38px 24px}
+}
+</style>
+</head>
+<body>
+<script>
+window.gsSiteComponents = {
+  header: {
+    logoHref: "/",
+    logoText: "GS ConsultPro",
+    hamId: "ham",
+    hamAriaLabel: "Menu",
+    desktopLinks: [
+      { href: "/", label: "Home" },
+      { href: "/about/", label: "About" },
+      { href: "/contact/", label: "Contact" }
+    ],
+    mobileLinks: [
+      { href: "/", label: "Home" },
+      { href: "/about/", label: "About" },
+      { href: "/contact/", label: "Contact" }
+    ],
+    cta: { href: "/contact/", label: "Talk to Us" },
+    mobileCta: { href: "/contact/", label: "Talk to Us" }
+  },
+  footer: {
+    brandName: "GS ConsultPro",
+    tagline: "Growth Strategy For Singapore &amp; APAC",
+    description: "GS ConsultPro helps ambitious brands build clearer positioning, stronger demand, and better-performing digital systems across Singapore and the wider APAC market.",
+    socialLinks: [
+      { href: "#", ariaLabel: "LinkedIn", label: "in" },
+      { href: "#", ariaLabel: "X", label: "X" },
+      { href: "#", ariaLabel: "Facebook", label: "fb" },
+      { href: "#", ariaLabel: "Instagram", label: "Ig" }
+    ],
+    columns: [
+      {
+        title: "Pages",
+        links: [
+          { href: "/", label: "Homepage" },
+          { href: "/about/", label: "About" },
+          { href: "/contact/", label: "Contact" }
+        ]
+      },
+      {
+        title: "Core Services",
+        links: [
+          { href: "/seo-services-singapore/", label: "SEO" },
+          { href: "/app-development-services-singapore/", label: "App Development" },
+          { href: "/lead-generation-services-singapore/", label: "Lead Generation & Growth" }
+        ]
+      },
+      {
+        title: "Reach Us",
+        links: [
+          { href: "mailto:hello@gsconsultpro.com", label: "hello@gsconsultpro.com" },
+          { href: "/contact/", label: "Singapore, APAC" }
+        ]
+      }
+    ],
+    copyright: "&copy; 2026 GS ConsultPro. All rights reserved.",
+    bottomLinks: [
+      { href: "/about/", label: "About" },
+      { href: "/contact/", label: "Contact" },
+      { href: "/services/", label: "Services" }
+    ]
+  }
+};
+</script>
+<div id="site-header"></div>
+<script src="/assets/site.js"></script>
+
+<main>
+  <section class="hero-page">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="stag">About GS ConsultPro</div>
+          <h1>Built To Turn <em>Visibility</em> Into Measurable Growth</h1>
+          <p>We help Singapore and APAC businesses move from fragmented marketing activity to structured growth systems designed to strengthen visibility, generate demand, and support measurable business growth.</p>
+          <div class="hero-btns">
+            <a href="/services/" class="btn-ghost">Explore Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="story-grid">
+        <article class="story-card">
+          <div class="stag-plain">Who We Are</div>
+          <h2>A Growth Partner Built For Execution And Results</h2>
+          <p>GS ConsultPro exists for businesses that want more than disconnected campaigns and surface-level activity. We work with companies that need stronger demand generation, better conversion performance, and scalable digital growth.</p>
+          <p>Our approach combines strategy with execution. We translate growth priorities into focused action plans and help implement the systems, campaigns, and digital assets needed to support measurable business outcomes.</p>
+        </article>
+        <aside class="sidebar-card">
+          <div class="stag-plain">What We Believe</div>
+          <h3>Better Growth Starts With Better Direction</h3>
+          <p>Most growth problems are not caused by a lack of effort. They come from fragmented priorities, unclear positioning, and inconsistent execution.</p>
+          <ul>
+            <li>Strong growth needs a clear message, not just more traffic.</li>
+            <li>Every channel should support revenue, not vanity metrics.</li>
+            <li>Execution matters most when strategy is grounded.</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="sec-hd">
+        <span class="stag-plain">What Guides Us</span>
+        <h2>How We Think About Growth</h2>
+        <p>We keep our work focused, accountable, and aligned with measurable business outcomes.</p>
+      </div>
+      <div class="value-grid">
+        <article class="value-card">
+          <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-6"/></svg></div>
+          <h3>Commercial Focus</h3>
+          <p>We align strategy and execution around qualified demand, stronger conversion, and measurable business growth rather than activity for its own sake.</p>
+        </article>
+        <article class="value-card">
+          <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg></div>
+          <h3>Strategic Discipline</h3>
+          <p>We prioritise the work that will move the needle first, helping teams avoid dilution across too many disconnected channels or initiatives.</p>
+        </article>
+        <article class="value-card">
+          <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <h3>Execution Speed</h3>
+          <p>Great opportunities lose value when they stay in planning too long. We turn direction into focused action quickly and cleanly.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="sec-hd">
+        <span class="stag-plain">At A Glance</span>
+        <h2>What We Help Businesses Achieve</h2>
+        <p>Our role changes by client, but the goal remains the same: strengthen visibility, improve conversion, and support measurable business growth.</p>
+      </div>
+      <div class="stat-grid">
+        <article class="stat-card"><strong>SEO</strong><span>Search Authority</span></article>
+        <article class="stat-card"><strong>Content</strong><span>Authority Building</span></article>
+        <article class="stat-card"><strong>Outreach</strong><span>Demand Acceleration</span></article>
+        <article class="stat-card"><strong>Web</strong><span>Experience Optimisation</span></article>
+        <article class="stat-card"><strong>Automation</strong><span>Workflow Intelligence</span></article>
+        <article class="stat-card"><strong>Partnerships</strong><span>Ecosystem Growth</span></article>
+        <article class="stat-card"><strong>Events</strong><span>Executive Engagement</span></article>
+        <article class="stat-card"><strong>Enablement</strong><span>Capability Development</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="sec-hd">
+        <span class="stag-plain">Our Approach</span>
+        <h2>How We Work With Clients</h2>
+        <p>We bring structure to growth initiatives so businesses can move faster with clearer direction and stronger alignment.</p>
+      </div>
+      <div class="approach-grid">
+        <article class="approach-card">
+          <h3>Diagnose First</h3>
+          <p>We start by understanding what is working, where friction exists, and which opportunities matter most commercially.</p>
+        </article>
+        <article class="approach-card">
+          <h3>Prioritise Clearly</h3>
+          <p>Not every task deserves immediate attention. We focus on the highest-impact actions that create real momentum.</p>
+        </article>
+        <article class="approach-card">
+          <h3>Execute With Intent</h3>
+          <p>Once direction is clear, we move into execution with structured plans, defined deliverables, and attention to quality.</p>
+        </article>
+        <article class="approach-card">
+          <h3>Improve Continuously</h3>
+          <p>Growth compounds when execution is continuously refined through performance feedback and iteration.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-band">
+        <div class="band-card">
+          <h2>Need A Team That Can Bring More Structure To Growth Initiatives?</h2>
+          <p>If your business needs better direction, stronger execution, or a clearer path from visibility to revenue, we would be glad to talk through what comes next.</p>
+          <a href="/contact/" class="btn-primary">Contact GS ConsultPro</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script>
+const hdr = document.getElementById('hdr');
+window.addEventListener('scroll', () => hdr.classList.toggle('scrolled', scrollY > 60));
+
+const ham = document.getElementById('ham');
+const mobNav = document.getElementById('mobNav');
+if (ham && mobNav) {
+  ham.addEventListener('click', () => {
+    ham.classList.toggle('open');
+    mobNav.classList.toggle('open');
+  });
+  mobNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    ham.classList.remove('open');
+    mobNav.classList.remove('open');
+  }));
+}
+
+const revealBlocks = document.querySelectorAll('section, footer');
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.16, rootMargin: '0px 0px -8% 0px' });
+  revealBlocks.forEach((block) => revealObserver.observe(block));
+} else {
+  revealBlocks.forEach((block) => block.classList.add('in-view'));
+}
+</script>
+</body>
+</html>
