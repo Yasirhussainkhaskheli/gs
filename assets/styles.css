@@ -84,6 +84,24 @@ body:not(.home-page) .hero-page .btn-ghost:hover{
 .mob-group-label{display:block;padding:12px 32px 8px;color:var(--muted2,#64748b);font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase}
 
 .stag,
+.stag-plain{
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+.stag{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:16px;
+}
+.stag-plain{
+  display:inline-block;
+  margin-bottom:12px;
+}
+
+.stag,
 .stag-plain,
 .mini-label,
 .hero-label,
@@ -98,4 +116,14 @@ body:not(.home-page) .hero-page .btn-ghost:hover{
 }
 .stag::before{
   background:var(--accent,#2d8cff) !important;
+}
+
+.cta-banner .stag,
+.cta-banner .stag-plain,
+.cta-in .stag,
+.cta-in .stag-plain,
+.cta-band .stag,
+.cta-band .stag-plain,
+.cta-band .mini-label{
+  color:#fff !important;
 }

@@ -16,18 +16,7 @@
     },
     {
       href: '/seo-services-singapore/',
-      label: 'SEO',
-      children: [
-        { href: 'technical-/seo-services-singapore/', label: 'Technical SEO' },
-        { href: '/on-page-semantic-seo-services-singapore/', label: 'On-Page & Semantic SEO' },
-        { href: '/off-page-seo-link-building-singapore/', label: 'Off-Page SEO & Link Building' },
-        { href: '/local-seo-services-singapore/', label: 'Local SEO' },
-        { href: '/international-seo-services-singapore/', label: 'International SEO' },
-        { href: '/ecommerce-seo-services-singapore/', label: 'E-commerce SEO' },
-        { href: 'shopify-/seo-services-singapore/', label: 'Shopify SEO' },
-        { href: '/free-seo-audit-singapore/', label: 'Free SEO Audit' },
-        { href: '/seo-packages-pricing-singapore/', label: 'SEO Packages & Pricing' }
-      ]
+      label: 'SEO'
     },
     {
       href: '/app-development-services-singapore/',
@@ -96,16 +85,6 @@
     { href: '/website-ui-ux-design-services-singapore/', label: 'Website UI/UX' },
     { href: '/website-maintenance-services-singapore/', label: 'Website Maintenance' },
     { href: '/seo-services-singapore/', label: 'SEO' },
-    { type: 'label', label: 'SEO Services' },
-    { href: 'technical-/seo-services-singapore/', label: 'Technical SEO' },
-    { href: '/on-page-semantic-seo-services-singapore/', label: 'On-Page & Semantic SEO' },
-    { href: '/off-page-seo-link-building-singapore/', label: 'Off-Page SEO & Link Building' },
-    { href: '/local-seo-services-singapore/', label: 'Local SEO' },
-    { href: '/international-seo-services-singapore/', label: 'International SEO' },
-    { href: '/ecommerce-seo-services-singapore/', label: 'E-commerce SEO' },
-    { href: 'shopify-/seo-services-singapore/', label: 'Shopify SEO' },
-    { href: '/free-seo-audit-singapore/', label: 'Free SEO Audit' },
-    { href: '/seo-packages-pricing-singapore/', label: 'SEO Packages & Pricing' },
     { href: '/app-development-services-singapore/', label: 'App Development' },
     { type: 'label', label: 'App Services' },
     { href: '/custom-mobile-app-development-singapore/', label: 'Mobile App Development' },
