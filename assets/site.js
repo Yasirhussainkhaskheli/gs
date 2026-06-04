@@ -67,7 +67,9 @@
       href: '/services/',
       label: 'Strategy & Engagement',
       children: [
-        { href: '/tradeshow-exhibitor-strategy-singapore/', label: 'Trade Show & Exhibitor Strategy' }
+        { href: '/tradeshow-exhibitor-strategy-singapore/', label: 'Trade Show & Exhibitor Strategy' },
+        { href: '/strategic-partnership-consulting-singapore/', label: 'Strategic Partnerships' },
+        { href: '/corporate-sales-training-workshops-singapore/', label: 'Corporate Training & Workshops' }
       ]
     }
   ];
@@ -125,6 +127,8 @@
     { href: '/services/', label: 'Strategy & Engagement' },
     { type: 'label', label: 'Strategy & Engagement Services' },
     { href: '/tradeshow-exhibitor-strategy-singapore/', label: 'Trade Show & Exhibitor Strategy' },
+    { href: '/strategic-partnership-consulting-singapore/', label: 'Strategic Partnerships' },
+    { href: '/corporate-sales-training-workshops-singapore/', label: 'Corporate Training & Workshops' },
     { href: '/about/', label: 'About' },
     { href: '/contact/', label: 'Contact' }
   ];
@@ -166,6 +170,8 @@
     'Strategy & Engagement',
     'Strategy & Engagement Services',
     'Trade Show & Exhibitor Strategy',
+    'Strategic Partnerships',
+    'Corporate Training & Workshops',
     'FAQs',
     'About',
     'Contact',
