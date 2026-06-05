@@ -3,16 +3,7 @@
   const globalServiceMenus = [
     {
       href: '/web-design-development-singapore/',
-      label: 'Web Design',
-      children: [
-        { href: '/ecommerce-website-development-singapore/', label: 'E-commerce Website Development' },
-        { href: '/shopify-development-services-singapore/', label: 'Shopify Development' },
-        { href: '/wordpress-website-development-singapore/', label: 'WordPress Website Development' },
-        { href: '/bigcommerce-development-services-singapore/', label: 'BigCommerce Development' },
-        { href: '/landing-page-development-singapore/', label: 'Landing Page Development' },
-        { href: '/website-ui-ux-design-services-singapore/', label: 'Website UI/UX' },
-        { href: '/website-maintenance-services-singapore/', label: 'Website Maintenance' }
-      ]
+      label: 'Web Design & Development'
     },
     {
       href: '/seo-services-singapore/',
@@ -75,15 +66,7 @@
   ];
   const globalMobileMenus = [
     { href: '/', label: 'Home' },
-    { href: '/web-design-development-singapore/', label: 'Web Design' },
-    { type: 'label', label: 'Web Services' },
-    { href: '/ecommerce-website-development-singapore/', label: 'E-commerce Website Development' },
-    { href: '/shopify-development-services-singapore/', label: 'Shopify Development' },
-    { href: '/wordpress-website-development-singapore/', label: 'WordPress Website Development' },
-    { href: '/bigcommerce-development-services-singapore/', label: 'BigCommerce Development' },
-    { href: '/landing-page-development-singapore/', label: 'Landing Page Development' },
-    { href: '/website-ui-ux-design-services-singapore/', label: 'Website UI/UX' },
-    { href: '/website-maintenance-services-singapore/', label: 'Website Maintenance' },
+    { href: '/web-design-development-singapore/', label: 'Web Design & Development' },
     { href: '/seo-services-singapore/', label: 'SEO' },
     { href: '/app-development-services-singapore/', label: 'App Development' },
     { type: 'label', label: 'App Services' },
