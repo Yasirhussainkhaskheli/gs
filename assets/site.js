@@ -2,55 +2,40 @@
   const config = window.gsSiteComponents || {};
   const globalServiceMenus = [
     {
-      href: '/web-design-development-singapore/',
-      label: 'Web Design & Development'
-    },
-    {
       href: '/seo-services-singapore/',
       label: 'SEO'
     },
     {
-      href: '/app-development-services-singapore/',
-      label: 'App Development',
-      children: [
-        { href: '/custom-mobile-app-development-singapore/', label: 'Mobile App Development' },
-        { href: '/react-native-app-development-singapore/', label: 'React Native Development' },
-        { href: '/chatbot-development-services-singapore/', label: 'Chatbot Development' }
-      ]
-    },
-    {
-      href: '/lead-generation-services-singapore/',
-      label: 'Lead Generation & Growth',
-      children: [
-        { href: '/b2b-lead-generation-services-singapore/', label: 'B2B Lead Generation' },
-        { href: '/lead-generation-services-singapore/', label: 'Sales Automation' }
-      ]
-    },
-    {
       href: '/content-creation-services-singapore/',
-      label: 'Content Creation',
-      children: [
-        { href: '/content-marketing-services-singapore/', label: 'Content Marketing Strategy' },
-        { href: '/blog-writing-services-singapore/', label: 'Blog Writing Services' },
-        { href: '/social-media-content-services-singapore/', label: 'Social Media Content' }
-      ]
+      label: 'Content Strategy & Writing'
     },
     {
       href: '/paid-media-social-advertising-singapore/',
-      label: 'Paid Media & Social',
-      children: [
-        { href: '/google-ads-ppc-services-singapore/', label: 'Google Ads (PPC)' },
-        { href: '/social-media-marketing-services-singapore/', label: 'Social Media Marketing' }
-      ]
+      label: 'Paid Media & Social Advertising'
     },
     {
-      href: '/services/',
-      label: 'Strategy & Engagement',
-      children: [
-        { href: '/tradeshow-exhibitor-strategy-singapore/', label: 'Trade Show & Exhibitor Strategy' },
-        { href: '/strategic-partnership-consulting-singapore/', label: 'Strategic Partnerships' },
-        { href: '/corporate-sales-training-workshops-singapore/', label: 'Corporate Training & Workshops' }
-      ]
+      href: '/lead-generation-services-singapore/',
+      label: 'B2B Lead Generation & Sales Automation'
+    },
+    {
+      href: '/web-design-development-singapore/',
+      label: 'Web Design & Development'
+    },
+    {
+      href: '/app-development-services-singapore/',
+      label: 'App Development & AI Solutions'
+    },
+    {
+      href: '/strategic-partnership-consulting-singapore/',
+      label: 'Strategic Partnerships'
+    },
+    {
+      href: '/corporate-sales-training-workshops-singapore/',
+      label: 'Corporate Training & Workshops'
+    },
+    {
+      href: '/tradeshow-exhibitor-strategy-singapore/',
+      label: 'Trade Show & Exhibitor Strategy'
     }
   ];
   const globalDesktopMenus = [
@@ -66,31 +51,15 @@
   ];
   const globalMobileMenus = [
     { href: '/', label: 'Home' },
-    { href: '/web-design-development-singapore/', label: 'Web Design & Development' },
     { href: '/seo-services-singapore/', label: 'SEO' },
-    { href: '/app-development-services-singapore/', label: 'App Development' },
-    { type: 'label', label: 'App Services' },
-    { href: '/custom-mobile-app-development-singapore/', label: 'Mobile App Development' },
-    { href: '/react-native-app-development-singapore/', label: 'React Native Development' },
-    { href: '/chatbot-development-services-singapore/', label: 'Chatbot Development' },
-    { href: '/lead-generation-services-singapore/', label: 'Lead Generation & Growth' },
-    { type: 'label', label: 'Growth Services' },
-    { href: '/b2b-lead-generation-services-singapore/', label: 'B2B Lead Generation' },
-    { href: '/lead-generation-services-singapore/', label: 'Sales Automation' },
-    { href: '/content-creation-services-singapore/', label: 'Content Creation' },
-    { type: 'label', label: 'Content Services' },
-    { href: '/content-marketing-services-singapore/', label: 'Content Marketing Strategy' },
-    { href: '/blog-writing-services-singapore/', label: 'Blog Writing Services' },
-    { href: '/social-media-content-services-singapore/', label: 'Social Media Content' },
-    { href: '/paid-media-social-advertising-singapore/', label: 'Paid Media & Social' },
-    { type: 'label', label: 'Paid Media Services' },
-    { href: '/google-ads-ppc-services-singapore/', label: 'Google Ads (PPC)' },
-    { href: '/social-media-marketing-services-singapore/', label: 'Social Media Marketing' },
-    { href: '/services/', label: 'Strategy & Engagement' },
-    { type: 'label', label: 'Strategy & Engagement Services' },
-    { href: '/tradeshow-exhibitor-strategy-singapore/', label: 'Trade Show & Exhibitor Strategy' },
+    { href: '/content-creation-services-singapore/', label: 'Content Strategy & Writing' },
+    { href: '/paid-media-social-advertising-singapore/', label: 'Paid Media & Social Advertising' },
+    { href: '/lead-generation-services-singapore/', label: 'B2B Lead Generation & Sales Automation' },
+    { href: '/web-design-development-singapore/', label: 'Web Design & Development' },
+    { href: '/app-development-services-singapore/', label: 'App Development & AI Solutions' },
     { href: '/strategic-partnership-consulting-singapore/', label: 'Strategic Partnerships' },
     { href: '/corporate-sales-training-workshops-singapore/', label: 'Corporate Training & Workshops' },
+    { href: '/tradeshow-exhibitor-strategy-singapore/', label: 'Trade Show & Exhibitor Strategy' },
     { href: '/about/', label: 'About' },
     { href: '/contact/', label: 'Contact' }
   ];
