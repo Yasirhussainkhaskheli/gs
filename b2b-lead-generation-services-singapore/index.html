@@ -469,15 +469,6 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px
   </section>
 </main>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer-row">
-      <p>&copy; 2026 GS ConsultPro. All rights reserved.</p>
-      <p><a href="/services/">Explore Services</a></p>
-    </div>
-  </div>
-</footer>
-
 <script>
 const header=document.getElementById('siteHeader');
 const hamBtn=document.getElementById('hamBtn');
@@ -520,6 +511,7 @@ const observer=new IntersectionObserver(entries=>{
 },{threshold:.14});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 </script>
+<div id="site-footer"></div>
 </body>
 </html>
 

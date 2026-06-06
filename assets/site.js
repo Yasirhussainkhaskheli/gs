@@ -47,8 +47,49 @@
   ];
   const globalUtilityLinks = [
     { href: '/about/', label: 'About' },
+    { href: '/blog/', label: 'Blog' },
     { href: '/contact/', label: 'Contact' }
   ];
+  const globalFooter = {
+    brandName: 'GS ConsultPro',
+    tagline: 'Strategy-Led Growth Across Singapore & APAC',
+    description: 'GS ConsultPro helps businesses strengthen visibility, generate demand, and build scalable growth systems through strategy, digital execution, automation, and market engagement.',
+    primaryEmail: 'hello@gsconsultpro.com',
+    primaryEmailHref: 'mailto:hello@gsconsultpro.com',
+    location: 'Singapore • Serving APAC',
+    footerCtaLabel: 'Get a Free Quote',
+    footerCtaHref: '/contact/#contact-form',
+    columns: [
+      {
+        title: 'Services',
+        links: [
+          { href: '/seo-services-singapore/', label: 'SEO' },
+          { href: '/content-creation-services-singapore/', label: 'Content Strategy & Writing' },
+          { href: '/paid-media-social-advertising-singapore/', label: 'Paid Media & Social Advertising' },
+          { href: '/lead-generation-services-singapore/', label: 'B2B Lead Generation & Sales Automation' },
+          { href: '/web-design-development-singapore/', label: 'Web Design & Development' },
+          { href: '/app-development-services-singapore/', label: 'App Development & AI Solutions' },
+          { href: '/strategic-partnership-consulting-singapore/', label: 'Strategic Partnerships' },
+          { href: '/corporate-sales-training-workshops-singapore/', label: 'Corporate Training & Workshops' },
+          { href: '/tradeshow-exhibitor-strategy-singapore/', label: 'Trade Show & Exhibitor Strategy' }
+        ]
+      },
+      {
+        title: 'Contact',
+        links: [
+          { href: 'mailto:hello@gsconsultpro.com', label: 'hello@gsconsultpro.com' },
+          { href: '/contact/#contact-form', label: 'Get a Free Quote' },
+          { href: '/contact/', label: 'Singapore • Serving APAC' }
+        ]
+      }
+    ],
+    copyright: '&copy; 2026 GS ConsultPro. All rights reserved.',
+    bottomLinks: [
+      { href: '/contact/', label: 'Privacy Policy' },
+      { href: '/contact/', label: 'Terms of Service' },
+      { href: '/services/', label: 'Sitemap' }
+    ]
+  };
   const globalMobileMenus = [
     { href: '/', label: 'Home' },
     { href: '/seo-services-singapore/', label: 'SEO' },
@@ -61,8 +102,17 @@
     { href: '/corporate-sales-training-workshops-singapore/', label: 'Corporate Training & Workshops' },
     { href: '/tradeshow-exhibitor-strategy-singapore/', label: 'Trade Show & Exhibitor Strategy' },
     { href: '/about/', label: 'About' },
+    { href: '/blog/', label: 'Blog' },
     { href: '/contact/', label: 'Contact' }
   ];
+  const defaultHeaderConfig = {
+    logoHref: '/',
+    logoText: 'GS ConsultPro',
+    hamId: 'ham',
+    hamAriaLabel: 'Menu',
+    desktopLinks: [{ href: '/', label: 'Home' }],
+    mobileLinks: [{ href: '/', label: 'Home' }]
+  };
   const replaceDesktopLabels = new Set(['SEO', 'Services', 'App Development', 'Lead Generation & Growth', 'Content Creation', 'Paid Media & Social', 'Strategy & Engagement']);
   const removeDesktopLabels = new Set(['FAQs', 'About', 'Contact', 'Get In Touch']);
   const removeMobileLabels = new Set([
@@ -175,21 +225,21 @@
   }
 
   function renderHeader(header) {
-    if (!header) return '';
+    const resolvedHeader = header || defaultHeaderConfig;
 
-    const logoHref = header.logoHref || '/';
-    const logoText = header.logoText || 'GS ConsultPro';
+    const logoHref = resolvedHeader.logoHref || '/';
+    const logoText = resolvedHeader.logoText || 'GS ConsultPro';
     const isHomePage = /(^|\/)index\.html$/i.test(window.location.pathname) || window.location.pathname === '/' || window.location.pathname === '';
     const displayLogoText = getDisplayBrandName(logoText);
-    const hamId = header.hamId || 'ham';
-    const navAttrs = header.navAriaLabel ? ` aria-label="${header.navAriaLabel}"` : '';
+    const hamId = resolvedHeader.hamId || 'ham';
+    const navAttrs = resolvedHeader.navAriaLabel ? ` aria-label="${resolvedHeader.navAriaLabel}"` : '';
     const headerCtaConfig = { href: '/contact/#contact-form', label: 'Get a Free Quote' };
     const headerCta = `<a href="${headerCtaConfig.href}" class="btn-primary">${headerCtaConfig.label}</a>`;
-    const desktopLinks = injectGlobalDesktopMenus(header.desktopLinks || []);
+    const desktopLinks = injectGlobalDesktopMenus(resolvedHeader.desktopLinks || []);
     const mobileCta = headerCtaConfig;
-    const mobileLinks = injectGlobalMobileMenus(header.mobileLinks || []);
+    const mobileLinks = injectGlobalMobileMenus(resolvedHeader.mobileLinks || []);
     const mobileCtaHtml = mobileCta
-      ? `<div class="mob-cta"><a href="${mobileCta.href || '#'}" class="btn-primary"${header.mobileCtaInlineFlex ? ' style="display:inline-flex"' : ''}>${mobileCta.label || ''}</a></div>`
+      ? `<div class="mob-cta"><a href="${mobileCta.href || '#'}" class="btn-primary"${resolvedHeader.mobileCtaInlineFlex ? ' style="display:inline-flex"' : ''}>${mobileCta.label || ''}</a></div>`
       : '';
 
     return `
@@ -205,7 +255,7 @@
       </ul>
       <div class="nav-end">
         ${headerCta}
-        <button class="ham" id="${hamId}" aria-label="${header.hamAriaLabel || 'Menu'}"${header.hamAriaExpanded ? ` aria-expanded="${header.hamAriaExpanded}"` : ''}${header.hamAriaControls ? ` aria-controls="${header.hamAriaControls}"` : ''}>
+        <button class="ham" id="${hamId}" aria-label="${resolvedHeader.hamAriaLabel || 'Menu'}"${resolvedHeader.hamAriaExpanded ? ` aria-expanded="${resolvedHeader.hamAriaExpanded}"` : ''}${resolvedHeader.hamAriaControls ? ` aria-controls="${resolvedHeader.hamAriaControls}"` : ''}>
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -220,43 +270,52 @@
   }
 
   function renderFooter(footer) {
-    if (!footer) return '';
+    const resolvedFooter = {
+      ...globalFooter,
+      columns: globalFooter.columns,
+      bottomLinks: globalFooter.bottomLinks
+    };
 
-    const displayBrandName = getDisplayBrandName(footer.brandName || 'GS ConsultPro');
-    const columns = (footer.columns || []).map((col) => {
+    const displayBrandName = getDisplayBrandName(resolvedFooter.brandName || 'GS ConsultPro');
+    const columns = (resolvedFooter.columns || []).map((col) => {
       const links = (col.links || [])
         .map((link) => `<li><a href="${link.href || '#'}">${link.label || ''}</a></li>`)
         .join('');
       return `
-      <div class="ft-col">
+      <div class="ft-nav-col">
         <h4>${col.title || ''}</h4>
         <ul>${links}</ul>
       </div>`;
     }).join('');
 
-    const socialLinks = (footer.socialLinks || []).length
-      ? `<div class="social-row">${footer.socialLinks.map((link) => `<a href="${link.href || '#'}" class="soc" aria-label="${link.ariaLabel || link.label || ''}">${link.label || ''}</a>`).join('')}</div>`
-      : '';
-
-    const bottomLinks = (footer.bottomLinks || [])
+    const bottomLinks = (resolvedFooter.bottomLinks || [])
       .map((link) => `<a href="${link.href || '#'}">${link.label || ''}</a>`)
       .join('');
 
     return `
-<footer>
+<footer class="site-footer">
   <div class="container">
-    <div class="ft-top">
-      <div class="ft-brand">
-        <div class="ft-logo"><div class="ft-logo-mark">GS</div><span class="ft-logo-txt">${displayBrandName}</span></div>
-        <div class="ft-tagline">${footer.tagline || ''}</div>
-        <p>${footer.description || ''}</p>
-        ${socialLinks}
+    <div class="ft-wrap">
+      <div class="ft-top">
+        <div class="ft-brand-panel">
+          <div class="ft-logo"><div class="ft-logo-mark">GS</div><span class="ft-logo-txt">${displayBrandName}</span></div>
+          <div class="ft-tagline">${resolvedFooter.tagline || ''}</div>
+          <p class="ft-description">${resolvedFooter.description || ''}</p>
+          <div class="ft-contact-list">
+            <a href="${resolvedFooter.primaryEmailHref || '#'}">${resolvedFooter.primaryEmail || ''}</a>
+            <a href="/contact/#contact-form">Book a Consultation</a>
+            <span>${resolvedFooter.location || ''}</span>
+          </div>
+          <a href="${resolvedFooter.footerCtaHref || '#'}" class="ft-btn">${resolvedFooter.footerCtaLabel || ''}</a>
+        </div>
+        <div class="ft-links-grid">
+          ${columns}
+        </div>
       </div>
-      ${columns}
-    </div>
-    <div class="ft-bottom">
-      <p>${footer.copyright || '&copy; 2026 GS ConsultPro. All rights reserved.'}</p>
-      <div class="ft-links">${bottomLinks}</div>
+      <div class="ft-bottom">
+        <p>${resolvedFooter.copyright || '&copy; 2026 GS ConsultPro. All rights reserved.'}</p>
+        <div class="ft-bottom-links">${bottomLinks}</div>
+      </div>
     </div>
   </div>
 </footer>`;
@@ -267,8 +326,52 @@
     headerMount.outerHTML = renderHeader(config.header);
   }
 
-  const footerMount = document.getElementById('site-footer');
-  if (footerMount) {
-    footerMount.outerHTML = renderFooter(config.footer);
+  function initHeaderBehavior() {
+    const hdr = document.getElementById('hdr');
+    const ham = document.querySelector('.ham');
+    const mobNav = document.getElementById('mobNav');
+
+    if (hdr) {
+      const syncHeaderScroll = () => {
+        hdr.classList.toggle('scrolled', window.scrollY > 60);
+      };
+      syncHeaderScroll();
+      window.addEventListener('scroll', syncHeaderScroll, { passive: true });
+    }
+
+    if (ham && mobNav && !ham.dataset.gsBound) {
+      ham.dataset.gsBound = 'true';
+      ham.addEventListener('click', () => {
+        const open = mobNav.classList.toggle('open');
+        ham.classList.toggle('open', open);
+        ham.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      mobNav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          mobNav.classList.remove('open');
+          ham.classList.remove('open');
+          ham.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  }
+
+  function mountFooter() {
+    const footerMount = document.getElementById('site-footer');
+    if (footerMount) {
+      footerMount.outerHTML = renderFooter(config.footer);
+    }
+  }
+
+  mountFooter();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      initHeaderBehavior();
+      mountFooter();
+    }, { once: true });
+  } else {
+    initHeaderBehavior();
+    mountFooter();
   }
 })();
