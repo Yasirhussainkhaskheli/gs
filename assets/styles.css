@@ -14,7 +14,7 @@ header{
   transition:background .3s,box-shadow .3s;
 }
 header.scrolled .nav-bg{
-  background:rgba(255,255,255,.92);
+  background:rgba(0, 0, 0, 0.18);
   backdrop-filter:blur(16px);
   -webkit-backdrop-filter:blur(16px);
   box-shadow:0 2px 24px rgba(15,23,42,.08);
@@ -95,9 +95,12 @@ nav{
   display:block;
   width:22px;
   height:2px;
-  background:var(--text,#0b1220);
+  background:#fff;
   border-radius:2px;
   transition:all .28s cubic-bezier(.4,0,.2,1);
+}
+header.scrolled .ham span{
+  background:var(--text,#0b1220);
 }
 .ham.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
 .ham.open span:nth-child(2){opacity:0}
@@ -133,7 +136,7 @@ header.inner-page-header .nav-bg{
   box-shadow:none;
 }
 header.inner-page-header.scrolled .nav-bg{
-  background:rgba(8,16,31,.18);
+  background:rgba(8,16,31,.5);
   backdrop-filter:blur(12px);
   -webkit-backdrop-filter:blur(12px);
   box-shadow:0 14px 36px rgba(15,23,42,.18);
