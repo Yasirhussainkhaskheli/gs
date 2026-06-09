@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Video Insights | GS ConsultPro</title>
+<meta name="description" content="Discover valuable video insights on cybersecurity, GTM strategies, marketing, and lead generation for businesses in Asia." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/styles.css" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-y:scroll}
+body{font-family:'Barlow','Segoe UI',Arial,Helvetica,sans-serif;background:#fff;color:#0f172a;overflow-x:hidden;line-height:1.6;text-rendering:optimizeLegibility}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+:root{
+  --dark:#0f1523;
+  --accent:#2d8cff;
+  --accent2:#1f72d8;
+  --accent-soft:rgba(45,140,255,.1);
+  --light:#f8fafc;
+  --light2:#f1f5f9;
+  --text:#0b1220;
+  --text2:#1f2937;
+  --muted:#334155;
+  --muted2:#64748b;
+  --border:#e5e7eb;
+  --border2:#d1d5db;
+  --trans:all .28s cubic-bezier(.4,0,.2,1);
+  --max:1280px;
+  --r2:16px;
+  --r3:20px;
+  --sh:0 6px 22px rgba(15,23,42,.07),0 2px 6px rgba(15,23,42,.04);
+  --shm:0 14px 40px rgba(15,23,42,.1),0 4px 14px rgba(15,23,42,.05);
+  --sh-red:0 8px 28px rgba(45,140,255,.28);
+}
+.container{max-width:var(--max);margin:0 auto;padding:0 48px}
+.btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:#fff;padding:14px 30px;border-radius:999px;font-family:'Barlow','Segoe UI',Arial,Helvetica,sans-serif;font-weight:700;font-size:14px;letter-spacing:.6px;text-transform:uppercase;border:2px solid var(--accent);transition:var(--trans);cursor:pointer;box-shadow:0 10px 30px rgba(45,140,255,.2)}
+.btn-primary:hover{background:var(--accent2);border-color:var(--accent2);transform:translateY(-3px);box-shadow:var(--sh-red)}
+.stag-plain{display:inline-block;margin-bottom:12px;font-size:12px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent)}
+.insights-hero{padding:120px 0 60px;background:radial-gradient(circle at top left,rgba(45,140,255,.22),transparent 30%),radial-gradient(circle at bottom right,rgba(45,140,255,.12),transparent 32%),linear-gradient(135deg,#08101f 0%,#112a59 58%,#2d8cff 100%)}
+.insights-hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(42px,6vw,76px);font-weight:900;text-transform:uppercase;line-height:.98;color:#fff;margin-bottom:28px}
+.insights-cta{display:inline-flex;gap:8px;margin-top:24px}
+.insights-sec{padding:84px 0 112px;background:#fff}
+.insights-list{display:grid;gap:72px}
+.insight-item{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.insight-item:nth-child(even) .video-wrapper{order:2}
+.insight-item:nth-child(even) .insight-content{order:1}
+.video-wrapper{position:relative;width:100%;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:18px;background:#000;box-shadow:var(--shm);border:1.5px solid var(--border)}
+.video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:18px}
+.insight-content h3{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:900;line-height:1.15;text-transform:uppercase;color:var(--text);margin-bottom:16px}
+.insight-content p{font-size:16px;line-height:1.68;color:var(--muted);margin-bottom:20px}
+.insight-content a{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--accent-soft);color:var(--text);padding:12px 24px;border-radius:999px;font-family:'Barlow','Segoe UI',Arial,Helvetica,sans-serif;font-weight:700;font-size:13px;letter-spacing:.6px;text-transform:uppercase;transition:var(--trans);cursor:pointer;border:1px solid transparent}
+.insight-content a:hover{background:var(--accent);color:#fff}
+@media (max-width:1080px){
+  .insight-item{grid-template-columns:1fr;gap:36px}
+  .insight-item:nth-child(even) .video-wrapper{order:1}
+  .insight-item:nth-child(even) .insight-content{order:2}
+}
+@media (max-width:860px){
+  .container{padding:0 22px}
+  .insights-hero{padding:100px 0 50px}
+  .insights-sec{padding:60px 0 80px}
+  .insights-grid{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .insights-hero{padding:80px 0 40px}
+  .insights-hero h1{font-size:36px}
+  .insight-card{padding:24px}
+  .insight-card h3{font-size:20px}
+}
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<main>
+  <section class="insights-hero">
+    <div class="container">
+      <span class="stag-plain">Valuable Resources</span>
+      <h1>Video Insights</h1>
+      <div class="insights-cta">
+        <a href="mailto:connect@gsconsultpro.com" class="btn-primary">Schedule Free Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="insights-sec">
+    <div class="container">
+      <div class="insights-list">
+        <div class="insight-item">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/70GViYJvxYg?si=lk5Rzbvjxc5IzQ3y" title="Shopping Smart: Holiday Scams in Asia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="insight-content">
+            <h3>Shopping Smart: Holiday Scams in Asia</h3>
+            <p>Discover the increasing risks of shopping scams across Asia. Stay informed with insights and tips to protect yourself and enjoy a safe and joyful holiday season.</p>
+            <a href="tel:+65 8399 0799">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="insight-item">
+          <div class="insight-content">
+            <h3>The Cyber Tug of War: Banks vs Fraudsters in Asia</h3>
+            <p>How are banks in Asia tackling the ever-evolving tactics of fraudsters? Discover the challenges, innovations, and strategies shaping the battle for a secure digital future.</p>
+            <a href="https://gsconsultpro.com/contact">Contact Us</a>
+          </div>
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/lvXx1bqjuyo?si=ljXx5_daMLZ-8v2d" title="The Cyber Tug of War: Banks vs Fraudsters in Asia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="insight-item">
+          <div class="video-wrapper">
+            <iframe title="vimeo-player" src="https://player.vimeo.com/video/1026160738?h=59f953dc34" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="insight-content">
+            <h3>5 Winning GTM Strategies Every Business Should Know</h3>
+            <p>Proven Approaches to Drive Growth, Market Penetration, and Competitive Edge</p>
+          </div>
+        </div>
+
+        <div class="insight-item">
+          <div class="insight-content">
+            <h3>Marketing's Role in a Fast-Paced World</h3>
+            <p>How It Drives Growth and Competitive Advantage</p>
+          </div>
+          <div class="video-wrapper">
+            <iframe title="vimeo-player" src="https://player.vimeo.com/video/1024250907?h=772cf1e43c" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="insight-item">
+          <div class="video-wrapper">
+            <iframe title="vimeo-player" src="https://player.vimeo.com/video/1028850064?h=4b14ef2561" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="insight-content">
+            <h3>The Power of a Strong Lead Generation Program</h3>
+            <p>Build growth and loyalty with effective lead generation.</p>
+          </div>
+        </div>
+
+        <div class="insight-item">
+          <div class="insight-content">
+            <h3>5 Winning GTM Strategies Every Business Should Know</h3>
+            <p>Proven Approaches to Drive Growth, Market Penetration, and Competitive Edge</p>
+          </div>
+          <div class="video-wrapper">
+            <iframe title="vimeo-player" src="https://player.vimeo.com/video/1026160738?h=59f953dc34" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="insight-item">
+          <div class="video-wrapper">
+            <iframe title="vimeo-player" src="https://player.vimeo.com/video/1024250907?h=772cf1e43c" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="insight-content">
+            <h3>Marketing's Role in a Fast-Paced World</h3>
+            <p>How It Drives Growth and Competitive Advantage</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="/assets/site.js"></script>
+<div id="site-footer"></div>
+</body>
+</html>
