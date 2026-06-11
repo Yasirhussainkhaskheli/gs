@@ -43,13 +43,15 @@ ul{list-style:none}
   --sh-red:0 8px 28px rgba(45,140,255,.28);
 }
 .container{max-width:var(--max);margin:0 auto;padding:0 48px}
-.btn-primary{
+.btn-primary,.btn-ghost{
   display:inline-flex;align-items:center;justify-content:center;gap:8px;
   background:var(--accent);color:#fff;padding:14px 30px;border-radius:999px;
   font-family:'Barlow','Segoe UI',Arial,Helvetica,sans-serif;font-weight:700;font-size:14px;
   letter-spacing:.6px;text-transform:uppercase;border:2px solid var(--accent);
   transition:var(--trans);cursor:pointer;box-shadow:0 10px 30px rgba(45,140,255,.2)
 }
+.btn-ghost{background:transparent;color:var(--text);padding:12px 28px;border:2px solid var(--border2)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
 .btn-primary:hover{background:var(--accent2);border-color:var(--accent2);transform:translateY(-3px);box-shadow:var(--sh-red)}
 .sec-hd{margin:0 auto 56px;max-width:min(76%,940px);text-align:center}
 .sec-hd h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,4vw,50px);font-weight:900;text-transform:uppercase;line-height:1.04;color:var(--text)}
@@ -93,8 +95,8 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px
 }
 .hero-copy h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(42px,7vw,82px);font-weight:900;line-height:.95;text-transform:uppercase;color:var(--text);margin-bottom:22px}
 .hero-copy p{font-size:19px;line-height:1.78;color:var(--muted);max-width:920px;margin:0 auto}
-.hero-actions{display:flex;justify-content:center;margin-top:30px}
-.hero-tags,.cta-tags{
+.hero-actions{display:flex;justify-content:center;margin-top:30px; gap: 8px;}
+.hero-tags,.cta-tags{ 
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
@@ -298,7 +300,8 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px
         <h1>App Development &amp; AI Solutions in Singapore &amp; APAC</h1>
         <p>GS ConsultPro helps Singapore and APAC businesses build practical digital solutions, from mobile apps and web applications to AI chatbots and workflow tools designed to improve customer experience, efficiency, and business growth.</p>
         <div class="hero-actions">
-          <a class="btn-primary" href="/contact/#contact-form">Book a Consultation</a>
+           <a href="/contact/#contact-form" class="btn-primary">Book a Consultation</a>
+          <a href="#services" class="btn-ghost">View Services</a>
         </div>
         <div class="hero-tags">
           <span class="hero-tag">Mobile Apps</span>

@@ -22,47 +22,65 @@
     { href: '/blog/', label: 'Blog' },
     { href: '/contact/', label: 'Contact' }
   ];
+const globalFooter = {
+  brandName: 'GS ConsultPro',
+  tagline: 'Strategy-Led Growth Across Singapore & APAC',
+  description:
+    'GS ConsultPro helps businesses strengthen visibility, generate demand, and build scalable growth systems through strategy, digital execution, automation, and market engagement.',
 
-  const globalFooter = {
-    brandName: 'GS ConsultPro',
-    tagline: 'Strategy-Led Growth Across Singapore & APAC',
-    description: 'GS ConsultPro helps businesses strengthen visibility, generate demand, and build scalable growth systems through strategy, digital execution, automation, and market engagement.',
-    primaryEmail: 'hello@gsconsultpro.com',
-    primaryEmailHref: 'mailto:hello@gsconsultpro.com',
-    location: 'Singapore \u2022 Serving APAC',
-    footerCtaLabel: 'Book a Consultation',
-    footerCtaHref: '/contact/#contact-form',
-    columns: [
-      {
-        title: 'Growth & Marketing',
-        links: [
-          { href: '/seo-services-singapore/', label: 'SEO' },
-          { href: '/content-creation-services-singapore/', label: 'Content Strategy & Writing' },
-          { href: '/paid-media-social-advertising-singapore/', label: 'Paid Media & Social Advertising' }
-        ]
-      },
-      {
-        title: 'Web & Development',
-        links: [
-          { href: '/lead-generation-services-singapore/', label: 'B2B Lead Generation & Sales Automation' },
-          { href: '/web-design-development-singapore/', label: 'Web Design & Development' },
-          { href: '/app-development-services-singapore/', label: 'App Development & AI Solutions' }
-        ]
-      },
-      {
-        title: 'Consulting & Training',
-        links: [
-          { href: '/strategic-partnership-consulting-singapore/', label: 'Strategic Partnerships' },
-          { href: '/corporate-sales-training-workshops-singapore/', label: 'Corporate Training & Workshops' },
-          { href: '/tradeshow-exhibitor-strategy-singapore/', label: 'Trade Show & Exhibitor Strategy' }
-        ]
-      }
-    ],
-    copyright: '\u00a9 2026 GS ConsultPro. All rights reserved.',
-    bottomLinks: [
-      { href: '/privacy-policy/', label: 'Privacy Policy' }
-    ]
-  };
+  primaryEmail: 'hello@gsconsultpro.com',
+  primaryEmailHref: 'mailto:hello@gsconsultpro.com',
+
+  location: 'Singapore • Serving APAC',
+
+  footerCtaLabel: 'Book a Consultation',
+  footerCtaHref: '/contact/#contact-form',
+
+  columns: [
+    {
+      title: 'Marketing & Growth',
+      links: [
+        { href: '/seo-services-singapore/', label: 'SEO Services' },
+        { href: '/content-creation-services-singapore/', label: 'Content Strategy & Writing' },
+        { href: '/paid-media-social-advertising-singapore/', label: 'Paid Media & Social Advertising' },
+        { href: '/lead-generation-services-singapore/', label: 'B2B Lead Generation & Sales Automation' }
+      ]
+    },
+
+    {
+      title: 'Technology Solutions',
+      links: [
+        { href: '/web-design-development-singapore/', label: 'Web Design & Development' },
+        { href: '/app-development-services-singapore/', label: 'App Development & AI Solutions' }
+      ]
+    },
+
+    {
+      title: 'Consulting Services',
+      links: [
+        { href: '/strategic-partnership-consulting-singapore/', label: 'Strategic Partnerships' },
+        { href: '/corporate-sales-training-workshops-singapore/', label: 'Corporate Training & Workshops' },
+        { href: '/tradeshow-exhibitor-strategy-singapore/', label: 'Trade Show & Exhibitor Strategy' }
+      ]
+    },
+
+    {
+      title: 'Company',
+      links: [
+        { href: '/', label: 'Home' },
+        { href: '/about/', label: 'About Us' },
+        { href: '/contact/', label: 'Contact' },
+        // { href: '/privacy-policy/', label: 'Privacy Policy' }
+      ]
+    }
+  ],
+
+  copyright: '© 2026 GS ConsultPro. All rights reserved.',
+
+  bottomLinks: [
+    { href: '/privacy-policy/', label: 'Privacy Policy' }
+  ]
+};
 
   const globalMobileMenuLinks = [
     { href: '/', label: 'Home' },
@@ -72,7 +90,8 @@
 
     { href: '/about/', label: 'About' },
     { href: '/blog/', label: 'Blog' },
-    { href: '/contact/', label: 'Contact' }
+    { href: '/contact/', label: 'Contact' },
+    { href: '/video-insights/', label: 'Video Insights' }
   ];
 
   function getIsHomePage() {
