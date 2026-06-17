@@ -5138,7 +5138,6 @@ body.page-video-insights .insight-content a:hover {
 }
 
 body.page-privacy-policy .policy-hero {
-  min-height: 100svh;
   padding: 120px 0 80px;
   display: flex;
   align-items: center;
@@ -5492,10 +5491,9 @@ body.page-privacy-policy .effective-date {
     padding: 96px 0 52px;
   }
 
-  body:is(.page-services-index, .page-service-template, .page-about, .page-contact, .page-privacy-policy) .hero-page,
-  body.page-privacy-policy .policy-hero {
-    min-height: 100svh;
-  }
+body:is(.page-services-index, .page-service-template, .page-about, .page-contact) .hero-page {
+  min-height: 100svh;
+}
 
   body:is(
       .page-services-index,
