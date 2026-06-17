@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -8,309 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/assets/styles.css" />
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;overflow-y:scroll}
-body{font-family:'Barlow','Segoe UI',Arial,Helvetica,sans-serif;background:#fff;color:#0f172a;overflow-x:hidden;line-height:1.6;text-rendering:optimizeLegibility}
-img{max-width:100%;display:block}
-a{text-decoration:none;color:inherit}
-ul{list-style:none}
-:root{
-  --dark:#0f1523;
-  --accent:#2d8cff;
-  --accent2:#1f72d8;
-  --accent-soft:rgba(45,140,255,.1);
-  --light:#f8fafc;
-  --light2:#f1f5f9;
-  --white:#ffffff;
-  --text:#0b1220;
-  --text2:#1f2937;
-  --muted:#334155;
-  --muted2:#64748b;
-  --border:#e5e7eb;
-  --border2:#d1d5db;
-  --trans:all 0.28s cubic-bezier(0.4,0,0.2,1);
-  --max:1280px;
-  --r:12px;
-  --r2:16px;
-  --r3:20px;
-  --sh:0 6px 22px rgba(15,23,42,.07),0 2px 6px rgba(15,23,42,.04);
-  --shm:0 14px 40px rgba(15,23,42,.1),0 4px 14px rgba(15,23,42,.05);
-  --shl:0 24px 64px rgba(15,23,42,.12),0 8px 20px rgba(15,23,42,.06);
-  --sh-red:0 8px 28px rgba(45,140,255,.28);
-}
-.container{max-width:var(--max);margin:0 auto;padding:0 48px}
-.btn-primary,.btn-ghost,.btn-ghost-white{
-  display:inline-flex;align-items:center;gap:8px;border-radius:999px;
-  font-family:'Barlow','Segoe UI',Arial,Helvetica,sans-serif;font-weight:700;font-size:14px;
-  letter-spacing:.6px;text-transform:uppercase;transition:var(--trans);cursor:pointer
-}
-.btn-primary{
-  background:var(--accent);color:#fff;padding:14px 30px;border:2px solid var(--accent);
-  box-shadow:0 10px 30px rgba(45,140,255,.2)
-}
-.btn-primary:hover{background:var(--accent2);border-color:var(--accent2);transform:translateY(-3px);box-shadow:var(--sh-red)}
-.btn-ghost{background:transparent;color:var(--text);padding:12px 28px;border:2px solid var(--border2)}
-.btn-ghost:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
-.btn-ghost-white{background:transparent;color:#fff;padding:12px 28px;border:2px solid rgba(255,255,255,.45)}
-.btn-ghost-white:hover{border-color:#fff;background:rgba(255,255,255,.1)}
-.stag,.stag-plain{
-  font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent)
-}
-.stag{display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
-.stag::before{content:'';width:24px;height:2px;background:var(--accent);flex-shrink:0}
-.stag-plain{display:inline-block;margin-bottom:12px}
-.sec-hd{margin:0 auto 60px;max-width:min(70%,900px);text-align:center}
-.sec-hd h2{font-family:'Barlow Condensed','Arial Narrow','Roboto Condensed','Segoe UI',sans-serif;font-size:clamp(28px,4vw,50px);font-weight:900;text-transform:uppercase;line-height:1.04;color:var(--text)}
-.sec-hd p{font-size:18px;line-height:1.72;margin-top:16px;max-width:720px;color:var(--muted)}
-header{position:fixed;top:0;left:0;width:100%;z-index:1000;transition:var(--trans)}
-.nav-bg{background:transparent;transition:background .3s,box-shadow .3s}
-header.scrolled .nav-bg{background:rgba(255,255,255,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 2px 24px rgba(15,23,42,.08)}
-nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:76px;max-width:var(--max);margin:0 auto}
-.logo{display:flex;align-items:center;gap:10px}
-.logo-mark{width:38px;height:38px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;color:#fff;letter-spacing:-1px}
-.logo-txt{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--text);letter-spacing:.5px}
-.nav-ul{display:flex;align-items:center;gap:2px}
-.nav-ul>li{position:relative}
-.nav-ul>li>a{color:var(--text2);font-size:14px;font-weight:500;padding:26px 14px;display:flex;align-items:center;gap:5px;transition:color .2s;white-space:nowrap}
-.nav-ul>li>a:hover{color:var(--text)}
-.arr{width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px;transition:transform .2s;flex-shrink:0}
-.nav-ul>li:hover>a .arr{transform:rotate(-135deg);margin-top:2px}
-.drop{position:absolute;top:100%;left:0;background:#fff;min-width:250px;box-shadow:0 20px 60px rgba(0,0,0,.13);border-top:3px solid var(--accent);border-radius:0 0 10px 10px;padding:8px 0;opacity:0;visibility:hidden;transform:translateY(10px);transition:var(--trans);z-index:100}
-.nav-ul>li:hover .drop{opacity:1;visibility:visible;transform:translateY(0)}
-.drop a{display:block;padding:10px 20px;color:var(--text2);font-size:14px;font-weight:500;transition:var(--trans)}
-.drop a:hover{color:var(--accent);background:var(--light);padding-left:26px}
-.nav-end{display:flex;align-items:center;gap:14px}
-.nav-end .btn-primary{padding:10px 22px;font-size:13px}
-.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
-.ham span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:var(--trans)}
-.ham.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
-.ham.open span:nth-child(2){opacity:0}
-.ham.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
-.mob-nav{display:none;position:fixed;top:76px;left:0;width:100%;background:#fff;z-index:999;padding:20px 0 28px;border-top:1px solid var(--border);max-height:calc(100vh - 76px);overflow-y:auto;box-shadow:0 20px 40px rgba(15,23,42,.08)}
-.mob-nav.open{display:block}
-.mob-nav a{display:block;padding:12px 32px;color:var(--text2);font-size:15px;font-weight:500;border-bottom:1px solid var(--border)}
-.mob-group-label{display:block;padding:12px 32px 8px;color:var(--muted2);font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase}
-.mob-cta{padding:20px 32px}
-.hero-page{
-  padding:164px 0 108px;background:
-  radial-gradient(circle at top left, rgba(45,140,255,.12), transparent 28%),
-  linear-gradient(180deg, #fff 0%, #f8fbff 100%);
-}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:40px;align-items:end}
-.hero-copy{max-width:min(70%,900px);margin:0 auto;text-align:center}
-.hero-copy h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(46px,7vw,82px);font-weight:900;line-height:.95;text-transform:uppercase;color:var(--text);margin-bottom:22px;max-width:760px}
-.hero-copy h1 em{font-style:normal;color:var(--accent)}
-.hero-copy p{font-size:19px;line-height:1.78;color:var(--muted);max-width:720px;margin-bottom:32px}
-.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px;justify-content:center}
-.hero-btns .btn-primary{padding:16px 36px;font-size:13px;letter-spacing:.8px}
-.svc-sec,.why-sec,.proc-sec,.testi-sec,.faq-sec,.contact-sec{padding:128px 0}
-.svc-sec,.testi-sec,.faq-sec{background:var(--light)}
-.svc-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  align-items: stretch; /* cards in same row match height */
-}
-.svc-card{
-  background:#fff;border-radius:var(--r2);padding:38px 32px;border:1.5px solid var(--border);
-  transition:var(--trans);position:relative;overflow:hidden;
-   display: flex;
-  flex-direction: column;
-}
-.svc-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--accent-soft),transparent);opacity:0;transition:opacity .3s}
-.svc-card:hover{border-color:rgba(45,140,255,.35);box-shadow:0 12px 40px rgba(45,140,255,.10);transform:translateY(-4px)}
-.svc-card:hover::before{opacity:1}
-.svc-icon{width:52px;height:52px;border-radius:12px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;margin-bottom:18px;position:relative;z-index:1}
-.svc-icon svg{width:24px;height:24px;color:var(--accent)}
-.svc-card h3,.why-panel h3,.proc-card h3,.testi-card strong,.c-form h3{font-family:'Barlow Condensed',sans-serif}
-.svc-card h3{font-size:22px;font-weight:800;text-transform:uppercase;color:var(--text);margin-bottom:10px;letter-spacing:.3px;position:relative;z-index:1}
-.svc-card p{color:var(--muted);font-size:18px;line-height:1.68;margin-bottom:18px;position:relative;z-index:1;flex: 1;}
-.svc-badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;position:relative;z-index:1}
-.svc-badge{padding:5px 10px;background:var(--light);border:1.5px solid var(--border);border-radius:999px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
-.svc-lnk{display:inline-flex;align-items:center;gap:7px;color:var(--accent);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;position:relative;z-index:1}
-.svc-arrow{transition:transform .3s}
-.svc-card:hover .svc-arrow{transform:translate(3px,-3px)}
-.why-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px}
-.why-panel{
-  background:#fff;border-radius:var(--r3);padding:34px;border:1.5px solid var(--border);box-shadow:var(--sh)
-}
-.why-panel h3{font-size:22px;font-weight:800;text-transform:uppercase;color:var(--text);margin-bottom:10px}
-.why-panel p{font-size:18px;line-height:1.7;color:var(--muted)}
-.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.proc-card{background:#fff;border-radius:var(--r2);padding:32px 26px;border:1.5px solid var(--border);transition:var(--trans);border-top:3px solid transparent}
-.proc-card:hover{transform:translateY(-5px);box-shadow:var(--shm);border-top-color:var(--accent)}
-.proc-step{font-family:'Barlow Condensed',sans-serif;font-size:54px;font-weight:900;color:var(--border2);line-height:1;margin-bottom:14px;display:block}
-.proc-card p{color:var(--muted);font-size:18px;line-height:1.65}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.testi-card{background:#fff;border-radius:var(--r2);padding:34px 30px;border:1.5px solid var(--border);border-top:3px solid transparent;transition:var(--trans)}
-.testi-card:hover{box-shadow:var(--shm);border-top-color:var(--accent)}
-.tq{font-size:52px;line-height:1;color:var(--accent);opacity:.16;font-family:Georgia,serif;margin-bottom:8px}
-.t-txt{color:var(--text2);font-size:18px;line-height:1.76;margin-bottom:26px;font-style:italic}
-.t-meta{display:flex;align-items:center;gap:14px}
-.t-av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;color:#fff;flex-shrink:0}
-.t-info strong{display:block;color:var(--text);font-size:14px;font-weight:700}
-.t-info span{color:var(--muted);font-size:13px}
-.cta-sec{
-  padding:0 0 128px;background:var(--light)
-}
-.cta-in{
-  background:var(--accent);
-  background-image:linear-gradient(140deg, rgba(255,255,255,.16), transparent 35%), radial-gradient(circle at top right, rgba(255,255,255,.14), transparent 26%);
-  border-radius:28px;padding:56px 48px;display:flex;justify-content:space-between;gap:26px;align-items:center;box-shadow:var(--sh-red)
-}
-.cta-in h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,4vw,48px);font-weight:900;text-transform:uppercase;color:#fff;line-height:1.02;margin-bottom:12px}
-.cta-in p{font-size:19px;line-height:1.72;color:rgba(255,255,255,.86);max-width:700px}
-.cta-btns{display:flex;gap:14px;flex-wrap:wrap}
-.cta-sec .btn-primary{background:#fff;color:var(--accent);border-color:#fff}
-.cta-sec .btn-primary:hover{background:rgba(255,255,255,.92);border-color:rgba(255,255,255,.92);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.16)}
-.faq-grid{display:grid;gap:14px}
-.faq-item{background:#fff;border-radius:14px;overflow:hidden;border:1.5px solid var(--border);transition:var(--trans)}
-.faq-item.on{border-color:rgba(45,140,255,.25);box-shadow:var(--sh)}
-.faq-q{padding:18px 20px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px;font-weight:600;color:var(--text);line-height:1.4}
-.faq-item.on .faq-q{color:var(--accent)}
-.faq-ico{width:24px;height:24px;border-radius:50%;background:var(--border);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:var(--muted);transition:var(--trans)}
-.faq-item.on .faq-ico{background:var(--accent);color:#fff;transform:rotate(45deg)}
-.faq-a{padding:0 20px;max-height:0;overflow:hidden;font-size:18px;color:var(--muted);line-height:1.72;transition:max-height .35s ease,padding .35s ease}
-.faq-item.on .faq-a{padding:0 20px 20px;max-height:220px}
-.contact-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:42px;align-items:start}
-.contact-copy{max-width:min(70%,900px);margin:0 auto;}
-.contact-copy h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(26px,3.5vw,46px);font-weight:900;text-transform:uppercase;color:var(--text);line-height:1.03;margin-bottom:16px}
-.contact-copy>p{color:var(--muted);font-size:18px;line-height:1.72;margin-bottom:32px}
-.c-info-list{display:grid;gap:14px}
-.c-info-item{display:flex;align-items:flex-start;gap:14px;padding:18px 20px;background:var(--light);border:1.5px solid var(--border);border-radius:16px}
-.c-ico{width:44px;height:44px;border-radius:12px;background:var(--accent-soft);border:1.5px solid rgba(45,140,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.c-ico svg{width:18px;height:18px;color:var(--accent)}
-.c-det strong{display:block;font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px}
-.c-det span{font-size:14px;color:var(--muted)}
-.c-form{background:var(--light);border-radius:var(--r3);padding:44px 42px;border:1.5px solid var(--border);box-shadow:var(--shm)}
-.c-form h3{font-size:28px;font-weight:900;text-transform:uppercase;color:var(--text);margin-bottom:28px}
-.f-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.f-grp{display:grid;gap:8px;margin-bottom:16px}
-.f-grp label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
-.f-grp input,.f-grp select,.f-grp textarea{background:#fff;border:1.5px solid var(--border);border-radius:var(--r);padding:12px 15px;color:var(--text);font-family:'Barlow',sans-serif;font-size:15px;transition:var(--trans);outline:none;width:100%}
-.f-grp textarea{min-height:132px;resize:vertical}
-.f-grp input:focus,.f-grp select:focus,.f-grp textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(45,140,255,.1)}
-footer{background:#fff;padding:80px 0 0;border-top:1px solid var(--border)}
-.ft-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:44px;padding-bottom:52px;border-bottom:1px solid var(--border)}
-.ft-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.ft-logo-mark{width:34px;height:34px;background:var(--accent);border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:900;color:#fff}
-.ft-logo-txt{font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:800;color:var(--text)}
-.ft-brand p{color:var(--muted);font-size:18px;line-height:1.72;margin-bottom:22px}
-.ft-tagline{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;display:block}
-.social-row{display:flex;gap:10px}
-.soc{width:36px;height:36px;border-radius:8px;background:var(--light);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px;font-weight:700;transition:var(--trans)}
-.soc:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-2px)}
-.ft-col h4{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border)}
-.ft-col ul{display:grid;gap:10px}
-.ft-col ul li a{color:var(--muted);font-size:14px;transition:var(--trans)}
-.ft-col ul li a:hover{color:var(--text);padding-left:5px}
-.ft-bottom{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:22px 0 30px}
-.ft-bottom p,.ft-links a{font-size:13px;color:var(--muted)}
-.ft-links{display:flex;gap:18px;flex-wrap:wrap}
-.ft-links a:hover{color:var(--text2)}
-.wa{position:fixed;bottom:28px;right:28px;z-index:999;width:54px;height:54px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(37,211,102,.45);transition:var(--trans)}
-.wa:hover{transform:translateY(-3px)}
-.wa svg{width:28px;height:28px}
-section,footer{--reveal-dur:.8s;--reveal-ease:cubic-bezier(.22,1,.36,1)}
-section .container>*,
-footer .container>*{
-  opacity:0;
-  transform:translateY(34px);
-  transition:opacity var(--reveal-dur) var(--reveal-ease),transform var(--reveal-dur) var(--reveal-ease)
-}
-section.in-view .container>*,
-footer.in-view .container>*{
-  opacity:1;
-  transform:none
-}
-.svc-grid>*,
-.why-grid>*,
-.proc-grid>*,
-.testi-grid>*,
-.faq-grid>*,
-.contact-grid>*,
-.ft-top>*{
-  opacity:0;
-  transform:translateY(28px);
-  transition:opacity .75s var(--reveal-ease),transform .75s var(--reveal-ease)
-}
-section.in-view .svc-grid>*,
-section.in-view .why-grid>*,
-section.in-view .proc-grid>*,
-section.in-view .testi-grid>*,
-section.in-view .faq-grid>*,
-section.in-view .contact-grid>*,
-footer.in-view .ft-top>*{
-  opacity:1;
-  transform:none
-}
-section.in-view .svc-grid>*:nth-child(1),
-section.in-view .why-grid>*:nth-child(1),
-section.in-view .proc-grid>*:nth-child(1),
-section.in-view .testi-grid>*:nth-child(1),
-section.in-view .faq-grid>*:nth-child(1),
-section.in-view .contact-grid>*:nth-child(1),
-footer.in-view .ft-top>*:nth-child(1){transition-delay:.04s}
-section.in-view .svc-grid>*:nth-child(2),
-section.in-view .why-grid>*:nth-child(2),
-section.in-view .proc-grid>*:nth-child(2),
-section.in-view .testi-grid>*:nth-child(2),
-section.in-view .faq-grid>*:nth-child(2),
-section.in-view .contact-grid>*:nth-child(2),
-footer.in-view .ft-top>*:nth-child(2){transition-delay:.12s}
-section.in-view .svc-grid>*:nth-child(3),
-section.in-view .why-grid>*:nth-child(3),
-section.in-view .proc-grid>*:nth-child(3),
-section.in-view .testi-grid>*:nth-child(3),
-section.in-view .faq-grid>*:nth-child(3),
-footer.in-view .ft-top>*:nth-child(3){transition-delay:.2s}
-section.in-view .svc-grid>*:nth-child(4),
-section.in-view .proc-grid>*:nth-child(4),
-section.in-view .faq-grid>*:nth-child(4),
-footer.in-view .ft-top>*:nth-child(4){transition-delay:.28s}
-section.in-view .svc-grid>*:nth-child(n+5),
-section.in-view .faq-grid>*:nth-child(n+5){transition-delay:.34s}
-@media (prefers-reduced-motion:reduce){
-  section .container>*,
-  footer .container>*,
-  .svc-grid>*,
-  .why-grid>*,
-  .proc-grid>*,
-  .testi-grid>*,
-  .faq-grid>*,
-  .contact-grid>*,
-  .ft-top>*{
-    opacity:1!important;
-    transform:none!important;
-    transition:none!important
-  }
-}
-@media (max-width:1100px){
-  .hero-grid,.why-grid,.contact-grid,.ft-top,.svc-grid,.testi-grid,.proc-grid{grid-template-columns:1fr 1fr}
-  .ft-top{grid-template-columns:1.4fr 1fr}
-}
-@media (max-width:860px){
-  .container,nav{padding:0 22px}
-  .nav-ul,.nav-end .btn-primary{display:none}
-  .ham{display:flex}
-  .hero-page{padding:136px 0 84px}
-  .hero-grid,.svc-grid,.why-grid,.proc-grid,.testi-grid,.contact-grid,.ft-top,.f-row{grid-template-columns:1fr}
-  .cta-in,.ft-bottom{flex-direction:column;align-items:flex-start}
-  .hero-copy,.sec-hd,.contact-copy{max-width:100%}
-}
-@media (max-width:640px){
-  .hero-copy h1{font-size:40px}
-  .hero-copy p,.sec-hd p,.svc-card p,.why-panel p,.proc-card p,.t-txt,.faq-a,.contact-copy>p{font-size:17px}
-  .hero-btns{flex-direction:column;align-items:stretch}
-  .hero-btns a,.cta-btns a,.mob-cta a,.c-form .btn-primary{justify-content:center;width:100%}
-  .svc-sec,.why-sec,.proc-sec,.testi-sec,.faq-sec,.contact-sec{padding:72px 0}
-  .cta-sec{padding:0 0 72px}
-  .cta-in{padding:38px 24px}
-}
-</style>
 </head>
-<body>
+<body class="page-services-index">
 <script>
 window.gsSiteComponents = {
   header: {
@@ -355,13 +54,13 @@ window.gsSiteComponents = {
         links: [
           { href: "/", label: "Homepage" },
           { href: "/services/", label: "Services" },
-          { href: "/service-detail/", label: "SEO Detail Page" }
+          { href: "/seo-services-singapore/", label: "SEO" }
         ]
       },
       {
         title: "Services",
         links: [
-          { href: "/service-detail/", label: "SEO" },
+          { href: "/seo-services-singapore/", label: "SEO" },
           { href: "/web-design-development-singapore/", label: "Web Design & Development" },
           { href: "#services-grid", label: "PPC" },
           { href: "#services-grid", label: "Automation" }
@@ -406,10 +105,10 @@ window.gsSiteComponents = {
 
 <section class="svc-sec" id="services-grid">
   <div class="container">
-    <div class="sec-hd" style="text-align:center">
+    <div class="sec-hd u-text-center">
       <span class="stag-plain">What We Offer</span>
       <h2>Services Designed Around Business Growth</h2>
-      <p style="margin-left:auto;margin-right:auto">Choose the support you need now, or combine multiple services into a custom growth plan aligned with your goals, market, and sales process.</p>
+      <p class="u-mx-auto">Choose the support you need now, or combine multiple services into a custom growth plan aligned with your goals, market, and sales process.</p>
     </div>
     <div class="svc-grid">
       <article class="svc-card">
@@ -417,7 +116,28 @@ window.gsSiteComponents = {
         <h3>Search Engine Optimisation (SEO)</h3>
         <p>Increase visibility on Google, attract higher-intent traffic, and turn search into a consistent lead source that compounds over time.</p>
         <div class="svc-badges"><span class="svc-badge">Organic Growth</span><span class="svc-badge">Lead Quality</span></div>
-        <a class="svc-lnk" href="/service-detail/">Learn More <svg class="svc-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a class="svc-lnk" href="/seo-services-singapore/">Learn More <svg class="svc-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </article>
+      <article class="svc-card">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <h3>Content Strategy &amp; Writing</h3>
+        <p>Create strategic content that improves search visibility, builds trust, and supports stronger lead generation across the buyer journey.</p>
+        <div class="svc-badges"><span class="svc-badge">SEO Content</span><span class="svc-badge">Authority Building</span></div>
+        <a class="svc-lnk" href="/content-creation-services-singapore/">Learn More <svg class="svc-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </article>
+      <article class="svc-card">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/><path d="M12 8v8"/></svg></div>
+        <h3>Paid Media &amp; Social Advertising</h3>
+        <p>Launch targeted paid campaigns designed to strengthen visibility, generate demand, and improve measurable return on ad spend.</p>
+        <div class="svc-badges"><span class="svc-badge">Demand Generation</span><span class="svc-badge">Performance Focus</span></div>
+        <a class="svc-lnk" href="/paid-media-social-advertising-singapore/">Learn More <svg class="svc-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </article>
+      <article class="svc-card">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>B2B Lead Generation &amp; Sales Automation</h3>
+        <p>Build more structured lead handling, qualification, outreach, and follow-up systems to support scalable pipeline growth.</p>
+        <div class="svc-badges"><span class="svc-badge">Lead Systems</span><span class="svc-badge">Sales Automation</span></div>
+        <a class="svc-lnk" href="/lead-generation-services-singapore/">Learn More <svg class="svc-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </article>
       <article class="svc-card">
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
@@ -427,39 +147,11 @@ window.gsSiteComponents = {
         <a class="svc-lnk" href="/web-design-development-singapore/">Learn More <svg class="svc-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </article>
       <article class="svc-card">
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h18"/><path d="M12 3v18"/><circle cx="12" cy="12" r="9"/></svg></div>
-        <h3>Google Ads / PPC</h3>
-        <p>Capture demand quickly with targeted campaigns built to bring in ready-to-buy traffic and measurable returns.</p>
-        <div class="svc-badges"><span class="svc-badge">Immediate Traffic</span><span class="svc-badge">ROAS Focused</span></div>
-        <a class="svc-lnk" href="#contact">Speak to Us <svg class="svc-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      </article>
-      <article class="svc-card">
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></div>
-        <h3>Social Media Marketing</h3>
-        <p>Grow awareness, engagement, and trust with campaigns that connect your brand to the right audience at the right time.</p>
-        <div class="svc-badges"><span class="svc-badge">Brand Visibility</span><span class="svc-badge">Audience Growth</span></div>
-        <a class="svc-lnk" href="#contact">Book a Strategy Call <svg class="svc-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      </article>
-      <article class="svc-card">
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-        <h3>Content Creation</h3>
-        <p>Publish content that builds authority, supports SEO, and moves more prospects from curiosity to confidence.</p>
-        <div class="svc-badges"><span class="svc-badge">Authority</span><span class="svc-badge">Conversion Support</span></div>
-        <a class="svc-lnk" href="#contact">Talk Content Strategy <svg class="svc-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      </article>
-      <article class="svc-card">
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h3>Sales Automation &amp; Lead Generation</h3>
-        <p>Capture, qualify, and follow up with leads more efficiently so your team can respond faster and close with more confidence.</p>
-        <div class="svc-badges"><span class="svc-badge">Automation</span><span class="svc-badge">Faster Follow-Up</span></div>
-        <a class="svc-lnk" href="#contact">See How It Works <svg class="svc-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      </article>
-      <article class="svc-card">
-        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 20h10"/><path d="M12 18v2"/><path d="M8 9h8"/><path d="M8 13h5"/></svg></div>
-        <h3>Trade Show &amp; Exhibitor Strategy</h3>
-        <p>Help exhibitors and organisers improve event preparation, booth engagement, lead capture, and post-show follow-up.</p>
-        <div class="svc-badges"><span class="svc-badge">B2B Events</span><span class="svc-badge">Exhibitor Success</span></div>
-        <a class="svc-lnk" href="/tradeshow-exhibitor-strategy-singapore/">Learn More <svg class="svc-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 6h6"/><path d="M8 10h8"/><path d="M12 18h.01"/></svg></div>
+        <h3>App Development &amp; AI Solutions</h3>
+        <p>Build practical digital tools, apps, chatbots, and workflows that improve customer experience and operational efficiency.</p>
+        <div class="svc-badges"><span class="svc-badge">Apps</span><span class="svc-badge">AI Workflows</span></div>
+        <a class="svc-lnk" href="/app-development-services-singapore/">Learn More <svg class="svc-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </article>
       <article class="svc-card">
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 12h8"/><path d="M12 8v8"/><circle cx="12" cy="12" r="9"/><path d="M16.5 7.5l-9 9"/></svg></div>
@@ -475,16 +167,23 @@ window.gsSiteComponents = {
         <div class="svc-badges"><span class="svc-badge">Sales Training</span><span class="svc-badge">Enablement</span></div>
         <a class="svc-lnk" href="/corporate-sales-training-workshops-singapore/">Learn More <svg class="svc-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </article>
+      <article class="svc-card">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 20h10"/><path d="M12 18v2"/><path d="M8 9h8"/><path d="M8 13h5"/></svg></div>
+        <h3>Trade Show &amp; Exhibitor Strategy</h3>
+        <p>Help exhibitors and organisers improve event preparation, booth engagement, lead capture, and post-show follow-up.</p>
+        <div class="svc-badges"><span class="svc-badge">B2B Events</span><span class="svc-badge">Exhibitor Success</span></div>
+        <a class="svc-lnk" href="/tradeshow-exhibitor-strategy-singapore/">Learn More <svg class="svc-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </article>
     </div>
   </div>
 </section>
 
 <section class="why-sec" id="why-us">
   <div class="container">
-    <div class="sec-hd" style="text-align:center">
+    <div class="sec-hd u-text-center">
       <span class="stag-plain">Why Choose Us</span>
       <h2>More Than Marketing. Built for Growth.</h2>
-      <p style="margin-left:auto;margin-right:auto">Businesses choose GS ConsultPro because we connect strategy, execution, and conversion thinking into one focused system.</p>
+      <p class="u-mx-auto">Businesses choose GS ConsultPro because we connect strategy, execution, and conversion thinking into one focused system.</p>
     </div>
     <div class="why-grid">
       <div class="why-panel">
@@ -509,10 +208,10 @@ window.gsSiteComponents = {
 
 <section class="proc-sec" id="process">
   <div class="container">
-    <div class="sec-hd" style="text-align:center">
+    <div class="sec-hd u-text-center">
       <span class="stag-plain">Our Process</span>
       <h2>A Simple Path From Interest to Action</h2>
-      <p style="margin-left:auto;margin-right:auto">The process is designed to feel clear, practical, and easy to move forward with from the first conversation.</p>
+      <p class="u-mx-auto">The process is designed to feel clear, practical, and easy to move forward with from the first conversation.</p>
     </div>
     <div class="proc-grid">
       <article class="proc-card">
@@ -541,10 +240,10 @@ window.gsSiteComponents = {
 
 <section class="testi-sec">
   <div class="container">
-    <div class="sec-hd" style="text-align:center">
+    <div class="sec-hd u-text-center">
       <span class="stag-plain">Social Proof</span>
       <h2>Trusted by Businesses Ready to Grow</h2>
-      <p style="margin-left:auto;margin-right:auto">Proof matters. These testimonials reinforce the kind of outcomes conversion-focused buyers want to see before reaching out.</p>
+      <p class="u-mx-auto">Proof matters. These testimonials reinforce the kind of outcomes conversion-focused buyers want to see before reaching out.</p>
     </div>
     <div class="testi-grid">
       <article class="testi-card">
@@ -584,7 +283,7 @@ window.gsSiteComponents = {
       </div>
       <div class="cta-btns">
         <a href="#contact" class="btn-primary">Book Now</a>
-        <a href="/service-detail/" class="btn-ghost-white">View SEO Service</a>
+        <a href="/seo-services-singapore/" class="btn-ghost-white">View SEO Service</a>
       </div>
     </div>
   </div>
@@ -592,7 +291,7 @@ window.gsSiteComponents = {
 
 <section class="faq-sec" id="faq">
   <div class="container">
-    <div class="sec-hd" style="text-align:center;max-width:620px;margin:0 auto 60px">
+    <div class="sec-hd u-text-center u-max-620 u-mx-auto">
       <h2>Questions That Usually Come Before the First Enquiry</h2>
       <p>These answers remove common friction points and help visitors feel more confident about taking the next step.</p>
     </div>
@@ -638,7 +337,7 @@ window.gsSiteComponents = {
         <div class="f-grp"><label>Email Address</label><input type="email" placeholder="john@company.com" /></div>
         <div class="f-grp"><label>Service Interested In</label><select><option value="" disabled selected>Select a service</option><option>Search Engine Optimisation (SEO)</option><option>Web Design &amp; Development</option><option>Google Ads / PPC</option><option>Social Media Marketing</option><option>Content Creation</option><option>Sales Automation &amp; Lead Generation</option></select></div>
         <div class="f-grp"><label>What Do You Need Help With?</label><textarea placeholder="Tell us about your business, your goal, and what result you want next."></textarea></div>
-        <a href="/contact/#contact-form" class="btn-primary" style="width:100%;justify-content:center;padding:15px">Request My Quote <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="/contact/#contact-form" class="btn-primary u-btn-full u-btn-pad-15">Request My Quote <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
     </div>
   </div>

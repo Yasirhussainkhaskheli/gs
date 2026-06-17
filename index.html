@@ -1,1065 +1,1114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>GS ConsultPro - Marketing &amp; Digital Solutions Agency in Singapore</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/assets/styles.css" />
-<style>
-/* ===== RESET & BASE ===== */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;overflow-y:scroll}
-body{font-family:'Barlow','Segoe UI',Arial,Helvetica,sans-serif;background:#fff;color:#0f172a;overflow-x:hidden;line-height:1.6;text-rendering:optimizeLegibility}
-img{max-width:100%;display:block}
-a{text-decoration:none;color:inherit}
-ul{list-style:none}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      GS ConsultPro - Marketing &amp; Digital Solutions Agency in Singapore
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body class="home-page page-home">
+    <script>
+      window.gsSiteComponents = {
+        header: {
+          logoHref: "#home",
+          logoText: "GS ConsultPro",
+          hamId: "ham",
+          hamAriaLabel: "Menu",
+          desktopLinks: [
+            {
+              href: "/seo-services-singapore/",
+              label: "SEO",
+            },
+            { href: "#why", label: "About" },
+            { href: "#faq", label: "FAQs" },
+            { href: "#contact", label: "Contact" },
+          ],
+          mobileLinks: [
+            { href: "/seo-services-singapore/", label: "SEO" },
+            { href: "#why", label: "About" },
+            { href: "#faq", label: "FAQs" },
+            { href: "#contact", label: "Contact" },
+          ],
+          cta: null,
+          mobileCta: null,
+          mobileCtaInlineFlex: true,
+        },
+        footer: {
+          brandName: "GS ConsultPro",
+          tagline:
+            "Marketing &amp; Digital Solutions for Singapore &amp; APAC Growth",
+          description:
+            "Helping Singapore and APAC brands strengthen visibility, convert prospects, and grow revenue through data-driven marketing strategies that deliver real, measurable results.",
+          socialLinks: [
+            { href: "#", ariaLabel: "LinkedIn", label: "in" },
+            { href: "#", ariaLabel: "X", label: "X" },
+            { href: "#", ariaLabel: "Facebook", label: "fb" },
+            { href: "#", ariaLabel: "Instagram", label: "Ig" },
+          ],
+          columns: [
+            {
+              title: "Services",
+              links: [
+                {
+                  href: "#services",
+                  label: "Search Engine Optimisation (SEO)",
+                },
+                { href: "#services", label: "Web Design & Development" },
+                { href: "#services", label: "Mobile App Development" },
+                {
+                  href: "#services",
+                  label: "Sales Automation & Growth Systems",
+                },
+                { href: "#services", label: "Content Creation" },
+                { href: "#services", label: "Paid Media & Social" },
+              ],
+            },
+            {
+              title: "Industries",
+              links: [
+                { href: "#industries", label: "E-Commerce & Retail" },
+                { href: "#industries", label: "B2B & Professional Services" },
+                { href: "#industries", label: "Healthcare & Wellness" },
+                { href: "#industries", label: "Finance & Fintech" },
+                { href: "#industries", label: "Technology & SaaS" },
+                { href: "#industries", label: "Hospitality & Tourism" },
+              ],
+            },
+            {
+              title: "Company",
+              links: [
+                { href: "#why", label: "About GS ConsultPro" },
+                { href: "#faq", label: "FAQs" },
+                { href: "#contact", label: "Contact Us" },
+                {
+                  href: "mailto:hello@gsconsultpro.com",
+                  label: "hello@gsconsultpro.com",
+                },
+                { href: "#contact", label: "Singapore, APAC" },
+              ],
+            },
+          ],
+          copyright: "&copy; 2026 GS ConsultPro. All rights reserved.",
+          bottomLinks: [
+            { href: "#contact", label: "Privacy Policy" },
+            { href: "#contact", label: "Terms of Service" },
+            { href: "#home", label: "Sitemap" },
+          ],
+        },
+      };
+    </script>
+    <div id="site-header"></div>
+    <script src="/assets/site.js"></script>
 
-/* ===== DESIGN TOKENS ===== */
-:root{
-  --dark:#0f1523;
-  --accent:#2d8cff;
-  --accent2:#1f72d8;
-  --accent-soft:rgba(45,140,255,.1);
-  --accent-mid:rgba(45,140,255,.18);
-  --light:#f8fafc;
-  --light2:#f1f5f9;
-  --white:#ffffff;
-  --text:#0b1220;
-  --text2:#1f2937;
-  --muted:#334155;
-  --muted2:#64748b;
-  --border:#e5e7eb;
-  --border2:#d1d5db;
-  --trans:all 0.28s cubic-bezier(0.4,0,0.2,1);
-  --max:1280px;
-  --r:12px;
-  --r2:16px;
-  --r3:20px;
-  --sh:0 6px 22px rgba(15,23,42,.07),0 2px 6px rgba(15,23,42,.04);
-  --shm:0 14px 40px rgba(15,23,42,.1),0 4px 14px rgba(15,23,42,.05);
-  --shl:0 24px 64px rgba(15,23,42,.12),0 8px 20px rgba(15,23,42,.06);
-  --sh-red:0 8px 28px rgba(45,140,255,.28);
-}
-
-/* ===== LAYOUT ===== */
-.container{max-width:var(--max);margin:0 auto;padding:0 48px}
-
-/* ===== BUTTONS ===== */
-.btn-primary{
-  display:inline-flex;align-items:center;gap:8px;
-  background:var(--accent);color:#fff;
-  padding:14px 30px;border-radius:999px;
-  font-family:'Barlow','Segoe UI',Arial,Helvetica,sans-serif;font-weight:700;font-size:14px;
-  letter-spacing:.6px;text-transform:uppercase;
-  border:2px solid var(--accent);cursor:pointer;transition:var(--trans);box-shadow:0 10px 30px rgba(45,140,255,.2)
-}
-.btn-primary:hover{background:var(--accent2);border-color:var(--accent2);transform:translateY(-3px);box-shadow:var(--sh-red)}
-
-.btn-ghost{
-  display:inline-flex;align-items:center;gap:8px;
-  background:transparent;color:var(--text);
-  padding:12px 28px;border-radius:999px;
-  font-family:'Barlow','Segoe UI',Arial,Helvetica,sans-serif;font-weight:700;font-size:14px;
-  letter-spacing:.6px;text-transform:uppercase;
-  border:2px solid var(--border2);cursor:pointer;transition:var(--trans)
-}
-.btn-ghost:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
-
-.btn-ghost-white{
-  display:inline-flex;align-items:center;gap:8px;
-  background:transparent;color:#fff;
-  padding:12px 28px;border-radius:999px;
-  font-family:'Barlow','Segoe UI',Arial,Helvetica,sans-serif;font-weight:700;font-size:14px;
-  letter-spacing:.6px;text-transform:uppercase;
-  border:2px solid rgba(255,255,255,.45);cursor:pointer;transition:var(--trans)
-}
-.btn-ghost-white:hover{border-color:#fff;background:rgba(255,255,255,.1)}
-
-/* ===== EYEBROW TAGS ===== */
-.stag{
-  display:inline-flex;align-items:center;gap:10px;
-  font-size:12px;font-weight:700;letter-spacing:2.5px;
-  text-transform:uppercase;color:var(--accent);margin-bottom:16px
-}
-.stag::before{content:'';width:24px;height:2px;background:var(--accent);flex-shrink:0}
-.stag-plain{
-  font-size:12px;font-weight:700;letter-spacing:2.5px;
-  text-transform:uppercase;color:var(--accent);display:inline-block;margin-bottom:12px
-}
-
-/* ===== SECTION HEADER ===== */
-.sec-hd{margin-bottom:60px}
-.sec-hd h2{font-family:'Barlow Condensed','Arial Narrow','Roboto Condensed','Segoe UI',sans-serif;font-size:clamp(28px,4vw,50px);font-weight:900;text-transform:uppercase;line-height:1.04}
-.sec-hd h2.lt{color:#fff}
-.sec-hd h2.dk{color:var(--text)}
-.sec-hd p{font-size:18px;line-height:1.72;margin-top:16px;max-width:620px}
-.sec-hd p.lt{color:rgba(255,255,255,.62)}
-.sec-hd p.dk{color:var(--muted)}
-
-/* ===== HEADER ===== */
-header{position:fixed;top:0;left:0;width:100%;z-index:1000;transition:var(--trans)}
-.nav-bg{background:transparent;transition:background .3s,box-shadow .3s}
-header.scrolled .nav-bg{backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 2px 24px rgba(15,23,42,.08)}
-nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:76px;max-width:var(--max);margin:0 auto}
-
-
-.logo{display:flex;align-items:center;gap:3px}
-.logo-mark{width:38px;height:38px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed','Arial Narrow','Roboto Condensed','Segoe UI',sans-serif;font-size:20px;font-weight:900;color:#fff;letter-spacing:-1px}
-.logo-txt{font-family:'Barlow Condensed','Arial Narrow','Roboto Condensed','Segoe UI',sans-serif;font-size:22px;font-weight:800;color:var(--text);letter-spacing:.5px}
-
-.nav-ul{display:flex;align-items:center;gap:2px}
-.nav-ul>li{position:relative}
-.nav-ul>li>a{color:var(--text2);font-size:14px;font-weight:500;padding:26px 14px;display:flex;align-items:center;gap:5px;transition:color .2s;white-space:nowrap}
-.nav-ul>li>a:hover{color:var(--text)}
-.arr{width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px;transition:transform .2s;flex-shrink:0}
-.nav-ul>li:hover>a .arr{transform:rotate(-135deg);margin-top:2px}
-.drop{position:absolute;top:100%;left:0;background:#fff;min-width:250px;box-shadow:0 20px 60px rgba(0,0,0,.13);border-top:3px solid var(--accent);border-radius:0 0 10px 10px;padding:8px 0;opacity:0;visibility:hidden;transform:translateY(10px);transition:var(--trans);z-index:100}
-.nav-ul>li:hover>.drop{opacity:1;visibility:visible;transform:translateY(0)}
-.drop a{display:block;padding:10px 20px;color:var(--text2);font-size:14px;font-weight:500;transition:var(--trans)}
-.drop a:hover{color:var(--accent);background:var(--light);padding-left:26px}
-
-.nav-end{display:flex;align-items:center;gap:14px}
-.nav-end .btn-primary{padding:10px 22px;font-size:13px}
-.ham{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:transparent;border:none}
-.ham span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:var(--trans)}
-.ham.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
-.ham.open span:nth-child(2){opacity:0}
-.ham.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
-
-/* ===== MOBILE NAV ===== */
-.mob-nav{display:block;position:fixed;top:76px;left:0;width:100%;background:#fff;z-index:999;border-top:1px solid var(--border);max-height:calc(100vh - 76px);overflow-y:auto;box-shadow:0 20px 40px rgba(15,23,42,.08);opacity:0;visibility:hidden;transform:translateY(-15px);transition:all 0.3s cubic-bezier(0.4,0,0.2,1);padding:0}
-.mob-nav.open{opacity:1;visibility:visible;transform:translateY(0);padding:20px 0 28px}
-.mob-nav a{display:block;padding:12px 32px;color:var(--text2);font-size:15px;font-weight:500;border-bottom:1px solid var(--border);transition:color .2s}
-.mob-nav a:hover{color:var(--accent)}
-.mob-cta{padding:20px 32px}
-.mob-nav .mob-group-label{display:block;padding:12px 32px 8px;color:var(--muted2);font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase}
-
-/* ===== HERO ===== */
-.hero{
-  min-height:100vh;
-  padding-top:76px;
-  background:#091226;
-  display:flex;
-  align-items:center;
-  position:relative;
-  overflow:hidden
-}
-.hero::after{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:url('/assets/images/hero-stars-bg.jpg') center/cover no-repeat;
-  opacity:.68;
-  transform:scale(1.06);
-  transform-origin:center center;
-  animation:heroZoom 18s ease-in-out infinite alternate;
-  z-index:0;
-  pointer-events:none
-}
-.hero-stars,
-.hero-stars::before,
-.hero-stars::after{
-  position:absolute;
-  inset:-8%;
-  content:'';
-  pointer-events:none
-}
-.hero-stars{
-  z-index:1;
-  background-image:
-    radial-gradient(circle, rgba(255,255,255,.92) 0 1px, transparent 1.6px),
-    radial-gradient(circle, rgba(147,197,253,.9) 0 1.2px, transparent 1.9px),
-    radial-gradient(circle, rgba(255,255,255,.55) 0 1px, transparent 1.7px);
-  background-size:220px 220px, 340px 340px, 420px 420px;
-  background-position:0 0, 40px 70px, 120px 30px;
-  opacity:.58;
-  animation:starDrift 38s linear infinite
-}
-.hero-stars::before{
-  background-image:
-    radial-gradient(circle, rgba(255,255,255,.95) 0 1.2px, transparent 2px),
-    radial-gradient(circle, rgba(125,211,252,.75) 0 1px, transparent 1.8px),
-    radial-gradient(circle, rgba(255,255,255,.35) 0 2px, transparent 3px);
-  background-size:280px 280px, 460px 460px, 620px 620px;
-  background-position:60px 40px, 0 0, 180px 120px;
-  opacity:.52;
-  animation:starDriftAlt 54s linear infinite
-}
-.hero-stars::after{
-  background-image:
-    radial-gradient(circle, rgba(255,255,255,.9) 0 1px, transparent 1.7px),
-    radial-gradient(circle, rgba(191,219,254,.8) 0 1px, transparent 1.7px),
-    radial-gradient(circle, rgba(255,255,255,.28) 0 2.4px, transparent 3.2px);
-  background-size:180px 180px, 300px 300px, 540px 540px;
-  background-position:20px 110px, 100px 0, 60px 180px;
-  opacity:.34;
-  animation:starPulse 7s ease-in-out infinite alternate, starDrift 68s linear infinite
-}
-.hero::before{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg, rgba(8,16,34,.18), rgba(5,10,24,.34) 35%, rgba(5,10,24,.62));
-  z-index:2;
-  pointer-events:none
-}
-.hero-inner{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  gap:0;
-  padding:132px 0 120px;
-  max-width:920px;
-  margin:0 auto;
-  position:relative;
-  z-index:3
-}
-
-.hero-eye{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;
-  color:#eff6ff;margin-bottom:24px;
-  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);
-  padding:7px 16px;border-radius:30px
-}
-.hero h1{font-family:'Barlow Condensed','Arial Narrow','Roboto Condensed','Segoe UI',sans-serif;font-size:clamp(44px,7vw,88px);font-weight:900;line-height:.96;color:#fff;text-transform:uppercase;margin-bottom:24px;letter-spacing:-.5px;max-width:760px;margin-left:auto;margin-right:auto;text-shadow:0 12px 30px rgba(0,0,0,.28)}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.hero-sub{color:rgba(255,255,255,.88);font-size:19px;font-weight:400;line-height:1.78;margin-bottom:42px;max-width:760px;margin-left:auto;margin-right:auto}
-.hero-btns{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:56px}
-.hero-btns .btn-primary{min-width:276px;padding:16px 42px;font-size:14px;letter-spacing:.6px}
-.hero .btn-ghost{color:#fff;border-color:rgba(255,255,255,.46);background:rgba(255,255,255,.04)}
-.hero .btn-ghost:hover{color:#fff;border-color:#fff;background:rgba(255,255,255,.14)}
-header:not(.scrolled) .logo-txt{color:#fff}
-header:not(.scrolled) .nav-ul>li>a{color:rgba(255,255,255,.9)}
-header:not(.scrolled) .nav-ul>li>a:hover{color:#fff}
-header:not(.scrolled) .arr{border-right-color:#fff;border-bottom-color:#fff}
-header:not(.scrolled) .ham span{background:#fff}
-
-@keyframes heroZoom{
-  0%{transform:scale(1.06)}
-  100%{transform:scale(1.16)}
-}
-@keyframes starDrift{
-  0%{transform:translate3d(0,0,0)}
-  100%{transform:translate3d(-120px,70px,0)}
-}
-@keyframes starDriftAlt{
-  0%{transform:translate3d(0,0,0)}
-  100%{transform:translate3d(140px,90px,0)}
-}
-@keyframes starPulse{
-  0%{opacity:.24}
-  100%{opacity:.42}
-}
-
-.stats-row{display:grid;grid-template-columns:repeat(4,1fr);border:1.5px solid var(--border);border-radius:16px;overflow:hidden;background:#fff;box-shadow:var(--sh);max-width:900px;margin:0 auto}
-.stat-i{padding:20px 14px;text-align:center;border-right:1.5px solid var(--border)}
-.stat-i:last-child{border-right:none}
-.stat-n{font-family:'Barlow Condensed',sans-serif;font-size:38px;font-weight:900;color:var(--text);line-height:1;margin-bottom:5px}
-.stat-n span{color:var(--accent)}
-.stat-l{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.5px;text-transform:uppercase}
-
-/* ===== TICKER ===== */
-.ticker-sec{background:var(--light);padding:32px 0;overflow:hidden;border-bottom:1px solid var(--border)}
-.ticker-lbl{text-align:center;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
-.ticker-track{display:flex;overflow:hidden}
-.ticker-in{display:flex;align-items:center;gap:48px;animation:tick 32s linear infinite;flex-shrink:0}
-@keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.tick-item{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;letter-spacing:2px;color:#64748b;text-transform:uppercase;flex-shrink:0;transition:color .3s}
-.tick-item:hover{color:var(--text2)}
-.tick-dot{color:var(--accent);opacity:.4;font-size:8px;flex-shrink:0}
-
-/* ===== ABOUT ===== */
-.about-sec{padding:128px 0;background:#fff}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.about-img-wrap{position:relative}
-.about-img{border-radius:var(--r3);overflow:hidden;aspect-ratio:4/5;background:var(--light2);box-shadow:var(--shl)}
-.about-img img{width:100%;height:100%;object-fit:cover}
-.about-badge{position:absolute;bottom:-20px;right:-20px;background:var(--accent);color:#fff;padding:26px 30px;border-radius:14px;text-align:center;box-shadow:var(--sh-red)}
-.about-badge strong{font-family:'Barlow Condensed',sans-serif;font-size:50px;font-weight:900;display:block;line-height:1}
-.about-badge span{font-size:12px;font-weight:600;opacity:.9;text-transform:uppercase;letter-spacing:1px;display:block;margin-top:5px}
-.about-content h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,3.5vw,46px);font-weight:900;line-height:1.03;text-transform:uppercase;color:var(--text);margin-bottom:18px}
-.about-content>p{color:var(--muted);font-size:18px;line-height:1.78;margin-bottom:28px}
-.check-list{display:flex;flex-direction:column;gap:10px;margin-bottom:36px}
-.check-list li{display:flex;align-items:flex-start;gap:13px;padding:14px 18px;background:var(--light);border-radius:10px;border-left:3px solid var(--accent);font-size:15px;color:var(--text2);line-height:1.58}
-.check-list li svg{width:17px;height:17px;flex-shrink:0;color:var(--accent);margin-top:2px}
-
-/* ===== SERVICES (LIGHT) ===== */
-.svc-sec{
-  padding:128px 0;
-  background:
-    radial-gradient(circle at 92% 4%, rgba(45,140,255,.12), transparent 24%),
-    radial-gradient(circle at 4% 55%, rgba(45,140,255,.08), transparent 24%),
-    linear-gradient(180deg,#fff 0%,#f7fbff 100%);
-  position:relative;
-  overflow:hidden
-}
-.svc-sec::before{
-  content:'';position:absolute;right:-140px;top:-150px;width:420px;height:420px;border-radius:50%;
-  border:1px solid rgba(45,140,255,.08);box-shadow:inset 0 0 0 36px rgba(45,140,255,.025);
-  pointer-events:none
-}
-.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:1220px;margin:56px auto 0}
-.svc-card{
-  background:transparent;border:none;border-radius:0;padding:0 28px;
-  transition:var(--trans);position:relative;overflow:visible;cursor:default;
-  display:flex;flex-direction:column;min-height:0
-}
-.svc-card:not(:first-child){border-left:1.5px solid rgba(45,140,255,.12)}
-.svc-card::before{display:none}
-.svc-card:hover{transform:translateY(-4px)}
-.svc-card:hover .svc-icon{box-shadow:0 16px 34px rgba(45,140,255,.24);transform:translateY(-2px)}
-.svc-card:hover .svc-arrow{transform:translateX(3px)}
-.svc-num{
-  font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;
-  color:var(--accent);letter-spacing:1.5px;margin-bottom:16px;
-  display:inline-block;background:var(--accent-soft);padding:4px 10px;border-radius:4px
-}
-.svc-icon{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;margin:0 0 22px;flex-shrink:0;box-shadow:0 10px 28px rgba(45,140,255,.18);border:6px solid #fff;transition:var(--trans);position:relative;    margin-top: 20px;}
-.svc-icon::after{content:'';position:absolute;width:46px;height:3px;background:var(--accent);margin-top:94px;border-radius:999px}
-.svc-icon svg{width:27px;height:27px;color:#fff}
-.svc-card h3{font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:800;text-transform:uppercase;color:var(--text);margin:26px 0 12px;letter-spacing:.3px;line-height:1.15;min-height:44px}
-.svc-card p{color:var(--muted);font-size:16px;line-height:1.58;margin-bottom:22px;min-height:126px}
-.svc-list{display:flex;flex-direction:column;gap:10px;margin-top:0;margin-bottom:0}
-.svc-list span{display:flex;align-items:flex-start;gap:9px;padding:0;background:transparent;border:none;border-radius:0;color:var(--text2);font-size:14px;font-weight:700;line-height:1.35}
-.svc-list span::before{content:'✓';width:16px;height:16px;border-radius:50%;background:var(--accent);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;line-height:1;flex-shrink:0;margin-top:1px}
-.svc-list span:last-child:nth-child(odd){grid-column:auto}
-.svc-lnk{display:none}
-.svc-arrow{transition:transform .3s}
-.svc-cta{
-  max-width:1080px;margin:56px auto 0;background:#fff;border:1.5px solid var(--border);
-  border-radius:18px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;
-  gap:24px;box-shadow:var(--sh)
-}
-.svc-cta-mark{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0}
-.svc-cta-mark svg{width:23px;height:23px}
-.svc-cta-copy{display:flex;align-items:center;gap:16px;min-width:0}
-.svc-cta-copy strong{display:block;color:var(--text);font-size:16px;font-weight:800;margin-bottom:2px}
-.svc-cta-copy span{display:block;color:var(--muted);font-size:14px;line-height:1.5}
-
-/* ===== PROCESS ===== */
-.proc-sec{padding:128px 0;background:#fff}
-.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.proc-card{background:var(--light);border-radius:var(--r2);padding:32px 26px;border:1.5px solid var(--border);transition:var(--trans);border-top:3px solid transparent}
-.proc-card:hover{transform:translateY(-5px);box-shadow:var(--shm);border-top-color:var(--accent);background:#fff}
-.proc-step{font-family:'Barlow Condensed',sans-serif;font-size:54px;font-weight:900;color:var(--border2);line-height:1;margin-bottom:14px;display:block;transition:color .3s}
-.proc-card:hover .proc-step{color:rgba(45,140,255,.14)}
-.proc-card h3{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;text-transform:uppercase;color:var(--text);margin-bottom:10px;line-height:1.2}
-.proc-card p{color:var(--muted);font-size:18px;line-height:1.65}
-
-/* ===== WHY US ===== */
-.why-sec{padding:0 0 128px 0;background:var(--light)}
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
-.why-img-wrap{border-radius:var(--r3);overflow:hidden;aspect-ratio:1;background:var(--light2);box-shadow:var(--shl);position:relative}
-.why-img-wrap img{width:100%;height:100%;object-fit:cover}
-.why-overlay{
-  position:absolute;bottom:20px;left:20px;right:20px;
-  background:rgba(15,21,35,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
-  border-radius:12px;padding:18px 22px;border-left:3px solid var(--accent);
-  max-height:60%;overflow:hidden
-}
-.why-overlay strong{display:block;color:#fff;font-size:15px;font-weight:700;margin-bottom:6px}
-.why-overlay span{color:rgba(255,255,255,.55);font-size:12px;line-height:1.6;display:block}
-.why-content h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(26px,3.5vw,46px);font-weight:900;text-transform:uppercase;color:var(--text);line-height:1.03;margin-bottom:14px}
-.why-content>p{color:var(--muted);font-size:18px;line-height:1.72;margin-bottom:28px}
-.why-items{display:flex;flex-direction:column;gap:12px}
-.why-item{display:flex;gap:16px;align-items:flex-start;padding:18px 20px;background:#fff;border-radius:14px;border:1.5px solid var(--border);transition:var(--trans);cursor:pointer}
-.why-item:hover{border-color:rgba(45,140,255,.25);box-shadow:var(--sh);transform:translateX(4px)}
-.why-item.active{border-color:rgba(45,140,255,.35);box-shadow:var(--sh);transform:translateX(4px)}
-.why-ico{width:42px;height:42px;border-radius:10px;flex-shrink:0;background:var(--accent-soft);display:flex;align-items:center;justify-content:center}
-.why-ico svg{width:20px;height:20px;color:var(--accent)}
-.why-item h4{font-size:14px;font-weight:700;color:var(--text);margin-bottom:3px}
-.why-item p{font-size:18px;color:var(--muted);line-height:1.65;max-height:0;overflow:hidden;opacity:0;margin-top:0;transition:max-height .35s ease,opacity .25s ease,margin-top .25s ease}
-.why-item.active p{max-height:280px;opacity:1;margin-top:6px}
-
-/* ===== INDUSTRIES ===== */
-.ind-sec{padding:128px 0;background:#fff}
-.ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
-.ind-card{background:var(--light);border-radius:var(--r2);padding:32px 28px;border:1.5px solid var(--border);transition:var(--trans);border-bottom:3px solid transparent;display:flex;flex-direction:column;gap:12px}
-.ind-card:hover{transform:translateY(-5px);box-shadow:var(--shm);border-bottom-color:var(--accent);background:#fff}
-.ind-ico{width:50px;height:50px;border-radius:12px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center}
-.ind-ico svg{width:24px;height:24px;color:var(--accent)}
-.ind-card h3{font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:800;text-transform:uppercase;color:var(--text)}
-.ind-card p{color:var(--muted);font-size:18px;line-height:1.65}
-.ind-sec .sec-hd,
-.ind-sec .sec-hd p{width:min(100%,760px)!important;max-width:760px!important}
-
-/* ===== TOOLS (LIGHT) ===== */
-.tools-sec{padding:128px 0;background:var(--light)}
-.tools-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:52px}
-.tool-cat{background:#fff;border:1.5px solid var(--border);border-radius:var(--r2);padding:32px 30px;transition:var(--trans)}
-.tool-cat:hover{border-color:rgba(45,140,255,.22);box-shadow:var(--sh)}
-.tool-cat h4{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:18px;display:flex;align-items:center;gap:10px}
-.tool-cat h4::after{content:'';flex:1;height:1px;background:var(--border)}
-.tool-tags{display:flex;flex-wrap:wrap;gap:8px}
-.tool-tag{padding:6px 14px;background:var(--light);border:1.5px solid var(--border);border-radius:30px;font-size:13px;font-weight:500;color:var(--text2);transition:var(--trans)}
-.tool-tag:hover{background:var(--accent-soft);border-color:rgba(45,140,255,.3);color:var(--accent)}
-
-/* ===== TESTIMONIALS ===== */
-.testi-sec{padding:128px 0;background:#fff;overflow:hidden}
-.testi-wrap{overflow:hidden;margin:0 -48px;padding:0 48px}
-.testi-track{display:flex;gap:24px;transition:transform .5s cubic-bezier(.4,0,.2,1)}
-.testi-card{flex:0 0 calc(33.33% - 16px);background:var(--light);border-radius:var(--r2);padding:34px 30px;transition:var(--trans);border:1.5px solid var(--border);border-top:3px solid transparent}
-.testi-card:hover{box-shadow:var(--shm);border-top-color:var(--accent);background:#fff;border-color:rgba(45,140,255,.12)}
-.tq{font-size:52px;line-height:1;color:var(--accent);opacity:.16;font-family:Georgia,serif;margin-bottom:6px}
-.t-stars{display:flex;gap:3px;margin-bottom:14px}
-.t-stars span{color:#f59e0b;font-size:13px}
-.t-txt{color:var(--text2);font-size:18px;line-height:1.76;margin-bottom:26px;font-style:italic}
-.t-author{display:flex;align-items:center;gap:12px}
-.t-av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;color:#fff;flex-shrink:0}
-.t-info strong{display:block;color:var(--text);font-size:14px;font-weight:700}
-.t-info span{color:var(--muted);font-size:13px}
-.testi-ctrl{display:flex;justify-content:center;align-items:center;gap:14px;margin-top:42px}
-.t-btn{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--border);background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:var(--trans);color:var(--muted)}
-.t-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
-.t-dots{display:flex;gap:8px}
-.t-dot{width:8px;height:8px;border-radius:50%;background:var(--border2);cursor:pointer;transition:var(--trans);border:none}
-.t-dot.on{background:var(--accent);width:24px;border-radius:4px}
-
-/* ===== CTA BANNER (RED ACCENT) ===== */
-.cta-sec{
-  padding:110px 0;
-  background:var(--accent);
-  background-image:
-    radial-gradient(ellipse at 25% 60%,rgba(255,255,255,.07) 0%,transparent 55%),
-    radial-gradient(ellipse at 85% 20%,rgba(0,0,0,.09) 0%,transparent 50%)
-}
-.cta-in{display:flex;align-items:center;justify-content:space-between;gap:48px;flex-wrap:wrap}
-.cta-in h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,4vw,48px);font-weight:900;text-transform:uppercase;color:#fff;line-height:1.02;margin-bottom:12px}
-.cta-in p{color:rgba(255,255,255,.76);font-size:18px;line-height:1.7}
-.cta-btns{display:flex;gap:14px;flex-wrap:wrap}
-.cta-sec .btn-primary{background:#fff;color:var(--accent);border-color:#fff}
-.cta-sec .btn-primary:hover{background:rgba(255,255,255,.92);border-color:rgba(255,255,255,.92);transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.16)}
-.cta-sec .btn-ghost-white{border-color:rgba(255,255,255,.5)}
-
-/* ===== FAQ ===== */
-.faq-sec{padding:128px 0;background:var(--light)}
-.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:52px}
-.faq-item{background:#fff;border-radius:14px;overflow:hidden;border:1.5px solid var(--border);transition:var(--trans)}
-.faq-item.on{border-color:rgba(45,140,255,.25);box-shadow:var(--sh)}
-.faq-q{padding:18px 20px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:14px;font-weight:600;color:var(--text);transition:color .2s;line-height:1.4}
-.faq-item.on .faq-q{color:var(--accent)}
-.faq-ico{width:24px;height:24px;border-radius:50%;background:var(--border);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:var(--muted);transition:var(--trans)}
-.faq-item.on .faq-ico{background:var(--accent);color:#fff;transform:rotate(45deg)}
-.faq-a{padding:0 20px;max-height:0;overflow:hidden;font-size:18px;color:var(--muted);line-height:1.72;transition:max-height .35s ease,padding .35s ease}
-.faq-item.on .faq-a{padding:0 20px 18px;max-height:500px}
-
-/* ===== CONTACT ===== */
-.contact-sec{padding:128px 0;background:#fff}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
-.contact-left h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(26px,3.5vw,46px);font-weight:900;text-transform:uppercase;color:var(--text);line-height:1.03;margin-bottom:16px}
-.contact-left>p{color:var(--muted);font-size:18px;line-height:1.72;margin-bottom:32px}
-.c-info-list{display:flex;flex-direction:column;gap:14px;margin-bottom:32px}
-.c-info-item{display:flex;align-items:center;gap:14px}
-.c-ico{width:44px;height:44px;border-radius:12px;background:var(--accent-soft);border:1.5px solid rgba(45,140,255,.15);flex-shrink:0;display:flex;align-items:center;justify-content:center}
-.c-ico svg{width:18px;height:18px;color:var(--accent)}
-.c-det strong{display:block;font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px}
-.c-det span{font-size:14px;color:var(--muted)}
-.c-form{background:var(--light);border-radius:var(--r3);padding:44px 42px;border:1.5px solid var(--border);box-shadow:var(--shm)}
-.c-form h3{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;text-transform:uppercase;color:var(--text);margin-bottom:28px}
-.f-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}
-.f-grp{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
-.f-grp label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
-.f-grp input,.f-grp select,.f-grp textarea{background:#fff;border:1.5px solid var(--border);border-radius:var(--r);padding:12px 15px;color:var(--text);font-family:'Barlow',sans-serif;font-size:15px;transition:var(--trans);outline:none;width:100%}
-.f-grp input::placeholder,.f-grp textarea::placeholder{color:#b0b7c3}
-.f-grp input:focus,.f-grp select:focus,.f-grp textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(45,140,255,.1)}
-.f-grp select option{background:#fff;color:var(--text)}
-.f-grp textarea{min-height:100px;resize:vertical}
-
-/* ===== FOOTER ===== */
-footer{background:#fff;padding:80px 0 0;border-top:1px solid var(--border)}
-.ft-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:44px;padding-bottom:52px;border-bottom:1px solid var(--border)}
-.ft-logo{display:flex;align-items:center;gap:9px;margin-bottom:14px}
-.ft-logo-mark{width:34px;height:34px;background:var(--accent);border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:900;color:#fff}
-.ft-logo-txt{font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:800;color:var(--text)}
-.ft-brand p{color:var(--muted);font-size:18px;line-height:1.72;margin-bottom:22px}
-.ft-tagline{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px;display:block}
-.social-row{display:flex;gap:8px}
-.soc{width:36px;height:36px;border-radius:8px;background:var(--light);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px;font-weight:700;transition:var(--trans)}
-.soc:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-2px)}
-.ft-col h4{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border)}
-.ft-col ul{display:flex;flex-direction:column;gap:9px}
-.ft-col ul li a{color:var(--muted);font-size:14px;transition:var(--trans)}
-.ft-col ul li a:hover{color:var(--text);padding-left:5px}
-.ft-bottom{display:flex;align-items:center;justify-content:space-between;padding:20px 0;flex-wrap:wrap;gap:10px}
-.ft-bottom p{color:#475569;font-size:18px}
-.ft-links{display:flex;gap:18px}
-.ft-links a{color:#475569;font-size:13px;transition:color .2s}
-.ft-links a:hover{color:var(--text2)}
-
-/* ===== SCROLL REVEAL ===== */
-.rv,
-.rv.rv-init,
-.rv.rv-init.vis{opacity:1;transform:none}
-section,footer{--reveal-dur:.8s;--reveal-ease:cubic-bezier(.22,1,.36,1)}
-section .container>*,
-footer .container>*{
-  opacity:0;
-  transform:translateY(34px);
-  transition:opacity var(--reveal-dur) var(--reveal-ease),transform var(--reveal-dur) var(--reveal-ease)
-}
-section.in-view .container>*,
-footer.in-view .container>*{
-  opacity:1;
-  transform:none
-}
-.svc-grid>*,
-.proc-grid>*,
-.ind-grid>*,
-.faq-grid>*,
-.contact-grid>*,
-.ft-top>*{
-  opacity:0;
-  transform:translateY(28px);
-  transition:opacity .75s var(--reveal-ease),transform .75s var(--reveal-ease)
-}
-section.in-view .svc-grid>*,
-section.in-view .proc-grid>*,
-section.in-view .ind-grid>*,
-section.in-view .faq-grid>*,
-section.in-view .contact-grid>*,
-footer.in-view .ft-top>*{
-  opacity:1;
-  transform:none
-}
-section.in-view .svc-grid>*:nth-child(1),
-section.in-view .proc-grid>*:nth-child(1),
-section.in-view .ind-grid>*:nth-child(1),
-section.in-view .faq-grid>*:nth-child(1),
-section.in-view .contact-grid>*:nth-child(1),
-footer.in-view .ft-top>*:nth-child(1){transition-delay:.04s}
-section.in-view .svc-grid>*:nth-child(2),
-section.in-view .proc-grid>*:nth-child(2),
-section.in-view .ind-grid>*:nth-child(2),
-section.in-view .faq-grid>*:nth-child(2),
-section.in-view .contact-grid>*:nth-child(2),
-footer.in-view .ft-top>*:nth-child(2){transition-delay:.12s}
-section.in-view .svc-grid>*:nth-child(3),
-section.in-view .proc-grid>*:nth-child(3),
-section.in-view .ind-grid>*:nth-child(3),
-section.in-view .faq-grid>*:nth-child(3),
-section.in-view .contact-grid>*:nth-child(3),
-footer.in-view .ft-top>*:nth-child(3){transition-delay:.2s}
-section.in-view .svc-grid>*:nth-child(4),
-section.in-view .proc-grid>*:nth-child(4),
-section.in-view .faq-grid>*:nth-child(4),
-footer.in-view .ft-top>*:nth-child(4){transition-delay:.28s}
-section.in-view .faq-grid>*:nth-child(n+5){transition-delay:.34s}
-@media (prefers-reduced-motion:reduce){
-  section .container>*,
-  footer .container>*,
-  .svc-grid>*,
-  .proc-grid>*,
-  .ind-grid>*,
-  .faq-grid>*,
-  .contact-grid>*,
-  .ft-top>*{
-    opacity:1!important;
-    transform:none!important;
-    transition:none!important
-  }
-}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:1100px){
-  .svc-grid{grid-template-columns:repeat(2,1fr)}
-  .svc-card{border-left:none!important;padding:0 34px}
-  .svc-card:nth-child(even){border-left:1.5px solid rgba(45,140,255,.12)!important}
-  .proc-grid{grid-template-columns:repeat(2,1fr)}
-  .tools-grid{grid-template-columns:1fr}
-  .ft-top{grid-template-columns:1fr 1fr}
-}
-@media(max-width:900px){
-  .container{padding:0 24px}
-  nav{padding:0 24px}
-  .nav-ul{display:none}
-  .ham{display:flex}
-  .nav-end .btn-primary{display:none}
-  .hero-inner{padding:108px 0 86px}
-  .stats-row{grid-template-columns:repeat(2,1fr)}
-  .stat-i{border-bottom:1.5px solid var(--border)}
-  .stat-i:nth-child(3),.stat-i:nth-child(4){border-bottom:none}
-  .about-grid,.why-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
-  .about-img-wrap{display:none}
-  .svc-grid{grid-template-columns:1fr}
-  .svc-card{min-height:0;border-left:none!important;padding:0}
-  .svc-card h3,.svc-card p,.svc-list{min-height:0}
-  .svc-list{grid-template-columns:1fr}
-  .svc-cta{flex-direction:column;align-items:flex-start}
-  .ind-grid{grid-template-columns:1fr 1fr}
-  .faq-grid{grid-template-columns:1fr}
-  .testi-card{flex:0 0 85%}
-  .ft-top{grid-template-columns:1fr}
-  .cta-in{flex-direction:column;text-align:center}
-  .testi-wrap{margin:0 -24px;padding:0 24px}
-  .about-sec,.svc-sec,.proc-sec,.why-sec,.ind-sec,.tools-sec,.testi-sec,.faq-sec,.contact-sec{padding:88px 0}
-}
-@media(max-width:600px){
-  .hero h1{font-size:38px}
-  .hero-sub{font-size:18px}
-  .hero-inner{padding:88px 0 72px}
-  .hero-btns{flex-direction:column}
-  .hero-btns a{width:100%;justify-content:center}
-  .ind-grid{grid-template-columns:1fr}
-  .proc-grid{grid-template-columns:1fr}
-  .f-row{grid-template-columns:1fr}
-  .c-form{padding:24px 18px}
-  .stats-row{grid-template-columns:repeat(2,1fr)}
-  .testi-wrap{margin:0 -24px;padding:0 24px}
-  .cta-sec{padding:82px 0}
-  .why-overlay{left:14px;right:14px;bottom:14px;padding:16px}
-  .ft-bottom{justify-content:center;text-align:center}
-  .about-sec,.svc-sec,.proc-sec,.why-sec,.ind-sec,.tools-sec,.testi-sec,.faq-sec,.contact-sec{padding:72px 0}
-}
-</style>
-</head>
-<body>
-
-<script>
-window.gsSiteComponents = {
-  header: {
-    logoHref: "#home",
-    logoText: "GS ConsultPro",
-    hamId: "ham",
-    hamAriaLabel: "Menu",
-    desktopLinks: [
-      {
-        href: "/seo-services-singapore/",
-        label: "SEO"
-      },
-      { href: "#why", label: "About" },
-      { href: "#faq", label: "FAQs" },
-      { href: "#contact", label: "Contact" }
-    ],
-    mobileLinks: [
-      { href: "/seo-services-singapore/", label: "SEO" },
-      { href: "#why", label: "About" },
-      { href: "#faq", label: "FAQs" },
-      { href: "#contact", label: "Contact" }
-    ],
-    cta: null,
-    mobileCta: null,
-    mobileCtaInlineFlex: true
-  },
-  footer: {
-    brandName: "GS ConsultPro",
-    tagline: "Marketing &amp; Digital Solutions for Singapore &amp; APAC Growth",
-    description: "Helping Singapore and APAC brands strengthen visibility, convert prospects, and grow revenue through data-driven marketing strategies that deliver real, measurable results.",
-    socialLinks: [
-      { href: "#", ariaLabel: "LinkedIn", label: "in" },
-      { href: "#", ariaLabel: "X", label: "X" },
-      { href: "#", ariaLabel: "Facebook", label: "fb" },
-      { href: "#", ariaLabel: "Instagram", label: "Ig" }
-    ],
-    columns: [
-      {
-        title: "Services",
-        links: [
-          { href: "#services", label: "Search Engine Optimisation (SEO)" },
-          { href: "#services", label: "Web Design & Development" },
-          { href: "#services", label: "Mobile App Development" },
-          { href: "#services", label: "Sales Automation & Growth Systems" },
-          { href: "#services", label: "Content Creation" },
-          { href: "#services", label: "Paid Media & Social" }
-        ]
-      },
-      {
-        title: "Industries",
-        links: [
-          { href: "#industries", label: "E-Commerce & Retail" },
-          { href: "#industries", label: "B2B & Professional Services" },
-          { href: "#industries", label: "Healthcare & Wellness" },
-          { href: "#industries", label: "Finance & Fintech" },
-          { href: "#industries", label: "Technology & SaaS" },
-          { href: "#industries", label: "Hospitality & Tourism" }
-        ]
-      },
-      {
-        title: "Company",
-        links: [
-          { href: "#why", label: "About GS ConsultPro" },
-          { href: "#faq", label: "FAQs" },
-          { href: "#contact", label: "Contact Us" },
-          { href: "mailto:hello@gsconsultpro.com", label: "hello@gsconsultpro.com" },
-          { href: "#contact", label: "Singapore, APAC" }
-        ]
-      }
-    ],
-    copyright: "&copy; 2026 GS ConsultPro. All rights reserved.",
-    bottomLinks: [
-      { href: "#contact", label: "Privacy Policy" },
-      { href: "#contact", label: "Terms of Service" },
-      { href: "#home", label: "Sitemap" }
-    ]
-  }
-};
-</script>
-<div id="site-header"></div>
-<script src="/assets/site.js"></script>
-</div>
-
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-stars" aria-hidden="true"></div>
-  <div class="container">
-    <div class="hero-inner">
-      <div>
-        <div class="hero-eye">Singapore &amp; APAC Digital Growth Agency</div>
-        <h1>Marketing &amp; Digital <em>Solutions</em> Agency In Singapore</h1>
-        <p class="hero-sub">We help Singapore and APAC brands strengthen visibility, convert prospects, and grow revenue through data-driven marketing strategies that deliver real, measurable results.</p>
-        <div class="hero-btns">
-          <a href="#contact" class="btn-primary">Get a Free Consultation <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-          <a href="#services" class="btn-ghost">Our Services</a>
-        </div>
-        <!-- <div class="stats-row">
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-stars" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-inner">
+          <div>
+            <div class="hero-eye">
+              Singapore &amp; APAC Digital Growth Agency
+            </div>
+            <h1>
+              Marketing &amp; Digital <em>Solutions</em> Agency In Singapore
+            </h1>
+            <p class="hero-sub">
+              We help Singapore and APAC brands strengthen visibility, convert
+              prospects, and grow revenue through data-driven marketing
+              strategies that deliver real, measurable results.
+            </p>
+            <div class="hero-btns">
+              <a href="#contact" class="btn-primary"
+                >Get a Free Consultation
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" /></svg>
+              </a>
+              <a href="#services" class="btn-ghost">Our Services</a>
+            </div>
+            <!-- <div class="stats-row">
           <div class="stat-i"><div class="stat-n">500<span>+</span></div><div class="stat-l">Brands Grown</div></div>
           <div class="stat-i"><div class="stat-n">10<span>+</span></div><div class="stat-l">Years in APAC</div></div>
           <div class="stat-i"><div class="stat-n">98<span>%</span></div><div class="stat-l">Client Retention</div></div>
           <div class="stat-i"><div class="stat-n">3<span>X</span></div><div class="stat-l">Average ROI</div></div>
         </div> -->
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="svc-sec" id="services">
-  <div class="container">
-    <div class="sec-hd rv" style="text-align:center">
-      <span class="stag-plain">What We Offer</span>
-      <h2 class="dk">Services for Singapore &amp; APAC Businesses</h2>
-      <p class="dk" style="max-width:720px;margin-left:auto;margin-right:auto">GS ConsultPro provides integrated digital marketing, SEO, web development, and growth solutions for Singapore businesses and companies across APAC, helping brands increase visibility, generate demand, and drive sustainable revenue growth.</p>
-    </div>
-    <div class="svc-grid">
-
-      <!-- Card 1: Growth & Marketing -->
-      <div class="svc-card rv">
-        <div class="svc-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="11" cy="11" r="7.5" stroke="currentColor" stroke-width="1.8"/>
-            <line x1="16.7" y1="16.7" x2="21" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <h3>Growth &amp; Marketing</h3>
-        <p>Integrated marketing programmes designed to strengthen visibility, build authority, and support measurable demand generation.</p>
-        <div class="svc-list">
-          <a href="/seo-services-singapore/"><span>SEO</span></a>
-          <a href="/content-creation-services-singapore/"><span>Content Creation</span></a>
-          <a href="/paid-media-social-advertising-singapore/"><span>Digital Advertising &amp; Social Media</span></a>
-        </div>
-        <a href="/services/" class="svc-lnk">Speak to Us
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svc-arrow">
-            <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-            <polyline points="12,5 19,12 12,19" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-      </div>
-
-      <!-- Card 2: Demand Generation & Pipeline Growth -->
-      <div class="svc-card rv">
-        <div class="svc-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="9" cy="7" r="3.5" stroke="currentColor" stroke-width="1.8"/>
-            <path d="M2 21v-1.5A3.5 3.5 0 0 1 5.5 16h7A3.5 3.5 0 0 1 16 19.5V21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            <path d="M16 3.5a3.5 3.5 0 0 1 0 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            <path d="M19 16.2A3.5 3.5 0 0 1 22 19.5V21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <h3>Demand Generation &amp; Pipeline Growth</h3>
-        <p>Connected systems and workflows designed to improve lead handling, response speed, and conversion across the customer journey.</p>
-        <div class="svc-list">
-          <!-- <a href="/lead-generation-services-singapore/"><span>Demand Generation &amp; Pipeline Growth</span></a>   -->
-          <a href="/lead-generation-services-singapore/"><span>Sales Automation &amp; Growth Systems</span></a>
-        </div>
-        <a href="/lead-generation-services-singapore/" class="svc-lnk">Speak to Us
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svc-arrow">
-            <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-            <polyline points="12,5 19,12 12,19" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-      </div>
-
-      <!-- Card 3: Digital Experience -->
-      <div class="svc-card rv">
-        <div class="svc-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="2.5" y="2.5" width="19" height="19" rx="2" stroke="currentColor" stroke-width="1.8"/>
-            <line x1="2.5" y1="9" x2="21.5" y2="9" stroke="currentColor" stroke-width="1.8"/>
-            <line x1="9" y1="9" x2="9" y2="21.5" stroke="currentColor" stroke-width="1.8"/>
-          </svg>
-        </div>
-        <h3>Digital Experience</h3>
-        <p>Digital platforms and media assets built for strong user experience, technical performance, and scalable customer engagement.</p>
-        <div class="svc-list">
-          <a href="/web-design-development-singapore/"><span>Web Design &amp; Development</span></a>
-          <a href="/app-development-services-singapore/"><span>App Development &amp; AI Solutions</span></a>
-          <!-- <a href="/app-development-services-singapore/"><span>Mobile App Development</span></a> -->
-        </div>
-        <a href="/web-design-development-singapore/" class="svc-lnk">Speak to Us
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svc-arrow">
-            <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-            <polyline points="12,5 19,12 12,19" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-      </div>
-
-      <!-- Card 4: Strategy & Engagement -->
-      <div class="svc-card rv">
-        <div class="svc-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2.5L19.5 6.5V12C19.5 16.5 16.5 19.8 12 21C7.5 19.8 4.5 16.5 4.5 12V6.5L12 2.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-            <polyline points="8.5,12 10.5,14 15.5,9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <h3>Strategy &amp; Engagement</h3>
-        <p>Market engagement initiatives that support ecosystem growth, executive connection, and internal capability development.</p>
-        <div class="svc-list">
-          <a href="/strategic-partnership-consulting-singapore/"><span>Partnership Strategy &amp; Ecosystem Development</span></a>
-          <a href="/tradeshow-exhibitor-strategy-singapore/"><span>Industry Events &amp; Executive Roundtables</span></a>
-          <a href="/corporate-sales-training-workshops-singapore/"><span>Corporate Training &amp; Workshops</span></a>
-        </div>
-        <a href="/strategic-partnership-consulting-singapore/" class="svc-lnk">Speak to Us
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="svc-arrow">
-            <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-            <polyline points="12,5 19,12 12,19" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-      </div>
-
-    </div>
-    <div class="svc-cta">
-      <div class="svc-cta-copy">
-        <div class="svc-cta-mark">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="12,2 14.9,8.6 22,9.3 16.7,14.1 18.2,21.1 12,17.5 5.8,21.1 7.3,14.1 2,9.3 9.1,8.6" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" fill="none"/>
-          </svg>
-        </div>
-        <div>
-          <strong>Built for growth across Singapore &amp; APAC</strong>
-          <span>Integrated teams. Smarter systems. Measurable outcomes.</span>
-        </div>
-      </div>
-      <a href="#contact" class="btn-primary">Speak to Us
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-          <polyline points="12,5 19,12 12,19" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- WHY US -->
-<section class="why-sec" id="why">
-  <div class="container">
-    <div class="why-grid">
-      <div class="why-img-wrap rv">
-        <!-- REPLACE: office/team photo -->
-        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" alt="GS ConsultPro" />
-        <div class="why-overlay">
-          <strong>Where Strategy Meets Growth</strong>
-          <span>Clear execution designed to support measurable business growth.</span>
-        </div>
-      </div>
-      <div class="rv">
-        <div class="stag-plain">Why Choose Us</div>
-        <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(26px,3.5vw,44px);font-weight:900;text-transform:uppercase;color:var(--dark);line-height:1.05;margin-bottom:14px">More Than Marketing. Built for Growth.</h2>
-        <p style="color:var(--muted);font-size:18px;line-height:1.7;margin-bottom:32px">Businesses work with GS ConsultPRO because we combine regional insight with structured strategy and execution. We move beyond isolated campaigns, aligning marketing, digital experiences, and growth initiatives with clear business objectives to support sustainable growth across Singapore and APAC.</p>
-        <div class="why-items">
-          <div class="why-item active">
-            <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19v-6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2zm0 0V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v10m-6 0a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2m0 0V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"/></svg></div>
-            <div><h4>Decisions Backed by Real Data</h4><p>Every decision is grounded in real market data and customer behaviour. We analyse demand, user intent, and competition to identify opportunities and support measurable growth using platforms such as Google Analytics, SEMrush, and Ahrefs.</p></div>
-          </div>
-          <div class="why-item">
-            <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-            <div><h4>Regional Insight That Applies Locally</h4><p>We understand how businesses grow across Singapore and APAC, helping clients adapt strategy, messaging, and channel focus to the markets that matter most.</p></div>
-          </div>
-          <div class="why-item">
-            <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-            <div><h4>Clear Reporting and Accountability</h4><p>You see what is being done, why it matters, and how it is performing, so there is clarity around progress, priorities, and next steps.</p></div>
-          </div>
-          <div class="why-item">
-            <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-            <div><h4>Growth-Focused Execution</h4><p>We connect strategy and execution so each initiative supports stronger visibility, better conversion, and measurable business growth.</p></div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- INDUSTRIES -->
-<section class="ind-sec" id="industries">
-  <div class="container">
-    <div class="sec-hd rv" style="text-align:center;width:75%;max-width:none;margin:0 auto">
-      <span class="stag-plain">Sectors We Serve</span>
-      <h2 class="dk">Industries We Focus On</h2>
-      <p class="dk" style="width:75%;max-width:none;margin:16px auto 0">We work with growth-focused companies across Singapore and APAC to expand into new markets, strengthen demand, and build a lasting presence.</p>
-    </div>
-    <div class="ind-grid">
-      <div class="ind-card rv"><div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>Financial Services &amp; Fintech</h3><p>We work with financial services and fintech companies to build trust in regulated markets, strengthen market positioning, and support sustainable growth.</p></div>
-      <div class="ind-card rv"><div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><h3>SaaS &amp; Technology</h3><p>We work with SaaS and technology companies to drive product adoption, strengthen positioning, and scale effectively across regional markets.</p></div>
-      <div class="ind-card rv"><div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3>Professional Services</h3><p>We work with professional services firms to build authority, generate high-value demand, and support long-term business growth.</p></div>
-    </div>
-  </div>
-</section>
+    <!-- SERVICES -->
+    <section class="svc-sec" id="services">
+      <div class="container">
+        <div class="sec-hd rv u-text-center">
+          <span class="stag-plain">What We Offer</span>
+          <h2 class="dk">Services for Singapore &amp; APAC Businesses</h2>
+          <p class="dk u-max-720 u-mx-auto">
+            GS ConsultPro provides integrated digital marketing, SEO, web
+            development, and growth solutions for Singapore businesses and
+            companies across APAC, helping brands increase visibility, generate
+            demand, and drive sustainable revenue growth.
+          </p>
+        </div>
+        <div class="svc-grid">
+          <!-- Card 1: Growth & Marketing -->
+          <div class="svc-card rv">
+            <div class="svc-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="7.5"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <line
+                  x1="16.7"
+                  y1="16.7"
+                  x2="21"
+                  y2="21"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <h3>Growth &amp; Marketing</h3>
+            <p>
+              Integrated marketing programmes designed to strengthen visibility,
+              build authority, and support measurable demand generation.
+            </p>
+            <div class="svc-list">
+              <a href="/seo-services-singapore/"><span>SEO</span></a>
+              <a href="/content-creation-services-singapore/"
+                ><span>Content Strategy &amp; Writing</span></a
+              >
+              <a href="/paid-media-social-advertising-singapore/"
+                ><span>Paid Media &amp; Social Advertising</span></a
+              >
+            </div>
+            <a href="/services/" class="svc-lnk"
+              >Speak to Us
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="svc-arrow"
+              >
+                <line
+                  x1="5"
+                  y1="12"
+                  x2="19"
+                  y2="12"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                />
+                <polyline
+                  points="12,5 19,12 12,19"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
 
+          <!-- Card 2: Demand Generation & Pipeline Growth -->
+          <div class="svc-card rv">
+            <div class="svc-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="9"
+                  cy="7"
+                  r="3.5"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <path
+                  d="M2 21v-1.5A3.5 3.5 0 0 1 5.5 16h7A3.5 3.5 0 0 1 16 19.5V21"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M16 3.5a3.5 3.5 0 0 1 0 7"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M19 16.2A3.5 3.5 0 0 1 22 19.5V21"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <h3>Demand Generation &amp; Pipeline Growth</h3>
+            <p>
+              Connected systems and workflows designed to improve lead handling,
+              response speed, and conversion across the customer journey.
+            </p>
+            <div class="svc-list">
+              <!-- <a href="/lead-generation-services-singapore/"><span>Demand Generation &amp; Pipeline Growth</span></a>   -->
+              <a href="/lead-generation-services-singapore/"
+                ><span>B2B Lead Generation &amp; Sales Automation</span></a
+              >
+            </div>
+            <a href="/lead-generation-services-singapore/" class="svc-lnk"
+              >Speak to Us
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="svc-arrow"
+              >
+                <line
+                  x1="5"
+                  y1="12"
+                  x2="19"
+                  y2="12"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                />
+                <polyline
+                  points="12,5 19,12 12,19"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
 
+          <!-- Card 3: Digital Experience -->
+          <div class="svc-card rv">
+            <div class="svc-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="2.5"
+                  y="2.5"
+                  width="19"
+                  height="19"
+                  rx="2"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <line
+                  x1="2.5"
+                  y1="9"
+                  x2="21.5"
+                  y2="9"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+                <line
+                  x1="9"
+                  y1="9"
+                  x2="9"
+                  y2="21.5"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+              </svg>
+            </div>
+            <h3>Digital Experience</h3>
+            <p>
+              Digital platforms and media assets built for strong user
+              experience, technical performance, and scalable customer
+              engagement.
+            </p>
+            <div class="svc-list">
+              <a href="/web-design-development-singapore/"
+                ><span>Web Design &amp; Development</span></a
+              >
+              <a href="/app-development-services-singapore/"
+                ><span>App Development &amp; AI Solutions</span></a
+              >
+              <!-- <a href="/app-development-services-singapore/"><span>Mobile App Development</span></a> -->
+            </div>
+            <a href="/web-design-development-singapore/" class="svc-lnk"
+              >Speak to Us
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="svc-arrow"
+              >
+                <line
+                  x1="5"
+                  y1="12"
+                  x2="19"
+                  y2="12"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                />
+                <polyline
+                  points="12,5 19,12 12,19"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
 
-<!-- CTA BANNER -->
-<section class="cta-sec">
-  <div class="container">
-    <div class="cta-in" style="text-align:center;flex-direction:column;align-items:center">
-      <div>
-        <h2>Built for Growth. Engineered to Scale.</h2>
-        <p style="text-align:center;font-size:20px;line-height:1.75">GS ConsultPRO combines digital marketing, growth strategy, digital platforms, automation, and market engagement solutions to help businesses strengthen visibility, generate demand, and support scalable growth across Singapore and APAC.<br><br>From SEO and content strategy to web development, partnership strategy, AI-powered video production, and executive engagement initiatives, every solution is aligned with clear business objectives and measurable outcomes.<br><br><strong>Strategy-led. Growth-focused. Execution-driven.</strong></p>
-      </div>
-      <div class="cta-btns" style="justify-content:center">
-        <a href="#contact" class="btn-primary">Email Us</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq-sec" id="faq">
-  <div class="container">
-    <div class="sec-hd rv" style="text-align:center;max-width:580px;margin:0 auto">
-      <h2 class="dk">Frequently Asked Questions</h2>
-      <p class="dk">Everything you need to know about digital marketing in Singapore and how GS ConsultPro delivers measurable results for your business.</p>
-    </div>
-    <div class="faq-grid">
-      <div class="faq-item"><div class="faq-q">What SEO Services Do You Provide? <span class="faq-ico">+</span></div><div class="faq-a">GS ConsultPro provides SEO strategy, technical SEO, on-page optimisation, content SEO, local SEO, e-commerce SEO, and website SEO audits. The exact scope depends on your website, business goals, target audience, and current search visibility.</div></div>
-      <div class="faq-item"><div class="faq-q">Why Do Businesses Need Digital Marketing and Growth Support? <span class="faq-ico">+</span></div><div class="faq-a">Businesses today need more than isolated marketing campaigns. They need integrated strategy, digital execution, automation, and market engagement to strengthen visibility, generate demand, and compete effectively in increasingly crowded markets. GS ConsultPRO helps businesses across Singapore and APAC combine growth strategy, digital platforms, content, automation, and execution to support measurable and scalable growth.</div></div>
-      <div class="faq-item"><div class="faq-q">What Is the Difference Between SEO and Google Ads for Businesses? <span class="faq-ico">+</span></div><div class="faq-a"><p><strong>SEO</strong> (Search Engine Optimisation) builds long-term organic visibility through content strategy, technical optimisation, and search authority, helping businesses generate sustainable traffic and reduce long-term acquisition costs.</p><p><strong>Google Ads</strong> provides immediate paid search visibility, targeted traffic, and measurable lead generation through ongoing advertising campaigns.</p><p>For many businesses, the strongest digital growth strategy combines both <strong>SEO</strong> for sustainable long-term visibility and <strong>Google Ads</strong> for immediate traffic, conversions, and demand generation.</p></div></div>
-      <div class="faq-item"><div class="faq-q">How Long Does SEO Take to Show Results? <span class="faq-ico">+</span></div><div class="faq-a">SEO typically delivers measurable improvements within 3 to 6 months, depending on factors such as competition, website authority, technical performance, and content consistency. More competitive industries may require longer-term investment to achieve strong organic visibility and sustainable ranking growth. GS ConsultPRO focuses on structured SEO strategies designed to strengthen search visibility, build topical authority, and support long-term business growth.</div></div>
-      <div class="faq-item"><div class="faq-q">What Is Topical Authority and Why Does It Matter for SEO? <span class="faq-ico">+</span></div><div class="faq-a">Topical authority is the process of building comprehensive, trusted expertise around a specific subject so search engines recognise a website as a credible source within that area. This is achieved through strategically structured content that covers related topics, search intent, user questions, and key subject areas in depth. For businesses, strong topical authority improves organic visibility, strengthens rankings across competitive keywords, reduces dependence on paid traffic, and supports long-term SEO growth.</div></div>
-      <div class="faq-item"><div class="faq-q">Does GS ConsultPro Serve Businesses Outside Singapore? <span class="faq-ico">+</span></div><div class="faq-a">Yes. GS ConsultPRO supports businesses across APAC, including Southeast Asia, Malaysia, Indonesia, Thailand, Vietnam, Cambodia, India, and other regional markets. Our experience across APAC helps businesses adapt strategy, content, digital execution, and growth initiatives for regional audiences, market conditions, and local business environments.</div></div>
-      <div class="faq-item"><div class="faq-q">What Industries Does GS ConsultPro Specialise In? <span class="faq-ico">+</span></div><div class="faq-a">GS ConsultPro focuses on financial services and fintech, SaaS and technology, professional services, and retail &amp; e-commerce businesses across Singapore and APAC. Our work is tailored to industries where clear positioning, digital visibility, trust-building, and structured growth execution are important to business growth.</div></div>
-      <div class="faq-item"><div class="faq-q">How Does GS ConsultPRO Measure and Report Performance? <span class="faq-ico">+</span></div><div class="faq-a">GS ConsultPRO provides customised reporting dashboards using platforms such as Google Analytics 4 (GA4) and Looker Studio to track visibility, traffic, engagement, lead generation, and conversion performance. Regular strategy reviews and performance reporting help businesses understand what is working, identify growth opportunities, and make informed marketing and digital growth decisions.</div></div>
-      <div class="faq-item"><div class="faq-q">What Makes GS ConsultPRO Different? <span class="faq-ico">+</span></div><div class="faq-a">GS ConsultPRO combines strategy, digital execution, automation, and market engagement to help businesses build visibility, generate demand, and support measurable growth across Singapore and APAC. Rather than focusing on isolated campaigns, we align SEO, content, digital platforms, paid media, and growth initiatives around clear business objectives and measurable outcomes.</div></div>
-      <div class="faq-item"><div class="faq-q">How Does GS ConsultPRO Approach Local SEO? <span class="faq-ico">+</span></div><div class="faq-a">Our Local SEO strategies help businesses improve visibility across Google Search, Google Maps, and location-based search results. This includes Google Business Profile optimisation, local citation building, geo-targeted content, review management, and structured data implementation designed to strengthen local search visibility and attract high-intent audiences actively searching for relevant services.</div></div>
-      <div class="faq-item"><div class="faq-q">How Do We Get Started with GS ConsultPRO? <span class="faq-ico">+</span></div><div class="faq-a">Getting started begins with a consultation to understand your business objectives, current digital presence, and growth priorities. From there, GS ConsultPRO develops a tailored strategy and execution roadmap aligned with your goals, timelines, and measurable growth objectives.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact-sec" id="contact">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="rv">
-        <div class="stag">Get In Touch</div>
-        <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(26px,3.5vw,44px);font-weight:900;text-transform:uppercase;color:var(--dark);line-height:1.05;margin-bottom:14px">Let's Build Your Next Stage of Growth.</h2>
-        <p style="color:var(--muted);font-size:18px;line-height:1.7;margin-bottom:32px">Growth-focused digital strategy, execution, and market engagement designed for businesses across Singapore and APAC.</p>
-        <div class="c-info-list">
-          <div class="c-info-item"><div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="c-det"><strong>Email</strong><span>hello@gsconsultpro.com</span></div></div>
-          <div class="c-info-item"><div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="c-det"><strong>Location</strong><span>Singapore - Serving APAC</span></div></div>
+          <!-- Card 4: Strategy & Engagement -->
+          <div class="svc-card rv">
+            <div class="svc-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2.5L19.5 6.5V12C19.5 16.5 16.5 19.8 12 21C7.5 19.8 4.5 16.5 4.5 12V6.5L12 2.5Z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linejoin="round"
+                />
+                <polyline
+                  points="8.5,12 10.5,14 15.5,9"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>Strategy &amp; Engagement</h3>
+            <p>
+              Market engagement initiatives that support ecosystem growth,
+              executive connection, and internal capability development.
+            </p>
+            <div class="svc-list">
+              <a href="/strategic-partnership-consulting-singapore/"
+                ><span
+                  >Strategic Partnerships</span
+                ></a
+              >
+              <a href="/tradeshow-exhibitor-strategy-singapore/"
+                ><span>Trade Show &amp; Exhibitor Strategy</span></a
+              >
+              <a href="/corporate-sales-training-workshops-singapore/"
+                ><span>Corporate Training &amp; Workshops</span></a
+              >
+            </div>
+            <a
+              href="/strategic-partnership-consulting-singapore/"
+              class="svc-lnk"
+              >Speak to Us
+              <svg
+                width="13"
+                height="13"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="svc-arrow"
+              >
+                <line
+                  x1="5"
+                  y1="12"
+                  x2="19"
+                  y2="12"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                />
+                <polyline
+                  points="12,5 19,12 12,19"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="svc-cta">
+          <div class="svc-cta-copy">
+            <div class="svc-cta-mark">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polygon
+                  points="12,2 14.9,8.6 22,9.3 16.7,14.1 18.2,21.1 12,17.5 5.8,21.1 7.3,14.1 2,9.3 9.1,8.6"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linejoin="round"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <div>
+              <strong>Built for growth across Singapore &amp; APAC</strong>
+              <span
+                >Integrated teams. Smarter systems. Measurable outcomes.</span
+              >
+            </div>
+          </div>
+          <a href="#contact" class="btn-primary"
+            >Speak to Us
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="5"
+                y1="12"
+                x2="19"
+                y2="12"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+              />
+              <polyline
+                points="12,5 19,12 12,19"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
         </div>
       </div>
-      <div class="c-form rv">
-        <h3>Get In Touch</h3>
-        <div class="f-row">
-          <div class="f-grp"><label>First Name</label><input type="text" placeholder="John" /></div>
-          <div class="f-grp"><label>Last Name</label><input type="text" placeholder="Doe" /></div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="why-sec" id="why">
+      <div class="container">
+        <div class="why-grid">
+          <div class="why-img-wrap rv">
+            <!-- REPLACE: office/team photo -->
+            <img
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
+              alt="GS ConsultPro"
+            />
+            <div class="why-overlay">
+              <strong>Where Strategy Meets Growth</strong>
+              <span
+                >Clear execution designed to support measurable business
+                growth.</span
+              >
+            </div>
+          </div>
+          <div class="why-content rv">
+            <div class="stag-plain">Why Choose Us</div>
+            <h2>More Than Marketing. Built for Growth.</h2>
+            <p>
+              Businesses work with GS ConsultPRO because we combine regional
+              insight with structured strategy and execution. We move beyond
+              isolated campaigns, aligning marketing, digital experiences, and
+              growth initiatives with clear business objectives to support
+              sustainable growth across Singapore and APAC.
+            </p>
+            <div class="why-items">
+              <div class="why-item active">
+                <div class="why-ico">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M9 19v-6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2zm0 0V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v10m-6 0a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2m0 0V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4>Decisions Backed by Real Data</h4>
+                  <p>
+                    Every decision is grounded in real market data and customer
+                    behaviour. We analyse demand, user intent, and competition
+                    to identify opportunities and support measurable growth
+                    using platforms such as Google Analytics, SEMrush, and
+                    Ahrefs.
+                  </p>
+                </div>
+              </div>
+              <div class="why-item">
+                <div class="why-ico">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <path
+                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4>Regional Insight That Applies Locally</h4>
+                  <p>
+                    We understand how businesses grow across Singapore and APAC,
+                    helping clients adapt strategy, messaging, and channel focus
+                    to the markets that matter most.
+                  </p>
+                </div>
+              </div>
+              <div class="why-item">
+                <div class="why-ico">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <h4>Clear Reporting and Accountability</h4>
+                  <p>
+                    You see what is being done, why it matters, and how it is
+                    performing, so there is clarity around progress, priorities,
+                    and next steps.
+                  </p>
+                </div>
+              </div>
+              <div class="why-item">
+                <div class="why-ico">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                  </svg>
+                </div>
+                <div>
+                  <h4>Growth-Focused Execution</h4>
+                  <p>
+                    We connect strategy and execution so each initiative
+                    supports stronger visibility, better conversion, and
+                    measurable business growth.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="f-grp"><label>Email Address</label><input type="email" placeholder="john@company.com" /></div>
-        <div class="f-grp"><label>Company</label><input type="text" placeholder="Your Company Name" /></div>
-        <div class="f-grp"><label>Services of Interest</label><select><option value="" disabled selected>Select a service</option><option>Search Engine Optimisation (SEO)</option><option>Web Design & Development</option><option>Mobile App Development</option><option>Sales Automation &amp; Growth Systems</option><option>Content Creation</option><option>Paid Media &amp; Social</option></select></div>
-        <div class="f-grp"><label>Message</label><textarea placeholder="Tell us what you're looking to achieve..."></textarea></div>
-        <button class="btn-primary" style="width:100%;justify-content:center;padding:15px">Get a Free Consultation <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<div id="site-footer"></div>
+    <!-- INDUSTRIES -->
+    <section class="ind-sec" id="industries">
+      <div class="container">
+        <div class="sec-hd rv u-text-center u-w-75 u-mx-auto">
+          <span class="stag-plain">Sectors We Serve</span>
+          <h2 class="dk">Industries We Focus On</h2>
+          <p class="dk u-w-75 u-mx-auto">
+            We work with growth-focused companies across Singapore and APAC to
+            expand into new markets, strengthen demand, and build a lasting
+            presence.
+          </p>
+        </div>
+        <div class="ind-grid">
+          <div class="ind-card rv">
+            <div class="ind-ico">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="12" y1="1" x2="12" y2="23" />
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg>
+            </div>
+            <h3>Financial Services &amp; Fintech</h3>
+            <p>
+              We work with financial services and fintech companies to build
+              trust in regulated markets, strengthen market positioning, and
+              support sustainable growth.
+            </p>
+          </div>
+          <div class="ind-card rv">
+            <div class="ind-ico">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+            </div>
+            <h3>SaaS &amp; Technology</h3>
+            <p>
+              We work with SaaS and technology companies to drive product
+              adoption, strengthen positioning, and scale effectively across
+              regional markets.
+            </p>
+          </div>
+          <div class="ind-card rv">
+            <div class="ind-ico">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+            </div>
+            <h3>Professional Services</h3>
+            <p>
+              We work with professional services firms to build authority,
+              generate high-value demand, and support long-term business growth.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<script>
-// Header scroll
-const hdr = document.getElementById('hdr');
-window.addEventListener('scroll', () => hdr.classList.toggle('scrolled', scrollY > 60));
+    <!-- CTA BANNER -->
+    <section class="cta-sec">
+      <div class="container">
+        <div class="cta-in u-text-center u-center-col">
+          <div>
+            <h2>Built for Growth. Engineered to Scale.</h2>
+            <p class="u-text-center">
+              GS ConsultPRO combines digital marketing, growth strategy, digital
+              platforms, automation, and market engagement solutions to help
+              businesses strengthen visibility, generate demand, and support
+              scalable growth across Singapore and APAC.<br /><br />From SEO and
+              content strategy to web development, partnership strategy,
+              AI-powered video production, and executive engagement initiatives,
+              every solution is aligned with clear business objectives and
+              measurable outcomes.<br /><br /><strong
+                >Strategy-led. Growth-focused. Execution-driven.</strong
+              >
+            </p>
+          </div>
+          <div class="cta-btns u-justify-center">
+            <a href="#contact" class="btn-primary">Email Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-// Hamburger
-const ham = document.getElementById('ham');
-const mobNav = document.getElementById('mobNav');
-if (ham && mobNav) {
-  ham.addEventListener('click', () => {
-    ham.classList.toggle('open');
-    mobNav.classList.toggle('open');
-  });
-  mobNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    ham.classList.remove('open');
-    mobNav.classList.remove('open');
-  }));
-}
+    <!-- FAQ -->
+    <section class="faq-sec" id="faq">
+      <div class="container">
+        <div class="sec-hd rv u-text-center u-max-580 u-mx-auto">
+          <h2 class="dk">Frequently Asked Questions</h2>
+          <p class="dk">
+            Everything you need to know about digital marketing in Singapore and
+            how GS ConsultPro delivers measurable results for your business.
+          </p>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-q">
+              What SEO Services Do You Provide? <span class="faq-ico">+</span>
+            </div>
+            <div class="faq-a">
+              GS ConsultPro provides SEO strategy, technical SEO, on-page
+              optimisation, content SEO, local SEO, e-commerce SEO, and website
+              SEO audits. The exact scope depends on your website, business
+              goals, target audience, and current search visibility.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">
+              Why Do Businesses Need Digital Marketing and Growth Support?
+              <span class="faq-ico">+</span>
+            </div>
+            <div class="faq-a">
+              Businesses today need more than isolated marketing campaigns. They
+              need integrated strategy, digital execution, automation, and
+              market engagement to strengthen visibility, generate demand, and
+              compete effectively in increasingly crowded markets. GS ConsultPRO
+              helps businesses across Singapore and APAC combine growth
+              strategy, digital platforms, content, automation, and execution to
+              support measurable and scalable growth.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">
+              What Is the Difference Between SEO and Google Ads for Businesses?
+              <span class="faq-ico">+</span>
+            </div>
+            <div class="faq-a">
+              <p>
+                <strong>SEO</strong> (Search Engine Optimisation) builds
+                long-term organic visibility through content strategy, technical
+                optimisation, and search authority, helping businesses generate
+                sustainable traffic and reduce long-term acquisition costs.
+              </p>
+              <p>
+                <strong>Google Ads</strong> provides immediate paid search
+                visibility, targeted traffic, and measurable lead generation
+                through ongoing advertising campaigns.
+              </p>
+              <p>
+                For many businesses, the strongest digital growth strategy
+                combines both <strong>SEO</strong> for sustainable long-term
+                visibility and <strong>Google Ads</strong> for immediate
+                traffic, conversions, and demand generation.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">
+              How Long Does SEO Take to Show Results?
+              <span class="faq-ico">+</span>
+            </div>
+            <div class="faq-a">
+              SEO typically delivers measurable improvements within 3 to 6
+              months, depending on factors such as competition, website
+              authority, technical performance, and content consistency. More
+              competitive industries may require longer-term investment to
+              achieve strong organic visibility and sustainable ranking growth.
+              GS ConsultPRO focuses on structured SEO strategies designed to
+              strengthen search visibility, build topical authority, and support
+              long-term business growth.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">
+              What Is Topical Authority and Why Does It Matter for SEO?
+              <span class="faq-ico">+</span>
+            </div>
+            <div class="faq-a">
+              Topical authority is the process of building comprehensive,
+              trusted expertise around a specific subject so search engines
+              recognise a website as a credible source within that area. This is
+              achieved through strategically structured content that covers
+              related topics, search intent, user questions, and key subject
+              areas in depth. For businesses, strong topical authority improves
+              organic visibility, strengthens rankings across competitive
+              keywords, reduces dependence on paid traffic, and supports
+              long-term SEO growth.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">
+              Does GS ConsultPro Serve Businesses Outside Singapore?
+              <span class="faq-ico">+</span>
+            </div>
+            <div class="faq-a">
+              Yes. GS ConsultPRO supports businesses across APAC, including
+              Southeast Asia, Malaysia, Indonesia, Thailand, Vietnam, Cambodia,
+              India, and other regional markets. Our experience across APAC
+              helps businesses adapt strategy, content, digital execution, and
+              growth initiatives for regional audiences, market conditions, and
+              local business environments.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">
+              What Industries Does GS ConsultPro Specialise In?
+              <span class="faq-ico">+</span>
+            </div>
+            <div class="faq-a">
+              GS ConsultPro focuses on financial services and fintech, SaaS and
+              technology, professional services, and retail &amp; e-commerce
+              businesses across Singapore and APAC. Our work is tailored to
+              industries where clear positioning, digital visibility,
+              trust-building, and structured growth execution are important to
+              business growth.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">
+              How Does GS ConsultPRO Measure and Report Performance?
+              <span class="faq-ico">+</span>
+            </div>
+            <div class="faq-a">
+              GS ConsultPRO provides customised reporting dashboards using
+              platforms such as Google Analytics 4 (GA4) and Looker Studio to
+              track visibility, traffic, engagement, lead generation, and
+              conversion performance. Regular strategy reviews and performance
+              reporting help businesses understand what is working, identify
+              growth opportunities, and make informed marketing and digital
+              growth decisions.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">
+              What Makes GS ConsultPRO Different? <span class="faq-ico">+</span>
+            </div>
+            <div class="faq-a">
+              GS ConsultPRO combines strategy, digital execution, automation,
+              and market engagement to help businesses build visibility,
+              generate demand, and support measurable growth across Singapore
+              and APAC. Rather than focusing on isolated campaigns, we align
+              SEO, content, digital platforms, paid media, and growth
+              initiatives around clear business objectives and measurable
+              outcomes.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">
+              How Does GS ConsultPRO Approach Local SEO?
+              <span class="faq-ico">+</span>
+            </div>
+            <div class="faq-a">
+              Our Local SEO strategies help businesses improve visibility across
+              Google Search, Google Maps, and location-based search results.
+              This includes Google Business Profile optimisation, local citation
+              building, geo-targeted content, review management, and structured
+              data implementation designed to strengthen local search visibility
+              and attract high-intent audiences actively searching for relevant
+              services.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">
+              How Do We Get Started with GS ConsultPRO?
+              <span class="faq-ico">+</span>
+            </div>
+            <div class="faq-a">
+              Getting started begins with a consultation to understand your
+              business objectives, current digital presence, and growth
+              priorities. From there, GS ConsultPRO develops a tailored strategy
+              and execution roadmap aligned with your goals, timelines, and
+              measurable growth objectives.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-// Testimonial slider
-const trk = document.getElementById('tTrack');
-const dots = document.querySelectorAll('.t-dot');
-const prevBtn = document.getElementById('tPrev');
-const nextBtn = document.getElementById('tNext');
-if (trk && dots.length && prevBtn && nextBtn && trk.querySelector('.testi-card')) {
-  let cur = 0;
-  const pv = () => window.innerWidth < 768 ? 1 : 3;
-  const pages = () => Math.ceil(6 / pv());
-  function go(n) {
-    n = Math.max(0, Math.min(pages() - 1, n));
-    const w = trk.querySelector('.testi-card').offsetWidth + 24;
-    trk.style.transform = `translateX(-${n * w * pv()}px)`;
-    dots.forEach((d, i) => d.classList.toggle('on', i === n));
-    cur = n;
-  }
-  dots.forEach(d => d.addEventListener('click', () => go(+d.dataset.i)));
-  prevBtn.addEventListener('click', () => go(cur - 1));
-  nextBtn.addEventListener('click', () => go(cur + 1));
-}
+    <!-- CONTACT -->
+    <section class="contact-sec" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-left rv">
+            <div class="stag">Get In Touch</div>
+            <h2>Let's Build Your Next Stage of Growth.</h2>
+            <p>
+              Growth-focused digital strategy, execution, and market engagement
+              designed for businesses across Singapore and APAC.
+            </p>
+            <div class="c-info-list">
+              <div class="c-info-item">
+                <div class="c-ico">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </div>
+                <div class="c-det">
+                  <strong>Email</strong><span>hello@gsconsultpro.com</span>
+                </div>
+              </div>
+              <div class="c-info-item">
+                <div class="c-ico">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <div class="c-det">
+                  <strong>Location</strong><span>Singapore - Serving APAC</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="c-form rv">
+            <h3>Get In Touch</h3>
+            <div class="f-row">
+              <div class="f-grp">
+                <label>First Name</label
+                ><input type="text" placeholder="John" />
+              </div>
+              <div class="f-grp">
+                <label>Last Name</label><input type="text" placeholder="Doe" />
+              </div>
+            </div>
+            <div class="f-grp">
+              <label>Email Address</label
+              ><input type="email" placeholder="john@company.com" />
+            </div>
+            <div class="f-grp">
+              <label>Company</label
+              ><input type="text" placeholder="Your Company Name" />
+            </div>
+            <div class="f-grp">
+              <label>Services of Interest</label
+              ><select>
+                <option value="" disabled selected>Select a service</option>
+                <option>Search Engine Optimisation (SEO)</option>
+                <option>Web Design & Development</option>
+                <option>Mobile App Development</option>
+                <option>Sales Automation &amp; Growth Systems</option>
+                <option>Content Creation</option>
+                <option>Paid Media &amp; Social</option>
+              </select>
+            </div>
+            <div class="f-grp">
+              <label>Message</label
+              ><textarea
+                placeholder="Tell us what you're looking to achieve..."
+              ></textarea>
+            </div>
+            <button class="btn-primary u-btn-full u-btn-pad-15">
+              Get a Free Consultation
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-// FAQ
-document.querySelectorAll('.faq-item').forEach(item => {
-  item.querySelector('.faq-q').addEventListener('click', () => {
-    const was = item.classList.contains('on');
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('on'));
-    if (!was) item.classList.add('on');
-  });
-});
+    <div id="site-footer"></div>
 
-// Why Choose Us accordion
-const whyItems = document.querySelectorAll('.why-item');
-whyItems.forEach(item => {
-  item.addEventListener('click', () => {
-    const wasActive = item.classList.contains('active');
-    whyItems.forEach(i => i.classList.remove('active'));
-    if (!wasActive) item.classList.add('active');
-  });
-});
-
-// Keep reveal items static to prevent page jumps.
-document.querySelectorAll('.rv').forEach(el => el.classList.add('vis'));
-
-// Section reveal
-const revealBlocks = document.querySelectorAll('section, footer');
-if ('IntersectionObserver' in window) {
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        revealObserver.unobserve(entry.target);
+    <script>
+      // Testimonial slider
+      const trk = document.getElementById("tTrack");
+      const dots = document.querySelectorAll(".t-dot");
+      const prevBtn = document.getElementById("tPrev");
+      const nextBtn = document.getElementById("tNext");
+      if (
+        trk &&
+        dots.length &&
+        prevBtn &&
+        nextBtn &&
+        trk.querySelector(".testi-card")
+      ) {
+        let cur = 0;
+        const pv = () => (window.innerWidth < 768 ? 1 : 3);
+        const pages = () => Math.ceil(6 / pv());
+        function go(n) {
+          n = Math.max(0, Math.min(pages() - 1, n));
+          const w = trk.querySelector(".testi-card").offsetWidth + 24;
+          trk.style.transform = `translateX(-${n * w * pv()}px)`;
+          dots.forEach((d, i) => d.classList.toggle("on", i === n));
+          cur = n;
+        }
+        dots.forEach((d) =>
+          d.addEventListener("click", () => go(+d.dataset.i)),
+        );
+        prevBtn.addEventListener("click", () => go(cur - 1));
+        nextBtn.addEventListener("click", () => go(cur + 1));
       }
-    });
-  }, { threshold: 0.16, rootMargin: '0px 0px -8% 0px' });
-  revealBlocks.forEach((block) => revealObserver.observe(block));
-} else {
-  revealBlocks.forEach((block) => block.classList.add('in-view'));
-}
 
-</script>
-</body>
+      // Why Choose Us accordion
+      const whyItems = document.querySelectorAll(".why-item");
+      whyItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          const wasActive = item.classList.contains("active");
+          whyItems.forEach((i) => i.classList.remove("active"));
+          if (!wasActive) item.classList.add("active");
+        });
+      });
+
+      // Keep reveal items static to prevent page jumps.
+      document.querySelectorAll(".rv").forEach((el) => el.classList.add("vis"));
+
+      // Section reveal
+      const revealBlocks = document.querySelectorAll("section, footer");
+      if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+                revealObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.16, rootMargin: "0px 0px -8% 0px" },
+        );
+        revealBlocks.forEach((block) => revealObserver.observe(block));
+      } else {
+        revealBlocks.forEach((block) => block.classList.add("in-view"));
+      }
+    </script>
+  </body>
 </html>
-
-
