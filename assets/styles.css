@@ -5336,6 +5336,13 @@ body.page-privacy-policy .effective-date {
 }
 
 @media (max-width: 640px) {
+  body.page-service-template :is(.service-grid, .include-grid, .result-grid, .benefit-grid, .proc-grid, .quote-grid, .case-grid, .faq-grid),
+  body.page-service-template :is(.service-grid, .include-grid):has(> :nth-child(3)),
+  body.page-service-template :is(.service-grid, .include-grid):has(> :nth-child(6)),
+  body.page-services-index :is(.svc-grid, .proc-grid, .testi-grid, .contact-grid, .why-grid) {
+    grid-template-columns: 1fr !important;
+  }
+
   body.page-service-template .faq-grid,
   body.page-services-index .faq-grid,
   body.home-page .faq-grid {
