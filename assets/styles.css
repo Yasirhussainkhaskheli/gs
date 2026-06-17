@@ -1443,7 +1443,7 @@ body.page-service-template :is(.faq-item.on, .faq-item.open) .faq-a {
   padding: 0 20px 20px;
 }
 
-body.page-service-template .cta-banner {
+body:is(.page-service-template, .page-about, .page-contact) .cta-banner {
   background: var(--accent, #2d8cff);
   background-image:
     linear-gradient(140deg, rgba(255, 255, 255, 0.16), transparent 35%),
@@ -1461,7 +1461,7 @@ body.page-service-template .cta-banner {
   box-shadow: 0 8px 28px rgba(45, 140, 255, 0.28);
 }
 
-body.page-service-template .cta-band {
+body:is(.page-service-template, .page-about, .page-contact) .cta-band {
   background: var(--accent, #2d8cff);
   background-image:
     linear-gradient(140deg, rgba(255, 255, 255, 0.16), transparent 35%),
@@ -1480,17 +1480,17 @@ body.page-service-template .cta-band {
   box-shadow: 0 8px 28px rgba(45, 140, 255, 0.28);
 }
 
-body.page-service-template .cta-band > :not(.btn-primary) {
+body:is(.page-service-template, .page-about, .page-contact) .cta-band > :not(.btn-primary) {
   grid-column: 1;
 }
 
-body.page-service-template .cta-band > .btn-primary {
+body:is(.page-service-template, .page-about, .page-contact) .cta-band > .btn-primary {
   grid-column: 2;
   grid-row: 1 / span 5;
   align-self: center;
 }
 
-body.page-service-template :is(.cta-banner, .cta-band) h2 {
+body:is(.page-service-template, .page-about, .page-contact) :is(.cta-banner, .cta-band) h2 {
   font-family: "Barlow Condensed", sans-serif;
   font-size: clamp(28px, 4vw, 48px);
   font-weight: 900;
@@ -1500,14 +1500,14 @@ body.page-service-template :is(.cta-banner, .cta-band) h2 {
   margin-bottom: 12px;
 }
 
-body.page-service-template :is(.cta-banner, .cta-band) p {
+body:is(.page-service-template, .page-about, .page-contact) :is(.cta-banner, .cta-band) p {
   font-size: 19px;
   line-height: 1.72;
   color: rgba(255, 255, 255, 0.86);
   max-width: 760px;
 }
 
-body.page-service-template :is(.cta-banner, .cta-band) .btn-primary {
+body:is(.page-service-template, .page-about, .page-contact) :is(.cta-banner, .cta-band) .btn-primary {
   background: #fff;
   color: var(--accent, #2d8cff);
   border-color: #fff;
@@ -1656,21 +1656,21 @@ body.page-service-template :is(.why-card, .why-col) :is(.pill-row, .pill-grid) {
   justify-content: flex-start;
 }
 
-body.page-service-template :is(.why-card, .why-col, .cta-banner, .cta-band) :is(.pill-row, .pill-grid, .tag-row, .cta-tags) {
+body:is(.page-service-template, .page-about, .page-contact) :is(.why-card, .why-col, .cta-banner, .cta-band) :is(.pill-row, .pill-grid, .tag-row, .cta-tags) {
   margin-top: 18px;
 }
 
-body.page-service-template :is(.cta-banner, .cta-band) :is(.stag, .stag-plain, .mini-label) {
+body:is(.page-service-template, .page-about, .page-contact) :is(.cta-banner, .cta-band) :is(.stag, .stag-plain, .mini-label) {
   display: block;
   width: fit-content;
   text-align: left;
 }
 
-body.page-service-template :is(.cta-banner, .cta-band) :is(.tag-row, .pill-row, .cta-tags) {
+body:is(.page-service-template, .page-about, .page-contact) :is(.cta-banner, .cta-band) :is(.tag-row, .pill-row, .cta-tags) {
   justify-content: flex-start;
 }
 
-body.page-service-template :is(.cta-banner, .cta-band) :is(.tag-pill, .mini-pill, .cta-tag, .pill-item) {
+body:is(.page-service-template, .page-about, .page-contact) :is(.cta-banner, .cta-band) :is(.tag-pill, .mini-pill, .cta-tag, .pill-item) {
   background: rgba(255, 255, 255, 0.12);
   border-color: rgba(255, 255, 255, 0.22);
   color: #fff;
@@ -2768,6 +2768,84 @@ body.page-blog .filter-row {
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 34px;
+}
+body.page-blog .filter-select-wrap {
+  display: none;
+  margin-bottom: 22px;
+}
+body.page-blog .filter-mobile-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text2, #334155);
+}
+body.page-blog .filter-dropdown {
+  position: relative;
+}
+body.page-blog .filter-dropdown-toggle {
+  width: 100%;
+  min-height: 52px;
+  border: 1.5px solid var(--border, #e5e7eb);
+  border-radius: 16px;
+  background: #fff;
+  color: var(--text, #0b1220);
+  padding: 12px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Barlow', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+body.page-blog .filter-dropdown-icon {
+  flex: 0 0 auto;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--text2, #334155);
+}
+body.page-blog .filter-dropdown.is-open .filter-dropdown-icon {
+  transform: rotate(45deg);
+}
+body.page-blog .filter-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: grid;
+  gap: 6px;
+  padding: 8px;
+  border: 1.5px solid var(--border, #e5e7eb);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow:
+    0 12px 28px rgba(15, 23, 42, 0.12),
+    0 2px 8px rgba(15, 23, 42, 0.08);
+}
+body.page-blog .filter-dropdown-menu[hidden] {
+  display: none !important;
+}
+body.page-blog .filter-dropdown-option {
+  width: 100%;
+  border: 0;
+  background: #fff;
+  color: var(--text, #0b1220);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Barlow', sans-serif;
+  text-align: left;
+  cursor: pointer;
+}
+body.page-blog .filter-dropdown-option.is-active {
+  background: var(--accent, #2d8cff);
+  color: #fff;
 }
 body.page-blog .filter-pill {
   display: inline-flex;
@@ -5343,14 +5421,11 @@ body.page-privacy-policy .effective-date {
   }
 
   body.page-blog .filter-row {
-    gap: 10px;
-    overflow-x: auto;
-    padding-bottom: 6px;
-    flex-wrap: nowrap;
+    display: none;
   }
 
-  body.page-blog .filter-row::-webkit-scrollbar {
-    display: none;
+  body.page-blog .filter-select-wrap {
+    display: block;
   }
 }
 
@@ -5548,8 +5623,8 @@ body.page-privacy-policy .effective-date {
   body.page-service-template .cta-banner,
   body.page-service-template .cta-band,
   body.page-services-index .cta-in,
-  body.page-about .cta-band,
-  body.page-contact .cta-band {
+  body.page-about :is(.cta-banner, .cta-band),
+  body.page-contact :is(.cta-banner, .cta-band) {
     padding: 24px 20px;
     border-radius: 24px;
   }
@@ -5589,55 +5664,55 @@ body.page-privacy-policy .effective-date {
     white-space: normal;
   }
 
-  body.page-service-template .cta-banner {
+  body:is(.page-service-template, .page-about, .page-contact) .cta-banner {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 18px;
   }
 
-  body.page-service-template .cta-banner > * {
+  body:is(.page-service-template, .page-about, .page-contact) .cta-banner > * {
     width: 100%;
   }
 
-  body.page-service-template .cta-band {
+  body:is(.page-service-template, .page-about, .page-contact) .cta-band {
     grid-template-columns: 1fr;
     justify-items: start;
   }
 
-  body.page-service-template .cta-band > .btn-primary,
-  body.page-service-template .cta-band > :not(.btn-primary) {
+  body:is(.page-service-template, .page-about, .page-contact) .cta-band > .btn-primary,
+  body:is(.page-service-template, .page-about, .page-contact) .cta-band > :not(.btn-primary) {
     grid-column: 1;
     grid-row: auto;
   }
 
-  body.page-service-template :is(.cta-banner, .cta-band) h2 {
-    font-size: clamp(28px, 9vw, 40px);
+  body:is(.page-service-template, .page-about, .page-contact) :is(.cta-banner, .cta-band) h2 {
+    font-size: clamp(27px, 8vw, 40px);
     line-height: 1.02;
     margin-bottom: 10px;
   }
 
-  body.page-service-template :is(.cta-banner, .cta-band) p {
+  body:is(.page-service-template, .page-about, .page-contact) :is(.cta-banner, .cta-band) p {
     max-width: none;
     font-size: 16px;
     line-height: 1.65;
   }
 
-  body.page-service-template :is(.cta-banner, .cta-band) .hero-btns,
-  body.page-service-template :is(.cta-banner, .cta-band) .hero-actions {
+  body:is(.page-service-template, .page-about, .page-contact) :is(.cta-banner, .cta-band) .hero-btns,
+  body:is(.page-service-template, .page-about, .page-contact) :is(.cta-banner, .cta-band) .hero-actions {
     width: 100%;
     justify-content: flex-start;
     align-items: flex-start;
   }
 
-  body.page-service-template .cta-banner .btn-primary,
-  body.page-service-template .cta-band .btn-primary {
+  body:is(.page-service-template, .page-about, .page-contact) .cta-banner .btn-primary,
+  body:is(.page-service-template, .page-about, .page-contact) .cta-band .btn-primary {
     width: auto;
     max-width: 100%;
     white-space: normal;
   }
 
-  body.page-service-template :is(.cta-banner, .cta-band) :is(.tag-row, .pill-row, .cta-tags) {
+  body:is(.page-service-template, .page-about, .page-contact) :is(.cta-banner, .cta-band) :is(.tag-row, .pill-row, .cta-tags) {
     justify-content: flex-start;
   }
 

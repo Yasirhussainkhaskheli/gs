@@ -319,20 +319,49 @@
 
       const closeItem = (target) => {
         if (!target) return;
-        target.classList.remove('on', 'open');
         const targetPanel = target.querySelector('.faq-a');
-        if (targetPanel) targetPanel.style.maxHeight = '0px';
+        if (targetPanel) {
+          if (targetPanel.style.maxHeight === 'none') {
+            targetPanel.style.maxHeight = `${targetPanel.scrollHeight}px`;
+            void targetPanel.offsetHeight;
+          }
+        }
+
+        target.classList.remove('on', 'open');
+
+        if (targetPanel) {
+          targetPanel.style.maxHeight = '0px';
+        }
       };
 
       const openItem = (target) => {
         if (!target) return;
         target.classList.add('on', 'open');
         const targetPanel = target.querySelector('.faq-a');
-        if (targetPanel) targetPanel.style.maxHeight = `${targetPanel.scrollHeight}px`;
+        if (targetPanel) {
+          targetPanel.style.maxHeight = '0px';
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              if (target.classList.contains('on') || target.classList.contains('open')) {
+                targetPanel.style.maxHeight = `${targetPanel.scrollHeight}px`;
+              }
+            });
+          });
+        }
       };
 
       if (panel && !(item.classList.contains('on') || item.classList.contains('open'))) {
         panel.style.maxHeight = '0px';
+      }
+
+      if (panel && !panel.dataset.gsFaqTransitionBound) {
+        panel.dataset.gsFaqTransitionBound = '1';
+        panel.addEventListener('transitionend', (event) => {
+          if (event.propertyName !== 'max-height') return;
+          if (item.classList.contains('on') || item.classList.contains('open')) {
+            panel.style.maxHeight = 'none';
+          }
+        });
       }
 
       trigger.addEventListener(
@@ -365,7 +394,13 @@
     const syncOpenFaqHeights = () => {
       document.querySelectorAll('.faq-item.on, .faq-item.open').forEach((item) => {
         const panel = item.querySelector('.faq-a');
-        if (panel) panel.style.maxHeight = `${panel.scrollHeight}px`;
+        if (!panel) return;
+        panel.style.maxHeight = `${panel.scrollHeight}px`;
+        requestAnimationFrame(() => {
+          if (item.classList.contains('on') || item.classList.contains('open')) {
+            panel.style.maxHeight = 'none';
+          }
+        });
       });
     };
 

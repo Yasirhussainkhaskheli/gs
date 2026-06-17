@@ -60,8 +60,23 @@ window.gsSiteComponents = {
     </div>
   </section>
 
-  <section class="blog-sec">
+  <section class="blog-sec" id="posts">
     <div class="container">
+      <div class="filter-select-wrap">
+        <span class="filter-mobile-label">Blog category</span>
+        <div class="filter-dropdown" id="blogFilterDropdown">
+          <button class="filter-dropdown-toggle" id="blogFilterToggle" type="button" aria-expanded="false" aria-controls="blogFilterMenu">
+            <span id="blogFilterLabel">All Posts</span>
+            <span class="filter-dropdown-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="filter-dropdown-menu" id="blogFilterMenu" hidden>
+            <button class="filter-dropdown-option is-active" type="button" data-filter="all">All Posts</button>
+            <button class="filter-dropdown-option" type="button" data-filter="financial-crime-insights">Financial Crime Insights</button>
+            <button class="filter-dropdown-option" type="button" data-filter="lead-generation">Lead Generation</button>
+            <button class="filter-dropdown-option" type="button" data-filter="marketing">Marketing</button>
+          </div>
+        </div>
+      </div>
       <div class="filter-row" aria-label="Blog categories">
         <button class="filter-pill is-active" type="button" data-filter="all">All Posts</button>
         <button class="filter-pill" type="button" data-filter="financial-crime-insights">Financial Crime Insights</button>
@@ -152,19 +167,123 @@ if (ham && mobNav) {
     mobNav.classList.remove('open');
   }));
 }
+
 const filterButtons = document.querySelectorAll('.filter-pill');
 const postCards = document.querySelectorAll('.post-card');
+const dropdown = document.getElementById('blogFilterDropdown');
+const dropdownToggle = document.getElementById('blogFilterToggle');
+const dropdownMenu = document.getElementById('blogFilterMenu');
+const dropdownLabel = document.getElementById('blogFilterLabel');
+const dropdownOptions = document.querySelectorAll('.filter-dropdown-option');
+
+function getFilterLabel(filter) {
+  const labels = {
+    all: 'All Posts',
+    'financial-crime-insights': 'Financial Crime Insights',
+    'lead-generation': 'Lead Generation',
+    marketing: 'Marketing'
+  };
+  return labels[filter] || 'All Posts';
+}
+
+function syncFilterUrl(filter) {
+  const url = new URL(window.location.href);
+  if (filter === 'all') {
+    url.searchParams.delete('category');
+  } else {
+    url.searchParams.set('category', filter);
+  }
+  url.hash = 'posts';
+  window.history.replaceState({}, '', url);
+}
+
+function closeDropdown() {
+  if (!dropdownToggle || !dropdownMenu) return;
+  dropdownToggle.setAttribute('aria-expanded', 'false');
+  dropdownMenu.hidden = true;
+  dropdown?.classList.remove('is-open');
+}
+
+function openDropdown() {
+  if (!dropdownToggle || !dropdownMenu) return;
+  dropdownToggle.setAttribute('aria-expanded', 'true');
+  dropdownMenu.hidden = false;
+  dropdown?.classList.add('is-open');
+}
+
+function applyFilter(filter) {
+  const activeFilter = filter || 'all';
+
+  filterButtons.forEach((button) => {
+    const isActive = (button.dataset.filter || 'all') === activeFilter;
+    button.classList.toggle('is-active', isActive);
+    button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+  });
+
+  dropdownOptions.forEach((option) => {
+    const isActive = (option.dataset.filter || 'all') === activeFilter;
+    option.classList.toggle('is-active', isActive);
+    option.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+  });
+
+  if (dropdownLabel) {
+    dropdownLabel.textContent = getFilterLabel(activeFilter);
+  }
+
+  postCards.forEach((card) => {
+    const categories = (card.dataset.categories || '').split(' ').filter(Boolean);
+    card.style.display = activeFilter === 'all' || categories.includes(activeFilter) ? '' : 'none';
+  });
+}
+
 filterButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const filter = button.dataset.filter || 'all';
-    filterButtons.forEach((item) => item.classList.remove('is-active'));
-    button.classList.add('is-active');
-    postCards.forEach((card) => {
-      const categories = (card.dataset.categories || '').split(' ');
-      card.style.display = filter === 'all' || categories.includes(filter) ? '' : 'none';
-    });
+    applyFilter(filter);
+    syncFilterUrl(filter);
   });
 });
+
+dropdownOptions.forEach((option) => {
+  option.addEventListener('click', () => {
+    const filter = option.dataset.filter || 'all';
+    applyFilter(filter);
+    closeDropdown();
+    syncFilterUrl(filter);
+  });
+});
+
+if (dropdownToggle) {
+  dropdownToggle.addEventListener('click', () => {
+    const isOpen = dropdownToggle.getAttribute('aria-expanded') === 'true';
+    if (isOpen) {
+      closeDropdown();
+    } else {
+      openDropdown();
+    }
+  });
+}
+
+document.addEventListener('click', (event) => {
+  if (dropdown && !dropdown.contains(event.target)) {
+    closeDropdown();
+  }
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    closeDropdown();
+  }
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 900) {
+    closeDropdown();
+  }
+});
+
+const initialCategory = new URLSearchParams(window.location.search).get('category') || 'all';
+applyFilter(initialCategory);
 </script>
 </body>
 </html>
