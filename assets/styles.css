@@ -4670,9 +4670,6 @@ body.home-page section.in-view .faq-grid > *:nth-child(n + 5) {
     border-left: none !important;
     padding: 0 34px;
   }
-  body.home-page .svc-card:nth-child(even) {
-    border-left: 1.5px solid rgba(45, 140, 255, 0.12) !important;
-  }
   body.home-page .proc-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -5312,7 +5309,7 @@ body.page-privacy-policy .effective-date {
   body.page-services-index :is(.svc-card, .why-panel, .proc-card, .testi-card, .c-form),
   body.page-contact :is(.panel, .form-card, .contact-card, .expect-card),
   body.page-about :is(.story-card, .sidebar-card, .value-card, .approach-card, .stat-card),
-  body.page-blog :is(.post-card, .subscribe-card),
+  body.page-blog .subscribe-card,
   body.page-blog-article :is(.side-card, .subscribe-card),
   body.page-video-insights .insight-item,
   body.page-privacy-policy .policy-layout {
@@ -5533,11 +5530,20 @@ body.page-privacy-policy .effective-date {
   body.page-services-index :is(.svc-card, .why-panel, .proc-card, .testi-card, .c-form),
   body.page-contact :is(.panel, .form-card, .contact-card, .expect-card),
   body.page-about :is(.story-card, .sidebar-card, .value-card, .approach-card, .stat-card),
-  body.page-blog :is(.post-card, .subscribe-card),
+  body.page-blog .subscribe-card,
   body.page-blog-article :is(.side-card, .subscribe-card),
   body.page-video-insights .insight-item {
     padding-left: 18px;
     padding-right: 18px;
+  }
+
+  body.page-blog .post-card {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  body.page-blog .post-body {
+    padding: 20px 18px;
   }
 }
 
