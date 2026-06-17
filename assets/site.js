@@ -14,7 +14,7 @@
   const globalDesktopMenus = [
     { href: '/services/', label: 'Services', children: globalServiceMenus },
     { href: '/about/', label: 'About' },
-    { href: '/blog/', label: 'Blog' },
+    { href: '/blog/', label: 'Insightful Reads' },
     { href: '/video-insights/', label: 'Video Insights' },
     { href: '/contact/', label: 'Contact' }
   ];
@@ -23,7 +23,7 @@
     { href: '/', label: 'Home' },
     { href: '/services/', label: 'Services', children: globalServiceMenus },
     { href: '/about/', label: 'About' },
-    { href: '/blog/', label: 'Blog' },
+    { href: '/blog/', label: 'Insightful Reads' },
     { href: '/video-insights/', label: 'Video Insights' },
     { href: '/contact/', label: 'Contact' }
   ];
@@ -67,7 +67,7 @@
         links: [
           { href: '/', label: 'Home' },
           { href: '/about/', label: 'About Us' },
-          { href: '/blog/', label: 'Blog' },
+          { href: '/blog/', label: 'Insightful Reads' },
           { href: '/contact/', label: 'Contact' }
         ]
       }
@@ -313,26 +313,64 @@
     document.querySelectorAll('.faq-item').forEach((item) => {
       if (item.dataset.gsFaqBound) return;
       const trigger = item.querySelector('.faq-q');
+      const panel = item.querySelector('.faq-a');
       if (!trigger) return;
       item.dataset.gsFaqBound = '1';
 
-      trigger.addEventListener('click', () => {
-        const group = item.closest('.faq-grid, .faq-wrap');
+      const closeItem = (target) => {
+        if (!target) return;
+        target.classList.remove('on', 'open');
+        const targetPanel = target.querySelector('.faq-a');
+        if (targetPanel) targetPanel.style.maxHeight = '0px';
+      };
+
+      const openItem = (target) => {
+        if (!target) return;
+        target.classList.add('on', 'open');
+        const targetPanel = target.querySelector('.faq-a');
+        if (targetPanel) targetPanel.style.maxHeight = `${targetPanel.scrollHeight}px`;
+      };
+
+      if (panel && !(item.classList.contains('on') || item.classList.contains('open'))) {
+        panel.style.maxHeight = '0px';
+      }
+
+      trigger.addEventListener(
+        'click',
+        (event) => {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+
+          const group =
+            item.closest('.faq-grid, .faq-wrap, .faq-list, .faq-section') || item.parentElement;
         const isOpen = item.classList.contains('on') || item.classList.contains('open');
 
         if (group) {
           group.querySelectorAll('.faq-item').forEach((other) => {
-            other.classList.remove('on', 'open');
-          });
-        } else {
-          item.parentElement?.querySelectorAll('.faq-item').forEach((other) => {
-            other.classList.remove('on', 'open');
+            if (other !== item) closeItem(other);
           });
         }
 
-        if (!isOpen) item.classList.add('on', 'open');
-      });
+          if (isOpen) {
+            closeItem(item);
+          } else {
+            closeItem(item);
+            openItem(item);
+          }
+        },
+        true
+      );
     });
+
+    const syncOpenFaqHeights = () => {
+      document.querySelectorAll('.faq-item.on, .faq-item.open').forEach((item) => {
+        const panel = item.querySelector('.faq-a');
+        if (panel) panel.style.maxHeight = `${panel.scrollHeight}px`;
+      });
+    };
+
+    syncOpenFaqHeights();
+    window.addEventListener('resize', syncOpenFaqHeights, { passive: true });
   }
 
   function initRevealBlocks() {
@@ -356,6 +394,14 @@
     );
 
     blocks.forEach((block) => observer.observe(block));
+  }
+
+  function initFaqHeadings() {
+    const faqSections = document.querySelectorAll('#faq, .faq-sec');
+    faqSections.forEach((section) => {
+      const heading = section.querySelector('.sec-hd h2, h2');
+      if (heading) heading.textContent = 'FAQs';
+    });
   }
 
   function renderFooter() {
@@ -419,6 +465,7 @@
         initScrollBehavior();
         initServicePairSync();
         initFaqs();
+        initFaqHeadings();
         initRevealBlocks();
         mountFooter();
       },
@@ -429,6 +476,7 @@
     initScrollBehavior();
     initServicePairSync();
     initFaqs();
+    initFaqHeadings();
     initRevealBlocks();
     mountFooter();
   }

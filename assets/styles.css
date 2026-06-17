@@ -264,9 +264,9 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 48px;
+  width: min(var(--max), calc(100% - 48px));
+  padding: 0;
   height: 76px;
-  max-width: 1280px;
   margin: 0 auto;
 }
 .logo {
@@ -953,7 +953,10 @@ footer.site-footer {
 }
 
 body.page-service-template .hero-page {
+  min-height: 100svh;
   padding: 164px 0 108px;
+  display: flex;
+  align-items: center;
 }
 
 body.page-service-template .hero-copy {
@@ -1251,6 +1254,13 @@ body.page-service-template :is(.result-grid, .benefit-grid, .proc-grid, .quote-g
   gap: 22px;
 }
 
+body.page-service-template .faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
 body.page-service-template :is(.result-num, .benefit-num, .proc-step) {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 52px;
@@ -1365,6 +1375,7 @@ body.page-service-template .faq-item {
   overflow: hidden;
   border: 1.5px solid var(--border, #e5e7eb);
   transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  align-self: start;
 }
 
 body.page-service-template :is(.faq-item.on, .faq-item.open) {
@@ -1430,7 +1441,6 @@ body.page-service-template .faq-a {
 
 body.page-service-template :is(.faq-item.on, .faq-item.open) .faq-a {
   padding: 0 20px 20px;
-  max-height: 280px;
 }
 
 body.page-service-template .cta-banner {
@@ -1672,7 +1682,10 @@ body.page-service-template :is(.cta-banner, .cta-band) :is(.tag-pill, .mini-pill
 body.page-about .hero-page,
 body.page-services-index .hero-page,
 body.page-contact .hero-page {
+  min-height: 100svh;
   padding: 164px 0 108px;
+  display: flex;
+  align-items: center;
 }
 
 body.page-about .hero-grid,
@@ -1681,7 +1694,7 @@ body.page-contact .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 40px;
-  align-items: end;
+  align-items: center;
 }
 
 body.page-about .hero-copy,
@@ -2080,7 +2093,9 @@ body.page-services-index .cta-btns .btn-ghost-white:hover {
 }
 body.page-services-index .faq-grid {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
+  align-items: start;
 }
 body.page-services-index .faq-item {
   background: #fff;
@@ -2088,6 +2103,7 @@ body.page-services-index .faq-item {
   overflow: hidden;
   border: 1.5px solid var(--border, #e5e7eb);
   transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  align-self: start;
 }
 body.page-services-index .faq-item.on {
   border-color: rgba(45, 140, 255, 0.25);
@@ -2142,7 +2158,6 @@ body.page-services-index .faq-a {
 }
 body.page-services-index .faq-item.on .faq-a {
   padding: 0 20px 20px;
-  max-height: 220px;
 }
 body.page-services-index .contact-grid {
   display: grid;
@@ -3127,7 +3142,7 @@ body.page-blog-article .recent-post a {
     padding: 0 28px;
   }
   body.page-service-template
-    :is(.service-grid, .include-grid, .result-grid, .benefit-grid, .proc-grid, .case-grid, .quote-grid, .why-grid, .contact-grid),
+    :is(.split-grid, .service-grid, .include-grid, .result-grid, .benefit-grid, .proc-grid, .case-grid, .quote-grid, .why-grid, .contact-grid),
   body.page-services-index
     :is(.svc-grid, .proc-grid, .testi-grid, .contact-grid, .why-grid),
   body.page-about :is(.story-grid, .value-grid, .stat-grid, .approach-grid),
@@ -4350,6 +4365,7 @@ body.home-page .faq-grid {
   grid-template-columns: 1fr 1fr;
   gap: 16px;
   margin-top: 52px;
+  align-items: start;
 }
 body.home-page .faq-item {
   background: #fff;
@@ -4357,6 +4373,7 @@ body.home-page .faq-item {
   overflow: hidden;
   border: 1.5px solid var(--border);
   transition: var(--trans);
+  align-self: start;
 }
 body.home-page .faq-item.on {
   border-color: rgba(45, 140, 255, 0.25);
@@ -4408,9 +4425,16 @@ body.home-page .faq-a {
     max-height 0.35s ease,
     padding 0.35s ease;
 }
+body.home-page .faq-item.on .faq-a,
+body.home-page .faq-item.open .faq-a,
+body.page-services-index .faq-item.on .faq-a,
+body.page-services-index .faq-item.open .faq-a,
+body.page-service-template .faq-item.on .faq-a,
+body.page-service-template .faq-item.open .faq-a {
+  padding: 0 20px 20px;
+}
 body.home-page .faq-item.on .faq-a {
   padding: 0 20px 18px;
-  max-height: 500px;
 }
 
 /* ===== CONTACT ===== */
@@ -4750,17 +4774,32 @@ body.home-page section.in-view .faq-grid > *:nth-child(n + 5) {
   }
 }
 @media (max-width: 600px) {
+  body.home-page .hero {
+    min-height: 100svh;
+  }
+  body.home-page .hero-eye {
+    font-size: 9px;
+    letter-spacing: 2px;
+    padding: 6px 12px;
+    margin-bottom: 18px;
+  }
   body.home-page .hero h1 {
-    font-size: 38px;
+    font-size: 32px;
+    line-height: 0.98;
+    margin-bottom: 18px;
   }
   body.home-page .hero-sub {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.65;
+    margin-bottom: 28px;
   }
   body.home-page .hero-inner {
-    padding: 88px 0 72px;
+    padding: 72px 0 56px;
+    max-width: 100%;
   }
   body.home-page .hero-btns {
     flex-direction: column;
+    gap: 10px;
   }
   body.home-page .hero-btns a {
     width: 100%;
@@ -4787,6 +4826,10 @@ body.home-page section.in-view .faq-grid > *:nth-child(n + 5) {
   }
   body.home-page .cta-sec {
     padding: 82px 0;
+  }
+  body.home-page .cta-in p {
+    font-size: 16px;
+    line-height: 1.68;
   }
   body.home-page .why-items {
     gap: 10px;
@@ -4832,6 +4875,23 @@ body.home-page section.in-view .faq-grid > *:nth-child(n + 5) {
   body.home-page .faq-sec,
   body.home-page .contact-sec {
     padding: 72px 0;
+  }
+}
+
+@media (max-width: 420px) {
+  body.home-page .hero-inner {
+    padding: 64px 0 48px;
+  }
+  body.home-page .hero h1 {
+    font-size: 28px;
+  }
+  body.home-page .hero-sub {
+    font-size: 15px;
+  }
+  body.home-page .hero-btns a {
+    min-height: 46px;
+    font-size: 12px;
+    padding: 0 18px;
   }
 }
 
@@ -4978,7 +5038,10 @@ body.page-video-insights .insight-content a:hover {
 }
 
 body.page-privacy-policy .policy-hero {
+  min-height: 100svh;
   padding: 120px 0 80px;
+  display: flex;
+  align-items: center;
   background:
     radial-gradient(circle at top left, rgba(45, 140, 255, 0.22), transparent 30%),
     radial-gradient(circle at bottom right, rgba(45, 140, 255, 0.12), transparent 32%),
@@ -5087,9 +5150,394 @@ body.page-privacy-policy .effective-date {
   }
 }
 
+/* ===== PUBLIC PAGE RESPONSIVE CONSISTENCY ===== */
+@media (max-width: 1120px) {
+  body:is(
+      .page-services-index,
+      .page-service-template,
+      .page-about,
+      .page-contact,
+      .page-blog,
+      .page-blog-article,
+      .page-video-insights,
+      .page-privacy-policy
+    )
+    .container {
+    width: min(var(--max), calc(100% - 40px));
+    padding: 0;
+  }
+
+  body:is(
+      .page-services-index,
+      .page-service-template,
+      .page-about,
+      .page-contact,
+      .page-blog,
+      .page-blog-article,
+      .page-video-insights,
+      .page-privacy-policy
+    )
+    .sec-hd {
+    margin-bottom: 36px;
+  }
+
+  body:is(
+      .page-services-index,
+      .page-service-template,
+      .page-about,
+      .page-contact,
+      .page-blog,
+      .page-blog-article,
+      .page-video-insights,
+      .page-privacy-policy
+    )
+    .sec-hd
+    h2 {
+    font-size: clamp(32px, 6vw, 52px);
+  }
+
+  body:is(
+      .page-services-index,
+      .page-service-template,
+      .page-about,
+      .page-contact,
+      .page-blog,
+      .page-blog-article,
+      .page-video-insights,
+      .page-privacy-policy
+    )
+    :is(.hero-copy h1, .blog-copy h1, .article-copy h1, .insights-hero h1, .policy-hero h1) {
+    font-size: clamp(38px, 7vw, 58px);
+  }
+
+  body:is(
+      .page-services-index,
+      .page-service-template,
+      .page-about,
+      .page-contact,
+      .page-blog,
+      .page-blog-article,
+      .page-video-insights,
+      .page-privacy-policy
+    )
+    :is(.hero-copy p, .blog-copy p, .article-copy p, .insight-content p, .policy-body p, .policy-body li) {
+    font-size: 17px;
+    line-height: 1.72;
+  }
+}
+
+@media (max-width: 900px) {
+  body:is(
+      .page-services-index,
+      .page-service-template,
+      .page-about,
+      .page-contact,
+      .page-blog,
+      .page-blog-article,
+      .page-video-insights,
+      .page-privacy-policy
+    )
+    .container {
+    width: min(var(--max), calc(100% - 28px));
+  }
+
+  body:is(
+      .page-services-index,
+      .page-service-template,
+      .page-about,
+      .page-contact,
+      .page-blog,
+      .page-blog-article,
+      .page-video-insights,
+      .page-privacy-policy
+    )
+    :is(.hero-page, .blog-hero, .article-hero, .insights-hero, .policy-hero) {
+    padding: 112px 0 64px;
+  }
+
+  body:is(
+      .page-services-index,
+      .page-service-template,
+      .page-about,
+      .page-contact,
+      .page-blog,
+      .page-blog-article,
+      .page-video-insights,
+      .page-privacy-policy
+    )
+    :is(.hero-copy h1, .blog-copy h1, .article-copy h1, .insights-hero h1, .policy-hero h1, .sec-hd h2) {
+    font-size: clamp(34px, 7.8vw, 46px);
+  }
+
+  body:is(
+      .page-services-index,
+      .page-service-template,
+      .page-about,
+      .page-contact,
+      .page-blog,
+      .page-blog-article,
+      .page-video-insights,
+      .page-privacy-policy
+    )
+    :is(
+      .hero-copy p,
+      .blog-copy p,
+      .article-copy p,
+      .insight-content p,
+      .policy-body p,
+      .policy-body li,
+      .contact-copy > p,
+      .panel > p
+    ) {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  body.page-service-template
+    :is(
+      .service-card,
+      .include-item,
+      .result-card,
+      .benefit-card,
+      .proc-card,
+      .quote-card,
+      .problem-card,
+      .pain-card,
+      .solution-card,
+      .why-card,
+      .why-col,
+      .contact-card,
+      .c-form
+    ),
+  body.page-services-index :is(.svc-card, .why-panel, .proc-card, .testi-card, .c-form),
+  body.page-contact :is(.panel, .form-card, .contact-card, .expect-card),
+  body.page-about :is(.story-card, .sidebar-card, .value-card, .approach-card, .stat-card),
+  body.page-blog :is(.post-card, .subscribe-card),
+  body.page-blog-article :is(.side-card, .subscribe-card),
+  body.page-video-insights .insight-item,
+  body.page-privacy-policy .policy-layout {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  body.page-blog .filter-row {
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    flex-wrap: nowrap;
+  }
+
+  body.page-blog .filter-row::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 @media (max-width: 900px) {
   body.home-page .container {
     padding: 0 5px;
+  }
+}
+
+@media (max-width: 640px) {
+  body.page-service-template .faq-grid,
+  body.page-services-index .faq-grid,
+  body.home-page .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.page-service-template :is(.split-grid, .why-grid) {
+    gap: 18px;
+  }
+
+  body:is(
+      .page-services-index,
+      .page-service-template,
+      .page-about,
+      .page-contact,
+      .page-blog,
+      .page-blog-article,
+      .page-video-insights,
+      .page-privacy-policy
+    )
+    .container {
+    width: min(var(--max), calc(100% - 20px));
+  }
+
+  body:is(
+      .page-services-index,
+      .page-service-template,
+      .page-about,
+      .page-contact,
+      .page-blog,
+      .page-blog-article,
+      .page-video-insights,
+      .page-privacy-policy
+    )
+    :is(.hero-page, .blog-hero, .article-hero, .insights-hero, .policy-hero) {
+    padding: 96px 0 52px;
+  }
+
+  body:is(.page-services-index, .page-service-template, .page-about, .page-contact, .page-privacy-policy) .hero-page,
+  body.page-privacy-policy .policy-hero {
+    min-height: 100svh;
+  }
+
+  body:is(
+      .page-services-index,
+      .page-service-template,
+      .page-about,
+      .page-contact,
+      .page-blog,
+      .page-blog-article,
+      .page-video-insights,
+      .page-privacy-policy
+    )
+    :is(.hero-copy h1, .blog-copy h1, .article-copy h1, .insights-hero h1, .policy-hero h1, .sec-hd h2) {
+    font-size: clamp(28px, 8vw, 32px);
+  }
+
+  body:is(
+      .page-services-index,
+      .page-service-template,
+      .page-about,
+      .page-contact,
+      .page-blog,
+      .page-blog-article,
+      .page-video-insights,
+      .page-privacy-policy
+    )
+    :is(
+      .hero-copy p,
+      .blog-copy p,
+      .article-copy p,
+      .insight-content p,
+      .policy-body p,
+      .policy-body li,
+      .contact-copy > p,
+      .panel > p
+    ) {
+    font-size: 16px;
+    line-height: 1.68;
+  }
+
+  body.page-service-template .hero-copy,
+  body.page-about .hero-copy,
+  body.page-services-index .hero-copy,
+  body.page-contact .hero-copy {
+    max-width: 100%;
+  }
+
+  body.page-service-template :is(.hero-btns, .hero-actions, .tag-row, .hero-tags, .cta-tags, .pill-row, .pill-grid, .hero-proof),
+  body.page-about .hero-btns,
+  body.page-services-index .hero-btns,
+  body.page-contact .hero-btns {
+    gap: 8px;
+  }
+
+  body.page-service-template :is(.tag-row, .hero-tags, .cta-tags),
+  body.page-service-template :is(.hero-btns, .hero-actions),
+  body.page-about .hero-btns,
+  body.page-services-index .hero-btns,
+  body.page-contact .hero-btns {
+    justify-content: center;
+  }
+
+  body.page-service-template .tag-pill,
+  body.page-service-template .mini-pill,
+  body.page-service-template .hero-tag,
+  body.page-service-template .cta-tag,
+  body.page-service-template .pill-item,
+  body.page-service-template .proof-pill {
+    padding: 6px 10px;
+    font-size: 10px;
+    letter-spacing: 0.6px;
+    line-height: 1.25;
+  }
+
+  body.page-service-template :is(.hero-btns a, .hero-actions a),
+  body.page-about .hero-btns a,
+  body.page-services-index .hero-btns a,
+  body.page-contact .hero-btns a {
+    min-height: 46px;
+    padding: 0 18px;
+    font-size: 12px;
+  }
+
+  body:is(
+      .page-services-index,
+      .page-service-template,
+      .page-about,
+      .page-contact,
+      .page-blog,
+      .page-blog-article,
+      .page-video-insights,
+      .page-privacy-policy
+    )
+    .sec-hd
+    h2,
+  body.page-service-template :is(.problem-card, .pain-card, .solution-card) h2,
+  body.page-contact :is(.panel h2, .contact-copy h2),
+  body.page-about .story-card h2,
+  body.page-blog-article .article-body h2,
+  body.page-privacy-policy .policy-body h2 {
+    font-size: clamp(22px, 6vw, 28px);
+  }
+
+  body.page-services-index :is(.svc-card h3, .why-panel h3, .proc-card h3),
+  body.page-service-template
+    :is(
+      .service-card h3,
+      .include-item h3,
+      .result-card h3,
+      .benefit-card h3,
+      .proc-card h3,
+      .quote-card h3,
+      .why-card h3,
+      .why-col h3,
+      .c-form h3
+    ),
+  body.page-about :is(.value-card h3, .approach-card h3, .sidebar-card h3),
+  body.page-contact :is(.form-card h3, .contact-card h3, .expect-card h3),
+  body.page-blog .post-card h2,
+  body.page-blog-article :is(.article-body h3, .side-card h3),
+  body.page-video-insights .insight-content h3,
+  body.page-privacy-policy .policy-body h3 {
+    font-size: clamp(18px, 5vw, 24px);
+  }
+
+  body.page-service-template .cta-banner,
+  body.page-service-template .cta-band,
+  body.page-services-index .cta-in,
+  body.page-about .cta-band,
+  body.page-contact .cta-band {
+    padding: 24px 20px;
+    border-radius: 24px;
+  }
+
+  body.page-service-template
+    :is(
+      .service-card,
+      .include-item,
+      .result-card,
+      .benefit-card,
+      .proc-card,
+      .quote-card,
+      .problem-card,
+      .pain-card,
+      .solution-card,
+      .why-card,
+      .why-col,
+      .contact-card,
+      .c-form
+    ),
+  body.page-services-index :is(.svc-card, .why-panel, .proc-card, .testi-card, .c-form),
+  body.page-contact :is(.panel, .form-card, .contact-card, .expect-card),
+  body.page-about :is(.story-card, .sidebar-card, .value-card, .approach-card, .stat-card),
+  body.page-blog :is(.post-card, .subscribe-card),
+  body.page-blog-article :is(.side-card, .subscribe-card),
+  body.page-video-insights .insight-item {
+    padding-left: 18px;
+    padding-right: 18px;
   }
 }
 
