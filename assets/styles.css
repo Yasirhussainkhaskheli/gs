@@ -5518,6 +5518,58 @@ body.page-privacy-policy .effective-date {
     border-radius: 24px;
   }
 
+  body.page-service-template .cta-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 18px;
+  }
+
+  body.page-service-template .cta-banner > * {
+    width: 100%;
+  }
+
+  body.page-service-template .cta-band {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  body.page-service-template .cta-band > .btn-primary,
+  body.page-service-template .cta-band > :not(.btn-primary) {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  body.page-service-template :is(.cta-banner, .cta-band) h2 {
+    font-size: clamp(28px, 9vw, 40px);
+    line-height: 1.02;
+    margin-bottom: 10px;
+  }
+
+  body.page-service-template :is(.cta-banner, .cta-band) p {
+    max-width: none;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  body.page-service-template :is(.cta-banner, .cta-band) .hero-btns,
+  body.page-service-template :is(.cta-banner, .cta-band) .hero-actions {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  body.page-service-template .cta-banner .btn-primary,
+  body.page-service-template .cta-band .btn-primary {
+    width: auto;
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  body.page-service-template :is(.cta-banner, .cta-band) :is(.tag-row, .pill-row, .cta-tags) {
+    justify-content: flex-start;
+  }
+
   body.page-service-template
     :is(
       .service-card,
