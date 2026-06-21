@@ -3,7 +3,7 @@
     { href: '/seo-services-singapore/', label: 'SEO' },
     { href: '/content-creation-services-singapore/', label: 'Content Strategy & Writing' },
     { href: '/paid-media-social-advertising-singapore/', label: 'Paid Media & Social Advertising' },
-    { href: '/lead-generation-services-singapore/', label: 'B2B Lead Generation & Sales Automation' },
+    { href: '/lead-generation-services-singapore/', label: 'Lead Generation & Sales Automation' },
     { href: '/web-design-development-singapore/', label: 'Web Design & Development' },
     { href: '/app-development-services-singapore/', label: 'App Development & AI Solutions' },
     { href: '/strategic-partnership-consulting-singapore/', label: 'Strategic Partnerships' },
@@ -44,7 +44,7 @@
           { href: '/seo-services-singapore/', label: 'SEO Services' },
           { href: '/content-creation-services-singapore/', label: 'Content Strategy & Writing' },
           { href: '/paid-media-social-advertising-singapore/', label: 'Paid Media & Social Advertising' },
-          { href: '/lead-generation-services-singapore/', label: 'B2B Lead Generation & Sales Automation' }
+          { href: '/lead-generation-services-singapore/', label: 'Lead Generation & Sales Automation' }
         ]
       },
       {
@@ -516,3 +516,4 @@
     mountFooter();
   }
 })();
+
